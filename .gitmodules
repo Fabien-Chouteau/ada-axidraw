@@ -1,0 +1,6 @@
+[submodule "boards/Ada_Drivers_Library"]
+	path = boards/Ada_Drivers_Library
+	url = https://github.com/AdaCore/Ada_Drivers_Library.git
+[submodule "ACNC"]
+	path = ACNC
+	url = git@github.com:Fabien-Chouteau/ACNC.git
