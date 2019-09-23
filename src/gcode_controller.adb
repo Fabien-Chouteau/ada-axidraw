@@ -52,6 +52,13 @@ package body Gcode_Controller is
    LS_Exclu_Y1  : Float;
    LS_Exclu_Y2  : Float;
 
+   procedure Run_With_Exclusion (Origin         : Float_Position;
+                                 System         : L_System.System;
+                                 Depth          : Natural;
+                                 Distance       : Float;
+                                 X1, X2, Y1, Y2 : Float)
+     with Unreferenced;
+
    procedure Erase_All with Unreferenced;
 
    Task_Sync : Ada.Synchronous_Task_Control.Suspension_Object;
@@ -318,39 +325,30 @@ package body Gcode_Controller is
 --                Depth    => 4,
 --                Distance => 2.0);
 
-         Run_With_Exclusion
-           (Origin   =>  (0.0, 0.0, 1.0),
-            System   => Some_Lsystems.Hilbert_Curve,
-            Depth    => 6,
-            Distance => 2.0,
-            X1       => 40.0,
-            X2       => 90.0,
-            Y1       => -90.0,
-            Y2       => -40.0);
---           Run (Origin   =>  (1.0, -1.0, 1.0),
---                System   => Some_Lsystems.Hilbert_Curve,
---                Depth    => 6,
---                Distance => 2.0);
+         Run (Origin   =>  (10.0, -15.0, 1.0),
+              System   => Some_Lsystems.Hilbert_Curve,
+              Depth    => 6,
+              Distance => 2.0);
 
          -- Signature --
 
          Gcode_Controller.Execute ("M17");
 
-         Gcode.Motion.Move_Line (Ctx, (200.0, -105.0, 1.0), Feed_Rate => 100.0);
+         Gcode.Motion.Move_Line (Ctx, (115.0, -165.0, 1.0), Feed_Rate => 100.0);
 
          Hershey_Fonts.Print_String (Hershey_Fonts.Scriptc.Font,
                                      GContext (Ctx),
                                      "Made with Ada",
                                      Scale => 0.4);
 
-         Gcode.Motion.Move_Line (Ctx, (200.0, -120.0, 1.0), Feed_Rate => 100.0);
+         Gcode.Motion.Move_Line (Ctx, (102.0, -150.0, 1.0), Feed_Rate => 100.0);
 
          Hershey_Fonts.Print_String (Hershey_Fonts.Futural.Font,
                                      GContext (Ctx),
                                      "www.adacore.com",
                                      Scale => 0.2);
 
-         Gcode.Motion.Move_Line (Ctx, (0.0, 0.0, 1.0), Feed_Rate => 100.0);
+         Gcode.Motion.Move_Line (Ctx, (200.0, -190.0, 1.0), Feed_Rate => 100.0);
 
          Gcode_Controller.Execute ("M18");
       end loop;

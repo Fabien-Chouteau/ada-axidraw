@@ -26,6 +26,7 @@ with Step_Control;
 
 procedure Main is
 begin
+
    Gcode_Controller.Initalize;
    Step_Control.Initalize;
    Gcode_Controller.Start;

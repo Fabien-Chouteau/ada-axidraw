@@ -91,7 +91,7 @@ package Settings is
 
    type Homing_Order_Range is range 1 .. 3;
    Homing_Order : constant array (Homing_Order_Range) of Gcode.Axis_Name :=
-     (Gcode.Z_Axis, Gcode.X_Axis, Gcode.Y_Axis);
+     (Gcode.Z_Axis, Gcode.Y_Axis, Gcode.X_Axis);
 
    Homing_Approach_Feed_Rate : constant Gcode.Float_Value := 40.0; --  mm/s
    Homing_Precision_Feed_Rate : constant Gcode.Float_Value := 1.0; --  mm/s
