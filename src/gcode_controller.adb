@@ -34,11 +34,14 @@ with System;
 with Hardware_Interface;
 with Gcode; use Gcode;
 with L_System;
-with Some_Lsystems;
+--  with Some_Lsystems;
 
 with Hershey_Fonts;
 with Hershey_Fonts.Scriptc;
 with Hershey_Fonts.Futural;
+
+with Sudoku;
+with Ada.Real_Time; use Ada.Real_Time;
 
 package body Gcode_Controller is
 
@@ -222,7 +225,7 @@ package body Gcode_Controller is
       --  Move to origin
       Gcode.Motion.Move_Line (Ctx, Origin, Feed_Rate => 100.0);
 
-      --  Lowert pen
+      --  Lower pen
       Gcode.Motion.Move_Line (Ctx,
                               (LS_Position (X_Axis),
                                LS_Position (Y_Axis),
@@ -285,10 +288,9 @@ package body Gcode_Controller is
    --------------------
 
    task body Execution_Task is
---        C : Character;
---        subtype Buffer_Range is Positive range 1 .. 1024;
---        Buffer : String (Buffer_Range);
---        Index : Buffer_Range := Buffer_Range'First;
+
+      use type Sudoku.Grid_Level;
+      Level : Sudoku.Grid_Level := Sudoku.Grid_Level'First;
    begin
 
       Ada.Synchronous_Task_Control.Suspend_Until_True (Task_Sync);
@@ -298,6 +300,9 @@ package body Gcode_Controller is
          while Hardware_Interface.Start_Button_Pressed loop
             null;
          end loop;
+
+         delay until Clock + Milliseconds (300);
+
          while not Hardware_Interface.Start_Button_Pressed loop
             null;
          end loop;
@@ -307,6 +312,19 @@ package body Gcode_Controller is
          Gcode_Controller.Execute ("M17");
          Gcode_Controller.Execute ("G28");
          Gcode_Controller.Execute ("M18");
+
+         Sudoku.Draw (Ctx    => GContext (Ctx),
+                      X      => 22.0,
+                      Y      => -120.0,
+                      G_Type => Level,
+                      Size   => 100.0);
+
+         --  Switch to the next level or re-start from the first
+         if Level = Sudoku.Medium then
+            Level := Sudoku.Grid_Level'First;
+         else
+            Level := Sudoku.Grid_Level'Succ (Level);
+         end if;
 
          -- Hilbert Curve --
 
@@ -325,10 +343,10 @@ package body Gcode_Controller is
 --                Depth    => 4,
 --                Distance => 2.0);
 
-         Run (Origin   =>  (10.0, -15.0, 1.0),
-              System   => Some_Lsystems.Hilbert_Curve,
-              Depth    => 6,
-              Distance => 2.0);
+--           Run (Origin   =>  (10.0, -15.0, 1.0),
+--                System   => Some_Lsystems.Hilbert_Curve,
+--                Depth    => 6,
+--                Distance => 2.0);
 
          -- Signature --
 
