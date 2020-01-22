@@ -7,18 +7,18 @@ with STM32.PWM; use STM32.PWM;
 
 package body Hardware_Interface is
 
-   M1_Step_GPIO    : GPIO_Point renames PA6;  -- Arduino: D12
-   M2_Step_GPIO    : GPIO_Point renames PF13; -- Arduino: D7
+   M1_Step_GPIO    : GPIO_Point renames PF15; -- Arduino: D2
+   M2_Step_GPIO    : GPIO_Point renames PF14; -- Arduino: D4
 
    M1_Dir_GPIO     : GPIO_Point renames PE11; -- Arduino: D5
-   M2_Dir_GPIO     : GPIO_Point renames PF12; -- Arduino: D8
+   M2_Dir_GPIO     : GPIO_Point renames PF13; -- Arduino: D7
 
-   Not_Enable_GPIO : GPIO_Point renames PF14; -- Arduino: D4
+   Not_Enable_GPIO : GPIO_Point renames PF12; -- Arduino: D8
 
-   Limit_X_GPIO    : GPIO_Point renames PA3;  -- Arduino: A0
-   Limit_Y_GPIO    : GPIO_Point renames PF15; -- Arduino: D2
+   Limit_X_GPIO    : GPIO_Point renames PG9;  -- Arduino: D0
+   Limit_Y_GPIO    : GPIO_Point renames PG14; -- Arduino: D1
 
-   Start_GPIO      : GPIO_Point renames PF3;  -- Arduino: A3
+   Start_GPIO      : GPIO_Point renames PA7;  -- Arduino: D11
 
    -- PWM --
 
