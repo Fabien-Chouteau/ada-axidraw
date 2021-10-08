@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from ATSAMV71Q21.svd
+--  This spec has been automatically generated from ATSAMRH71F20C.svd
 
 pragma Restrictions (No_Elaboration_Code);
 

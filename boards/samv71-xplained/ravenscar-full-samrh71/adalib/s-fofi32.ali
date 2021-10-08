@@ -1,0 +1,65 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.fore_fixed_32%s  s-fofi32.ads		9c7f2519 NE OL PU PK
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.arith_32%s	s-arit32.adb		s-arit32.ali
+Z system.exn_int%s	s-exnint.ads		s-exnint.ali
+W system.fore_f%s
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-arit32.ads		20210927095552 6d8c80a6 system.arith_32%s
+D s-exnint.ads		20210927095552 6df15928 system.exn_int%s
+D s-exponn.ads		20210927095552 d643ee1e system.exponn%s
+D s-fore_f.ads		20210927095552 5b88f089 system.fore_f%s
+D s-fore_f.adb		20210927095552 1df060cf system.fore_f%b
+D s-fofi32.ads		20210927095552 1d43923c system.fore_fixed_32%s
+G a e
+G c Z s s [fore_fixed system__fore_fixed_32__impl 47 13 44_4]
+X 1 interfac.ads
+38K9*Interfaces 231e15 8|35w6 42r21
+52I9*Integer_32<integer> 8|42r32
+X 2 system.ads
+50K9*System 164e11 8|36r6 37r6 39r9 50r5
+X 3 s-arit32.ads
+38K16*Arith_32 55e20 8|36w13 44r39
+43U14*Scaled_Divide32 8|44r48
+X 6 s-fore_f.ads
+44k16*Fore_F 54e18 8|37w13 44r24
+47V13*Fore_Fixed{natural} 8|48r19[44]
+X 8 s-fofi32.ads
+39K16*Fore_Fixed_32 2|50k9 8|50l12 50e25
+42I12*Int32{1|52I9} 44r32 47r26
+44K12*Impl[6|44] 48r14
+46V13*Fore_Fixed32=48:19{natural}
+47i7 Lo{1|52I9}
+47i11 Hi{1|52I9}
+47i15 Num{1|52I9}
+47i20 Den{1|52I9}
+47i33 Scale{integer}
+

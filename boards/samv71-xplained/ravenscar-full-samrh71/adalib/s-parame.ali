@@ -1,0 +1,61 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.parameters%b	s-parame.adb		87c51d9a NE OL PK
+W system%s		system.ads		system.ali
+
+U system.parameters%s	s-parame.ads		d44498da NE OL PU PK
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-parame.adb		20210927095552 09556a15 system.parameters%b
+G a e
+G c Z s b [adjust_storage_size system__parameters 74 13 none]
+X 1 system.ads
+50K9*System 164e11 2|49r9 101r25 173r5 3|34r14 49r5
+80M9*Address 2|101r32
+X 2 s-parame.ads
+49K16*Parameters 1|50k9 2|173l12 173e22 3|34b21 49l12 49t22
+56I9*Size_Type<integer> 65r32 65r45 68r34 71r34 74r41 74r59 87r46 3|40r41
+. 40r59
+65i4*Unspecified_Size{56I9} 3|42r17
+68i4*Default_Stack_Size{56I9} 3|43r17
+71i4*Minimum_Stack_Size{56I9}
+74V13*Adjust_Storage_Size{56I9} 74>34 3|40b13 47l8 47t27
+74i34 Size{56I9} 3|40b34 42r10 45r17
+82b4*Stack_Grows_Down{boolean}
+87i4*Runtime_Default_Sec_Stack_Size{56I9}
+95N4*long_bits
+100N4*ptr_bits
+101M12*C_Address{1|80M9}
+104a4*C_Malloc_Linkname{string}
+127b4*Garbage_Collected{boolean}
+142b4*No_Abort{boolean}
+155N4*Max_Attribute_Count
+162N4*Max_Task_Image_Length
+169N4*Default_Exception_Msg_Max_Length
+

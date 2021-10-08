@@ -1,0 +1,77 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB SS ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.strings.equal_case_insensitive%b  a-secain.adb  38316a5a NE OL PU SU
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
+W ada.strings%s		a-string.ads		a-string.ali
+
+U ada.strings.equal_case_insensitive%s  a-secain.ads  a7ec4680 NE OL PU SU
+W ada.strings%s		a-string.ads		a-string.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-charac.ads		20210927095552 2d3ec45b ada.characters%s
+D a-chahan.ads		20210927095552 0ce1b450 ada.characters.handling%s
+D a-chahan.adb		20210927095552 9621beac ada.characters.handling%b
+D a-chlat1.ads		20210927095552 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-secain.ads		20210927095552 37402117 ada.strings.equal_case_insensitive%s
+D a-secain.adb		20210927095552 0390ff1d ada.strings.equal_case_insensitive%b
+D a-strmap.ads		20210927095552 5a88892a ada.strings.maps%s
+D a-strmap.adb		20210927095552 7e646b75 ada.strings.maps%b
+D a-stmaco.ads		20210927095552 1c0e5368 ada.strings.maps.constants%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bitops.ads		20210927095552 0765e3a3 system.bit_ops%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+G a e
+G c Z s b [equal_case_insensitive ada__strings 30 22 none]
+X 1 ada.ads
+16K9*Ada 20e8 8|30r10 32r14 9|30r6 30r36 32r10 59r5
+X 2 a-charac.ads
+16K13*Characters 18e19 9|30r10 30r40
+X 3 a-chahan.ads
+36K24*Handling 160e28 9|30w21 30r51
+67V13*To_Lower{character} 9|48s10 48s34
+X 7 a-string.ads
+16K13*Strings 35e16 8|30r14 32r18 9|32r14 59r9
+X 8 a-secain.ads
+30V22*Equal_Case_Insensitive{boolean} 7|16k13 8|31>4 31>10 32r26 9|32b22
+. 59l17 59t39
+31a4 Left{string} 9|33b4 35r20 39r7 43r7 48r20 52r15
+31a10 Right{string} 9|33b10 36r20 39r22 48r44
+X 9 a-secain.adb
+35i4 LI{integer} 48r26 52r10 56m7 56r13
+36i4 RI{integer} 48r51 57m7 57r13
+47l4 loop 58e12
+

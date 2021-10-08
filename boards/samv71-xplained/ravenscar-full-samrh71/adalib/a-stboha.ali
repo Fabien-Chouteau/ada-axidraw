@@ -1,0 +1,74 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.strings.bounded.hash%b  a-stboha.adb	cd1a1295 NE OL SU GE
+W ada.strings.bounded%s	a-strbou.adb		a-strbou.ali
+W system%s		system.ads		system.ali
+W system.string_hash%s	s-strhas.adb		s-strhas.ali
+
+U ada.strings.bounded.hash%s  a-stboha.ads	c5493a6c BN NE OL PR GE
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.strings.bounded%s	a-strbou.adb		a-strbou.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-charac.ads		20210927095552 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210927095552 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20210927095552 61e5e089 ada.containers%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-strbou.ads		20210927095552 84c37afd ada.strings.bounded%s
+D a-stboha.ads		20210927095552 206fa018 ada.strings.bounded.hash%s
+D a-stboha.adb		20210927095552 cbe96a19 ada.strings.bounded.hash%b
+D a-strmap.ads		20210927095552 5a88892a ada.strings.maps%s
+D a-strsup.ads		20210927095552 a27dcb33 ada.strings.superbounded%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-strhas.ads		20210927095552 269cd894 system.string_hash%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+G a e
+G c Z s b [hash ada__strings__bounded 22 30 none]
+X 1 ada.ads
+16K9*Ada 20e8 7|16r6 20r10 22r10 25r22 8|32r10 35r8 40r5
+X 4 a-contai.ads
+16K13*Containers 28e19 7|16w10 23r12 8|33r10 35r12
+19M9*Hash_Type 7|23r23 8|33r21 37r26
+X 5 a-string.ads
+16K13*Strings 35e16 7|20r14 22r14 25r26 8|32r14 40r9
+X 6 a-strbou.ads
+45K21*Bounded 1281e24 7|20r22 22r22 25r34 8|32r22 40r17
+52k12*Generic_Bounded_Length 1279e30 7|20r30
+58R12 Bounded_String<10|47R9> 7|22r50[19] 8|32r50[7|19]
+82V16 To_String{string} 8|39s29[7|19]
+X 7 a-stboha.ads
+19K17 Bounded[6|52] 22r42 8|32r42 39r21
+22v30*Hash 6|45k21 7|22>36 25r42 8|32b30 40l25 40t29
+22r36 Key{6|58R12[19]} 8|32b36 39r40
+X 8 a-stboha.adb
+36V13 Hash_Fun[12|60]{4|19M9} 39s11
+X 11 system.ads
+50K9*System 8|30r6 36r29 11|164e11
+X 12 s-strhas.ads
+45K16*String_Hash 8|30w13 36r36 12|64e23
+60v13*Hash 8|36r48
+

@@ -1,0 +1,59 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.strings.fixed.hash_case_insensitive%s  a-sfhcin.ads  9414785f NE OL PU
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+W ada.strings.hash_case_insensitive%s  a-shcain.adb  a-shcain.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-charac.ads		20210927095552 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210927095552 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20210927095552 61e5e089 ada.containers%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-strfix.ads		20210927095552 aeacf44c ada.strings.fixed%s
+D a-sfhcin.ads		20210927095552 53f23e45 ada.strings.fixed.hash_case_insensitive%s
+D a-shcain.ads		20210927095552 08af52df ada.strings.hash_case_insensitive%s
+D a-strmap.ads		20210927095552 5a88892a ada.strings.maps%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+G a e
+X 1 ada.ads
+16K9*Ada 20e8 7|34r6 35r6 37r10 39r39 41r14
+X 4 a-contai.ads
+16K13*Containers 28e19 7|34w10 39r10
+19M9*Hash_Type 7|39r21
+X 5 a-string.ads
+16K13*Strings 1|16k9 5|35e16 7|35r10 37r14 39r43 41r18
+X 6 a-strfix.ads
+43K21*Fixed 5|16k13 6|1398e22 7|37r22 41r26
+X 7 a-sfhcin.ads
+37V28*Hash_Case_Insensitive=39:51{4|19M9} 41r32
+38a4 Key{string}
+X 8 a-shcain.ads
+32V22*Hash_Case_Insensitive{4|19M9} 7|35w18 39r51
+

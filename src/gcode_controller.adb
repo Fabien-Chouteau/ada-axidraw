@@ -25,6 +25,9 @@ with Gcode.Execution;
 with Gcode.Error;
 with Gcode.Motion;
 
+with Interfaces;
+--  with AdaCore_Microchip;
+
 with Ada.Synchronous_Task_Control;
 --  with Ada.Real_Time; use Ada.Real_Time;
 
@@ -36,11 +39,11 @@ with Gcode; use Gcode;
 with L_System;
 --  with Some_Lsystems;
 
-with Hershey_Fonts;
-with Hershey_Fonts.Scriptc;
-with Hershey_Fonts.Futural;
+--  with Hershey_Fonts;
+--  with Hershey_Fonts.Scriptc;
+--  with Hershey_Fonts.Futural;
 
-with Sudoku;
+--  with Sudoku;
 with Ada.Real_Time; use Ada.Real_Time;
 
 package body Gcode_Controller is
@@ -269,7 +272,6 @@ package body Gcode_Controller is
       LS_Exclu_X2 := X2;
       LS_Exclu_Y1 := Y1;
       LS_Exclu_Y2 := Y2;
-
       Run (Origin, System, Depth, Distance);
       LS_Exclu_Ena := False;
    end Run_With_Exclusion;
@@ -289,9 +291,10 @@ package body Gcode_Controller is
 
    task body Execution_Task is
 
-      use type Sudoku.Grid_Level;
-      Level : Sudoku.Grid_Level := Sudoku.Grid_Level'First;
+      --  use type Sudoku.Grid_Level;
+      --  Level : Sudoku.Grid_Level := Sudoku.Grid_Level'First;
    begin
+
 
       Ada.Synchronous_Task_Control.Suspend_Until_True (Task_Sync);
 
@@ -313,60 +316,91 @@ package body Gcode_Controller is
          Gcode_Controller.Execute ("G28");
          Gcode_Controller.Execute ("M18");
 
-         Sudoku.Draw (Ctx    => GContext (Ctx),
-                      X      => 22.0,
-                      Y      => -120.0,
-                      G_Type => Level,
-                      Size   => 100.0);
+         --  Draw logos
+         declare
+            use Interfaces;
 
-         --  Switch to the next level or re-start from the first
-         if Level = Sudoku.Medium then
-            Level := Sudoku.Grid_Level'First;
-         else
-            Level := Sudoku.Grid_Level'Succ (Level);
-         end if;
+            --  The drawing data is located in external ROM at address
+            --  0x60000000. It is an array of x, y int16 records starting and
+            --  ending with (0, 0). The coords are in 10th of milimeters (i.e.
+            --  divide by 10 to get milimeters).
 
-         -- Hilbert Curve --
+            type Coord is record
+               X, Y : Integer_16;
+            end record;
 
---           Run (Origin   =>  (100.0, -100.0, 1.0),
---                System   => Some_Lsystems.Sierpinski_Triangle_Curve,
---                Depth    => 7,
---                Distance => 1.5);
+            Data : array (Natural) of Coord with
+              Address => System'To_Address (16#6000_0000#);
 
---           Run (Origin   =>  (100.0, -150.0, 1.0),
---                System   => Some_Lsystems.Snow_Flake,
---                Depth    => 4,
---                Distance => 1.5);
+            New_Pos : Float_Position := (0.0, 0.0, 1.0); -- origin, up
+            Dwell : Boolean;
+         begin
+            Gcode_Controller.Execute ("M17");
 
---           Run (Origin   =>  (100.0, -180.0, 1.0),
---                System   => Some_Lsystems.Pleasent_Error,
---                Depth    => 4,
---                Distance => 2.0);
+            for Elt of Data (Data'First + 1 .. Data'Last) loop
+               pragma Warnings (Off, "not a multiple");
+               Dwell := False;
+               if Elt = (0, 0) then
+                  exit;
+               elsif Elt = (99, 99) then
+                  New_Pos (Z_Axis) := 1.0;
+                  Dwell := True;
+               elsif Elt = (-99, -99) then
+                  New_Pos (Z_Axis) := -1.0;
+                  Dwell := True;
+               else
+                  --  New_Pos (X_Axis) := Elt.X;
+                  --  New_Pos (Y_Axis) := Elt.Y;
+                  New_Pos (X_Axis) := Float (Elt.X) / 10.0;
+                  New_Pos (Y_Axis) := Float (Elt.Y) / 10.0;
+               end if;
+               Gcode.Motion.Move_Line (Ctx,
+                                       New_Pos,
+                                       Feed_Rate => 100.0);
 
---           Run (Origin   =>  (10.0, -15.0, 1.0),
---                System   => Some_Lsystems.Hilbert_Curve,
---                Depth    => 6,
---                Distance => 2.0);
+               if Dwell then
+                  Gcode_Controller.Execute ("G04 P0.4");
+               end if;
 
-         -- Signature --
+            end loop;
 
-         Gcode_Controller.Execute ("M17");
+            Gcode_Controller.Execute ("G28"); -- Home
+            Gcode_Controller.Execute ("M18");
+         end;
 
-         Gcode.Motion.Move_Line (Ctx, (115.0, -165.0, 1.0), Feed_Rate => 100.0);
+         --  Sudoku.Draw (Ctx    => GContext (Ctx),
+         --               X      => 22.0,
+         --               Y      => -120.0,
+         --               G_Type => Level,
+         --               Size   => 100.0);
+         --
+         --  --  Switch to the next level or re-start from the first
+         --  if Level = Sudoku.Medium then
+         --     Level := Sudoku.Grid_Level'First;
+         --  else
+         --     Level := Sudoku.Grid_Level'Succ (Level);
+         --  end if;
 
-         Hershey_Fonts.Print_String (Hershey_Fonts.Scriptc.Font,
-                                     GContext (Ctx),
-                                     "Made with Ada",
-                                     Scale => 0.4);
 
-         Gcode.Motion.Move_Line (Ctx, (102.0, -150.0, 1.0), Feed_Rate => 100.0);
-
-         Hershey_Fonts.Print_String (Hershey_Fonts.Futural.Font,
-                                     GContext (Ctx),
-                                     "www.adacore.com",
-                                     Scale => 0.2);
-
-         Gcode.Motion.Move_Line (Ctx, (200.0, -190.0, 1.0), Feed_Rate => 100.0);
+         --  -- Signature --
+         --
+         --  Gcode_Controller.Execute ("M17");
+         --
+         --  Gcode.Motion.Move_Line (Ctx, (115.0, -165.0, 1.0), Feed_Rate => 100.0);
+         --
+         --  Hershey_Fonts.Print_String (Hershey_Fonts.Futural.Font,
+         --                              GContext (Ctx),
+         --                              "Made with Ada",
+         --                              Scale => 0.4);
+         --
+         --  Gcode.Motion.Move_Line (Ctx, (102.0, -150.0, 1.0), Feed_Rate => 100.0);
+         --
+         --  Hershey_Fonts.Print_String (Hershey_Fonts.Futural.Font,
+         --                              GContext (Ctx),
+         --                              "www.adacore.com",
+         --                              Scale => 0.2);
+         --
+         --  Gcode.Motion.Move_Line (Ctx, (200.0, -190.0, 1.0), Feed_Rate => 100.0);
 
          Gcode_Controller.Execute ("M18");
       end loop;

@@ -1,0 +1,85 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+
+U system.io%b		s-io.adb		60c9526c NE OL PK
+W system%s		system.ads		system.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+W system.text_io%s	s-textio.adb		s-textio.ali
+
+U system.io%s		s-io.ads		c496181a BN NE OL PR PK
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-imagei.ads		20210927095552 0d3f86a7 system.image_i%s
+D s-imgint.ads		20210927095552 bdb6f5ec system.img_int%s
+D s-io.ads		20210927095552 9e42f74f system.io%s
+D s-io.adb		20210927095552 dc9c2aea system.io%b
+D s-textio.ads		20210927095552 22178fc9 system.text_io%s
+G a e
+G c Z s b [put system__io 40 14 none]
+G c Z s b [put system__io 42 14 none]
+G c Z s b [put system__io 44 14 none]
+G c Z s b [put_line system__io 45 14 none]
+G c Z s b [new_line system__io 47 14 none]
+G c Z s b [standard_error system__io 51 13 none]
+G c Z s b [standard_output system__io 52 13 none]
+G c Z s b [set_output system__io 54 14 none]
+G c Z b b [put_char_stderr system__io 38 14 none]
+X 1 system.ads
+50K9*System 164e11 4|37r9 64r5 5|34r6 36r14 49r13 67r11 81r7 140r5
+X 4 s-io.ads
+37K16*IO 1|50k9 4|58E9 64l12 64e14 5|36b21 140l12 140t14
+40U14*Put 40>19 5|61b14 64l8 64t11
+40i19 X{integer} 5|61b19 63r27
+42U14*Put 42>19 5|50s13 53s10 66b14 82l8 82t11 87s10 97s7
+42e19 C{character} 5|66b19 81r27
+44U14*Put 44>19 5|63s7 84b14 89l8 89t11 106s7
+44a19 S{string} 5|84b19 86r16 87r15
+45U14*Put_Line 45>24 5|104b14 108l8 108t16
+45a24 S{string} 5|104b24 106r12
+47U14*New_Line 47>24 5|46b14 55l8 55t16 107s7
+47i24 Spacing{positive} 5|46b24 48r21
+49E9*File_Type 51r35 52r36 54r33 58c9 58e38 5|114r36 123r35 134r33
+51V13*Standard_Error{49E9} 61r19 5|123b13 126l8 126t22
+52V13*Standard_Output{49E9} 62r19 5|114b13 117l8 117t23
+54U14*Set_Output 54>26 5|134b14 138l8 138t18
+54e26 File{49E9} 5|134b26 135r28
+58n23 Stdout{49E9} 5|116r14
+58n31 Stderr{49E9} 5|125r14
+X 5 s-io.adb
+38U14 Put_Char_Stderr 38>31 39i<c,put_char_stderr>22 95b14 98l8 98t23
+38e31 C{character} 95b31 97r12
+48i11 J{integer}
+86i11 J{integer} 87r18
+X 6 s-textio.ads
+35K16*Text_IO 5|34w13 49r20 67r18 81r14 6|82e19
+43U14*Initialize 5|74s10
+47b4*Initialized{boolean} 5|73r14
+55V13*Is_Tx_Ready{boolean} 5|77s17
+62U14*Put 5|81s22
+66V13*Use_Cr_Lf_For_New_Line{boolean} 5|49s28
+

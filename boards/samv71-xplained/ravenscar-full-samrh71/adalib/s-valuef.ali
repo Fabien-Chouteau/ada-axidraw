@@ -1,0 +1,136 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.value_f%b	s-valuef.adb		ac866e90 NE OL PK GE
+W system%s		system.ads		system.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W system.val_util%s	s-valuti.adb		s-valuti.ali
+W system.value_r%s
+
+U system.value_f%s	s-valuef.ads		1e0dd81d BN NE OL PR PK GE
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D s-valuti.ads		20210927095552 aca0b6fe system.val_util%s
+D s-valuef.ads		20210927095552 44d93748 system.value_f%s
+D s-valuef.adb		20210927095552 45163ab6 system.value_f%b
+D s-valuer.ads		20210927095552 2aeea103 system.value_r%s
+D s-valuer.adb		20210927095552 5e5f062c system.value_r%b
+G a e
+G c Z s b [value_f system 47 16 none]
+X 1 system.ads
+50K9*System 164e11 4|47r9 94r5 5|32r6 32r33 33r6 33r33 34r6 36r14 368r5
+91V14*"<="{boolean} 5|46r28
+X 2 s-unstyp.ads
+40K16*Unsigned_Types 251e26 5|32w13 32r40
+46M9*Unsigned 5|55r16 57r16 144r16 146r16 335r16 337r16 356r16 358r16
+X 3 s-valuti.ads
+34K16*Val_Util 124e20 5|33w13 33r40
+37U14*Bad_Value 5|208s16 269s19 321s32
+X 4 s-valuef.ads
+38I9 Int 43r22 44r23 54r13 55r13 55r25 85r13 86r13 86r25 5|46r19 49r42 59r16
+. 60r16 60r28 148r16 149r16 149r28 160r19 162r19 162r31 169r54 177r19 179r19
+. 179r31 183r25 183r32 185r19 200r54 204r24 205r44 206r23 214r22 219r20 225r20
+. 225r27 230r30 294r29 295r36 298r31 332r13 333r13 333r25 353r13 354r13 354r25
+40M9 Uns 5|46r31 49r33 54r16 143r16 169r42 200r42 204r19 205r37 227r11 228r11
+. 228r18 249r27 250r25 265r25 265r41 266r28 339r16 360r16
+42U19 Scaled_Divide 43>12 43>15 43>18 44<12 44<15 45>12 5|287s10 288s10 310s10
+. 315s10
+43*12 X{38I9}
+43*15 Y{38I9}
+43*18 Z{38I9}
+44*12 Q{38I9}
+44*15 R{38I9}
+45b12 Round{boolean} 5|287r63 288r64 310r48 315r63
+47k16*Value_F 1|50k9 4|38z9 40z9 42z19 94l12 94e19 5|36b21 368l12 368t19
+50V13*Scan_Fixed{38I9} 51>7 52^7 53>7 54>7 55>7 5|328b13 345l8 345t18
+51a7 Str{string} 5|329b7 342r34 344r32
+52p7 Ptr(integer) 5|330b7 342r39
+53i7 Max{integer} 5|331b7 342r44
+54*7 Num{38I9} 5|332b7 344r70
+55*7 Den{38I9} 5|333b7 344r75
+83V13*Value_Fixed{38I9} 84>7 85>7 86>7 5|351b13 366l8 366t19
+84a7 Str{string} 5|352b7 363r35 365r32
+85*7 Num{38I9} 5|353b7 365r70
+86*7 Den{38I9} 5|354b7 365r75
+X 5 s-valuef.adb
+49K12 Impl[6|45] 342r14 363r14
+52V13 Integer_To_Fixed{4|38I9} 53>7 54>7 55>7 56>7 57>7 58>7 59>7 60>7 141b13
+. 322l8 322t24 344s14 365s14
+53a7 Str{string} 142b7 208r27 269r30 321r43
+54*7 Val{4|40M9} 143b7 227r18
+55m7 Base{2|46M9} 144b7 151r22 153r30 225r32
+56i7 ScaleB{integer} 145b7 240r10 242r30 256r13 258r30
+57m7 Extra{2|46M9} 146b7 153r22 228r23
+58b7 Minus{boolean} 147b7 205r16 213r16
+59*7 Num{4|38I9} 148b7 156r22 246r38 262r18 278r15
+60*7 Den{4|38I9} 149b7 156r39 245r18 261r38 277r15
+159V16 Safe_Expont{4|38I9} 160>10 161=10 162>10 176b16 194l11 194t22 246s18
+. 261s18
+160*10 Base{4|38I9} 177b10 181r25 183r44 189r32
+161i10 Exp{natural} 178b10 188r16 190m13 190r23
+162*10 Factor{4|38I9} 179b10 181r44 185r26
+169V16 Unsigned_To_Signed{4|38I9} 169>36 200b16 221l11 221t29 287s25 288s25
+. 315s25
+169*36 Val{4|40M9} 200b36 204r13 205r31 214r27 219r25
+183*10 Min{4|38I9} 188r43
+185*10 Result{4|38I9} 188r33 189m13 189r23 193r17
+225*7 B{4|38I9} 246r31 249r32 250r30 261r31 265r46 266r33 288r53
+227*7 V{4|40M9} 249r21 250m16 250r21 265r19 266m19 266r24 287r45 315r45
+228*7 E{4|40M9} 249m16 265r36 266r38 267m19 286r10 288r45
+230*7 Y{4|38I9} 245m13 261m13 277m10 287r49 288r49 303m16 307m13 310r34 315r49
+230*10 Z{4|38I9} 246m13 262m13 278m10 287r52 310r37 315r52
+230*13 Q1{4|38I9} 287m55 312r17 315m55 317r17
+230*17 R1{4|38I9} 287m59 295r24 302m16 302r23 310r30 315m59
+230*21 Q2{4|38I9} 288m56 294r17 298r38 301m16 301r23 310r25 310m40 312r22
+230*25 R2{4|38I9} 288m60 310m44
+242i13 LS{integer} 246m34 246r34 248r27
+248i17 J{integer}
+258i13 LS{integer} 261m34 261r34 264r27
+264i17 J{integer}
+298*16 Bit{4|38I9} 301r28 302r28
+335m7 Base{2|46M9} 342m49 342r49 344r42
+336i7 ScaleB{integer} 342m55 342r55 344r48
+337m7 Extra{2|46M9} 342m63 342r63 344r56
+338b7 Minus{boolean} 342m70 342r70 344r63
+339*7 Val{4|40M9} 342m7 344r37
+356m7 Base{2|46M9} 363m40 363r40 365r42
+357i7 ScaleB{integer} 363m46 363r46 365r48
+358m7 Extra{2|46M9} 363m54 363r54 365r56
+359b7 Minus{boolean} 363m61 363r61 365r63
+360*7 Val{4|40M9} 363m7 365r37
+X 6 s-valuer.ads
+43b4 Round{boolean} 5|49r57
+45k16*Value_R 5|34w13 49r24 6|101e19
+48V13 Scan_Raw_Real{4|40M9} 5|342s19[49]
+91V13 Value_Raw_Real{4|40M9} 5|363s19[49]
+

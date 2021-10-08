@@ -1,0 +1,155 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_LONG_LONG_INTEGERS
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U interfaces%s		interfac.ads		edec285f NE OL PU PK
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+G c Z s s [shift_left interfaces 89 13 none]
+G c Z s s [shift_right interfaces 94 13 none]
+G c Z s s [shift_right_arithmetic interfaces 99 13 none]
+G c Z s s [rotate_left interfaces 104 13 none]
+G c Z s s [rotate_right interfaces 109 13 none]
+G c Z s s [shift_left interfaces 114 13 none]
+G c Z s s [shift_right interfaces 119 13 none]
+G c Z s s [shift_right_arithmetic interfaces 124 13 none]
+G c Z s s [rotate_left interfaces 129 13 none]
+G c Z s s [rotate_right interfaces 134 13 none]
+G c Z s s [shift_left interfaces 139 13 none]
+G c Z s s [shift_right interfaces 144 13 none]
+G c Z s s [shift_right_arithmetic interfaces 149 13 none]
+G c Z s s [rotate_left interfaces 154 13 none]
+G c Z s s [rotate_right interfaces 159 13 none]
+G c Z s s [shift_left interfaces 164 13 none]
+G c Z s s [shift_right interfaces 169 13 none]
+G c Z s s [shift_right_arithmetic interfaces 174 13 none]
+G c Z s s [rotate_left interfaces 179 13 none]
+G c Z s s [rotate_right interfaces 184 13 none]
+G c Z s s [shift_left interfaces 189 13 none]
+G c Z s s [shift_right interfaces 194 13 none]
+G c Z s s [shift_right_arithmetic interfaces 199 13 none]
+G c Z s s [rotate_left interfaces 204 13 none]
+G c Z s s [rotate_right interfaces 209 13 none]
+X 1 interfac.ads
+38K9*Interfaces 231l5 231e15
+46I9*Integer_8<short_short_integer> 47r8
+49I9*Integer_16<short_integer> 50r8
+52I9*Integer_32<integer> 53r8
+55I9*Integer_64<long_long_integer> 56r8
+63I9*Integer_128<long_long_long_integer>
+68M9*Unsigned_8 69r8 90r16 91r32 95r16 96r32 100r16 101r32 105r16 106r32
+. 110r16 111r32
+71M9*Unsigned_16 72r8 115r16 116r32 120r16 121r32 125r16 126r32 130r16 131r32
+. 135r16 136r32
+74M9*Unsigned_24 75r8
+79M9*Unsigned_32 80r8 140r16 141r32 145r16 146r32 150r16 151r32 155r16 156r32
+. 160r16 161r32
+82M9*Unsigned_64 83r8 165r16 166r32 170r16 171r32 175r16 176r32 180r16 181r32
+. 185r16 186r32
+86M9*Unsigned_128 190r16 191r32 195r16 196r32 200r16 201r32 205r16 206r32
+. 210r16 211r32
+89V13*Shift_Left{68M9} 90>7 91>7
+90m7 Value{68M9}
+91i7 Amount{natural}
+94V13*Shift_Right{68M9} 95>7 96>7
+95m7 Value{68M9}
+96i7 Amount{natural}
+99V13*Shift_Right_Arithmetic{68M9} 100>7 101>7
+100m7 Value{68M9}
+101i7 Amount{natural}
+104V13*Rotate_Left{68M9} 105>7 106>7
+105m7 Value{68M9}
+106i7 Amount{natural}
+109V13*Rotate_Right{68M9} 110>7 111>7
+110m7 Value{68M9}
+111i7 Amount{natural}
+114V13*Shift_Left{71M9} 115>7 116>7
+115m7 Value{71M9}
+116i7 Amount{natural}
+119V13*Shift_Right{71M9} 120>7 121>7
+120m7 Value{71M9}
+121i7 Amount{natural}
+124V13*Shift_Right_Arithmetic{71M9} 125>7 126>7
+125m7 Value{71M9}
+126i7 Amount{natural}
+129V13*Rotate_Left{71M9} 130>7 131>7
+130m7 Value{71M9}
+131i7 Amount{natural}
+134V13*Rotate_Right{71M9} 135>7 136>7
+135m7 Value{71M9}
+136i7 Amount{natural}
+139V13*Shift_Left{79M9} 140>7 141>7
+140m7 Value{79M9}
+141i7 Amount{natural}
+144V13*Shift_Right{79M9} 145>7 146>7
+145m7 Value{79M9}
+146i7 Amount{natural}
+149V13*Shift_Right_Arithmetic{79M9} 150>7 151>7
+150m7 Value{79M9}
+151i7 Amount{natural}
+154V13*Rotate_Left{79M9} 155>7 156>7
+155m7 Value{79M9}
+156i7 Amount{natural}
+159V13*Rotate_Right{79M9} 160>7 161>7
+160m7 Value{79M9}
+161i7 Amount{natural}
+164V13*Shift_Left{82M9} 165>7 166>7
+165m7 Value{82M9}
+166i7 Amount{natural}
+169V13*Shift_Right{82M9} 170>7 171>7
+170m7 Value{82M9}
+171i7 Amount{natural}
+174V13*Shift_Right_Arithmetic{82M9} 175>7 176>7
+175m7 Value{82M9}
+176i7 Amount{natural}
+179V13*Rotate_Left{82M9} 180>7 181>7
+180m7 Value{82M9}
+181i7 Amount{natural}
+184V13*Rotate_Right{82M9} 185>7 186>7
+185m7 Value{82M9}
+186i7 Amount{natural}
+189V13*Shift_Left{86M9} 190>7 191>7
+190m7 Value{86M9}
+191i7 Amount{natural}
+194V13*Shift_Right{86M9} 195>7 196>7
+195m7 Value{86M9}
+196i7 Amount{natural}
+199V13*Shift_Right_Arithmetic{86M9} 200>7 201>7
+200m7 Value{86M9}
+201i7 Amount{natural}
+204V13*Rotate_Left{86M9} 205>7 206>7
+205m7 Value{86M9}
+206i7 Amount{natural}
+209V13*Rotate_Right{86M9} 210>7 211>7
+210m7 Value{86M9}
+211i7 Amount{natural}
+216F9*IEEE_Float_32<short_float> 217r8
+219F9*IEEE_Float_64<long_float> 220r8
+229F9*IEEE_Extended_Float<long_long_float>
+

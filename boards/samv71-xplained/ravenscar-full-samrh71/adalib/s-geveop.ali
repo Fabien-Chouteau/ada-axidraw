@@ -1,0 +1,128 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_CONVERSION
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.generic_vector_operations%b  s-geveop.adb  ba141e65 NE OL PK GE
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+W system%s		system.ads		system.ali
+W system.address_operations%s  s-addope.adb	s-addope.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+U system.generic_vector_operations%s  s-geveop.ads  7ead9c57 BN NE OL PU PK GE
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.vectors%s	s-vector.ads		s-vector.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-addope.ads		20210927095552 130cbe33 system.address_operations%s
+D s-geveop.ads		20210927095552 747f96b6 system.generic_vector_operations%s
+D s-geveop.adb		20210927095552 a4ebb4de system.generic_vector_operations%b
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-vector.ads		20210927095552 7dc5afb0 system.vectors%s
+G a e
+G c Z s b [generic_vector_operations system 50 16 none]
+X 1 ada.ads
+16K9*Ada 20e8 6|36r6 66r26 67r26 118r26 119r26
+X 2 a-unccon.ads
+20v14*Unchecked_Conversion 6|36w10 66r30 67r30 118r30 119r30
+X 3 system.ads
+50K9*System 164e11 5|42r6 43r6 50r9 57r17 58r17 64r17 65r17 66r5 6|32w6 32r37
+. 33r6 33r37 34r6 34r37 38r14 49r17 50r17 102r17 103r17 147r5
+80M9*Address 5|57r24 64r24 6|41r18 41r29 42r18 42r29 49r24 52r12 53r12 54r12
+. 66r52 67r52 76r21 102r24 105r12 106r12 118r52 119r52 128r21
+84N4*Storage_Unit 6|40r38
+90V14*"<"{boolean} 6|82r16 89r16 134r16 140r16
+94V14*"="{boolean} 6|60r68 112r58
+X 4 s-addope.ads
+45K16*Address_Operations 87e30 6|33w13 33r44
+65V13*AddA{3|80M9} 6|77s14 84s16 85s16 86s16 91s16 92s16 93s16 129s14 136s16
+. 137s16 142s16 143s16
+69V13*ModA{3|80M9} 6|60s34 112s34
+77V13*OrA{3|80M9} 6|60s40 60s45 112s40
+X 5 s-geveop.ads
+46E9 Element 48r52 54r40 54r56 61r37 61r53 6|64r38 116r38
+47E9 Index 48r33
+48A9 Element_Array(46E9)<47E9> 6|42r38
+50k16*Generic_Vector_Operations 3|50k9 5|46z9 47z9 48z9 66l12 66e37 6|38b21
+. 147l12 147t37
+54V21 Element_Op{46E9} 54>33 54>36 6|90s25
+54*33 X{46E9}
+54*36 Y{46E9}
+55V21 Vector_Op{8|44M9} 55>32 55>35 6|83s25
+55m32 X{8|44M9}
+55m35 Y{8|44M9}
+56u14*Binary_Operation 57>7 57>10 57>13 58>7 6|48b14 95l8 95t24
+57m7 R{3|80M9} 6|49b7 52r23
+57m10 X{3|80M9} 6|49b10 53r23 89r18
+57m13 Y{3|80M9} 6|49b13 54r23
+58i7 Length{7|61I12} 6|50b7 78r45 89r22
+61V21 Element_Op{46E9} 61>33 6|141s25
+61*33 X{46E9}
+62V21 Vector_Op{8|44M9} 62>32 6|135s25
+62m32 X{8|44M9}
+63u14*Unary_Operation 64>7 64>10 65>7 6|101b14 145l8 145t23
+64m7 R{3|80M9} 6|102b7 105r23
+64m10 X{3|80M9} 6|102b10 106r23 140r18
+65i7 Length{7|61I12} 6|103b7 130r45 140r22
+X 6 s-geveop.adb
+40i4 IU{integer} 41r60 42r69
+41m4 VU{3|80M9} 57r52 60r64 84r26 85r26 86r26 109r52 112r54 136r26 137r26
+42m4 EU{3|80M9} 91r26 92r26 93r26 142r26 143r26
+52m7 RA{3|80M9} 60r50 83r14 86m10 86r22 90r14 93m10 93r22
+53m7 XA{3|80M9} 60r54 77r20 82r13 83r40 84m10 84r22 89r13 90r41 91m10 91r22
+54m7 YA{3|80M9} 60r59 83r53 85m10 85r22 90r54 92m10 92r22
+57m7 VI{7|104M9} 69r22 78r55 78r60
+59m7 Unaligned{7|104M9} 78r68
+63P12 Vector_Ptr(8|44M9) 66r61
+64P12 Element_Ptr(5|46E9) 67r61
+66V16 VP[2|20]{63P12} 83s10 83s36 83s49
+67V16 EP[2|20]{64P12} 90s10 90s37 90s50
+76m7 SA{3|80M9} 82r18
+105m7 RA{3|80M9} 112r45 135r14 137m10 137r22 141r14 143m10 143r22
+106m7 XA{3|80M9} 112r49 129r20 134r13 135r40 136m10 136r22 140r13 141r41
+. 142m10 142r22
+109m7 VI{7|104M9} 121r22 130r55 130r60
+111m7 Unaligned{7|104M9} 130r68
+115P12 Vector_Ptr(8|44M9) 118r61
+116P12 Element_Ptr(5|46E9) 119r61
+118V16 VP[2|20]{115P12} 135s10 135s36
+119V16 EP[2|20]{116P12} 141s10 141s37
+128m7 SA{3|80M9} 134r18
+X 7 s-stoele.ads
+42K16*Storage_Elements 5|43w13 58r24 65r24 6|34w13 34r44 50r24 103r24 7|116e28
+54I9*Storage_Offset<integer>
+61I12*Storage_Count{54I9} 5|58r41 65r41 6|50r41 103r41
+75V14*"+"{3|80M9} 6|89s20 140s20
+104M9*Integer_Address 6|57r21 59r28 78r28 109r21 111r28 130r28
+106V13*To_Address{3|80M9} 6|77s24 129s24
+111V13*To_Integer{104M9} 6|57s40 109s40
+X 8 s-vector.ads
+41K16*Vectors 5|42w13 55r39 55r62 62r36 62r59 6|41r38 63r37 115r37 8|49e19
+44M9*Vector 5|55r47 55r70 62r44 62r67 6|41r46 63r45 115r45
+

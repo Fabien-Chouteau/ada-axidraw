@@ -1,0 +1,57 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.libm_single.squareroot%b  s-lisisq.adb	02782c77 NE OL PK
+W system.libm_single%s	s-libsin.adb		s-libsin.ali
+
+U system.libm_single.squareroot%s  s-lisisq.ads	f76d7ac6 NE OL PU PK
+W system%s		system.ads		system.ali
+W system.libm_prefix%s	s-libpre.ads		s-libpre.ali
+W system.libm_single%s	s-libsin.adb		s-libsin.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-libpre.ads		20210927095552 f93cda94 system.libm_prefix%s
+D s-libsin.ads		20210927095552 7070a09c system.libm_single%s
+D s-lisisq.ads		20210927095552 7e2100ce system.libm_single.squareroot%s
+D s-lisisq.adb		20210927095552 7c592cb9 system.libm_single.squareroot%b
+G a e
+G c Z s b [sqrt system__libm_single__squareroot 40 13 none]
+X 1 system.ads
+50K9*System 164e11 4|34r6 35r9 38r24 48r5 5|35r14 53r5
+X 2 s-libpre.ads
+34K16*Libm_Prefix 38e23 4|34w13 38r31
+37a4*Prefix{string} 4|41r57
+X 3 s-libsin.ads
+40K16*Libm_Single 1|50k9 3|535e23 4|35r16 48r12 5|35r21 53r12
+X 4 s-lisisq.ads
+35K28*Squareroot 3|40k16 4|48l24 48e34 5|35b33 53l24 53t34
+38K12*SLP=38:31 41r53
+40V13*Sqrt{float} 40>19 5|48b13 51l8 51t12
+40f19 X{float} 5|48b19 50r24
+X 5 s-lisisq.adb
+41V13 Fpu_Sqrt{float} 41>23 50s14
+41f23 X{float}
+

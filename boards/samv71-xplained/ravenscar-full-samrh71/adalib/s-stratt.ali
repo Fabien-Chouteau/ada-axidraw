@@ -1,0 +1,561 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_LONG_LONG_INTEGERS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_CONVERSION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+
+U system.stream_attributes%b  s-stratt.adb	c9a3fcbc NE OL PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.unchecked_conversion%s
+W system%s		system.ads		system.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W system.stream_attributes.xdr%s  s-statxd.adb	s-statxd.ali
+
+U system.stream_attributes%s  s-stratt.ads	414158da BN NE OL PR PK
+W ada%s			ada.ads			ada.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W system%s		system.ads		system.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-ioexce.ads		20210927095552 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210927095552 119b8fb3 ada.streams%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210927095552 7bdda3fa system.stream_attributes%s
+D s-stratt.adb		20210927095552 fc996108 system.stream_attributes%b
+D s-statxd.ads		20210927095552 b54789f6 system.stream_attributes.xdr%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [i_ad system__stream_attributes 107 13 none]
+G c Z s b [i_as system__stream_attributes 108 13 none]
+G c Z s b [i_b system__stream_attributes 109 13 none]
+G c Z s b [i_c system__stream_attributes 110 13 none]
+G c Z s b [i_f system__stream_attributes 111 13 none]
+G c Z s b [i_i system__stream_attributes 112 13 none]
+G c Z s b [i_i24 system__stream_attributes 113 13 none]
+G c Z s b [i_lf system__stream_attributes 114 13 none]
+G c Z s b [i_li system__stream_attributes 115 13 none]
+G c Z s b [i_llf system__stream_attributes 116 13 none]
+G c Z s b [i_lli system__stream_attributes 117 13 none]
+G c Z s b [i_llli system__stream_attributes 118 13 none]
+G c Z s b [i_lllu system__stream_attributes 120 13 none]
+G c Z s b [i_llu system__stream_attributes 122 13 none]
+G c Z s b [i_lu system__stream_attributes 124 13 none]
+G c Z s b [i_sf system__stream_attributes 125 13 none]
+G c Z s b [i_si system__stream_attributes 126 13 none]
+G c Z s b [i_ssi system__stream_attributes 127 13 none]
+G c Z s b [i_ssu system__stream_attributes 128 13 none]
+G c Z s b [i_su system__stream_attributes 130 13 none]
+G c Z s b [i_u system__stream_attributes 131 13 none]
+G c Z s b [i_u24 system__stream_attributes 132 13 none]
+G c Z s b [i_wc system__stream_attributes 133 13 none]
+G c Z s b [i_wwc system__stream_attributes 134 13 none]
+G c Z s b [w_ad system__stream_attributes 145 14 none]
+G c Z s b [w_as system__stream_attributes 146 14 none]
+G c Z s b [w_b system__stream_attributes 147 14 none]
+G c Z s b [w_c system__stream_attributes 148 14 none]
+G c Z s b [w_f system__stream_attributes 149 14 none]
+G c Z s b [w_i system__stream_attributes 150 14 none]
+G c Z s b [w_i24 system__stream_attributes 151 14 none]
+G c Z s b [w_lf system__stream_attributes 152 14 none]
+G c Z s b [w_li system__stream_attributes 153 14 none]
+G c Z s b [w_llf system__stream_attributes 154 14 none]
+G c Z s b [w_lli system__stream_attributes 155 14 none]
+G c Z s b [w_llli system__stream_attributes 156 14 none]
+G c Z s b [w_lllu system__stream_attributes 158 14 none]
+G c Z s b [w_llu system__stream_attributes 160 14 none]
+G c Z s b [w_lu system__stream_attributes 162 14 none]
+G c Z s b [w_sf system__stream_attributes 163 14 none]
+G c Z s b [w_si system__stream_attributes 164 14 none]
+G c Z s b [w_ssi system__stream_attributes 165 14 none]
+G c Z s b [w_ssu system__stream_attributes 166 14 none]
+G c Z s b [w_su system__stream_attributes 168 14 none]
+G c Z s b [w_u system__stream_attributes 169 14 none]
+G c Z s b [w_u24 system__stream_attributes 170 14 none]
+G c Z s b [w_wc system__stream_attributes 171 14 none]
+G c Z s b [w_wwc system__stream_attributes 172 14 none]
+G c Z s b [block_io_ok system__stream_attributes 174 13 none]
+G c Z s s [thin_pointerIP system__stream_attributes 71 9 none]
+G c Z s s [fat_pointerIP system__stream_attributes 75 9 none]
+G c Z b b [xdr_support system__stream_attributes 45 13 none]
+G c Z b b [from_ad system__stream_attributes 96 13 none]
+G c Z b b [from_as system__stream_attributes 97 13 none]
+G c Z b b [from_f system__stream_attributes 98 13 none]
+G c Z b b [from_i system__stream_attributes 99 13 none]
+G c Z b b [from_i24 system__stream_attributes 100 13 none]
+G c Z b b [from_lf system__stream_attributes 101 13 none]
+G c Z b b [from_li system__stream_attributes 102 13 none]
+G c Z b b [from_llf system__stream_attributes 103 13 none]
+G c Z b b [from_lli system__stream_attributes 104 13 none]
+G c Z b b [from_llli system__stream_attributes 105 13 none]
+G c Z b b [from_lllu system__stream_attributes 106 13 none]
+G c Z b b [from_llu system__stream_attributes 107 13 none]
+G c Z b b [from_lu system__stream_attributes 108 13 none]
+G c Z b b [from_sf system__stream_attributes 109 13 none]
+G c Z b b [from_si system__stream_attributes 110 13 none]
+G c Z b b [from_ssi system__stream_attributes 111 13 none]
+G c Z b b [from_ssu system__stream_attributes 112 13 none]
+G c Z b b [from_su system__stream_attributes 113 13 none]
+G c Z b b [from_u system__stream_attributes 114 13 none]
+G c Z b b [from_u24 system__stream_attributes 115 13 none]
+G c Z b b [from_wc system__stream_attributes 116 13 none]
+G c Z b b [from_wwc system__stream_attributes 117 13 none]
+G c Z b b [to_ad system__stream_attributes 121 13 none]
+G c Z b b [to_as system__stream_attributes 122 13 none]
+G c Z b b [to_f system__stream_attributes 123 13 none]
+G c Z b b [to_i system__stream_attributes 124 13 none]
+G c Z b b [to_i24 system__stream_attributes 125 13 none]
+G c Z b b [to_lf system__stream_attributes 126 13 none]
+G c Z b b [to_li system__stream_attributes 127 13 none]
+G c Z b b [to_llf system__stream_attributes 128 13 none]
+G c Z b b [to_lli system__stream_attributes 129 13 none]
+G c Z b b [to_llli system__stream_attributes 130 13 none]
+G c Z b b [to_lllu system__stream_attributes 131 13 none]
+G c Z b b [to_llu system__stream_attributes 132 13 none]
+G c Z b b [to_lu system__stream_attributes 133 13 none]
+G c Z b b [to_sf system__stream_attributes 134 13 none]
+G c Z b b [to_si system__stream_attributes 135 13 none]
+G c Z b b [to_ssi system__stream_attributes 136 13 none]
+G c Z b b [to_ssu system__stream_attributes 137 13 none]
+G c Z b b [to_su system__stream_attributes 138 13 none]
+G c Z b b [to_u system__stream_attributes 139 13 none]
+G c Z b b [to_u24 system__stream_attributes 140 13 none]
+G c Z b b [to_wc system__stream_attributes 141 13 none]
+G c Z b b [to_wwc system__stream_attributes 142 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 17|42r6 52r19 54r19 18|32r6 33r6 33r23 34r6 50r28 57r19 58r19
+. 60r32 175r7 197r7 219r7 241r7 263r7 285r7 307r7 329r7 351r7 373r7 395r7
+. 415r16 418r7 439r16 442r7 466r7 488r7 510r7 532r7 554r7 578r7 600r7 622r7
+. 644r7 666r7 688r7 709r7 724r7 740r7 756r7 770r7 784r7 798r7 812r7 826r7
+. 840r7 854r7 865r16 868r7 880r16 883r7 899r7 913r7 927r7 941r7 957r7 973r7
+. 987r7 1001r7 1015r7 1029r7 1045r7
+X 3 a-ioexce.ads
+18K13*IO_Exceptions 30e22 18|32w10 50r32 415r20 439r20 865r20 880r20
+25X4*Device_Error 18|415r34 439r34 865r34 880r34
+26X4*End_Error 18|50r46
+X 4 a-stream.ads
+36K13*Streams 87e16 17|42w10 52r23 54r23 18|33w10 33r27 57r23 58r23 175r11
+. 197r11 219r11 241r11 263r11 285r11 307r11 329r11 351r11 373r11 395r11 418r11
+. 442r11 466r11 488r11 510r11 532r11 554r11 578r11 600r11 622r11 644r11 666r11
+. 688r11 709r11 724r11 740r11 756r11 770r11 784r11 798r11 812r11 826r11 840r11
+. 854r11 868r11 883r11 899r11 913r11 927r11 941r11 957r11 973r11 987r11 1001r11
+. 1015r11 1029r11 1045r11
+39H9*Root_Stream_Type 70e64 17|52r31
+42M9*Stream_Element
+44I9*Stream_Element_Offset<long_long_integer> 18|58r31
+51I12*Stream_Element_Count{44I9} 17|54r31
+54A9*Stream_Element_Array(42M9)<44I9> 18|57r31
+57x14*Read 18|175R19 197R19 219R19 241R19 263R19 285R19 307R19 329R19 351R19
+. 373R19 395R19 418R19 442R19 466R19 488R19 510R19 532R19 554R19 578R19 600R19
+. 622R19 644R19 666R19 688R19
+63x14*Write 18|709R19 724R19 740R19 756R19 770R19 784R19 798R19 812R19 826R19
+. 840R19 854R19 868R19 883R19 899R19 913R19 927R19 941R19 957R19 973R19 987R19
+. 1001R19 1015R19 1029R19 1045R19
+X 9 a-unccon.ads
+20v14*Unchecked_Conversion 18|34w10 60r36
+X 11 system.ads
+50K9*System 164e11 17|40w6 41r6 44r9 50r24 72r12 76r12 77r12 227r5 18|35r6
+. 37r14 55r21 65r36 66r36 1048r5
+80M9*Address 17|72r19 76r19 77r19 18|65r43 66r43
+84N4*Storage_Unit 18|55r28
+X 17 s-stratt.ads
+44K16*Stream_Attributes 11|50k9 17|47r42 71E9 227l12 227e29 18|35r13 37b21
+. 1048l12 1048t29
+50K12*UST=50:31 121r52 123r53 124r58 129r53 130r58 131r58 159r51 161r54 162r59
+. 167r54 168r59 169r59 18|81r30 82r33 83r33 87r33 88r33 89r33 106r34 107r34
+. 108r34 112r34 113r34 114r34 131r40 132r40 133r40 137r40 138r40 139r40 432r44
+. 456r44 479r56 568r44 591r56 613r55 876r44 891r44 906r57 965r44 980r57 994r56
+52C12*RST<4|39R9> 107r46 108r46 109r46 110r46 111r46 112r46 113r46 114r46
+. 115r46 116r46 117r46 118r46 120r46 122r46 124r46 125r46 126r46 127r46 128r46
+. 130r46 131r46 132r46 133r46 134r46 145r47 146r47 147r47 148r47 149r47 150r47
+. 151r47 152r47 153r47 154r47 155r47 156r47 158r47 160r47 162r47 163r47 164r47
+. 165r47 166r47 168r47 169r47 170r47 171r47 172r47 18|166r44 188r44 210r43
+. 232r43 254r43 276r43 298r45 320r44 342r44 364r45 386r45 408r46 432r32 456r32
+. 479r44 501r44 523r44 545r45 568r32 591r44 613r43 635r45 657r44 679r45 701r45
+. 716r45 731r44 747r44 763r44 777r44 791r46 805r45 819r45 833r46 847r46 862r32
+. 876r32 891r32 906r45 920r45 934r45 949r32 965r32 980r45 994r44 1008r46
+. 1022r45 1037r32
+54I12*SEC{4|51I12}
+56I9*Integer_24<integer> 57r8 113r58 151r59 18|74r33 100r34 125r40 298r57
+. 791r58
+59M9*Unsigned_24 60r8 132r58 170r59 18|90r33 115r34 140r40 635r57 1008r58
+71R9*Thin_Pointer 73e14 108r58 146r59 18|97r34 122r40 188r56 716r57
+72m7*P1{11|80M9}
+75R9*Fat_Pointer 78e14 107r58 145r59 18|96r34 121r40 166r56 701r57
+76m7*P1{11|80M9}
+77m7*P2{11|80M9}
+107V13*I_AD{75R9} 107^21 179r19 18|166b13 182l8 182t12
+107p21 Stream(52C12) 18|166b19 172r27 175r25
+108V13*I_AS{71R9} 108^21 180r19 18|188b13 204l8 204t12
+108p21 Stream(52C12) 18|188b19 194r27 197r25
+109V13*I_B{boolean} 109^21 181r19 18|210b13 226l8 226t11
+109p21 Stream(52C12) 18|210b18 216r26 219r25
+110V13*I_C{character} 110^21 182r19 18|232b13 248l8 248t11
+110p21 Stream(52C12) 18|232b18 238r26 241r25
+111V13*I_F{float} 111^21 183r19 18|254b13 270l8 270t11
+111p21 Stream(52C12) 18|254b18 260r26 263r25
+112V13*I_I{integer} 112^21 184r19 18|276b13 292l8 292t11
+112p21 Stream(52C12) 18|276b18 282r26 285r25
+113V13*I_I24{56I9} 113^21 18|298b13 314l8 314t13
+113p21 Stream(52C12) 18|298b20 304r28 307r25
+114V13*I_LF{long_float} 114^21 185r19 18|320b13 336l8 336t12
+114p21 Stream(52C12) 18|320b19 326r27 329r25
+115V13*I_LI{long_integer} 115^21 186r19 18|342b13 358l8 358t12
+115p21 Stream(52C12) 18|342b19 348r27 351r25
+116V13*I_LLF{long_long_float} 116^21 187r19 18|364b13 380l8 380t13
+116p21 Stream(52C12) 18|364b20 370r28 373r25
+117V13*I_LLI{long_long_integer} 117^21 188r19 18|386b13 402l8 402t13
+117p21 Stream(52C12) 18|386b20 392r28 395r25
+118V13*I_LLLI{long_long_long_integer} 118^21 189r19 18|408b13 425l8 425t14
+118p21 Stream(52C12) 18|408b21 418r25
+120V13*I_LLLU{21|49M9} 120^21 190r19 18|431b13 449l8 449t14
+120p21 Stream(52C12) 18|432b7 442r25
+122V13*I_LLU{21|48M9} 122^21 191r19 18|455b13 473l8 473t13
+122p21 Stream(52C12) 18|456b7 463r28 466r25
+124V13*I_LU{21|47M9} 124^21 192r19 18|479b13 495l8 495t12
+124p21 Stream(52C12) 18|479b19 485r27 488r25
+125V13*I_SF{short_float} 125^21 193r19 18|501b13 517l8 517t12
+125p21 Stream(52C12) 18|501b19 507r27 510r25
+126V13*I_SI{short_integer} 126^21 194r19 18|523b13 539l8 539t12
+126p21 Stream(52C12) 18|523b19 529r27 532r25
+127V13*I_SSI{short_short_integer} 127^21 195r19 18|545b13 561l8 561t13
+127p21 Stream(52C12) 18|545b20 551r28 554r25
+128V13*I_SSU{21|44M9} 128^21 196r19 18|567b13 585l8 585t13
+128p21 Stream(52C12) 18|568b7 575r28 578r25
+130V13*I_SU{21|45M9} 130^21 197r19 18|591b13 607l8 607t12
+130p21 Stream(52C12) 18|591b19 597r27 600r25
+131V13*I_U{21|46M9} 131^21 198r19 18|613b13 629l8 629t11
+131p21 Stream(52C12) 18|613b18 619r26 622r25
+132V13*I_U24{59M9} 132^21 18|635b13 651l8 651t13
+132p21 Stream(52C12) 18|635b20 641r28 644r25
+133V13*I_WC{wide_character} 133^21 199r19 18|657b13 673l8 673t12
+133p21 Stream(52C12) 18|657b19 663r27 666r25
+134V13*I_WWC{wide_wide_character} 134^21 200r19 18|679b13 695l8 695t13
+134p21 Stream(52C12) 18|679b20 685r28 688r25
+145U14*W_AD 145^22 145>52 202r19 18|701b14 710l8 710t12
+145p22 Stream(52C12) 18|701b20 705r20 709r26
+145r52 Item{75R9} 18|701b50 702r37 705r28
+146U14*W_AS 146^22 146>52 203r19 18|716b14 725l8 725t12
+146p22 Stream(52C12) 18|716b20 720r20 724r26
+146r52 Item{71R9} 18|716b50 717r37 720r28
+147U14*W_B 147^22 147>52 204r19 18|731b14 741l8 741t11
+147p22 Stream(52C12) 18|731b19 735r19 740r26
+147b52 Item{boolean} 18|731b49 735r27 739r29
+148U14*W_C 148^22 148>52 205r19 18|747b14 757l8 757t11
+148p22 Stream(52C12) 18|747b19 751r19 756r26
+148e52 Item{character} 18|747b49 751r27 755r31
+149U14*W_F 149^22 149>52 206r19 18|763b14 771l8 771t11
+149p22 Stream(52C12) 18|763b19 766r19 770r26
+149f52 Item{float} 18|763b49 766r27 770r46
+150U14*W_I 150^22 150>52 207r19 18|777b14 785l8 785t11
+150p22 Stream(52C12) 18|777b19 780r19 784r26
+150i52 Item{integer} 18|777b49 780r27 784r46
+151U14*W_I24 151^22 151>52 18|791b14 799l8 799t13
+151p22 Stream(52C12) 18|791b21 794r21 798r26
+151i52 Item{56I9} 18|791b51 794r29 798r48
+152U14*W_LF 152^22 152>52 208r19 18|805b14 813l8 813t12
+152p22 Stream(52C12) 18|805b20 808r20 812r26
+152f52 Item{long_float} 18|805b50 808r28 812r47
+153U14*W_LI 153^22 153>52 209r19 18|819b14 827l8 827t12
+153p22 Stream(52C12) 18|819b20 822r20 826r26
+153i52 Item{long_integer} 18|819b50 822r28 826r47
+154U14*W_LLF 154^22 154>52 210r19 18|833b14 841l8 841t13
+154p22 Stream(52C12) 18|833b21 836r21 840r26
+154f52 Item{long_long_float} 18|833b51 836r29 840r48
+155U14*W_LLI 155^22 155>52 211r19 18|847b14 855l8 855t13
+155p22 Stream(52C12) 18|847b21 850r21 854r26
+155i52 Item{long_long_integer} 18|847b51 850r29 854r48
+156U14*W_LLLI 156^22 156>52 212r19 18|861b14 869l8 869t14
+156p22 Stream(52C12) 18|862b7 868r26
+156i52 Item{long_long_long_integer} 18|862b37 868r49
+158U14*W_LLLU 158^22 158>52 213r19 18|875b14 884l8 884t14
+158p22 Stream(52C12) 18|876b7 883r26
+158m52 Item{21|49M9} 18|876b37 883r49
+160U14*W_LLU 160^22 160>52 214r19 18|890b14 900l8 900t13
+160p22 Stream(52C12) 18|891b7 895r21 899r26
+160m52 Item{21|48M9} 18|891b37 895r29 899r48
+162U14*W_LU 162^22 162>52 215r19 18|906b14 914l8 914t12
+162p22 Stream(52C12) 18|906b20 909r20 913r26
+162m52 Item{21|47M9} 18|906b50 909r28 913r47
+163U14*W_SF 163^22 163>52 216r19 18|920b14 928l8 928t12
+163p22 Stream(52C12) 18|920b20 923r20 927r26
+163f52 Item{short_float} 18|920b50 923r28 927r47
+164U14*W_SI 164^22 164>52 217r19 18|934b14 942l8 942t12
+164p22 Stream(52C12) 18|934b20 937r20 941r26
+164i52 Item{short_integer} 18|934b50 937r28 941r47
+165U14*W_SSI 165^22 165>52 218r19 18|948b14 958l8 958t13
+165p22 Stream(52C12) 18|949b7 953r21 957r26
+165i52 Item{short_short_integer} 18|949b37 953r29 957r48
+166U14*W_SSU 166^22 166>52 219r19 18|964b14 974l8 974t13
+166p22 Stream(52C12) 18|965b7 969r21 973r26
+166m52 Item{21|44M9} 18|965b37 969r29 973r48
+168U14*W_SU 168^22 168>52 220r19 18|980b14 988l8 988t12
+168p22 Stream(52C12) 18|980b20 983r20 987r26
+168m52 Item{21|45M9} 18|980b50 983r28 987r47
+169U14*W_U 169^22 169>52 221r19 18|994b14 1002l8 1002t11
+169p22 Stream(52C12) 18|994b19 997r19 1001r26
+169m52 Item{21|46M9} 18|994b49 997r27 1001r46
+170U14*W_U24 170^22 170>52 18|1008b14 1016l8 1016t13
+170p22 Stream(52C12) 18|1008b21 1011r21 1015r26
+170m52 Item{59M9} 18|1008b51 1011r29 1015r48
+171U14*W_WC 171^22 171>52 222r19 18|1022b14 1030l8 1030t12
+171p22 Stream(52C12) 18|1022b20 1025r20 1029r26
+171e52 Item{wide_character} 18|1022b50 1025r28 1029r47
+172U14*W_WWC 172^22 172>52 223r19 18|1036b14 1046l8 1046t13
+172p22 Stream(52C12) 18|1037b7 1041r21 1045r26
+172e52 Item{wide_wide_character} 18|1037b37 1041r29 1045r48
+174V13*Block_IO_OK{boolean} 225r19 18|157b13 160l8 160t19
+X 18 s-stratt.adb
+39i4 XDR_Flag{integer} 40m22 40r22 150r14
+45V13 XDR_Support{boolean} 46r19 148b13 151l8 151t19 159s18 171s10 193s10
+. 215s10 237s10 259s10 281s10 303s10 325s10 347s10 369s10 391s10 414s10 438s10
+. 462s10 484s10 506s10 528s10 550s10 574s10 596s10 618s10 640s10 662s10 684s10
+. 704s10 719s10 734s10 750s10 765s10 779s10 793s10 807s10 821s10 835s10 849s10
+. 864s10 879s10 894s10 908s10 922s10 936s10 952s10 968s10 982s10 996s10 1010s10
+. 1024s10 1040s10
+50X4 Err 178r16 200r16 222r16 244r16 266r16 288r16 310r16 332r16 354r16 376r16
+. 398r16 421r16 445r16 469r16 491r16 513r16 535r16 557r16 581r16 603r16 625r16
+. 647r16 669r16 691r16
+55N4 SU 68r65 68r75 69r65 69r75 70r65 70r75 71r65 71r75 72r65 72r75 73r65
+. 73r75 74r65 74r75 75r65 75r75 76r65 76r75 77r65 77r75 78r65 78r75 79r65
+. 79r75 81r65 81r75 82r65 82r75 83r65 83r75 84r65 84r75 85r65 85r75 86r65
+. 86r75 87r65 87r75 88r65 88r75 89r65 89r75 90r65 90r75 91r65 91r75 92r65
+. 92r75
+57A12 SEA{4|54A9}<4|44I9> 68r22 69r22 70r22 71r22 72r22 73r22 74r22 75r22
+. 76r22 77r22 78r22 79r22 81r19 82r22 83r22 84r22 85r22 86r22 87r22 88r22
+. 89r22 90r22 91r22 92r22
+58I12 SEO{4|44I9} 168r11 190r11 212r11 234r11 256r11 278r11 300r11 322r11
+. 344r11 366r11 388r11 411r11 435r11 459r11 481r11 503r11 525r11 547r11 571r11
+. 593r11 615r11 637r11 659r11 681r11
+60v21 UC 96r30 97r30 98r30 99r30 100r30 101r30 102r30 103r30 104r30 105r30
+. 106r30 107r30 108r30 109r30 110r30 111r30 112r30 113r30 114r30 115r30 116r30
+. 117r30 121r28 122r28 123r28 124r28 125r28 126r28 127r28 128r28 129r28 130r28
+. 131r28 132r28 133r28 134r28 135r28 136r28 137r28 138r28 139r28 140r28 141r28
+. 142r28
+65N4 Thin_Pointer_Size 69r33
+66N4 Fat_Pointer_Size 68r33
+68A12 S_AD{57A12}<4|44I9> 96r63 121r32 167r11 702r20
+69A12 S_AS{57A12}<4|44I9> 97r63 122r32 189r11 717r20
+70A12 S_B{57A12}<4|44I9> 211r11 732r11
+71A12 S_C{57A12}<4|44I9> 233r11 748r11
+72A12 S_F{57A12}<4|44I9> 98r63 123r32 255r11
+73A12 S_I{57A12}<4|44I9> 99r63 124r32 277r11
+74A12 S_I24{57A12}<4|44I9> 100r63 125r32 299r11
+75A12 S_LF{57A12}<4|44I9> 101r63 126r32 321r11
+76A12 S_LI{57A12}<4|44I9> 102r63 127r32 343r11
+77A12 S_LLF{57A12}<4|44I9> 103r63 128r32 365r11
+78A12 S_LLI{57A12}<4|44I9> 104r63 129r32 387r11
+79A12 S_LLLI{57A12}<4|44I9> 105r63 130r32 410r11
+80A12 S_LLLU{57A12}<4|44I9> 106r63 131r32 434r11
+82A12 S_LLU{57A12}<4|44I9> 107r63 132r32 458r11
+83A12 S_LU{57A12}<4|44I9> 108r63 133r32 480r11
+84A12 S_SF{57A12}<4|44I9> 109r63 134r32 502r11
+85A12 S_SI{57A12}<4|44I9> 110r63 135r32 524r11
+86A12 S_SSI{57A12}<4|44I9> 111r63 136r32 546r11
+87A12 S_SSU{57A12}<4|44I9> 112r63 137r32 570r11
+88A12 S_SU{57A12}<4|44I9> 113r63 138r32 592r11
+89A12 S_U{57A12}<4|44I9> 114r63 139r32 614r11
+90A12 S_U24{57A12}<4|44I9> 115r63 140r32 636r11
+91A12 S_WC{57A12}<4|44I9> 116r63 141r32 658r11
+92A12 S_WWC{57A12}<4|44I9> 117r63 142r32 680r11
+96V13 From_AD[9|20]{4|54A9} 702s28
+97V13 From_AS[9|20]{4|54A9} 717s28
+98V13 From_F[9|20]{4|54A9} 770s38
+99V13 From_I[9|20]{4|54A9} 784s38
+100V13 From_I24[9|20]{4|54A9} 798s38
+101V13 From_LF[9|20]{4|54A9} 812s38
+102V13 From_LI[9|20]{4|54A9} 826s38
+103V13 From_LLF[9|20]{4|54A9} 840s38
+104V13 From_LLI[9|20]{4|54A9} 854s38
+105V13 From_LLLI[9|20]{4|54A9} 868s38
+106V13 From_LLLU[9|20]{4|54A9} 883s38
+107V13 From_LLU[9|20]{4|54A9} 899s38
+108V13 From_LU[9|20]{4|54A9} 913s38
+109V13 From_SF[9|20]{4|54A9} 927s38
+110V13 From_SI[9|20]{4|54A9} 941s38
+111V13 From_SSI[9|20]{4|54A9} 957s38
+112V13 From_SSU[9|20]{4|54A9} 973s38
+113V13 From_SU[9|20]{4|54A9} 987s38
+114V13 From_U[9|20]{4|54A9} 1001s38
+115V13 From_U24[9|20]{4|54A9} 1015s38
+116V13 From_WC[9|20]{4|54A9} 1029s38
+117V13 From_WWC[9|20]{4|54A9} 1045s38
+121V13 To_AD[9|20]{17|75R9} 180s17
+122V13 To_AS[9|20]{17|71R9} 202s17
+123V13 To_F[9|20]{float} 268s17
+124V13 To_I[9|20]{integer} 290s17
+125V13 To_I24[9|20]{17|56I9} 312s17
+126V13 To_LF[9|20]{long_float} 334s17
+127V13 To_LI[9|20]{long_integer} 356s17
+128V13 To_LLF[9|20]{long_long_float} 378s17
+129V13 To_LLI[9|20]{long_long_integer} 400s17
+130V13 To_LLLI[9|20]{long_long_long_integer} 423s17
+131V13 To_LLLU[9|20]{21|49M9} 447s17
+132V13 To_LLU[9|20]{21|48M9} 471s17
+133V13 To_LU[9|20]{21|47M9} 493s17
+134V13 To_SF[9|20]{short_float} 515s17
+135V13 To_SI[9|20]{short_integer} 537s17
+136V13 To_SSI[9|20]{short_short_integer} 559s17
+137V13 To_SSU[9|20]{21|44M9} 583s17
+138V13 To_SU[9|20]{21|45M9} 605s17
+139V13 To_U[9|20]{21|46M9} 627s17
+140V13 To_U24[9|20]{17|59M9} 649s17
+141V13 To_WC[9|20]{wide_character} 671s17
+142V13 To_WWC[9|20]{wide_wide_character} 693s17
+167a7 T{68A12} 175m37 177r14 180r24
+168i7 L{58I12} 175m40 177r10
+189a7 T{69A12} 197m37 199r14 202r24
+190i7 L{58I12} 197m40 199r10
+211a7 T{70A12} 219m37 221r14 224r30
+212i7 L{58I12} 219m40 221r10
+233a7 T{71A12} 241m37 243r14 246r32
+234i7 L{58I12} 241m40 243r10
+255a7 T{72A12} 263m37 265r14 268r23
+256i7 L{58I12} 263m40 265r10
+277a7 T{73A12} 285m37 287r14 290r23
+278i7 L{58I12} 285m40 287r10
+299a7 T{74A12} 307m37 309r14 312r25
+300i7 L{58I12} 307m40 309r10
+321a7 T{75A12} 329m37 331r14 334r24
+322i7 L{58I12} 329m40 331r10
+343a7 T{76A12} 351m37 353r14 356r24
+344i7 L{58I12} 351m40 353r10
+365a7 T{77A12} 373m37 375r14 378r25
+366i7 L{58I12} 373m40 375r10
+387a7 T{78A12} 395m37 397r14 400r25
+388i7 L{58I12} 395m40 397r10
+410a7 T{79A12} 418m37 420r14 423r26
+411i7 L{58I12} 418m40 420r10
+434a7 T{80A12} 442m37 444r14 447r26
+435i7 L{58I12} 442m40 444r10
+458a7 T{82A12} 466m37 468r14 471r25
+459i7 L{58I12} 466m40 468r10
+480a7 T{83A12} 488m37 490r14 493r24
+481i7 L{58I12} 488m40 490r10
+502a7 T{84A12} 510m37 512r14 515r24
+503i7 L{58I12} 510m40 512r10
+524a7 T{85A12} 532m37 534r14 537r24
+525i7 L{58I12} 532m40 534r10
+546a7 T{86A12} 554m37 556r14 559r25
+547i7 L{58I12} 554m40 556r10
+570a7 T{87A12} 578m37 580r14 583r25
+571i7 L{58I12} 578m40 580r10
+592a7 T{88A12} 600m37 602r14 605r24
+593i7 L{58I12} 600m40 602r10
+614a7 T{89A12} 622m37 624r14 627r23
+615i7 L{58I12} 622m40 624r10
+636a7 T{90A12} 644m37 646r14 649r25
+637i7 L{58I12} 644m40 646r10
+658a7 T{91A12} 666m37 668r14 671r24
+659i7 L{58I12} 666m40 668r10
+680a7 T{92A12} 688m37 690r14 693r25
+681i7 L{58I12} 688m40 690r10
+702a7 T{68A12} 709r38
+717a7 T{69A12} 724r38
+732a7 T{70A12} 739m7 740r38
+748a7 T{71A12} 755m7 756r38
+X 19 s-statxd.ads
+44K34*XDR 18|35w31 172r17 194r17 216r17 238r17 260r17 282r17 304r17 326r17
+. 348r17 370r17 392r17 463r17 485r17 507r17 529r17 551r17 575r17 597r17 619r17
+. 641r17 663r17 685r17 705r10 720r10 735r10 751r10 766r10 780r10 794r10 808r10
+. 822r10 836r10 850r10 895r10 909r10 923r10 937r10 953r10 969r10 983r10 997r10
+. 1011r10 1025r10 1041r10 19|117e33
+59V13*I_AD{17|75R9} 18|172s21
+60V13*I_AS{17|71R9} 18|194s21
+61V13*I_B{boolean} 18|216s21
+62V13*I_C{character} 18|238s21
+63V13*I_F{float} 18|260s21
+64V13*I_I{integer} 18|282s21
+65V13*I_I24{17|56I9} 18|304s21
+66V13*I_LF{long_float} 18|326s21
+67V13*I_LI{long_integer} 18|348s21
+68V13*I_LLF{long_long_float} 18|370s21
+69V13*I_LLI{long_long_integer} 18|392s21
+70V13*I_LLU{21|48M9} 18|463s21
+71V13*I_LU{21|47M9} 18|485s21
+72V13*I_SF{short_float} 18|507s21
+73V13*I_SI{short_integer} 18|529s21
+74V13*I_SSI{short_short_integer} 18|551s21
+75V13*I_SSU{21|44M9} 18|575s21
+77V13*I_SU{21|45M9} 18|597s21
+78V13*I_U{21|46M9} 18|619s21
+79V13*I_U24{17|59M9} 18|641s21
+80V13*I_WC{wide_character} 18|663s21
+81V13*I_WWC{wide_wide_character} 18|685s21
+92U14*W_AD 18|705s14
+93U14*W_AS 18|720s14
+94U14*W_B 18|735s14
+95U14*W_C 18|751s14
+96U14*W_F 18|766s14
+97U14*W_I 18|780s14
+98U14*W_I24 18|794s14
+99U14*W_LF 18|808s14
+100U14*W_LI 18|822s14
+101U14*W_LLF 18|836s14
+102U14*W_LLI 18|850s14
+103U14*W_LLU 18|895s14
+105U14*W_LU 18|909s14
+106U14*W_SF 18|923s14
+107U14*W_SI 18|937s14
+108U14*W_SSI 18|953s14
+109U14*W_SSU 18|969s14
+111U14*W_SU 18|983s14
+112U14*W_U 18|997s14
+113U14*W_U24 18|1011s14
+114U14*W_WC 18|1025s14
+115U14*W_WWC 18|1041s14
+X 21 s-unstyp.ads
+40K16*Unsigned_Types 17|41w13 50r31 21|251e26
+44M9*Short_Short_Unsigned 17|129r57 167r58 18|87r37 112r38 137r44 568r48
+. 965r48
+45M9*Short_Unsigned 17|130r62 168r63 18|88r37 113r38 138r44 591r60 980r61
+46M9*Unsigned 17|131r62 169r63 18|89r37 114r38 139r44 613r59 994r60
+47M9*Long_Unsigned 17|124r62 162r63 18|83r37 108r38 133r44 479r60 906r61
+48M9*Long_Long_Unsigned 17|123r57 161r58 18|82r37 107r38 132r44 456r48 891r48
+49M9*Long_Long_Long_Unsigned 17|121r56 159r55 18|81r34 106r38 131r44 432r48
+. 876r48
+

@@ -1,0 +1,55 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.image_u%b	s-imageu.adb		7f5a291a NE OL PK GE
+W system%s		system.ads		system.ali
+
+U system.image_u%s	s-imageu.ads		0888df93 BN NE OL PU PK GE
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-imageu.ads		20210927095552 525c30c6 system.image_u%s
+D s-imageu.adb		20210927095552 2d0619dc system.image_u%b
+G a e
+G c Z s b [image_u system 40 16 none]
+X 1 system.ads
+50K9*System 164e11 2|40r9 62r5 3|32r14 86r5
+X 2 s-imageu.ads
+38M9 Uns 44r11 53r11 3|39r11 55r11 60r19
+40k16*Image_U 1|50k9 2|38z9 62l12 62e19 3|32b21 86l12 86t19
+43U14*Image_Unsigned 44>7 45=7 46<7 47r19 3|38b14 48l8 48t22
+44*7 V{38M9} 3|39b7 47r27
+45a7 S{string} 3|40b7 43r22 45m7 47m30
+46i7 P{natural} 3|41b7 46m7 47m33
+52U14*Set_Image_Unsigned 53>7 54=7 55=7 3|47s7 54b14 84l8 84t26
+53*7 V{38M9} 3|55b7 60r26 75r16
+54a7 S{string} 3|56b7 62r27 62r52 79m10
+55i7 P{natural} 3|57b7 62r22 62r48 63r22 79r13 83m7 83r12
+X 3 s-imageu.adb
+59i7 Nb_Digits{natural} 71m10 71r23 78r30 83r16
+60*7 Value{2|38M9} 70m10 70r19 72r20 75m7 79r44 80m10 80r19
+78i11 J{integer} 79r17
+

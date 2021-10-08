@@ -1,0 +1,255 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+
+U ada.calendar%b	a-calend.adb		518fcb73 OL PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+Z system.arith_64%s	s-arit64.adb		s-arit64.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.parameters%s  s-bbpara.ads		s-bbpara.ali
+W system.bb.time%s	s-bbtime.adb		s-bbtime.ali
+
+U ada.calendar%s	a-calend.ads		13b48162 BN EE NE OL PK
+W ada%s			ada.ads			ada.ali
+Z system%s		system.ads		system.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-calend.ads		20210927095552 65cc1cc3 ada.calendar%s
+D a-calend.adb		20210927095552 99ae454c ada.calendar%b
+D a-calclo.adb		20210927095552 6654b9f8 ada.calendar.clock
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-arit64.ads		20210927095552 5f88d2b0 system.arith_64%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbbosu.ads		20210927095552 0f820a2a system.bb.board_support%s
+D s-bbbosu.adb		20210927095552 21f80941 system.bb.board_support%b
+D s-bbsumu.adb		20210927095552 cbb92b04 system.bb.board_support.multiprocessors
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbinte.ads		20210927095552 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-bbprot.ads		20210927095552 f48a7e85 system.bb.protection%s
+D s-bbthre.ads		20210927095552 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20210927095552 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20210927095552 ad086247 system.bb.time%s
+D s-bbtime.adb		20210927095552 1eb33bd4 system.bb.time%b
+D s-bbtiev.ads		20210927095552 110cc417 system.bb.timing_events%s
+D s-maccod.ads		20210927095552 6d68a701 system.machine_code%s
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20210927095552 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20210927095552 69fa25c4 system.multiprocessors.spin_locks%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [clock ada__calendar 69 13 none]
+G c Z s b [year ada__calendar 75 13 none]
+G c Z s b [month ada__calendar 78 13 none]
+G c Z s b [day ada__calendar 81 13 none]
+G c Z s b [seconds ada__calendar 84 13 none]
+G c Z s b [split ada__calendar 87 14 none]
+G c Z s b [time_of ada__calendar 100 13 none]
+G c Z s b [Oadd ada__calendar 111 13 none]
+G c Z s b [Oadd ada__calendar 117 13 none]
+G c Z s b [Osubtract ada__calendar 123 13 none]
+G c Z s b [Osubtract ada__calendar 129 13 none]
+G c Z s b [Olt ada__calendar 135 13 none]
+G c Z s b [Ole ada__calendar 139 13 none]
+G c Z s b [Ogt ada__calendar 144 13 none]
+G c Z s b [Oge ada__calendar 148 13 none]
+G c Z b b [trunc ada__calendar 55 13 none]
+G c Z b b [trunc ada__calendar 58 13 none]
+G c Z b b [trunc ada__calendar 61 13 none]
+G c Z b b [valid_date ada__calendar 64 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 2|44r9 198r5 3|34r14 430r5 4|37r11
+X 2 a-calend.ads
+44K13*Calendar 1|16k9 2|184E9 198l9 198e17 3|34b18 430l9 430t17 4|37r15
+46@22*Clock_Time 47r21 71r16
+50O9*Time<184O9> 69r26 75r29 78r29 81r29 84r29 88r17 105r16 111r25 111r60
+. 117r43 117r60 123r25 123r60 129r25 129r43 135r33 139r33 144r33 148r33 190c9
+. 192r17 3|55r26 74r25 74r56 75r42 76r16 78r24 85r43 85r56 86r42 87r16 89r17
+. 100r25 100r56 101r42 102r16 104r25 111r25 111r39 112r42 113r16 128r32 137r33
+. 146r32 155r33 164r26 170r25 184r27 198r29 213r17 228r20 228r40 279r45 312r14
+. 313r11 327r26 331r15 417r26 4|43r23 52r22
+63I12*Year_Number{integer} 75r42 89r21 101r17 3|67r11 171r12 185r12 199r12
+. 214r21 276r17 365r11 417r39 418r12
+64I12*Month_Number{integer} 78r42 90r21 102r17 3|66r11 172r12 184r40 186r12
+. 200r12 215r21 277r17 364r11 419r12
+65I12*Day_Number{integer} 81r42 91r21 103r17 3|65r11 170r38 173r12 187r12
+. 201r12 216r21 278r17 363r11 420r12
+67O12*Day_Duration{duration} 84r42 92r21 104r17 3|174r12 188r12 198r42 202r12
+. 217r21 268r18 279r17 421r12
+69V13*Clock{50O9} 3|164b13 4|43b10 58l5 58t10
+75V13*Year{63I12} 75>22 158r19 3|417b13 425l8 425t12
+75o22 Date{50O9} 3|417b19 423r14
+78V13*Month{64I12} 78>22 159r19 3|184b13 192l8 192t13
+78o22 Date{50O9} 3|184b20 190r14
+81V13*Day{65I12} 81>22 160r19 3|170b13 178l8 178t11
+81o22 Date{50O9} 3|170b18 176r14
+84V13*Seconds{67O12} 84>22 3|198b13 206l8 206t15
+84o22 Date{50O9} 3|198b22 204r14
+87U14*Split 88>7 89<7 90<7 91<7 92<7 3|176s7 190s7 204s7 212b14 269l8 269t13
+. 423s7
+88o7 Date{50O9} 3|213b7 228r33 228r53 234r26
+89i7 Year{63I12} 3|214b7 263m7
+90i7 Month{64I12} 3|215b7 262m7 263r24
+91i7 Day{65I12} 3|216b7 264m7
+92o7 Seconds{67O12} 3|217b7 268m7
+100V13*Time_Of{50O9} 101>7 102>7 103>7 104>7 3|275b13 321l8 321t15 429s18
+101i7 Year{63I12} 3|276b7 286r32 300r38
+102i7 Month{64I12} 3|277b7 285r32 300r31
+103i7 Day{65I12} 3|278b7 293r19 300r26
+104o7 Seconds{67O12} 3|279b7 293r36
+111V14*"+"{50O9} 111>18 111>35 3|74b14 83l9 83t11
+111o18 Left{50O9} 3|74b18 78r17
+111o35 Right{duration} 3|74b31 78r30
+117V14*"+"{50O9} 117>18 117>35 3|85b14 94l9 94t11
+117o18 Left{duration} 3|85b18 89r23
+117o35 Right{50O9} 3|85b35 89r46
+123V14*"-"{50O9} 123>18 123>35 3|100b14 109l9 109t11
+123o18 Left{50O9} 3|100b18 104r18
+123o35 Right{duration} 3|100b31 104r31
+129V14*"-"{duration} 129>18 129>35 3|111b14 122l9 122t11
+129o18 Left{50O9} 3|111b18 116r16
+129o35 Right{50O9} 3|111b31 116r23
+135V14*"<"{boolean} 135>19 135>25 3|128b14 131l9 131t11
+135o19 Left{50O9} 3|128b18 130r35
+135o25 Right{50O9} 3|128b24 130r64
+139V14*"<="{boolean} 139>19 139>25 3|137b14 140l9 140t12
+139o19 Left{50O9} 3|137b19 139r35
+139o25 Right{50O9} 3|137b25 139r65
+144V14*">"{boolean} 144>19 144>25 3|146b14 149l9 149t11 331s31
+144o19 Left{50O9} 3|146b18 148r36
+144o25 Right{50O9} 3|146b24 148r65
+148V14*">="{boolean} 148>19 148>25 3|155b14 158l9 158t12
+148o19 Left{50O9} 3|155b19 157r35
+148o25 Right{50O9} 3|155b25 157r65
+153X4*Time_Error 3|82r16 93r16 108r16 121r16 301r16
+184O9 Constrained_Modified_Julian_Day 186r8 188r35
+188O12 Modified_Julian_Day 190r21 3|130r14 130r43 139r14 139r44 148r15 148r44
+. 157r14 157r44 289r30 290r30
+192o4 Radix_Time{50O9} 3|429m4 4|57r11
+X 3 a-calend.adb
+41N4 Secs_Per_Day 78r38 89r30 104r39 117r27 293r46 4|56r38
+50O9 Julian_Day 53r8 61r26 233r26 234r9 235r9 237r49 243r12 244r18 245r19
+. 246r19 253r19 254r22 254r44 255r24 256r19 257r21 257r48 314r10 318r21 318r38
+. 319r35 320r12 320r39 348r26 351r35
+55V13 Trunc{integer} 55>20 228s46 327b13 336l8 336t13
+55o20 Arg{2|50O9} 327b20 328r46 331r38
+58V13 Trunc{integer} 58>20 258s12 264s24 317s14 338b13 346l8 346t13
+58o20 Arg{duration} 338b20 339r46 341r63
+61V13 Trunc{integer} 61>20 237s32 242s9 253s12 256s12 318s14 348b13 356l8
+. 356t13
+61o20 Arg 348b20 349r46 351r70
+64V13 Valid_Date{boolean} 65>7 66>7 67>7 300s14 362b13 411l8 411t18
+65i7 D{2|65I12} 363b7 374r49 385r20 397r23 401r23
+66i7 M{2|64I12} 364b7 374r32 380r12
+67i7 Y{2|63I12} 365b7 374r15 396r16
+76o7 Result{2|50O9} 78m7 79r14
+87o7 Result{2|50O9} 89m7 90r14
+102o7 Result{2|50O9} 104m7 105r14
+113o7 Temp{2|50O9} 116m7 117r42
+114o7 Result{duration} 117m7 118r14
+171i7 DY{2|63I12} 176m20
+172i7 DM{2|64I12} 176m24
+173i7 DD{2|65I12} 176m28 177r14
+174o7 DS{2|67O12} 176m32
+185i7 DY{2|63I12} 190m20
+186i7 DM{2|64I12} 190m24 191r14
+187i7 DD{2|65I12} 190m28
+188o7 DS{2|67O12} 190m32
+199i7 DY{2|63I12} 204m20
+200i7 DM{2|64I12} 204m24
+201i7 DD{2|65I12} 204m28
+202o7 DS{2|67O12} 204m32 205r14
+228o7 F<2|184O9> 268r43
+233o7 JD_Date{50O9} 237r39
+237i7 Z{integer} 244r35 251r12
+239i7 A{integer} 251m7 252r12
+239i10 B{integer} 252m7 254r39 258r39 264r16
+239i13 C{integer} 253m7 257r65 263r16
+239i16 D{integer} 256m7 258r43 264r20
+239i19 E{integer} 258m7 262r16 262r24 264r61
+241i7 Alpha{integer} 251r20 251r28
+285i7 Month_Num{natural} 304r10 306m10 306r23 317r54
+286i7 Year_Num{integer} 305m10 305r22 309r12 319r52
+287i7 A{integer} 309m7 310r16 310r20
+287i10 B{integer} 310m7 316r12
+289O12 Day_Type 290r11 292r26 293r9 293r26
+292o7 Day_Val{289O12} 312r25
+295O15 Month_Fixed{duration} 317r41
+328i7 Rounded{integer} 329r37 329r52 331r21 332r17 334r17
+329i7 Sign{integer} 332r27
+339i7 Rounded{integer} 341r10 341r45 342r17 344r17 344r27 344r42
+349i7 Rounded{integer} 351r10 351r52 352r17 354r17 354r27 354r42
+418i7 DY{2|63I12} 423m20 424r14
+419i7 DM{2|64I12} 423m24
+420i7 DD{2|65I12} 423m28
+421o7 DS{2|67O12} 423m32
+X 4 a-calclo.adb
+45K12 SBBT=45:35 47r13 49r29 49r42 49r55
+49m4 Elapsed_Ticks{26|46M9} 55r33
+51o4 Elapsed_Seconds{duration} 55m4 56r20
+52o4 Elapsed_Days<2|184O9> 56m4 57r24
+X 11 interfac.ads
+55I9*Integer_64<long_long_integer>
+X 12 system.ads
+50K9*System 4|34r6 35r6 35r32 45r25 12|164e11
+X 13 s-arit64.ads
+44I12*Int64{11|55I9}
+54V13*Multiply_With_Ovflo_Check64{44I12} 55i<c,__gnat_mulv64>22
+X 14 s-bb.ads
+40K16*BB 4|34r13 35r13 35r39 45r32 14|95e14
+X 22 s-bbpara.ads
+46K19*Parameters 4|35w16 35r42 22|130e25
+52N4*Ticks_Per_Second 4|55r49
+X 26 s-bbtime.ads
+43K19*Time 4|34w16 45r35 26|184e19
+46M9*Time 4|47r18 49r34
+131V13*Epoch{46M9} 4|49s60
+134V13*Clock{46M9} 4|49s47
+

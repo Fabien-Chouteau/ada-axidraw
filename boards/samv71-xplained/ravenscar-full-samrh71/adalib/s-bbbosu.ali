@@ -1,0 +1,221 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+
+U system.bb.board_support%b  s-bbbosu.adb	a34e283b NE OL PK
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.cpu_primitives%s  s-bbcppr.adb	s-bbcppr.ali
+W system.bb.parameters%s  s-bbpara.ads		s-bbpara.ali
+W system.machine_code%s	s-maccod.ads		s-maccod.ali
+
+U system.bb.board_support%s  s-bbbosu.ads	90d92d2c BN NE OL PR PK
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.interrupts%s  s-bbinte.adb		s-bbinte.ali
+W system.bb.time%s	s-bbtime.adb		s-bbtime.ali
+W system.multiprocessors%s  s-multip.adb	s-multip.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbbosu.ads		20210927095552 0f820a2a system.bb.board_support%s
+D s-bbbosu.adb		20210927095552 21f80941 system.bb.board_support%b
+D s-bbsumu.adb		20210927095552 cbb92b04 system.bb.board_support.multiprocessors
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbcppr.adb		20210927095552 0d3346b0 system.bb.cpu_primitives%b
+D s-bcpcst.ads		20210927095552 1841a1ac system.bb.cpu_primitives.context_switch_trigger%s
+D s-bbcpsp.ads		20210927095552 ccfc81c7 system.bb.cpu_specific%s
+D s-bbinte.ads		20210927095552 c88d39da system.bb.interrupts%s
+D s-bbinte.adb		20210927095552 a342b37b system.bb.interrupts%b
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-bbthre.ads		20210927095552 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20210927095552 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20210927095552 ad086247 system.bb.time%s
+D s-imagei.ads		20210927095552 0d3f86a7 system.image_i%s
+D s-imgint.ads		20210927095552 bdb6f5ec system.img_int%s
+D s-maccod.ads		20210927095552 6d68a701 system.machine_code%s
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [initialize_board system__bb__board_support 54 14 none]
+G c Z s b [read_clock system__bb__board_support__time 70 16 none]
+G c Z s b [max_timer_interval system__bb__board_support__time 75 16 none]
+G c Z s b [set_alarm system__bb__board_support__time 82 17 none]
+G c Z s b [install_alarm_handler system__bb__board_support__time 86 17 none]
+G c Z s b [clear_alarm_interrupt system__bb__board_support__time 89 17 none]
+G c Z s b [priority_of_interrupt system__bb__board_support__interrupts 99 16 none]
+G c Z s b [install_interrupt_handler system__bb__board_support__interrupts 105 17 none]
+G c Z s b [set_current_priority system__bb__board_support__interrupts 122 17 none]
+G c Z s b [power_down system__bb__board_support__interrupts 133 17 none]
+G c Z s b [number_of_cpus system__bb__board_support__multiprocessors 144 16 none]
+G c Z s b [current_cpu system__bb__board_support__multiprocessors 148 16 none]
+G c Z s b [poke_cpu system__bb__board_support__multiprocessors 152 17 none]
+G c Z s b [start_all_cpus system__bb__board_support__multiprocessors 155 17 none]
+G c Z b b [sys_tick_registersIP system__bb__board_support 79 9 none]
+G c Z b b [to_pri system__bb__board_support 118 13 none]
+G c Z b b [to_priority system__bb__board_support 124 13 none]
+G c Z b b [TipBIP system__bb__board_support 131 4 none]
+G c Z b b [enable_interrupt_request system__bb__board_support 136 14 none]
+G c Z b b [interrupt_handler system__bb__board_support 141 14 none]
+G c Z b b [timer_interrupt_handler system__bb__board_support 142 14 none]
+X 4 system.ads
+50K9*System 164e11 7|43r6 44r6 45r6 47r9 100r22 101r16 106r22 144r38 148r35
+. 152r36 158r5 8|37r6 39r6 39r32 40r6 42r14 420r5 9|37r11 40r8 52r32 58r33
+80M9*Address 8|107r26
+116I12*Any_Priority{integer} 7|101r23 8|126r39 391r43
+117I12*Priority{116I12} 8|176r26
+118I12*Interrupt_Priority{116I12} 7|107r22 8|119r19 120r17 124r42 125r21
+. 126r13 138r19 290r42 337r19 344r32 376r22 393r50
+X 5 s-bb.ads
+40K16*BB 4|50k9 5|95e14 7|44r13 45r13 47r16 70r34 100r29 106r29 158r12 8|39r13
+. 39r39 40r13 42r21 43r24 190r34 250r17 287r20 289r10 420r12 9|37r18
+X 7 s-bbbosu.ads
+47K19*Board_Support 5|40k16 7|158l15 158e28 8|42b24 420l15 420t28 9|37r21
+54U14*Initialize_Board 8|149b14 177l8 177t24
+62K12*Time 92l8 92e12 8|43r53 50r17 77r27 168r7 169r7 179b17 292l8 292t12
+. 346r10
+63M12*Timer_Interval 64r11 75r42 82r36 8|50r22 77r32 97r21 168r23 184r42
+. 193r20 194r20 209r19 266r36 267r25 267r43 275r18 275r38
+70V16*Read_Clock{20|46M9} 8|190b16 251l11 251t21 267s59
+75V16*Max_Timer_Interval{63M12} 76r22 8|184b16
+82U17*Set_Alarm 82>28 8|168s12 266b17 280l11 280t20
+82m28 Ticks{63M12} 8|266b28 275r63 277r13
+86U17*Install_Alarm_Handler 86>40 8|286b17 291l11 291t32
+86p40 Handler{14|57P9} 8|287b10 290r13
+89U17*Clear_Alarm_Interrupt 90r22 8|169s12 257b17 260l11 260t32 346s15
+98K12*Interrupts 137l8 137e18 8|369b17 419l8 419t18
+99V16*Priority_Of_Interrupt{4|116I12} 100>10 102r22 8|390b16
+100i10 Interrupt{14|48I12} 8|393r14 394r32
+105U17*Install_Interrupt_Handler 106>10 107>10 8|374b17 384l11 384t36
+106i10 Interrupt{14|48I12} 8|375b10 379r13 380r17 383r36
+107i10 Prio{4|118I12} 8|376b10 380r39 383r47
+122U17*Set_Current_Priority 122>39 123r22 8|409b17 418l11 418t31
+122i39 Priority{integer} 8|409b39 416r53
+133U17*Power_Down 134r22 8|400b17 403l11 403t21
+139K12*Multiprocessors 157l8 157e23 8|294b17 9|39b14 66l5 66t20
+144V16*Number_Of_CPUs{24|23I12} 145r22 9|46b13
+148V16*Current_CPU{24|23I12} 149r22 9|52b13
+152U17*Poke_CPU 152>27
+152i27 CPU_Id{24|23I12}
+155U17*Start_All_CPUs
+X 8 s-bbbosu.adb
+45i4 Sys_Tick_Vector{10|104I9} 172r43
+46i4 Interrupt_Request_Vector{10|104I9} 174r37
+50m4 Alarm_Time{7|63M12} 51r21 52m22 52r22 274m10
+54i4 Alarm_Interrupt_ID{14|48I12} 290r22 302r26 340r22 379r26 393r26
+63m4 ICSR{10|43M9} 259m10 278m13
+66N4 ICSR_Pend_ST_Set 278r21
+67N4 ICSR_Pend_ST_Clr 259r18
+77m4 Tick_Period{7|63M12} 92r19 163r30 167r25 236r48
+79R9 Sys_Tick_Registers 84e14 94r11
+80m7*SYST_CSR{10|43M9} 162m12 165m12 221r24 347m15 347r32
+81m7*SYST_RVR{10|43M9} 163m12
+82m7*SYST_CVR{10|43M9} 164m12 209r40
+83m7*SYST_CALIB{10|43M9}
+86N4 CSR_Count_Flag 221r37
+87N4 CSR_Clk_Source 162r24 165r24
+88N4 CSR_Tick_Int 347r44
+89N4 CSR_Enable 165r42
+91N4 RVR_Last 92r34
+94r4 SYST{79R9} 162m7 163m7 164m7 165m7 209r35 221r19 347m10 347r27
+97m4 Next_Tick_Time{7|63M12} 167m7 235r20 236m13 236r31 241r20
+104N4 NVIC_Base 107r37
+107m4 NVIC_ISER0{4|80M9} 356r54
+110M9 PRI 118r41 120r12 124r30 131r43 416r25
+118V13 To_PRI{110M9} 118>21 380s31 416s45
+118i21 P{integer} 119r10 120r43
+124V13 To_Priority{4|118I12} 124>26 394s15
+124m26 P{110M9} 125r10 126r58
+131a4 IP(110M9) 380m13 394r28
+136U14 Enable_Interrupt_Request 137>7 138>7 335b14 367l8 367t32 383s10
+137i7 Interrupt{14|48I12} 336b7 340r10 351r28 352r42
+138i7 Prio{4|118I12} 337b7 344r25
+141U14 Interrupt_Handler 174r10 309b14 329l8 329t25
+142U14 Timer_Interrupt_Handler 172r10 300b14 303l8 303t31
+191m10 PRIMASK{10|43M9} 201m50 201r50 247r46
+192b10 Flag{boolean} 221m10 223r13
+193m10 Count{7|63M12} 209m10 241r37
+194m10 Res{7|63M12} 235m13 241m13 250r31
+267m10 Now{7|63M12} 275r12
+310i7 Id{14|48I12} 325m7 327r26
+311m7 Res{10|43M9} 317m35 317r35 320m7 320r14 325r32
+352i13 IRQ{natural} 353r42 354r44
+353i13 Regofs{natural} 364r24
+354m13 Regbit{10|43M9} 364r35
+355a13 NVIC_ISER(10|43M9) 364m13
+X 9 s-bbsumu.adb
+58U14 Poke_CPU
+58i24 CPU_Id{24|23I12}
+65U14 Start_All_CPUs
+X 10 s-bbcppr.ads
+40K19*CPU_Primitives 8|40w16 43r8 10|150e29
+43M9*Word 8|63r11 80r20 81r20 82r20 83r20 163r24 191r20 201r26 204r26 247r25
+. 311r13 317r12 354r31 355r44
+104I9*Vector_Id<short_short_integer> 8|45r40 46r40
+112U14*Install_Trap_Handler 8|171s7 173s7
+120U14*Disable_Interrupts 8|152s7
+128U14*Enable_Interrupts 8|176s7
+X 11 s-bbcppr.adb
+106U14 SV_Call_Handler 107i24
+109U14 Sys_Tick_Handler 110i24
+112U14 Interrupt_Request_Handler 113i24
+X 14 s-bbinte.ads
+45K19*Interrupts 7|44w16 86r50 100r32 106r32 8|43r27 287r23 289r13 14|92e25
+48I12*Interrupt_ID{17|75I12} 7|100r43 106r43 8|54r34 131r21 137r19 310r12
+. 325r13 336r19 375r22 391r22
+57P9*Interrupt_Handler 7|86r61 8|287r34
+64U14*Interrupt_Wrapper 8|302s7 327s7
+69U14*Attach_Handler 8|289s24
+X 17 s-bbpara.ads
+46K19*Parameters 8|39w16 39r42 17|130e25
+50N4*Clock_Frequency 8|77r50
+75I12*Interrupt_Range{integer}
+X 20 s-bbtime.ads
+43K19*Time 7|45w16 70r37 8|190r37 250r20 20|184e19
+46M9*Time 7|70r42 8|190r42 250r25
+X 23 s-maccod.ads
+36K16*Machine_Code 8|37w13 43r39 23|131e24
+44I9*Asm_Input_Operand<integer>
+45I9*Asm_Output_Operand<integer>
+83U14*Asm 8|200s10 203s10 246s10 316s7 402s10 415s10
+85i6 Outputs{45I9} 8|201r15
+86i6 Inputs{44I9} 8|204r15 247r15 416r15
+88b6 Volatile{boolean} 8|202r15 205r15 248r15 318r12 402r22 417r15
+X 24 s-multip.ads
+18K16*Multiprocessors 7|43w13 144r45 148r42 152r43 9|40r15 52r39 58r40 24|31e27
+21I9*CPU_Range<short_short_integer>
+23I12*CPU{21I9} 7|144r61 148r58 152r59 9|46r35 52r55 58r56
+

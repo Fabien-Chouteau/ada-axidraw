@@ -1,0 +1,103 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB SS ZX
+
+RN
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_OBSOLESCENT_FEATURES
+
+U system.traceback.symbolic%b  s-trasym.adb	a0281f47 NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.exceptions.traceback%s  a-exctra.adb	a-exctra.ali
+W system%s		system.ads		system.ali
+W system.address_image%s  s-addima.adb		s-addima.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.traceback%s	s-traceb.adb		s-traceb.ali
+
+U system.traceback.symbolic%s  s-trasym.ads	94518d7a EB NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W system.traceback%s	s-traceb.adb		s-traceb.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-exctra.ads		20210927095552 0966bad0 ada.exceptions.traceback%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-addima.ads		20210927095552 a1ec9d3a system.address_image%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-traceb.ads		20210927095552 bd2311fe system.traceback%s
+D s-trasym.ads		20210927095552 bd1dac90 system.traceback.symbolic%s
+D s-trasym.adb		20210927095552 b5bf943d system.traceback.symbolic%b
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [symbolic_traceback system__traceback__symbolic 80 13 none]
+G c Z s b [symbolic_traceback_no_hex system__traceback__symbolic 82 13 none]
+G c Z s b [symbolic_traceback system__traceback__symbolic 89 13 none]
+G c Z s b [symbolic_traceback_no_hex system__traceback__symbolic 91 13 none]
+G c Z s b [enable_cache system__traceback__symbolic 99 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|75r6 90r11 92r11 13|36r6 36r36 87r11 90r34 94r11
+X 2 a-except.ads
+44K13*Exceptions 289e19 12|75w10 90r15 92r15 13|36r10 36r40 87r15 90r38 94r15
+53R9*Exception_Occurrence 263e14 12|90r26 92r26 13|87r26 94r26
+X 3 a-exctra.ads
+40K24*Traceback 63e29 13|36w21 36r51 90r49
+50V13*Tracebacks{47A12} 13|90s59
+X 5 system.ads
+50K9*System 164e11 12|77r9 81r19 83r19 108r5 13|37r6 39r14 48r19 56r29 63r23
+. 81r19 108r5
+80M9*Address
+94V14*"="{boolean} 13|51r27
+X 6 s-addima.ads
+39V17*Address_Image{string} 13|37w13 56s36 63s30
+X 11 s-traceb.ads
+40K16*Traceback 5|50k9 11|77e21 12|77r16 108r12 13|39r21 108r12
+X 12 s-trasym.ads
+77K26*Symbolic 11|40k16 12|108l22 108e30 13|39b31 108l22 108t30
+80V13*Symbolic_Traceback{string} 81>7 13|47b13 75l8 75t26 83s14 90s14
+81a7 Traceback{14|52A9} 13|48b7 51r10 56r51 56r62 58r54 62r22 63r45
+82V13*Symbolic_Traceback_No_Hex{string} 83>7 13|80b13 84l8 84t33
+83a7 Traceback{14|52A9} 13|81b7 83r34
+89V13*Symbolic_Traceback{string} 90>7 13|86b13 91l8 91t26 96s14
+90r7 E{2|53R9} 13|87b7 90r71
+91V13*Symbolic_Traceback_No_Hex{string} 92>7 13|93b13 97l8 97t33
+92r7 E{2|53R9} 13|94b7 96r34
+99U14*Enable_Cache 99>28 13|103b14 106l8 106t20
+99b28 Include_Modules{boolean} 13|103b28
+X 13 s-trasym.adb
+56a13 Img{string} 58r36 63r16 66r43 66r58 67r65
+58a13 Result{string} 64m16 66m16 68m16 71m13 72r20
+59i13 Last{natural} 64r24 64r36 65m16 65r58 66r24 66r36 67m16 67r58 68r24
+. 71r21 72r33
+62i17 J{integer} 63r56
+X 14 s-traent.ads
+43K16*Traceback_Entries 12|81r26 83r26 13|48r26 81r26 14|63e29
+46M12*Traceback_Entry{5|80M9}
+52A9*Tracebacks_Array(46M12)<integer> 12|81r44 83r44 13|48r44 81r44
+

@@ -1,0 +1,142 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB SS ZX
+
+RN
+RV NO_SECONDARY_STACK
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.wide_wide_characters.handling%b  a-zchhan.adb  9d4d201e NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.wide_wide_characters%s  a-zchara.ads	a-zchara.ali
+W ada.wide_wide_characters.unicode%s  a-zchuni.adb  a-zchuni.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U ada.wide_wide_characters.handling%s  a-zchhan.ads  4f2d6220 BN NE OL PU PK
+W ada.wide_wide_characters%s  a-zchara.ads	a-zchara.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-zchara.ads		20210927095552 21c8f2b2 ada.wide_wide_characters%s
+D a-zchhan.ads		20210927095552 6ee59092 ada.wide_wide_characters.handling%s
+D a-zchhan.adb		20210927095552 9c1cc270 ada.wide_wide_characters.handling%b
+D a-zchuni.ads		20210927095552 6fb472fc ada.wide_wide_characters.unicode%s
+D a-zchuni.adb		20210927095552 b1db95f1 ada.wide_wide_characters.unicode%b
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-utf_32.ads		20210927095552 24cf731d system.utf_32%s
+D s-utf_32.adb		20210927095552 86f0ff4f system.utf_32%b
+G a e
+G c Z s b [is_control ada__wide_wide_characters__handling 23 13 none]
+G c Z s b [is_letter ada__wide_wide_characters__handling 28 13 none]
+G c Z s b [is_lower ada__wide_wide_characters__handling 35 13 none]
+G c Z s b [is_upper ada__wide_wide_characters__handling 40 13 none]
+G c Z s b [is_digit ada__wide_wide_characters__handling 45 13 none]
+G c Z s b [is_hexadecimal_digit ada__wide_wide_characters__handling 53 13 none]
+G c Z s b [is_alphanumeric ada__wide_wide_characters__handling 58 13 none]
+G c Z s b [is_special ada__wide_wide_characters__handling 65 13 none]
+G c Z s b [is_line_terminator ada__wide_wide_characters__handling 72 13 none]
+G c Z s b [is_mark ada__wide_wide_characters__handling 79 13 none]
+G c Z s b [is_other_format ada__wide_wide_characters__handling 85 13 none]
+G c Z s b [is_punctuation_connector ada__wide_wide_characters__handling 90 13 none]
+G c Z s b [is_space ada__wide_wide_characters__handling 96 13 none]
+G c Z s b [is_nfkc ada__wide_wide_characters__handling 101 13 none]
+G c Z s b [is_graphic ada__wide_wide_characters__handling 107 13 none]
+G c Z s b [to_lower ada__wide_wide_characters__handling 112 13 none]
+G c Z s b [to_lower ada__wide_wide_characters__handling 119 13 none]
+G c Z s b [to_upper ada__wide_wide_characters__handling 125 13 none]
+G c Z s b [to_upper ada__wide_wide_characters__handling 132 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 3|16r9 138r5 4|32r6 32r44 34r14 59r14 86r14 93r14 109r14 116r14
+. 123r14 131r14 138r14 163r14 181r14 194r5
+X 2 a-zchara.ads
+16K13*Wide_Wide_Characters 1|16k9 2|18e29 3|16r13 138r9 4|32r10 32r48 34r18
+. 59r18 86r18 93r18 109r18 116r18 123r18 131r18 138r18 163r18 181r18 194r9
+X 3 a-zchhan.ads
+16K34*Handling 2|16k13 3|138l30 138e38 4|34b39 194l30 194t38
+23V13*Is_Control{boolean} 23>25 24r19 4|49b13 52l8 52t18
+23e25 Item{wide_wide_character} 4|49b25 51r28
+28V13*Is_Letter{boolean} 28>24 29r19 4|42s14 85b13
+28e24 Item{wide_wide_character} 4|85b24
+35V13*Is_Lower{boolean} 35>23 36r19 4|99b13 102l8 102t16
+35e23 Item{wide_wide_character} 4|99b23 101r28
+40V13*Is_Upper{boolean} 40>23 41r19 4|153b13 156l8 156t16
+40e23 Item{wide_wide_character} 4|153b23 155r28
+45V13*Is_Digit{boolean} 45>23 46r19 51r14 4|42s39 58b13 76s14
+45e23 Item{wide_wide_character} 4|58b23
+50V13*Is_Decimal_Digit=51:14{boolean}
+50e31 Item{wide_wide_character}
+53V13*Is_Hexadecimal_Digit{boolean} 53>35 4|74b13 79l8 79t28
+53e35 Item{wide_wide_character} 4|74b35 76r24 77r17 78r17
+58V13*Is_Alphanumeric{boolean} 58>30 59r19 4|40b13 43l8 43t23 146s45
+58e30 Item{wide_wide_character} 4|40b30 42r25 42r49
+65V13*Is_Special{boolean} 65>25 66r19 4|144b13 147l8 147t18
+65e25 Item{wide_wide_character} 4|144b25 146r26 146r62
+72V13*Is_Line_Terminator{boolean} 72>33 73r19 4|92b13
+72e33 Item{wide_wide_character} 4|92b33
+79V13*Is_Mark{boolean} 79>22 80r19 4|108b13
+79e22 Item{wide_wide_character} 4|108b22
+85V13*Is_Other_Format{boolean} 85>30 86r19 4|122b13
+85e30 Item{wide_wide_character} 4|122b30
+90V13*Is_Punctuation_Connector{boolean} 91>7 92r19 4|129b13
+91e7 Item{wide_wide_character} 4|130b7
+96V13*Is_Space{boolean} 96>23 97r19 4|137b13
+96e23 Item{wide_wide_character} 4|137b23
+101V13*Is_NFKC{boolean} 101>22 102r19 4|115b13
+101e22 Item{wide_wide_character} 4|115b22
+107V13*Is_Graphic{boolean} 107>25 108r19 4|65b13 68l8 68t18 146s14
+107e25 Item{wide_wide_character} 4|65b25 67r34
+112V13*To_Lower{wide_wide_character} 112>23 113r19 4|162b13 170s24
+112e23 Item{wide_wide_character} 4|162b23
+119V13*To_Lower{wide_wide_string} 119>23 4|165b13 174l8 174t16
+119a23 Item{wide_wide_string} 4|165b23 166r34 170r34
+125V13*To_Upper{wide_wide_character} 125>23 126r19 4|180b13 188s24
+125e23 Item{wide_wide_character} 4|180b23
+132V13*To_Upper{wide_wide_string} 132>23 4|183b13 192l8 192t16
+132a23 Item{wide_wide_string} 4|183b23 184r34 188r34
+X 4 a-zchhan.adb
+166a7 Result{wide_wide_string} 169r16 170m10 173r14
+169i11 J{integer} 170r18 170r40
+184a7 Result{wide_wide_string} 187r16 188m10 191r14
+187i11 J{integer} 188r18 188r40
+X 5 a-zchuni.ads
+36K34*Unicode 4|32w31 32r69 59r39 86r39 93r39 109r39 116r39 123r39 131r39
+. 138r39 163r39 181r39 5|202e37
+43E9*Category<11|56E9>
+76V13*Get_Category{43E9} 4|51s14 101s14 155s14
+90V13*Is_Letter{boolean} 4|86r47
+102V13*Is_Digit{boolean} 4|59r47
+109V13*Is_Line_Terminator{boolean} 4|93r47
+117V13*Is_Mark{boolean} 4|109r47
+126V13*Is_Other{boolean} 4|123r47
+135V13*Is_Punctuation{boolean} 4|131r47
+143V13*Is_Space{boolean} 4|138r47
+150V13*Is_NFKC{boolean} 4|116r47
+156V13*Is_Non_Graphic{boolean} 4|67s18
+186V13*To_Lower_Case{wide_wide_character} 4|163r47
+194V13*To_Upper_Case{wide_wide_character} 4|181r47
+X 11 s-utf_32.ads
+57n6*Cc{56E9} 4|51r36
+62n6*Ll{56E9} 4|101r36
+66n6*Lu{56E9} 4|155r36
+

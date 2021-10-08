@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from ATSAMV71Q21.svd
+--  This spec has been automatically generated from ATSAMRH71F20C.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -14,37 +14,37 @@ package SAM_SVD.TRNG is
    -- Registers --
    ---------------
 
-   --  Security Key
-   type TRNG_CR_KEYSelect is
+   --  Register Write Access Key
+   type CR_WAKEYSelect is
      (--  Reset value for the field
-      TRNG_CR_KEYSelect_Reset,
+      CR_WAKEYSelect_Reset,
       --  Writing any other value in this field aborts the write operation.
       PASSWD)
      with Size => 24;
-   for TRNG_CR_KEYSelect use
-     (TRNG_CR_KEYSelect_Reset => 0,
+   for CR_WAKEYSelect use
+     (CR_WAKEYSelect_Reset => 0,
       PASSWD => 5393991);
 
    --  Control Register
-   type TRNG_TRNG_CR_Register is record
+   type TRNG_CR_Register is record
       --  Write-only. Enables the TRNG to Provide Random Values
       ENABLE       : Boolean := False;
       --  unspecified
       Reserved_1_7 : HAL.UInt7 := 16#0#;
-      --  Write-only. Security Key
-      KEY          : TRNG_CR_KEYSelect := TRNG_CR_KEYSelect_Reset;
+      --  Write-only. Register Write Access Key
+      WAKEY        : CR_WAKEYSelect := CR_WAKEYSelect_Reset;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for TRNG_TRNG_CR_Register use record
+   for TRNG_CR_Register use record
       ENABLE       at 0 range 0 .. 0;
       Reserved_1_7 at 0 range 1 .. 7;
-      KEY          at 0 range 8 .. 31;
+      WAKEY        at 0 range 8 .. 31;
    end record;
 
    --  Interrupt Enable Register
-   type TRNG_TRNG_IER_Register is record
+   type TRNG_IER_Register is record
       --  Write-only. Data Ready Interrupt Enable
       DATRDY        : Boolean := False;
       --  unspecified
@@ -53,13 +53,13 @@ package SAM_SVD.TRNG is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for TRNG_TRNG_IER_Register use record
+   for TRNG_IER_Register use record
       DATRDY        at 0 range 0 .. 0;
       Reserved_1_31 at 0 range 1 .. 31;
    end record;
 
    --  Interrupt Disable Register
-   type TRNG_TRNG_IDR_Register is record
+   type TRNG_IDR_Register is record
       --  Write-only. Data Ready Interrupt Disable
       DATRDY        : Boolean := False;
       --  unspecified
@@ -68,13 +68,13 @@ package SAM_SVD.TRNG is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for TRNG_TRNG_IDR_Register use record
+   for TRNG_IDR_Register use record
       DATRDY        at 0 range 0 .. 0;
       Reserved_1_31 at 0 range 1 .. 31;
    end record;
 
    --  Interrupt Mask Register
-   type TRNG_TRNG_IMR_Register is record
+   type TRNG_IMR_Register is record
       --  Read-only. Data Ready Interrupt Mask
       DATRDY        : Boolean;
       --  unspecified
@@ -83,14 +83,14 @@ package SAM_SVD.TRNG is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for TRNG_TRNG_IMR_Register use record
+   for TRNG_IMR_Register use record
       DATRDY        at 0 range 0 .. 0;
       Reserved_1_31 at 0 range 1 .. 31;
    end record;
 
    --  Interrupt Status Register
-   type TRNG_TRNG_ISR_Register is record
-      --  Read-only. Data Ready
+   type TRNG_ISR_Register is record
+      --  Read-only. Data Ready (cleared on read)
       DATRDY        : Boolean;
       --  unspecified
       Reserved_1_31 : HAL.UInt31;
@@ -98,33 +98,9 @@ package SAM_SVD.TRNG is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for TRNG_TRNG_ISR_Register use record
+   for TRNG_ISR_Register use record
       DATRDY        at 0 range 0 .. 0;
       Reserved_1_31 at 0 range 1 .. 31;
-   end record;
-
-   subtype TRNG_TRNG_VERSION_VERSION_Field is HAL.UInt12;
-   subtype TRNG_TRNG_VERSION_MFN_Field is HAL.UInt3;
-
-   --  Version Register
-   type TRNG_TRNG_VERSION_Register is record
-      --  Read-only. Version of the Hardware Module
-      VERSION        : TRNG_TRNG_VERSION_VERSION_Field;
-      --  unspecified
-      Reserved_12_15 : HAL.UInt4;
-      --  Read-only. Metal Fix Number
-      MFN            : TRNG_TRNG_VERSION_MFN_Field;
-      --  unspecified
-      Reserved_19_31 : HAL.UInt13;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for TRNG_TRNG_VERSION_Register use record
-      VERSION        at 0 range 0 .. 11;
-      Reserved_12_15 at 0 range 12 .. 15;
-      MFN            at 0 range 16 .. 18;
-      Reserved_19_31 at 0 range 19 .. 31;
    end record;
 
    -----------------
@@ -134,30 +110,27 @@ package SAM_SVD.TRNG is
    --  True Random Number Generator
    type TRNG_Peripheral is record
       --  Control Register
-      TRNG_CR      : aliased TRNG_TRNG_CR_Register;
+      CR    : aliased TRNG_CR_Register;
       --  Interrupt Enable Register
-      TRNG_IER     : aliased TRNG_TRNG_IER_Register;
+      IER   : aliased TRNG_IER_Register;
       --  Interrupt Disable Register
-      TRNG_IDR     : aliased TRNG_TRNG_IDR_Register;
+      IDR   : aliased TRNG_IDR_Register;
       --  Interrupt Mask Register
-      TRNG_IMR     : aliased TRNG_TRNG_IMR_Register;
+      IMR   : aliased TRNG_IMR_Register;
       --  Interrupt Status Register
-      TRNG_ISR     : aliased TRNG_TRNG_ISR_Register;
+      ISR   : aliased TRNG_ISR_Register;
       --  Output Data Register
-      TRNG_ODATA   : aliased HAL.UInt32;
-      --  Version Register
-      TRNG_VERSION : aliased TRNG_TRNG_VERSION_Register;
+      ODATA : aliased HAL.UInt32;
    end record
      with Volatile;
 
    for TRNG_Peripheral use record
-      TRNG_CR      at 16#0# range 0 .. 31;
-      TRNG_IER     at 16#10# range 0 .. 31;
-      TRNG_IDR     at 16#14# range 0 .. 31;
-      TRNG_IMR     at 16#18# range 0 .. 31;
-      TRNG_ISR     at 16#1C# range 0 .. 31;
-      TRNG_ODATA   at 16#50# range 0 .. 31;
-      TRNG_VERSION at 16#FC# range 0 .. 31;
+      CR    at 16#0# range 0 .. 31;
+      IER   at 16#10# range 0 .. 31;
+      IDR   at 16#14# range 0 .. 31;
+      IMR   at 16#18# range 0 .. 31;
+      ISR   at 16#1C# range 0 .. 31;
+      ODATA at 16#50# range 0 .. 31;
    end record;
 
    --  True Random Number Generator

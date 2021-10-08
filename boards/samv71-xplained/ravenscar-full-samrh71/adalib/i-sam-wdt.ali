@@ -1,0 +1,100 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U interfaces.sam.wdt%s	i-sam-wdt.ads		bbfd9175 NE OL PR PK
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W system%s		system.ads		system.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D i-sam.ads		20210927130812 3bba8a63 interfaces.sam%s
+D i-sam-wdt.ads		20210927130812 da93f443 interfaces.sam.wdt%s
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+G c Z s s [wdt_cr_registerIP interfaces__sam__wdt 35 9 none]
+G c Z s s [wdt_mr_registerIP interfaces__sam__wdt 68 9 none]
+G c Z s s [wdt_sr_registerIP interfaces__sam__wdt 107 9 none]
+G c Z s s [wdt_peripheralIP interfaces__sam__wdt 129 9 none]
+X 1 interfac.ads
+38K9*Interfaces 231e15 3|12r9 20r35 21r35 39r23 43r23 58r32 59r35 60r36 61r36
+. 62r34 63r32 64r37 65r38 86r24 103r34 104r34 113r23 149r5
+X 2 i-sam.ads
+13K20*SAM 1|38k9 2|139e19 3|12r20 20r46 21r46 39r34 43r34 58r43 59r46 60r47
+. 61r47 62r45 63r43 64r48 65r49 86r35 103r45 104r45 113r34 149r16
+24M9*Bit 3|20r50 21r50 59r50 60r51 61r51 62r49 64r52 65r53 103r49 104r49
+26M9*UInt2 3|86r39
+28M9*UInt3 3|39r38
+44M9*UInt12 3|58r47 63r47
+56M9*UInt19 3|43r38
+78M9*UInt30 3|113r38
+129m4*WDT_Base{4|80M9} 3|147r30
+X 3 i-sam-wdt.ads
+12K24*WDT 2|13k20 3|149l20 149e23
+20M12*WDT_CR_WDRSTT_Field{2|24M9} 37r23
+21M12*WDT_CR_LOCKMR_Field{2|24M9} 41r23
+24E9*CR_KEYSelect 29e6 30r8 45r23
+26n7*CR_KEYSelect_Reset{24E9} 31r7 45r39
+28n7*PASSWD{24E9} 32r7
+35R9*WDT_CR_Register 47e6 50r8 131r20
+37m7*WDRSTT{20M12} 51r7
+39m7*Reserved_1_3{2|28M9} 52r7
+41m7*LOCKMR{21M12} 53r7
+43m7*Reserved_5_23{2|56M9} 54r7
+45e7*KEY{24E9} 55r7
+58M12*WDT_MR_WDV_Field{2|44M9} 70r24
+59M12*WDT_MR_WDFIEN_Field{2|24M9} 72r24
+60M12*WDT_MR_WDRSTEN_Field{2|24M9} 74r24
+61M12*WDT_MR_WDRPROC_Field{2|24M9} 76r24
+62M12*WDT_MR_WDDIS_Field{2|24M9} 78r24
+63M12*WDT_MR_WDD_Field{2|44M9} 80r24
+64M12*WDT_MR_WDDBGHLT_Field{2|24M9} 82r24
+65M12*WDT_MR_WDIDLEHLT_Field{2|24M9} 84r24
+68R9*WDT_MR_Register 88e6 91r8 133r20
+70m7*WDV{58M12} 92r7
+72m7*WDFIEN{59M12} 93r7
+74m7*WDRSTEN{60M12} 94r7
+76m7*WDRPROC{61M12} 95r7
+78m7*WDDIS{62M12} 96r7
+80m7*WDD{63M12} 97r7
+82m7*WDDBGHLT{64M12} 98r7
+84m7*WDIDLEHLT{65M12} 99r7
+86m7*Reserved_30_31{2|26M9} 100r7
+103M12*WDT_SR_WDUNF_Field{2|24M9} 109r23
+104M12*WDT_SR_WDERR_Field{2|24M9} 111r23
+107R9*WDT_SR_Register 115e6 118r8 135r20
+109m7*WDUNF{103M12} 119r7
+111m7*WDERR{104M12} 120r7
+113m7*Reserved_2_31{2|78M9} 121r7
+129R9*WDT_Peripheral 137e6 139r8 146r25
+131r7*CR{35R9} 140r7
+133r7*MR{68R9} 141r7
+135r7*SR{107R9} 142r7
+146r4*WDT_Periph{129R9}
+X 4 system.ads
+50K9*System 3|10w6 48r24 89r24 116r24 4|164e11
+80M9*Address
+104n41*Low_Order_First{104E9} 3|48r31 89r31 116r31
+

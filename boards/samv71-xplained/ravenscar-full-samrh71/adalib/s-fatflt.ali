@@ -1,0 +1,80 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.fat_flt%s	s-fatflt.ads		99e63039 NE OL PU PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.unchecked_conversion%s
+W system%s		system.ads		system.ali
+W system.fat_gen%s
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-fatflt.ads		20210927095552 11beb392 system.fat_flt%s
+D s-fatgen.ads		20210927095552 d28c6cfe system.fat_gen%s
+D s-fatgen.adb		20210927095552 f61e99f3 system.fat_gen%b
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+G a e
+G c Z s s [adjacent system__fat_flt__attr_float 53 13 45_4]
+G c Z s s [ceiling system__fat_flt__attr_float 55 13 45_4]
+G c Z s s [compose system__fat_flt__attr_float 57 13 45_4]
+G c Z s s [copy_sign system__fat_flt__attr_float 59 13 45_4]
+G c Z s s [exponent system__fat_flt__attr_float 61 13 45_4]
+G c Z s s [floor system__fat_flt__attr_float 63 13 45_4]
+G c Z s s [fraction system__fat_flt__attr_float 65 13 45_4]
+G c Z s s [leading_part system__fat_flt__attr_float 67 13 45_4]
+G c Z s s [machine system__fat_flt__attr_float 69 13 45_4]
+G c Z s s [machine_rounding system__fat_flt__attr_float 71 13 45_4]
+G c Z s s [model system__fat_flt__attr_float 73 13 45_4]
+G c Z s s [pred system__fat_flt__attr_float 75 13 45_4]
+G c Z s s [remainder system__fat_flt__attr_float 77 13 45_4]
+G c Z s s [rounding system__fat_flt__attr_float 79 13 45_4]
+G c Z s s [scaling system__fat_flt__attr_float 81 13 45_4]
+G c Z s s [succ system__fat_flt__attr_float 83 13 45_4]
+G c Z s s [truncation system__fat_flt__attr_float 85 13 45_4]
+G c Z s s [unbiased_rounding system__fat_flt__attr_float 87 13 45_4]
+G c Z s s [valid system__fat_flt__attr_float 89 13 45_4]
+G c Z s s [decompose system__fat_flt__attr_float 150 14 45_4]
+G c Z s s [finite_succ system__fat_flt__attr_float 156 13 45_4]
+X 4 system.ads
+50K9*System 164e11 5|35r6 37r9 45r30 47r5
+X 5 s-fatflt.ads
+37K16*Fat_Flt 4|50k9 5|47l12 47e19
+45K12*Attr_Float[6|40]
+X 6 s-fatgen.ads
+40k16*Fat_Gen 5|35w13 45r37 6|117e19
+

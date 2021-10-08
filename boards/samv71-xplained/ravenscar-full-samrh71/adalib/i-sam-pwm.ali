@@ -1,0 +1,1010 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RR NO_ELABORATION_CODE
+
+U interfaces.sam.pwm%s	i-sam-pwm.ads		4b2f81e9 NE OL PR PK
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W system%s		system.ads		system.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D i-sam.ads		20210927130812 3bba8a63 interfaces.sam%s
+D i-sam-pwm.ads		20210927130812 2a41e4df interfaces.sam.pwm%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+G a e
+G c Z s s [pwm_clk_registerIP interfaces__sam__pwm 119 9 none]
+G c Z s s [Tpwm_ena_chid_field_arrayBIP interfaces__sam__pwm 149 4 none]
+G c Z s s [pwm_ena_chid_fieldIP interfaces__sam__pwm 153 9 none]
+G c Z s s [pwm_ena_registerIP interfaces__sam__pwm 173 9 none]
+G c Z s s [Tpwm_dis_chid_field_arrayBIP interfaces__sam__pwm 191 4 none]
+G c Z s s [pwm_dis_chid_fieldIP interfaces__sam__pwm 195 9 none]
+G c Z s s [pwm_dis_registerIP interfaces__sam__pwm 215 9 none]
+G c Z s s [Tpwm_sr_chid_field_arrayBIP interfaces__sam__pwm 233 4 none]
+G c Z s s [pwm_sr_chid_fieldIP interfaces__sam__pwm 237 9 none]
+G c Z s s [pwm_sr_registerIP interfaces__sam__pwm 257 9 none]
+G c Z s s [Tpwm_ier1_chid_field_arrayBIP interfaces__sam__pwm 275 4 none]
+G c Z s s [pwm_ier1_chid_fieldIP interfaces__sam__pwm 279 9 none]
+G c Z s s [Tpwm_ier1_fchid_field_arrayBIP interfaces__sam__pwm 302 4 none]
+G c Z s s [pwm_ier1_fchid_fieldIP interfaces__sam__pwm 307 9 none]
+G c Z s s [pwm_ier1_registerIP interfaces__sam__pwm 327 9 none]
+G c Z s s [Tpwm_idr1_chid_field_arrayBIP interfaces__sam__pwm 353 4 none]
+G c Z s s [pwm_idr1_chid_fieldIP interfaces__sam__pwm 357 9 none]
+G c Z s s [Tpwm_idr1_fchid_field_arrayBIP interfaces__sam__pwm 380 4 none]
+G c Z s s [pwm_idr1_fchid_fieldIP interfaces__sam__pwm 385 9 none]
+G c Z s s [pwm_idr1_registerIP interfaces__sam__pwm 405 9 none]
+G c Z s s [Tpwm_imr1_chid_field_arrayBIP interfaces__sam__pwm 431 4 none]
+G c Z s s [pwm_imr1_chid_fieldIP interfaces__sam__pwm 435 9 none]
+G c Z s s [Tpwm_imr1_fchid_field_arrayBIP interfaces__sam__pwm 458 4 none]
+G c Z s s [pwm_imr1_fchid_fieldIP interfaces__sam__pwm 463 9 none]
+G c Z s s [pwm_imr1_registerIP interfaces__sam__pwm 483 9 none]
+G c Z s s [Tpwm_isr1_chid_field_arrayBIP interfaces__sam__pwm 507 4 none]
+G c Z s s [pwm_isr1_chid_fieldIP interfaces__sam__pwm 511 9 none]
+G c Z s s [Tpwm_isr1_fchid_field_arrayBIP interfaces__sam__pwm 534 4 none]
+G c Z s s [pwm_isr1_fchid_fieldIP interfaces__sam__pwm 539 9 none]
+G c Z s s [pwm_isr1_registerIP interfaces__sam__pwm 559 9 none]
+G c Z s s [Tpwm_scm_sync_field_arrayBIP interfaces__sam__pwm 583 4 none]
+G c Z s s [pwm_scm_sync_fieldIP interfaces__sam__pwm 587 9 none]
+G c Z s s [pwm_scm_registerIP interfaces__sam__pwm 627 9 none]
+G c Z s s [pwm_dmar_registerIP interfaces__sam__pwm 660 9 none]
+G c Z s s [pwm_scuc_registerIP interfaces__sam__pwm 677 9 none]
+G c Z s s [pwm_scup_registerIP interfaces__sam__pwm 695 9 none]
+G c Z s s [pwm_scupupd_registerIP interfaces__sam__pwm 715 9 none]
+G c Z s s [Tpwm_ier2_cmpm_field_arrayBIP interfaces__sam__pwm 735 4 none]
+G c Z s s [pwm_ier2_cmpm_fieldIP interfaces__sam__pwm 739 9 none]
+G c Z s s [Tpwm_ier2_cmpu_field_arrayBIP interfaces__sam__pwm 762 4 none]
+G c Z s s [pwm_ier2_cmpu_fieldIP interfaces__sam__pwm 766 9 none]
+G c Z s s [pwm_ier2_registerIP interfaces__sam__pwm 786 9 none]
+G c Z s s [Tpwm_idr2_cmpm_field_arrayBIP interfaces__sam__pwm 825 4 none]
+G c Z s s [pwm_idr2_cmpm_fieldIP interfaces__sam__pwm 829 9 none]
+G c Z s s [Tpwm_idr2_cmpu_field_arrayBIP interfaces__sam__pwm 852 4 none]
+G c Z s s [pwm_idr2_cmpu_fieldIP interfaces__sam__pwm 856 9 none]
+G c Z s s [pwm_idr2_registerIP interfaces__sam__pwm 876 9 none]
+G c Z s s [Tpwm_imr2_cmpm_field_arrayBIP interfaces__sam__pwm 915 4 none]
+G c Z s s [pwm_imr2_cmpm_fieldIP interfaces__sam__pwm 919 9 none]
+G c Z s s [Tpwm_imr2_cmpu_field_arrayBIP interfaces__sam__pwm 942 4 none]
+G c Z s s [pwm_imr2_cmpu_fieldIP interfaces__sam__pwm 946 9 none]
+G c Z s s [pwm_imr2_registerIP interfaces__sam__pwm 966 9 none]
+G c Z s s [Tpwm_isr2_cmpm_field_arrayBIP interfaces__sam__pwm 1001 4 none]
+G c Z s s [pwm_isr2_cmpm_fieldIP interfaces__sam__pwm 1005 9 none]
+G c Z s s [Tpwm_isr2_cmpu_field_arrayBIP interfaces__sam__pwm 1028 4 none]
+G c Z s s [pwm_isr2_cmpu_fieldIP interfaces__sam__pwm 1032 9 none]
+G c Z s s [pwm_isr2_registerIP interfaces__sam__pwm 1052 9 none]
+G c Z s s [Tpwm_oov_oovh_field_arrayBIP interfaces__sam__pwm 1085 4 none]
+G c Z s s [pwm_oov_oovh_fieldIP interfaces__sam__pwm 1089 9 none]
+G c Z s s [Tpwm_oov_oovl_field_arrayBIP interfaces__sam__pwm 1112 4 none]
+G c Z s s [pwm_oov_oovl_fieldIP interfaces__sam__pwm 1116 9 none]
+G c Z s s [pwm_oov_registerIP interfaces__sam__pwm 1136 9 none]
+G c Z s s [Tpwm_os_osh_field_arrayBIP interfaces__sam__pwm 1162 4 none]
+G c Z s s [pwm_os_osh_fieldIP interfaces__sam__pwm 1166 9 none]
+G c Z s s [Tpwm_os_osl_field_arrayBIP interfaces__sam__pwm 1189 4 none]
+G c Z s s [pwm_os_osl_fieldIP interfaces__sam__pwm 1193 9 none]
+G c Z s s [pwm_os_registerIP interfaces__sam__pwm 1213 9 none]
+G c Z s s [Tpwm_oss_ossh_field_arrayBIP interfaces__sam__pwm 1237 4 none]
+G c Z s s [pwm_oss_ossh_fieldIP interfaces__sam__pwm 1241 9 none]
+G c Z s s [Tpwm_oss_ossl_field_arrayBIP interfaces__sam__pwm 1264 4 none]
+G c Z s s [pwm_oss_ossl_fieldIP interfaces__sam__pwm 1268 9 none]
+G c Z s s [pwm_oss_registerIP interfaces__sam__pwm 1288 9 none]
+G c Z s s [Tpwm_osc_osch_field_arrayBIP interfaces__sam__pwm 1314 4 none]
+G c Z s s [pwm_osc_osch_fieldIP interfaces__sam__pwm 1318 9 none]
+G c Z s s [Tpwm_osc_oscl_field_arrayBIP interfaces__sam__pwm 1341 4 none]
+G c Z s s [pwm_osc_oscl_fieldIP interfaces__sam__pwm 1345 9 none]
+G c Z s s [pwm_osc_registerIP interfaces__sam__pwm 1365 9 none]
+G c Z s s [Tpwm_ossupd_ossuph_field_arrayBIP interfaces__sam__pwm 1391 4 none]
+G c Z s s [pwm_ossupd_ossuph_fieldIP interfaces__sam__pwm 1396 9 none]
+G c Z s s [Tpwm_ossupd_ossupl_field_arrayBIP interfaces__sam__pwm 1419 4 none]
+G c Z s s [pwm_ossupd_ossupl_fieldIP interfaces__sam__pwm 1424 9 none]
+G c Z s s [pwm_ossupd_registerIP interfaces__sam__pwm 1444 9 none]
+G c Z s s [Tpwm_oscupd_oscuph_field_arrayBIP interfaces__sam__pwm 1470 4 none]
+G c Z s s [pwm_oscupd_oscuph_fieldIP interfaces__sam__pwm 1475 9 none]
+G c Z s s [Tpwm_oscupd_oscupl_field_arrayBIP interfaces__sam__pwm 1498 4 none]
+G c Z s s [pwm_oscupd_oscupl_fieldIP interfaces__sam__pwm 1503 9 none]
+G c Z s s [pwm_oscupd_registerIP interfaces__sam__pwm 1523 9 none]
+G c Z s s [pwm_fmr_registerIP interfaces__sam__pwm 1550 9 none]
+G c Z s s [pwm_fsr_registerIP interfaces__sam__pwm 1574 9 none]
+G c Z s s [pwm_fcr_registerIP interfaces__sam__pwm 1594 9 none]
+G c Z s s [Tpwm_fpv1_fpvh_field_arrayBIP interfaces__sam__pwm 1612 4 none]
+G c Z s s [pwm_fpv1_fpvh_fieldIP interfaces__sam__pwm 1616 9 none]
+G c Z s s [Tpwm_fpv1_fpvl_field_arrayBIP interfaces__sam__pwm 1639 4 none]
+G c Z s s [pwm_fpv1_fpvl_fieldIP interfaces__sam__pwm 1643 9 none]
+G c Z s s [pwm_fpv1_registerIP interfaces__sam__pwm 1663 9 none]
+G c Z s s [Tpwm_fpe_fpe_field_arrayBIP interfaces__sam__pwm 1689 4 none]
+G c Z s s [pwm_fpe_registerIP interfaces__sam__pwm 1693 9 none]
+G c Z s s [Tpwm_elmr_csel_field_arrayBIP interfaces__sam__pwm 1717 4 none]
+G c Z s s [pwm_elmr_csel_fieldIP interfaces__sam__pwm 1721 9 none]
+G c Z s s [pwm_elmr_registerIP interfaces__sam__pwm 1741 9 none]
+G c Z s s [Tpwm_elmr_registersBIP interfaces__sam__pwm 1757 4 none]
+G c Z s s [pwm_sspr_registerIP interfaces__sam__pwm 1763 9 none]
+G c Z s s [pwm_sspup_registerIP interfaces__sam__pwm 1783 9 none]
+G c Z s s [Tpwm_smmr_gcen_field_arrayBIP interfaces__sam__pwm 1801 4 none]
+G c Z s s [pwm_smmr_gcen_fieldIP interfaces__sam__pwm 1805 9 none]
+G c Z s s [Tpwm_smmr_down_field_arrayBIP interfaces__sam__pwm 1828 4 none]
+G c Z s s [pwm_smmr_down_fieldIP interfaces__sam__pwm 1832 9 none]
+G c Z s s [pwm_smmr_registerIP interfaces__sam__pwm 1852 9 none]
+G c Z s s [Tpwm_fpv2_fpzh_field_arrayBIP interfaces__sam__pwm 1878 4 none]
+G c Z s s [pwm_fpv2_fpzh_fieldIP interfaces__sam__pwm 1882 9 none]
+G c Z s s [Tpwm_fpv2_fpzl_field_arrayBIP interfaces__sam__pwm 1905 4 none]
+G c Z s s [pwm_fpv2_fpzl_fieldIP interfaces__sam__pwm 1909 9 none]
+G c Z s s [pwm_fpv2_registerIP interfaces__sam__pwm 1929 9 none]
+G c Z s s [Tpwm_wpcr_wprg_field_arrayBIP interfaces__sam__pwm 1975 4 none]
+G c Z s s [pwm_wpcr_wprg_fieldIP interfaces__sam__pwm 1979 9 none]
+G c Z s s [pwm_wpcr_registerIP interfaces__sam__pwm 2011 9 none]
+G c Z s s [Tpwm_wpsr_wpsws_field_arrayBIP interfaces__sam__pwm 2032 4 none]
+G c Z s s [pwm_wpsr_wpsws_fieldIP interfaces__sam__pwm 2037 9 none]
+G c Z s s [Tpwm_wpsr_wphws_field_arrayBIP interfaces__sam__pwm 2061 4 none]
+G c Z s s [pwm_wpsr_wphws_fieldIP interfaces__sam__pwm 2066 9 none]
+G c Z s s [pwm_wpsr_registerIP interfaces__sam__pwm 2088 9 none]
+G c Z s s [pwm_cmpv_pwm_pwm_cmp_registerIP interfaces__sam__pwm 2132 9 none]
+G c Z s s [pwm_cmpvupd_pwm_pwm_cmp_registerIP interfaces__sam__pwm 2154 9 none]
+G c Z s s [pwm_cmpm_pwm_pwm_cmp_registerIP interfaces__sam__pwm 2179 9 none]
+G c Z s s [pwm_cmpmupd_pwm_pwm_cmp_registerIP interfaces__sam__pwm 2217 9 none]
+G c Z s s [pwm_pwm_cmp_clusterIP interfaces__sam__pwm 2247 9 none]
+G c Z s s [Tpwm_pwm_cmp_clustersBIP interfaces__sam__pwm 2267 4 none]
+G c Z s s [pwm_cmr_pwm_pwm_ch_num_registerIP interfaces__sam__pwm 2369 9 none]
+G c Z s s [pwm_cdty_pwm_pwm_ch_num_registerIP interfaces__sam__pwm 2422 9 none]
+G c Z s s [pwm_cdtyupd_pwm_pwm_ch_num_registerIP interfaces__sam__pwm 2439 9 none]
+G c Z s s [pwm_cprd_pwm_pwm_ch_num_registerIP interfaces__sam__pwm 2456 9 none]
+G c Z s s [pwm_cprdupd_pwm_pwm_ch_num_registerIP interfaces__sam__pwm 2473 9 none]
+G c Z s s [pwm_ccnt_pwm_pwm_ch_num_registerIP interfaces__sam__pwm 2490 9 none]
+G c Z s s [pwm_dt_pwm_pwm_ch_num_registerIP interfaces__sam__pwm 2508 9 none]
+G c Z s s [pwm_dtupd_pwm_pwm_ch_num_registerIP interfaces__sam__pwm 2526 9 none]
+G c Z s s [pwm_pwm_ch_num_clusterIP interfaces__sam__pwm 2541 9 none]
+G c Z s s [Tpwm_pwm_ch_num_clustersBIP interfaces__sam__pwm 2573 4 none]
+G c Z s s [cmupd_registerIP interfaces__sam__pwm 2579 9 none]
+G c Z s s [etrg_registerIP interfaces__sam__pwm 2639 9 none]
+G c Z s s [lebr_registerIP interfaces__sam__pwm 2675 9 none]
+G c Z s s [pwm_peripheralIP interfaces__sam__pwm 2717 9 none]
+X 1 interfac.ads
+38K9*Interfaces 231e15 3|12r9 121r42 123r42 125r24 127r42 129r42 131r24 146r36
+. 159r19 177r23 188r36 201r19 219r23 230r35 243r19 261r23 272r37 285r19 299r38
+. 313r19 332r24 337r24 350r37 363r19 377r38 391r19 410r24 415r24 428r37 441r19
+. 455r38 469r19 487r24 491r24 504r37 517r19 531r38 545r19 563r24 567r24 580r36
+. 593r19 623r34 624r35 632r24 634r42 636r24 642r24 657r38 664r24 674r39 681r23
+. 691r34 692r37 701r23 712r40 719r23 729r35 730r35 732r37 745r19 759r37 772r19
+. 791r24 796r24 804r24 819r35 820r35 822r37 835r19 849r37 862r19 881r24 886r24
+. 894r24 909r35 910r35 912r37 925r19 939r37 952r19 970r24 974r24 980r24 995r35
+. 996r35 998r37 1011r19 1025r37 1038r19 1056r24 1060r24 1066r24 1082r36 1095r19
+. 1109r36 1122r19 1141r24 1146r24 1159r34 1172r19 1186r34 1199r19 1217r24
+. 1221r24 1234r36 1247r19 1261r36 1274r19 1293r24 1298r24 1311r36 1324r19
+. 1338r36 1351r19 1370r24 1375r24 1388r41 1402r19 1416r41 1430r19 1449r24
+. 1454r24 1467r41 1481r19 1495r41 1509r19 1528r24 1533r24 1545r34 1546r34
+. 1547r34 1558r24 1570r33 1571r32 1580r24 1591r34 1598r23 1609r37 1622r19
+. 1636r37 1649r19 1668r24 1673r24 1686r35 1699r19 1714r37 1727r19 1746r23
+. 1759r35 1760r36 1769r24 1780r38 1787r24 1798r37 1811r19 1825r37 1838r19
+. 1857r24 1862r24 1875r37 1888r19 1902r37 1915r19 1934r24 1939r24 1972r37
+. 1985r19 2013r35 2029r38 2043r19 2056r35 2058r38 2072r19 2085r37 2092r24
+. 2098r24 2118r45 2137r25 2139r24 2150r51 2151r52 2160r24 2171r46 2172r46
+. 2173r46 2174r49 2175r47 2176r50 2183r24 2195r24 2211r52 2212r52 2213r52
+. 2214r53 2221r24 2227r24 2231r24 2361r50 2362r49 2363r48 2364r49 2365r49
+. 2366r48 2371r42 2373r24 2375r42 2377r42 2379r41 2381r42 2387r24 2397r24
+. 2419r50 2426r24 2436r56 2443r24 2453r50 2460r24 2470r56 2477r24 2487r49
+. 2494r24 2504r47 2505r47 2522r53 2523r53 2575r34 2576r37 2581r24 2585r24
+. 2589r24 2602r33 2634r34 2635r33 2636r31 2643r47 2645r24 2647r47 2668r35
+. 2669r34 2670r34 2671r34 2672r34 2679r24 2689r24 2867r5
+68M9*Unsigned_8
+71M9*Unsigned_16
+79M9*Unsigned_32
+X 2 i-sam.ads
+13K20*SAM 1|38k9 2|139e19 3|12r20 121r53 123r53 125r35 127r53 129r53 131r35
+. 146r47 159r30 177r34 188r47 201r30 219r34 230r46 243r30 261r34 272r48 285r30
+. 299r49 313r30 332r35 337r35 350r48 363r30 377r49 391r30 410r35 415r35 428r48
+. 441r30 455r49 469r30 487r35 491r35 504r48 517r30 531r49 545r30 563r35 567r35
+. 580r47 593r30 623r45 624r46 632r35 634r53 636r35 642r35 657r49 664r35 674r50
+. 681r34 691r45 692r48 701r34 712r51 719r34 729r46 730r46 732r48 745r30 759r48
+. 772r30 791r35 796r35 804r35 819r46 820r46 822r48 835r30 849r48 862r30 881r35
+. 886r35 894r35 909r46 910r46 912r48 925r30 939r48 952r30 970r35 974r35 980r35
+. 995r46 996r46 998r48 1011r30 1025r48 1038r30 1056r35 1060r35 1066r35 1082r47
+. 1095r30 1109r47 1122r30 1141r35 1146r35 1159r45 1172r30 1186r45 1199r30
+. 1217r35 1221r35 1234r47 1247r30 1261r47 1274r30 1293r35 1298r35 1311r47
+. 1324r30 1338r47 1351r30 1370r35 1375r35 1388r52 1402r30 1416r52 1430r30
+. 1449r35 1454r35 1467r52 1481r30 1495r52 1509r30 1528r35 1533r35 1545r45
+. 1546r45 1547r45 1558r35 1570r44 1571r43 1580r35 1591r45 1598r34 1609r48
+. 1622r30 1636r48 1649r30 1668r35 1673r35 1686r46 1699r30 1714r48 1727r30
+. 1746r34 1759r46 1760r47 1769r35 1780r49 1787r35 1798r48 1811r30 1825r48
+. 1838r30 1857r35 1862r35 1875r48 1888r30 1902r48 1915r30 1934r35 1939r35
+. 1972r48 1985r30 2013r46 2029r49 2043r30 2056r46 2058r49 2072r30 2085r48
+. 2092r35 2098r35 2118r56 2137r36 2139r35 2150r62 2151r63 2160r35 2171r57
+. 2172r57 2173r57 2174r60 2175r58 2176r61 2183r35 2195r35 2211r63 2212r63
+. 2213r63 2214r64 2221r35 2227r35 2231r35 2361r61 2362r60 2363r59 2364r60
+. 2365r60 2366r59 2371r53 2373r35 2375r53 2377r53 2379r52 2381r53 2387r35
+. 2397r35 2419r61 2426r35 2436r67 2443r35 2453r61 2460r35 2470r67 2477r35
+. 2487r60 2494r35 2504r58 2505r58 2522r64 2523r64 2575r45 2576r48 2581r35
+. 2585r35 2589r35 2602r44 2634r45 2635r44 2636r42 2643r58 2645r35 2647r58
+. 2668r46 2669r45 2670r45 2671r45 2672r45 2679r35 2689r35 2867r16
+21M9*UInt32<1|79M9> 3|1699r34
+22M9*UInt16<1|71M9> 3|1580r39 2085r52 2504r62 2505r62 2522r68 2523r68
+23M9*Byte<1|68M9> 3|642r39 664r39 745r34 772r34 804r39 835r34 862r34 894r39
+. 925r34 952r34 980r39 1011r34 1038r34 1066r39 1545r49 1546r49 1547r49 1558r39
+. 1570r48 1571r47 1591r49 1686r50 1727r34 1787r39 2195r39 2426r39 2443r39
+. 2460r39 2477r39 2494r39
+24M9*Bit 3|146r51 188r51 230r50 272r52 299r53 350r52 377r53 428r52 455r53
+. 504r52 531r53 580r51 623r49 674r54 729r50 730r50 732r52 759r52 819r50 820r50
+. 822r52 849r52 909r50 910r50 912r52 939r52 995r50 996r50 998r52 1025r52
+. 1082r51 1109r51 1159r49 1186r49 1234r51 1261r51 1311r51 1338r51 1388r56
+. 1416r56 1467r56 1495r56 1609r52 1636r52 1714r52 1760r51 1798r52 1825r52
+. 1875r52 1902r52 1972r52 2029r53 2056r50 2058r53 2092r39 2151r67 2171r61
+. 2211r67 2361r65 2362r64 2363r63 2364r64 2365r64 2366r63 2575r49 2576r52
+. 2634r49 2635r48 2636r46 2669r49 2670r49 2671r49 2672r49
+26M9*UInt2 3|636r39 791r39 881r39 970r39 1056r39 1811r34 1838r34 2098r39
+. 2387r39 2645r39
+28M9*UInt3 3|624r50 2183r39 2221r39 2585r39
+30M9*UInt4 3|125r39 131r39 159r34 201r34 243r34 285r34 313r34 363r34 391r34
+. 441r34 469r34 517r34 545r34 593r34 691r49 692r52 712r55 796r39 886r39 974r39
+. 1060r39 1095r34 1122r34 1172r34 1199r34 1247r34 1274r34 1324r34 1351r34
+. 1402r34 1430r34 1481r34 1509r34 1622r34 1649r34 1888r34 1915r34 2172r61
+. 2173r61 2174r64 2175r62 2176r65 2212r67 2213r67 2214r68 2227r39 2373r39
+34M9*UInt6 3|1985r34 2043r34 2072r34
+36M9*UInt7 3|1769r39 2139r39 2160r39 2668r50
+38M9*UInt9 3|2581r39 2679r39
+44M9*UInt12 3|332r39 337r39 410r39 415r39 487r39 491r39 563r39 567r39 632r39
+. 1141r39 1146r39 1217r39 1221r39 1293r39 1298r39 1370r39 1375r39 1449r39
+. 1454r39 1528r39 1533r39 1668r39 1673r39 1934r39 1939r39 2231r39 2397r39
+. 2689r39
+48M9*UInt14 3|1857r39 1862r39
+54M9*UInt18 3|2589r39
+66M9*UInt24 3|657r53 701r38 1598r38 1746r38 1759r50 1780r53 2118r60 2150r66
+. 2419r65 2436r71 2453r65 2470r71 2487r64 2602r48
+74M9*UInt28 3|177r38 219r38 261r38 719r38
+80M9*UInt31 3|681r38
+112m4*PWM0_Base{4|80M9} 3|2861r30
+113m4*PWM1_Base{4|80M9} 3|2865r30
+X 3 i-sam-pwm.ads
+12K24*PWM 2|13k20 3|121r57 123r57 127r57 129r57 634r57 2013r50 2137r40 2371r57
+. 2375r57 2377r57 2379r56 2381r57 2643r62 2647r62 2867l20 2867e23
+21E9*CLK_DIVASelect 26e6 27r8 121r24
+23n7*CLKA_POFF{21E9} 28r7 121r61
+25n7*PREA{21E9} 29r7
+32E9*CLK_PREASelect 55e6 56r8 123r24
+34n7*CLK{32E9} 57r7 123r61
+36n7*CLK_DIV2{32E9} 58r7
+38n7*CLK_DIV4{32E9} 59r7
+40n7*CLK_DIV8{32E9} 60r7
+42n7*CLK_DIV16{32E9} 61r7
+44n7*CLK_DIV32{32E9} 62r7
+46n7*CLK_DIV64{32E9} 63r7
+48n7*CLK_DIV128{32E9} 64r7
+50n7*CLK_DIV256{32E9} 65r7
+52n7*CLK_DIV512{32E9} 66r7
+54n7*CLK_DIV1024{32E9} 67r7
+70E9*CLK_DIVBSelect 75e6 76r8 127r24
+72n7*CLKB_POFF{70E9} 77r7 127r61
+74n7*PREB{70E9} 78r7
+81E9*CLK_PREBSelect 104e6 105r8 129r24
+83n7*CLK{81E9} 106r7 129r61
+85n7*CLK_DIV2{81E9} 107r7
+87n7*CLK_DIV4{81E9} 108r7
+89n7*CLK_DIV8{81E9} 109r7
+91n7*CLK_DIV16{81E9} 110r7
+93n7*CLK_DIV32{81E9} 111r7
+95n7*CLK_DIV64{81E9} 112r7
+97n7*CLK_DIV128{81E9} 113r7
+99n7*CLK_DIV256{81E9} 114r7
+101n7*CLK_DIV512{81E9} 115r7
+103n7*CLK_DIV1024{81E9} 116r7
+119R9*PWM_CLK_Register 133e6 136r8 2719r32
+121e7*DIVA{21E9} 137r7
+123e7*PREA{32E9} 138r7
+125m7*Reserved_12_15{2|30M9} 139r7
+127e7*DIVB{70E9} 140r7
+129e7*PREB{81E9} 141r7
+131m7*Reserved_28_31{2|30M9} 142r7
+146M12*PWM_ENA_CHID_Element{2|24M9} 149r55
+149A9*PWM_ENA_CHID_Field_Array(146M12)<integer> 162r19
+153R9*PWM_ENA_CHID_Field 154d7 165e6 167r8 175r23
+154b7*As_Array{boolean} 156r12 175m46
+159m13*Val{2|30M9} 168r7 175m65
+162a13*Arr{149A9} 169r7
+173R9*PWM_ENA_Register 179e6 182r8 2721r32
+175r7*CHID{153R9} 183r7
+177m7*Reserved_4_31{2|74M9} 184r7
+188M12*PWM_DIS_CHID_Element{2|24M9} 191r55
+191A9*PWM_DIS_CHID_Field_Array(188M12)<integer> 204r19
+195R9*PWM_DIS_CHID_Field 196d7 207e6 209r8 217r23
+196b7*As_Array{boolean} 198r12 217m46
+201m13*Val{2|30M9} 210r7 217m65
+204a13*Arr{191A9} 211r7
+215R9*PWM_DIS_Register 221e6 224r8 2723r32
+217r7*CHID{195R9} 225r7
+219m7*Reserved_4_31{2|74M9} 226r7
+230M12*PWM_SR_CHID_Element{2|24M9} 233r54
+233A9*PWM_SR_CHID_Field_Array(230M12)<integer> 246r19
+237R9*PWM_SR_CHID_Field 238d7 249e6 251r8 259r23
+238b7*As_Array{boolean} 240r12
+243m13*Val{2|30M9} 252r7
+246a13*Arr{233A9} 253r7
+257R9*PWM_SR_Register 263e6 266r8 2725r32
+259r7*CHID{237R9} 267r7
+261m7*Reserved_4_31{2|74M9} 268r7
+272M12*PWM_IER1_CHID_Element{2|24M9} 275r56
+275A9*PWM_IER1_CHID_Field_Array(272M12)<integer> 288r19
+279R9*PWM_IER1_CHID_Field 280d7 291e6 293r8 329r24
+280b7*As_Array{boolean} 282r12 330m26
+285m13*Val{2|30M9} 294r7 330m45
+288a13*Arr{275A9} 295r7
+299M12*PWM_IER1_FCHID_Element{2|24M9} 303r9
+302A9*PWM_IER1_FCHID_Field_Array(299M12)<integer> 316r19
+307R9*PWM_IER1_FCHID_Field 308d7 319e6 321r8 334r24
+308b7*As_Array{boolean} 310r12 335m26
+313m13*Val{2|30M9} 322r7 335m45
+316a13*Arr{302A9} 323r7
+327R9*PWM_IER1_Register 339e6 342r8 2727r32
+329r7*CHID{279R9} 343r7
+332m7*Reserved_4_15{2|44M9} 344r7
+334r7*FCHID{307R9} 345r7
+337m7*Reserved_20_31{2|44M9} 346r7
+350M12*PWM_IDR1_CHID_Element{2|24M9} 353r56
+353A9*PWM_IDR1_CHID_Field_Array(350M12)<integer> 366r19
+357R9*PWM_IDR1_CHID_Field 358d7 369e6 371r8 407r24
+358b7*As_Array{boolean} 360r12 408m26
+363m13*Val{2|30M9} 372r7 408m45
+366a13*Arr{353A9} 373r7
+377M12*PWM_IDR1_FCHID_Element{2|24M9} 381r9
+380A9*PWM_IDR1_FCHID_Field_Array(377M12)<integer> 394r19
+385R9*PWM_IDR1_FCHID_Field 386d7 397e6 399r8 412r24
+386b7*As_Array{boolean} 388r12 413m26
+391m13*Val{2|30M9} 400r7 413m45
+394a13*Arr{380A9} 401r7
+405R9*PWM_IDR1_Register 417e6 420r8 2729r32
+407r7*CHID{357R9} 421r7
+410m7*Reserved_4_15{2|44M9} 422r7
+412r7*FCHID{385R9} 423r7
+415m7*Reserved_20_31{2|44M9} 424r7
+428M12*PWM_IMR1_CHID_Element{2|24M9} 431r56
+431A9*PWM_IMR1_CHID_Field_Array(428M12)<integer> 444r19
+435R9*PWM_IMR1_CHID_Field 436d7 447e6 449r8 485r24
+436b7*As_Array{boolean} 438r12
+441m13*Val{2|30M9} 450r7
+444a13*Arr{431A9} 451r7
+455M12*PWM_IMR1_FCHID_Element{2|24M9} 459r9
+458A9*PWM_IMR1_FCHID_Field_Array(455M12)<integer> 472r19
+463R9*PWM_IMR1_FCHID_Field 464d7 475e6 477r8 489r24
+464b7*As_Array{boolean} 466r12
+469m13*Val{2|30M9} 478r7
+472a13*Arr{458A9} 479r7
+483R9*PWM_IMR1_Register 493e6 496r8 2731r32
+485r7*CHID{435R9} 497r7
+487m7*Reserved_4_15{2|44M9} 498r7
+489r7*FCHID{463R9} 499r7
+491m7*Reserved_20_31{2|44M9} 500r7
+504M12*PWM_ISR1_CHID_Element{2|24M9} 507r56
+507A9*PWM_ISR1_CHID_Field_Array(504M12)<integer> 520r19
+511R9*PWM_ISR1_CHID_Field 512d7 523e6 525r8 561r24
+512b7*As_Array{boolean} 514r12
+517m13*Val{2|30M9} 526r7
+520a13*Arr{507A9} 527r7
+531M12*PWM_ISR1_FCHID_Element{2|24M9} 535r9
+534A9*PWM_ISR1_FCHID_Field_Array(531M12)<integer> 548r19
+539R9*PWM_ISR1_FCHID_Field 540d7 551e6 553r8 565r24
+540b7*As_Array{boolean} 542r12
+545m13*Val{2|30M9} 554r7
+548a13*Arr{534A9} 555r7
+559R9*PWM_ISR1_Register 569e6 572r8 2733r32
+561r7*CHID{511R9} 573r7
+563m7*Reserved_4_15{2|44M9} 574r7
+565r7*FCHID{539R9} 575r7
+567m7*Reserved_20_31{2|44M9} 576r7
+580M12*PWM_SCM_SYNC_Element{2|24M9} 583r55
+583A9*PWM_SCM_SYNC_Field_Array(580M12)<integer> 596r19
+587R9*PWM_SCM_SYNC_Field 588d7 599e6 601r8 629r24
+588b7*As_Array{boolean} 590r12 630m26
+593m13*Val{2|30M9} 602r7 630m45
+596a13*Arr{583A9} 603r7
+607E9*SCM_UPDMSelect 617e6 618r8 634r24
+610n7*MODE0{607E9} 619r7 634r61
+613n7*MODE1{607E9} 620r7
+616n7*MODE2{607E9} 621r7
+623M12*PWM_SCM_PTRM_Field{2|24M9} 638r24
+624M12*PWM_SCM_PTRCS_Field{2|28M9} 640r24
+627R9*PWM_SCM_Register 644e6 647r8 2735r32
+629r7*SYNC{587R9} 648r7
+632m7*Reserved_4_15{2|44M9} 649r7
+634e7*UPDM{607E9} 650r7
+636m7*Reserved_18_19{2|26M9} 651r7
+638m7*PTRM{623M12} 652r7
+640m7*PTRCS{624M12} 653r7
+642m7*Reserved_24_31{2|23M9} 654r7
+657M12*PWM_DMAR_DMADUTY_Field{2|66M9} 662r24
+660R9*PWM_DMAR_Register 666e6 669r8 2737r32
+662m7*DMADUTY{657M12} 670r7
+664m7*Reserved_24_31{2|23M9} 671r7
+674M12*PWM_SCUC_UPDULOCK_Field{2|24M9} 679r23
+677R9*PWM_SCUC_Register 683e6 686r8 2739r32
+679m7*UPDULOCK{674M12} 687r7
+681m7*Reserved_1_31{2|80M9} 688r7
+691M12*PWM_SCUP_UPR_Field{2|30M9} 697r23
+692M12*PWM_SCUP_UPRCNT_Field{2|30M9} 699r23
+695R9*PWM_SCUP_Register 703e6 706r8 2741r32
+697m7*UPR{691M12} 707r7
+699m7*UPRCNT{692M12} 708r7
+701m7*Reserved_8_31{2|66M9} 709r7
+712M12*PWM_SCUPUPD_UPRUPD_Field{2|30M9} 717r23
+715R9*PWM_SCUPUPD_Register 721e6 724r8 2743r32
+717m7*UPRUPD{712M12} 725r7
+719m7*Reserved_4_31{2|74M9} 726r7
+729M12*PWM_IER2_WRDY_Field{2|24M9} 789r24
+730M12*PWM_IER2_UNRE_Field{2|24M9} 794r24
+732M12*PWM_IER2_CMPM_Element{2|24M9} 735r56
+735A9*PWM_IER2_CMPM_Field_Array(732M12)<integer> 748r19
+739R9*PWM_IER2_CMPM_Field 740d7 751e6 753r8 798r24
+740b7*As_Array{boolean} 742r12 799m26
+745m13*Val{2|23M9} 754r7 799m45
+748a13*Arr{735A9} 755r7
+759M12*PWM_IER2_CMPU_Element{2|24M9} 762r56
+762A9*PWM_IER2_CMPU_Field_Array(759M12)<integer> 775r19
+766R9*PWM_IER2_CMPU_Field 767d7 778e6 780r8 801r24
+767b7*As_Array{boolean} 769r12 802m26
+772m13*Val{2|23M9} 781r7 802m45
+775a13*Arr{762A9} 782r7
+786R9*PWM_IER2_Register 806e6 809r8 2745r32
+789m7*WRDY{729M12} 810r7
+791m7*Reserved_1_2{2|26M9} 811r7
+794m7*UNRE{730M12} 812r7
+796m7*Reserved_4_7{2|30M9} 813r7
+798r7*CMPM{739R9} 814r7
+801r7*CMPU{766R9} 815r7
+804m7*Reserved_24_31{2|23M9} 816r7
+819M12*PWM_IDR2_WRDY_Field{2|24M9} 879r24
+820M12*PWM_IDR2_UNRE_Field{2|24M9} 884r24
+822M12*PWM_IDR2_CMPM_Element{2|24M9} 825r56
+825A9*PWM_IDR2_CMPM_Field_Array(822M12)<integer> 838r19
+829R9*PWM_IDR2_CMPM_Field 830d7 841e6 843r8 888r24
+830b7*As_Array{boolean} 832r12 889m26
+835m13*Val{2|23M9} 844r7 889m45
+838a13*Arr{825A9} 845r7
+849M12*PWM_IDR2_CMPU_Element{2|24M9} 852r56
+852A9*PWM_IDR2_CMPU_Field_Array(849M12)<integer> 865r19
+856R9*PWM_IDR2_CMPU_Field 857d7 868e6 870r8 891r24
+857b7*As_Array{boolean} 859r12 892m26
+862m13*Val{2|23M9} 871r7 892m45
+865a13*Arr{852A9} 872r7
+876R9*PWM_IDR2_Register 896e6 899r8 2747r32
+879m7*WRDY{819M12} 900r7
+881m7*Reserved_1_2{2|26M9} 901r7
+884m7*UNRE{820M12} 902r7
+886m7*Reserved_4_7{2|30M9} 903r7
+888r7*CMPM{829R9} 904r7
+891r7*CMPU{856R9} 905r7
+894m7*Reserved_24_31{2|23M9} 906r7
+909M12*PWM_IMR2_WRDY_Field{2|24M9} 968r24
+910M12*PWM_IMR2_UNRE_Field{2|24M9} 972r24
+912M12*PWM_IMR2_CMPM_Element{2|24M9} 915r56
+915A9*PWM_IMR2_CMPM_Field_Array(912M12)<integer> 928r19
+919R9*PWM_IMR2_CMPM_Field 920d7 931e6 933r8 976r24
+920b7*As_Array{boolean} 922r12
+925m13*Val{2|23M9} 934r7
+928a13*Arr{915A9} 935r7
+939M12*PWM_IMR2_CMPU_Element{2|24M9} 942r56
+942A9*PWM_IMR2_CMPU_Field_Array(939M12)<integer> 955r19
+946R9*PWM_IMR2_CMPU_Field 947d7 958e6 960r8 978r24
+947b7*As_Array{boolean} 949r12
+952m13*Val{2|23M9} 961r7
+955a13*Arr{942A9} 962r7
+966R9*PWM_IMR2_Register 982e6 985r8 2749r32
+968m7*WRDY{909M12} 986r7
+970m7*Reserved_1_2{2|26M9} 987r7
+972m7*UNRE{910M12} 988r7
+974m7*Reserved_4_7{2|30M9} 989r7
+976r7*CMPM{919R9} 990r7
+978r7*CMPU{946R9} 991r7
+980m7*Reserved_24_31{2|23M9} 992r7
+995M12*PWM_ISR2_WRDY_Field{2|24M9} 1054r24
+996M12*PWM_ISR2_UNRE_Field{2|24M9} 1058r24
+998M12*PWM_ISR2_CMPM_Element{2|24M9} 1001r56
+1001A9*PWM_ISR2_CMPM_Field_Array(998M12)<integer> 1014r19
+1005R9*PWM_ISR2_CMPM_Field 1006d7 1017e6 1019r8 1062r24
+1006b7*As_Array{boolean} 1008r12
+1011m13*Val{2|23M9} 1020r7
+1014a13*Arr{1001A9} 1021r7
+1025M12*PWM_ISR2_CMPU_Element{2|24M9} 1028r56
+1028A9*PWM_ISR2_CMPU_Field_Array(1025M12)<integer> 1041r19
+1032R9*PWM_ISR2_CMPU_Field 1033d7 1044e6 1046r8 1064r24
+1033b7*As_Array{boolean} 1035r12
+1038m13*Val{2|23M9} 1047r7
+1041a13*Arr{1028A9} 1048r7
+1052R9*PWM_ISR2_Register 1068e6 1071r8 2751r32
+1054m7*WRDY{995M12} 1072r7
+1056m7*Reserved_1_2{2|26M9} 1073r7
+1058m7*UNRE{996M12} 1074r7
+1060m7*Reserved_4_7{2|30M9} 1075r7
+1062r7*CMPM{1005R9} 1076r7
+1064r7*CMPU{1032R9} 1077r7
+1066m7*Reserved_24_31{2|23M9} 1078r7
+1082M12*PWM_OOV_OOVH_Element{2|24M9} 1085r55
+1085A9*PWM_OOV_OOVH_Field_Array(1082M12)<integer> 1098r19
+1089R9*PWM_OOV_OOVH_Field 1090d7 1101e6 1103r8 1138r24
+1090b7*As_Array{boolean} 1092r12 1139m26
+1095m13*Val{2|30M9} 1104r7 1139m45
+1098a13*Arr{1085A9} 1105r7
+1109M12*PWM_OOV_OOVL_Element{2|24M9} 1112r55
+1112A9*PWM_OOV_OOVL_Field_Array(1109M12)<integer> 1125r19
+1116R9*PWM_OOV_OOVL_Field 1117d7 1128e6 1130r8 1143r24
+1117b7*As_Array{boolean} 1119r12 1144m26
+1122m13*Val{2|30M9} 1131r7 1144m45
+1125a13*Arr{1112A9} 1132r7
+1136R9*PWM_OOV_Register 1148e6 1151r8 2753r32
+1138r7*OOVH{1089R9} 1152r7
+1141m7*Reserved_4_15{2|44M9} 1153r7
+1143r7*OOVL{1116R9} 1154r7
+1146m7*Reserved_20_31{2|44M9} 1155r7
+1159M12*PWM_OS_OSH_Element{2|24M9} 1162r53
+1162A9*PWM_OS_OSH_Field_Array(1159M12)<integer> 1175r19
+1166R9*PWM_OS_OSH_Field 1167d7 1178e6 1180r8 1215r24
+1167b7*As_Array{boolean} 1169r12 1215m45
+1172m13*Val{2|30M9} 1181r7 1215m64
+1175a13*Arr{1162A9} 1182r7
+1186M12*PWM_OS_OSL_Element{2|24M9} 1189r53
+1189A9*PWM_OS_OSL_Field_Array(1186M12)<integer> 1202r19
+1193R9*PWM_OS_OSL_Field 1194d7 1205e6 1207r8 1219r24
+1194b7*As_Array{boolean} 1196r12 1219m45
+1199m13*Val{2|30M9} 1208r7 1219m64
+1202a13*Arr{1189A9} 1209r7
+1213R9*PWM_OS_Register 1223e6 1226r8 2755r32
+1215r7*OSH{1166R9} 1227r7
+1217m7*Reserved_4_15{2|44M9} 1228r7
+1219r7*OSL{1193R9} 1229r7
+1221m7*Reserved_20_31{2|44M9} 1230r7
+1234M12*PWM_OSS_OSSH_Element{2|24M9} 1237r55
+1237A9*PWM_OSS_OSSH_Field_Array(1234M12)<integer> 1250r19
+1241R9*PWM_OSS_OSSH_Field 1242d7 1253e6 1255r8 1290r24
+1242b7*As_Array{boolean} 1244r12 1291m26
+1247m13*Val{2|30M9} 1256r7 1291m45
+1250a13*Arr{1237A9} 1257r7
+1261M12*PWM_OSS_OSSL_Element{2|24M9} 1264r55
+1264A9*PWM_OSS_OSSL_Field_Array(1261M12)<integer> 1277r19
+1268R9*PWM_OSS_OSSL_Field 1269d7 1280e6 1282r8 1295r24
+1269b7*As_Array{boolean} 1271r12 1296m26
+1274m13*Val{2|30M9} 1283r7 1296m45
+1277a13*Arr{1264A9} 1284r7
+1288R9*PWM_OSS_Register 1300e6 1303r8 2757r32
+1290r7*OSSH{1241R9} 1304r7
+1293m7*Reserved_4_15{2|44M9} 1305r7
+1295r7*OSSL{1268R9} 1306r7
+1298m7*Reserved_20_31{2|44M9} 1307r7
+1311M12*PWM_OSC_OSCH_Element{2|24M9} 1314r55
+1314A9*PWM_OSC_OSCH_Field_Array(1311M12)<integer> 1327r19
+1318R9*PWM_OSC_OSCH_Field 1319d7 1330e6 1332r8 1367r24
+1319b7*As_Array{boolean} 1321r12 1368m26
+1324m13*Val{2|30M9} 1333r7 1368m45
+1327a13*Arr{1314A9} 1334r7
+1338M12*PWM_OSC_OSCL_Element{2|24M9} 1341r55
+1341A9*PWM_OSC_OSCL_Field_Array(1338M12)<integer> 1354r19
+1345R9*PWM_OSC_OSCL_Field 1346d7 1357e6 1359r8 1372r24
+1346b7*As_Array{boolean} 1348r12 1373m26
+1351m13*Val{2|30M9} 1360r7 1373m45
+1354a13*Arr{1341A9} 1361r7
+1365R9*PWM_OSC_Register 1377e6 1380r8 2759r32
+1367r7*OSCH{1318R9} 1381r7
+1370m7*Reserved_4_15{2|44M9} 1382r7
+1372r7*OSCL{1345R9} 1383r7
+1375m7*Reserved_20_31{2|44M9} 1384r7
+1388M12*PWM_OSSUPD_OSSUPH_Element{2|24M9} 1392r9
+1391A9*PWM_OSSUPD_OSSUPH_Field_Array(1388M12)<integer> 1405r19
+1396R9*PWM_OSSUPD_OSSUPH_Field 1397d7 1408e6 1410r8 1446r24
+1397b7*As_Array{boolean} 1399r12 1447m26
+1402m13*Val{2|30M9} 1411r7 1447m45
+1405a13*Arr{1391A9} 1412r7
+1416M12*PWM_OSSUPD_OSSUPL_Element{2|24M9} 1420r9
+1419A9*PWM_OSSUPD_OSSUPL_Field_Array(1416M12)<integer> 1433r19
+1424R9*PWM_OSSUPD_OSSUPL_Field 1425d7 1436e6 1438r8 1451r24
+1425b7*As_Array{boolean} 1427r12 1452m26
+1430m13*Val{2|30M9} 1439r7 1452m45
+1433a13*Arr{1419A9} 1440r7
+1444R9*PWM_OSSUPD_Register 1456e6 1459r8 2761r32
+1446r7*OSSUPH{1396R9} 1460r7
+1449m7*Reserved_4_15{2|44M9} 1461r7
+1451r7*OSSUPL{1424R9} 1462r7
+1454m7*Reserved_20_31{2|44M9} 1463r7
+1467M12*PWM_OSCUPD_OSCUPH_Element{2|24M9} 1471r9
+1470A9*PWM_OSCUPD_OSCUPH_Field_Array(1467M12)<integer> 1484r19
+1475R9*PWM_OSCUPD_OSCUPH_Field 1476d7 1487e6 1489r8 1525r24
+1476b7*As_Array{boolean} 1478r12 1526m26
+1481m13*Val{2|30M9} 1490r7 1526m45
+1484a13*Arr{1470A9} 1491r7
+1495M12*PWM_OSCUPD_OSCUPL_Element{2|24M9} 1499r9
+1498A9*PWM_OSCUPD_OSCUPL_Field_Array(1495M12)<integer> 1512r19
+1503R9*PWM_OSCUPD_OSCUPL_Field 1504d7 1515e6 1517r8 1530r24
+1504b7*As_Array{boolean} 1506r12 1531m26
+1509m13*Val{2|30M9} 1518r7 1531m45
+1512a13*Arr{1498A9} 1519r7
+1523R9*PWM_OSCUPD_Register 1535e6 1538r8 2763r32
+1525r7*OSCUPH{1475R9} 1539r7
+1528m7*Reserved_4_15{2|44M9} 1540r7
+1530r7*OSCUPL{1503R9} 1541r7
+1533m7*Reserved_20_31{2|44M9} 1542r7
+1545M12*PWM_FMR_FPOL_Field{2|23M9} 1552r24
+1546M12*PWM_FMR_FMOD_Field{2|23M9} 1554r24
+1547M12*PWM_FMR_FFIL_Field{2|23M9} 1556r24
+1550R9*PWM_FMR_Register 1560e6 1563r8 2765r32
+1552m7*FPOL{1545M12} 1564r7
+1554m7*FMOD{1546M12} 1565r7
+1556m7*FFIL{1547M12} 1566r7
+1558m7*Reserved_24_31{2|23M9} 1567r7
+1570M12*PWM_FSR_FIV_Field{2|23M9} 1576r24
+1571M12*PWM_FSR_FS_Field{2|23M9} 1578r24
+1574R9*PWM_FSR_Register 1582e6 1585r8 2767r32
+1576m7*FIV{1570M12} 1586r7
+1578m7*FS{1571M12} 1587r7
+1580m7*Reserved_16_31{2|22M9} 1588r7
+1591M12*PWM_FCR_FCLR_Field{2|23M9} 1596r23
+1594R9*PWM_FCR_Register 1600e6 1603r8 2769r32
+1596m7*FCLR{1591M12} 1604r7
+1598m7*Reserved_8_31{2|66M9} 1605r7
+1609M12*PWM_FPV1_FPVH_Element{2|24M9} 1612r56
+1612A9*PWM_FPV1_FPVH_Field_Array(1609M12)<integer> 1625r19
+1616R9*PWM_FPV1_FPVH_Field 1617d7 1628e6 1630r8 1665r24
+1617b7*As_Array{boolean} 1619r12 1666m26
+1622m13*Val{2|30M9} 1631r7 1666m45
+1625a13*Arr{1612A9} 1632r7
+1636M12*PWM_FPV1_FPVL_Element{2|24M9} 1639r56
+1639A9*PWM_FPV1_FPVL_Field_Array(1636M12)<integer> 1652r19
+1643R9*PWM_FPV1_FPVL_Field 1644d7 1655e6 1657r8 1670r24
+1644b7*As_Array{boolean} 1646r12 1671m26
+1649m13*Val{2|30M9} 1658r7 1671m45
+1652a13*Arr{1639A9} 1659r7
+1663R9*PWM_FPV1_Register 1675e6 1678r8 2771r32
+1665r7*FPVH{1616R9} 1679r7
+1668m7*Reserved_4_15{2|44M9} 1680r7
+1670r7*FPVL{1643R9} 1681r7
+1673m7*Reserved_20_31{2|44M9} 1682r7
+1686M12*PWM_FPE_FPE_Element{2|23M9} 1689r54
+1689A9*PWM_FPE_FPE_Field_Array(1686M12)<integer> 1702r19
+1693R9*PWM_FPE_Register 1694d7 1705e6 1708r8 2773r32
+1694b7*As_Array{boolean} 1696r12
+1699m13*Val{2|21M9} 1709r7
+1702a13*Arr{1689A9} 1710r7
+1714M12*PWM_ELMR_CSEL_Element{2|24M9} 1717r56
+1717A9*PWM_ELMR_CSEL_Field_Array(1714M12)<integer> 1730r19
+1721R9*PWM_ELMR_CSEL_Field 1722d7 1733e6 1735r8 1743r23
+1722b7*As_Array{boolean} 1724r12 1744m25
+1727m13*Val{2|23M9} 1736r7 1744m44
+1730a13*Arr{1717A9} 1737r7
+1741R9*PWM_ELMR_Register 1748e6 1751r8 1757r49
+1743r7*CSEL{1721R9} 1752r7
+1746m7*Reserved_8_31{2|66M9} 1753r7
+1757A9*PWM_ELMR_Registers(1741R9)<integer> 2775r32
+1759M12*PWM_SSPR_SPRD_Field{2|66M9} 1765r24
+1760M12*PWM_SSPR_SPRDM_Field{2|24M9} 1767r24
+1763R9*PWM_SSPR_Register 1771e6 1774r8 2777r32
+1765m7*SPRD{1759M12} 1775r7
+1767m7*SPRDM{1760M12} 1776r7
+1769m7*Reserved_25_31{2|36M9} 1777r7
+1780M12*PWM_SSPUP_SPRDUP_Field{2|66M9} 1785r24
+1783R9*PWM_SSPUP_Register 1789e6 1792r8 2779r32
+1785m7*SPRDUP{1780M12} 1793r7
+1787m7*Reserved_24_31{2|23M9} 1794r7
+1798M12*PWM_SMMR_GCEN_Element{2|24M9} 1801r56
+1801A9*PWM_SMMR_GCEN_Field_Array(1798M12)<integer> 1814r19
+1805R9*PWM_SMMR_GCEN_Field 1806d7 1817e6 1819r8 1854r24
+1806b7*As_Array{boolean} 1808r12 1855m26
+1811m13*Val{2|26M9} 1820r7 1855m45
+1814a13*Arr{1801A9} 1821r7
+1825M12*PWM_SMMR_DOWN_Element{2|24M9} 1828r56
+1828A9*PWM_SMMR_DOWN_Field_Array(1825M12)<integer> 1841r19
+1832R9*PWM_SMMR_DOWN_Field 1833d7 1844e6 1846r8 1859r24
+1833b7*As_Array{boolean} 1835r12 1860m26
+1838m13*Val{2|26M9} 1847r7 1860m45
+1841a13*Arr{1828A9} 1848r7
+1852R9*PWM_SMMR_Register 1864e6 1867r8 2781r32
+1854r7*GCEN{1805R9} 1868r7
+1857m7*Reserved_2_15{2|48M9} 1869r7
+1859r7*DOWN{1832R9} 1870r7
+1862m7*Reserved_18_31{2|48M9} 1871r7
+1875M12*PWM_FPV2_FPZH_Element{2|24M9} 1878r56
+1878A9*PWM_FPV2_FPZH_Field_Array(1875M12)<integer> 1891r19
+1882R9*PWM_FPV2_FPZH_Field 1883d7 1894e6 1896r8 1931r24
+1883b7*As_Array{boolean} 1885r12 1932m26
+1888m13*Val{2|30M9} 1897r7 1932m45
+1891a13*Arr{1878A9} 1898r7
+1902M12*PWM_FPV2_FPZL_Element{2|24M9} 1905r56
+1905A9*PWM_FPV2_FPZL_Field_Array(1902M12)<integer> 1918r19
+1909R9*PWM_FPV2_FPZL_Field 1910d7 1921e6 1923r8 1936r24
+1910b7*As_Array{boolean} 1912r12 1937m26
+1915m13*Val{2|30M9} 1924r7 1937m45
+1918a13*Arr{1905A9} 1925r7
+1929R9*PWM_FPV2_Register 1941e6 1944r8 2783r32
+1931r7*FPZH{1882R9} 1945r7
+1934m7*Reserved_4_15{2|44M9} 1946r7
+1936r7*FPZL{1909R9} 1947r7
+1939m7*Reserved_20_31{2|44M9} 1948r7
+1952E9*WPCR_WPCMDSelect 1965e6 1966r8 2013r15
+1955n7*DISABLE_SW_PROT{1952E9} 1967r7 2013r54
+1958n7*ENABLE_SW_PROT{1952E9} 1968r7
+1964n7*ENABLE_HW_PROT{1952E9} 1969r7
+1972M12*PWM_WPCR_WPRG_Element{2|24M9} 1975r56
+1975A9*PWM_WPCR_WPRG_Field_Array(1972M12)<integer> 1988r19
+1979R9*PWM_WPCR_WPRG_Field 1980d7 1991e6 1993r8 2015r15
+1980b7*As_Array{boolean} 1982r12 2015m39
+1985m13*Val{2|34M9} 1994r7 2015m58
+1988a13*Arr{1975A9} 1995r7
+1999E9*WPCR_WPKEYSelect 2005e6 2006r8 2017r15
+2001n7*WPCR_WPKEYSelect_Reset{1999E9} 2007r7 2017r35
+2004n7*PASSWD{1999E9} 2008r7
+2011R9*PWM_WPCR_Register 2019e6 2022r8 2785r32
+2013e7*WPCMD{1952E9} 2023r7
+2015r7*WPRG{1979R9} 2024r7
+2017e7*WPKEY{1999E9} 2025r7
+2029M12*PWM_WPSR_WPSWS_Element{2|24M9} 2033r9
+2032A9*PWM_WPSR_WPSWS_Field_Array(2029M12)<integer> 2046r19
+2037R9*PWM_WPSR_WPSWS_Field 2038d7 2049e6 2051r8 2090r24
+2038b7*As_Array{boolean} 2040r12
+2043m13*Val{2|34M9} 2052r7
+2046a13*Arr{2032A9} 2053r7
+2056M12*PWM_WPSR_WPVS_Field{2|24M9} 2094r24
+2058M12*PWM_WPSR_WPHWS_Element{2|24M9} 2062r9
+2061A9*PWM_WPSR_WPHWS_Field_Array(2058M12)<integer> 2075r19
+2066R9*PWM_WPSR_WPHWS_Field 2067d7 2078e6 2080r8 2096r24
+2067b7*As_Array{boolean} 2069r12
+2072m13*Val{2|34M9} 2081r7
+2075a13*Arr{2061A9} 2082r7
+2085M12*PWM_WPSR_WPVSRC_Field{2|22M9} 2100r24
+2088R9*PWM_WPSR_Register 2102e6 2105r8 2787r32
+2090r7*WPSWS{2037R9} 2106r7
+2092m7*Reserved_6_6{2|24M9} 2107r7
+2094m7*WPVS{2056M12} 2108r7
+2096r7*WPHWS{2066R9} 2109r7
+2098m7*Reserved_14_15{2|26M9} 2110r7
+2100m7*WPVSRC{2085M12} 2111r7
+2118M12*PWM_CMPV_PWM_PWM_CMP_CV_Field{2|66M9} 2134r24
+2121E9*CMPV_CVMSelect 2126e6 2127r8 2136r24
+2123n7*COMPARE_AT_INCREMENT{2121E9} 2128r7 2137r44
+2125n7*COMPARE_AT_DECREMENT{2121E9} 2129r7
+2132R9*PWM_CMPV_PWM_PWM_CMP_Register 2141e6 2144r8 2249r25
+2134m7*CV{2118M12} 2145r7
+2136e7*CVM{2121E9} 2146r7
+2139m7*Reserved_25_31{2|36M9} 2147r7
+2150M12*PWM_CMPVUPD_PWM_PWM_CMP_CVUPD_Field{2|66M9} 2156r24
+2151M12*PWM_CMPVUPD_PWM_PWM_CMP_CVMUPD_Field{2|24M9} 2158r24
+2154R9*PWM_CMPVUPD_PWM_PWM_CMP_Register 2162e6 2165r8 2251r25
+2156m7*CVUPD{2150M12} 2166r7
+2158m7*CVMUPD{2151M12} 2167r7
+2160m7*Reserved_25_31{2|36M9} 2168r7
+2171M12*PWM_CMPM_PWM_PWM_CMP_CEN_Field{2|24M9} 2181r24
+2172M12*PWM_CMPM_PWM_PWM_CMP_CTR_Field{2|30M9} 2185r24
+2173M12*PWM_CMPM_PWM_PWM_CMP_CPR_Field{2|30M9} 2187r24
+2174M12*PWM_CMPM_PWM_PWM_CMP_CPRCNT_Field{2|30M9} 2189r24
+2175M12*PWM_CMPM_PWM_PWM_CMP_CUPR_Field{2|30M9} 2191r24
+2176M12*PWM_CMPM_PWM_PWM_CMP_CUPRCNT_Field{2|30M9} 2193r24
+2179R9*PWM_CMPM_PWM_PWM_CMP_Register 2197e6 2200r8 2253r25
+2181m7*CEN{2171M12} 2201r7
+2183m7*Reserved_1_3{2|28M9} 2202r7
+2185m7*CTR{2172M12} 2203r7
+2187m7*CPR{2173M12} 2204r7
+2189m7*CPRCNT{2174M12} 2205r7
+2191m7*CUPR{2175M12} 2206r7
+2193m7*CUPRCNT{2176M12} 2207r7
+2195m7*Reserved_24_31{2|23M9} 2208r7
+2211M12*PWM_CMPMUPD_PWM_PWM_CMP_CENUPD_Field{2|24M9} 2219r24
+2212M12*PWM_CMPMUPD_PWM_PWM_CMP_CTRUPD_Field{2|30M9} 2223r24
+2213M12*PWM_CMPMUPD_PWM_PWM_CMP_CPRUPD_Field{2|30M9} 2225r24
+2214M12*PWM_CMPMUPD_PWM_PWM_CMP_CUPRUPD_Field{2|30M9} 2229r24
+2217R9*PWM_CMPMUPD_PWM_PWM_CMP_Register 2233e6 2236r8 2255r25
+2219m7*CENUPD{2211M12} 2237r7
+2221m7*Reserved_1_3{2|28M9} 2238r7
+2223m7*CTRUPD{2212M12} 2239r7
+2225m7*CPRUPD{2213M12} 2240r7
+2227m7*Reserved_12_15{2|30M9} 2241r7
+2229m7*CUPRUPD{2214M12} 2242r7
+2231m7*Reserved_20_31{2|44M9} 2243r7
+2247R9*PWM_PWM_CMP_Cluster 2257e6 2259r8 2267r51
+2249r7*CMPV{2132R9} 2260r7
+2251r7*CMPVUPD{2154R9} 2261r7
+2253r7*CMPM{2179R9} 2262r7
+2255r7*CMPMUPD{2217R9} 2263r7
+2267A9*PWM_PWM_CMP_Clusters(2247R9)<integer> 2789r32
+2274E9*CMR_CPRESelect 2301e6 2302r8 2371r24
+2276n7*MCK{2274E9} 2303r7 2371r61
+2278n7*MCK_DIV_2{2274E9} 2304r7
+2280n7*MCK_DIV_4{2274E9} 2305r7
+2282n7*MCK_DIV_8{2274E9} 2306r7
+2284n7*MCK_DIV_16{2274E9} 2307r7
+2286n7*MCK_DIV_32{2274E9} 2308r7
+2288n7*MCK_DIV_64{2274E9} 2309r7
+2290n7*MCK_DIV_128{2274E9} 2310r7
+2292n7*MCK_DIV_256{2274E9} 2311r7
+2294n7*MCK_DIV_512{2274E9} 2312r7
+2296n7*MCK_DIV_1024{2274E9} 2313r7
+2298n7*CLKA{2274E9} 2314r7
+2300n7*CLKB{2274E9} 2315r7
+2318E9*CMR_CALGSelect 2323e6 2324r8 2375r24
+2320n7*LEFT_ALIGNED{2318E9} 2325r7 2375r61
+2322n7*CENTER_ALIGNED{2318E9} 2326r7
+2329E9*CMR_CPOLSelect 2334e6 2335r8 2377r24
+2331n7*LOW_POLARITY{2329E9} 2336r7 2377r61
+2333n7*HIGH_POLARITY{2329E9} 2337r7
+2340E9*CMR_CESSelect 2345e6 2346r8 2379r24
+2342n7*SINGLE_EVENT{2340E9} 2347r7 2379r60
+2344n7*DOUBLE_EVENT{2340E9} 2348r7
+2351E9*CMR_UPDSSelect 2356e6 2357r8 2381r24
+2353n7*UPDATE_AT_PERIOD{2351E9} 2358r7 2381r61
+2355n7*UPDATE_AT_HALF_PERIOD{2351E9} 2359r7
+2361M12*PWM_CMR_PWM_PWM_CH_NUM_DPOLI_Field{2|24M9} 2383r24
+2362M12*PWM_CMR_PWM_PWM_CH_NUM_TCTS_Field{2|24M9} 2385r24
+2363M12*PWM_CMR_PWM_PWM_CH_NUM_DTE_Field{2|24M9} 2389r24
+2364M12*PWM_CMR_PWM_PWM_CH_NUM_DTHI_Field{2|24M9} 2391r24
+2365M12*PWM_CMR_PWM_PWM_CH_NUM_DTLI_Field{2|24M9} 2393r24
+2366M12*PWM_CMR_PWM_PWM_CH_NUM_PPM_Field{2|24M9} 2395r24
+2369R9*PWM_CMR_PWM_PWM_CH_NUM_Register 2399e6 2402r8 2543r25
+2371e7*CPRE{2274E9} 2403r7
+2373m7*Reserved_4_7{2|30M9} 2404r7
+2375e7*CALG{2318E9} 2405r7
+2377e7*CPOL{2329E9} 2406r7
+2379e7*CES{2340E9} 2407r7
+2381e7*UPDS{2351E9} 2408r7
+2383m7*DPOLI{2361M12} 2409r7
+2385m7*TCTS{2362M12} 2410r7
+2387m7*Reserved_14_15{2|26M9} 2411r7
+2389m7*DTE{2363M12} 2412r7
+2391m7*DTHI{2364M12} 2413r7
+2393m7*DTLI{2365M12} 2414r7
+2395m7*PPM{2366M12} 2415r7
+2397m7*Reserved_20_31{2|44M9} 2416r7
+2419M12*PWM_CDTY_PWM_PWM_CH_NUM_CDTY_Field{2|66M9} 2424r24
+2422R9*PWM_CDTY_PWM_PWM_CH_NUM_Register 2428e6 2431r8 2545r25
+2424m7*CDTY{2419M12} 2432r7
+2426m7*Reserved_24_31{2|23M9} 2433r7
+2436M12*PWM_CDTYUPD_PWM_PWM_CH_NUM_CDTYUPD_Field{2|66M9} 2441r24
+2439R9*PWM_CDTYUPD_PWM_PWM_CH_NUM_Register 2445e6 2448r8 2547r25
+2441m7*CDTYUPD{2436M12} 2449r7
+2443m7*Reserved_24_31{2|23M9} 2450r7
+2453M12*PWM_CPRD_PWM_PWM_CH_NUM_CPRD_Field{2|66M9} 2458r24
+2456R9*PWM_CPRD_PWM_PWM_CH_NUM_Register 2462e6 2465r8 2549r25
+2458m7*CPRD{2453M12} 2466r7
+2460m7*Reserved_24_31{2|23M9} 2467r7
+2470M12*PWM_CPRDUPD_PWM_PWM_CH_NUM_CPRDUPD_Field{2|66M9} 2475r24
+2473R9*PWM_CPRDUPD_PWM_PWM_CH_NUM_Register 2479e6 2482r8 2551r25
+2475m7*CPRDUPD{2470M12} 2483r7
+2477m7*Reserved_24_31{2|23M9} 2484r7
+2487M12*PWM_CCNT_PWM_PWM_CH_NUM_CNT_Field{2|66M9} 2492r24
+2490R9*PWM_CCNT_PWM_PWM_CH_NUM_Register 2496e6 2499r8 2553r25
+2492m7*CNT{2487M12} 2500r7
+2494m7*Reserved_24_31{2|23M9} 2501r7
+2504M12*PWM_DT_PWM_PWM_CH_NUM_DTH_Field{2|22M9} 2510r13
+2505M12*PWM_DT_PWM_PWM_CH_NUM_DTL_Field{2|22M9} 2512r13
+2508R9*PWM_DT_PWM_PWM_CH_NUM_Register 2514e6 2517r8 2555r25
+2510m7*DTH{2504M12} 2518r7
+2512m7*DTL{2505M12} 2519r7
+2522M12*PWM_DTUPD_PWM_PWM_CH_NUM_DTHUPD_Field{2|22M9} 2528r16
+2523M12*PWM_DTUPD_PWM_PWM_CH_NUM_DTLUPD_Field{2|22M9} 2530r16
+2526R9*PWM_DTUPD_PWM_PWM_CH_NUM_Register 2532e6 2535r8 2557r25
+2528m7*DTHUPD{2522M12} 2536r7
+2530m7*DTLUPD{2523M12} 2537r7
+2541R9*PWM_PWM_CH_NUM_Cluster 2559e6 2561r8 2573r54
+2543r7*CMR{2369R9} 2562r7
+2545r7*CDTY{2422R9} 2563r7
+2547r7*CDTYUPD{2439R9} 2564r7
+2549r7*CPRD{2456R9} 2565r7
+2551r7*CPRDUPD{2473R9} 2566r7
+2553r7*CCNT{2490R9} 2567r7
+2555r7*DT{2508R9} 2568r7
+2557r7*DTUPD{2526R9} 2569r7
+2573A9*PWM_PWM_CH_NUM_Clusters(2541R9)<integer> 2791r32
+2575M12*CMUPD_CPOLUP_Field{2|24M9} 2583r24
+2576M12*CMUPD_CPOLINVUP_Field{2|24M9} 2587r24
+2579R9*CMUPD_Register 2591e6 2594r8 2793r32 2795r32 2801r32 2807r32
+2581m7*Reserved_0_8{2|38M9} 2595r7
+2583m7*CPOLUP{2575M12} 2596r7
+2585m7*Reserved_10_12{2|28M9} 2597r7
+2587m7*CPOLINVUP{2576M12} 2598r7
+2589m7*Reserved_14_31{2|54M9} 2599r7
+2602M12*ETRG_MAXCNT_Field{2|66M9} 2641r24
+2605E9*ETRG1_TRGMODESelect 2614e6 2615r8 2643r24
+2607n7*OFF{2605E9} 2616r7 2643r66
+2609n7*MODE1{2605E9} 2617r7
+2611n7*MODE2{2605E9} 2618r7
+2613n7*MODE3{2605E9} 2619r7
+2622E9*ETRG1_TRGEDGESelect 2629e6 2630r8 2647r24
+2625n7*FALLING_ZERO{2622E9} 2631r7 2647r66
+2628n7*RISING_ONE{2622E9} 2632r7
+2634M12*ETRG_TRGFILT_Field{2|24M9} 2649r24
+2635M12*ETRG_TRGSRC_Field{2|24M9} 2651r24
+2636M12*ETRG_RFEN_Field{2|24M9} 2653r24
+2639R9*ETRG_Register 2655e6 2658r8 2797r32 2803r32
+2641m7*MAXCNT{2602M12} 2659r7
+2643e7*TRGMODE{2605E9} 2660r7
+2645m7*Reserved_26_27{2|26M9} 2661r7
+2647e7*TRGEDGE{2622E9} 2662r7
+2649m7*TRGFILT{2634M12} 2663r7
+2651m7*TRGSRC{2635M12} 2664r7
+2653m7*RFEN{2636M12} 2665r7
+2668M12*LEBR_LEBDELAY_Field{2|36M9} 2677r24
+2669M12*LEBR_PWMLFEN_Field{2|24M9} 2681r24
+2670M12*LEBR_PWMLREN_Field{2|24M9} 2683r24
+2671M12*LEBR_PWMHFEN_Field{2|24M9} 2685r24
+2672M12*LEBR_PWMHREN_Field{2|24M9} 2687r24
+2675R9*LEBR_Register 2691e6 2694r8 2799r32 2805r32
+2677m7*LEBDELAY{2668M12} 2695r7
+2679m7*Reserved_7_15{2|38M9} 2696r7
+2681m7*PWMLFEN{2669M12} 2697r7
+2683m7*PWMLREN{2670M12} 2698r7
+2685m7*PWMHFEN{2671M12} 2699r7
+2687m7*PWMHREN{2672M12} 2700r7
+2689m7*Reserved_20_31{2|44M9} 2701r7
+2717R9*PWM_Peripheral 2809e6 2811r8 2860r26 2864r26
+2719r7*CLK{119R9} 2812r7
+2721r7*ENA{173R9} 2813r7
+2723r7*DIS{215R9} 2814r7
+2725r7*SR{257R9} 2815r7
+2727r7*IER1{327R9} 2816r7
+2729r7*IDR1{405R9} 2817r7
+2731r7*IMR1{483R9} 2818r7
+2733r7*ISR1{559R9} 2819r7
+2735r7*SCM{627R9} 2820r7
+2737r7*DMAR{660R9} 2821r7
+2739r7*SCUC{677R9} 2822r7
+2741r7*SCUP{695R9} 2823r7
+2743r7*SCUPUPD{715R9} 2824r7
+2745r7*IER2{786R9} 2825r7
+2747r7*IDR2{876R9} 2826r7
+2749r7*IMR2{966R9} 2827r7
+2751r7*ISR2{1052R9} 2828r7
+2753r7*OOV{1136R9} 2829r7
+2755r7*OS{1213R9} 2830r7
+2757r7*OSS{1288R9} 2831r7
+2759r7*OSC{1365R9} 2832r7
+2761r7*OSSUPD{1444R9} 2833r7
+2763r7*OSCUPD{1523R9} 2834r7
+2765r7*FMR{1550R9} 2835r7
+2767r7*FSR{1574R9} 2836r7
+2769r7*FCR{1594R9} 2837r7
+2771r7*FPV1{1663R9} 2838r7
+2773r7*FPE{1693R9} 2839r7
+2775a7*ELMR{1757A9} 2840r7
+2777r7*SSPR{1763R9} 2841r7
+2779r7*SSPUP{1783R9} 2842r7
+2781r7*SMMR{1852R9} 2843r7
+2783r7*FPV2{1929R9} 2844r7
+2785r7*WPCR{2011R9} 2845r7
+2787r7*WPSR{2088R9} 2846r7
+2789a7*PWM_PWM_CMP{2267A9} 2847r7
+2791a7*PWM_PWM_CH_NUM{2573A9} 2848r7
+2793r7*CMUPD0{2579R9} 2849r7
+2795r7*CMUPD1{2579R9} 2850r7
+2797r7*ETRG1{2639R9} 2851r7
+2799r7*LEBR1{2675R9} 2852r7
+2801r7*CMUPD2{2579R9} 2853r7
+2803r7*ETRG2{2639R9} 2854r7
+2805r7*LEBR2{2675R9} 2855r7
+2807r7*CMUPD3{2579R9} 2856r7
+2860r4*PWM0_Periph{2717R9}
+2864r4*PWM1_Periph{2717R9}
+X 4 system.ads
+50K9*System 3|10w6 134r24 180r24 222r24 264r24 340r24 418r24 494r24 570r24
+. 645r24 667r24 684r24 704r24 722r24 807r24 897r24 983r24 1069r24 1149r24
+. 1224r24 1301r24 1378r24 1457r24 1536r24 1561r24 1583r24 1601r24 1676r24
+. 1706r24 1749r24 1772r24 1790r24 1865r24 1942r24 2020r24 2103r24 2142r24
+. 2163r24 2198r24 2234r24 2400r24 2429r24 2446r24 2463r24 2480r24 2497r24
+. 2515r24 2533r24 2592r24 2656r24 2692r24 4|164e11
+80M9*Address
+104n41*Low_Order_First{104E9} 3|134r31 180r31 222r31 264r31 340r31 418r31
+. 494r31 570r31 645r31 667r31 684r31 704r31 722r31 807r31 897r31 983r31 1069r31
+. 1149r31 1224r31 1301r31 1378r31 1457r31 1536r31 1561r31 1583r31 1601r31
+. 1676r31 1706r31 1749r31 1772r31 1790r31 1865r31 1942r31 2020r31 2103r31
+. 2142r31 2163r31 2198r31 2234r31 2400r31 2429r31 2446r31 2463r31 2480r31
+. 2497r31 2515r31 2533r31 2592r31 2656r31 2692r31
+

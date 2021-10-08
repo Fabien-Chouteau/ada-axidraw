@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from ATSAMV71Q21.svd
+--  This spec has been automatically generated from ATSAMRH71F20C.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -15,41 +15,41 @@ package SAM_SVD.RSWDT is
    ---------------
 
    --  Password
-   type RSWDT_CR_KEYSelect is
+   type CR_KEYSelect is
      (--  Reset value for the field
-      RSWDT_CR_KEYSelect_Reset,
+      CR_KEYSelect_Reset,
       --  Writing any other value in this field aborts the write operation.
       PASSWD)
      with Size => 8;
-   for RSWDT_CR_KEYSelect use
-     (RSWDT_CR_KEYSelect_Reset => 0,
+   for CR_KEYSelect use
+     (CR_KEYSelect_Reset => 0,
       PASSWD => 196);
 
    --  Control Register
-   type RSWDT_RSWDT_CR_Register is record
+   type RSWDT_CR_Register is record
       --  Write-only. Watchdog Restart
       WDRSTT        : Boolean := False;
       --  unspecified
       Reserved_1_23 : HAL.UInt23 := 16#0#;
       --  Write-only. Password
-      KEY           : RSWDT_CR_KEYSelect := RSWDT_CR_KEYSelect_Reset;
+      KEY           : CR_KEYSelect := CR_KEYSelect_Reset;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RSWDT_RSWDT_CR_Register use record
+   for RSWDT_CR_Register use record
       WDRSTT        at 0 range 0 .. 0;
       Reserved_1_23 at 0 range 1 .. 23;
       KEY           at 0 range 24 .. 31;
    end record;
 
-   subtype RSWDT_RSWDT_MR_WDV_Field is HAL.UInt12;
-   subtype RSWDT_RSWDT_MR_ALLONES_Field is HAL.UInt12;
+   subtype RSWDT_MR_WDV_Field is HAL.UInt12;
+   subtype RSWDT_MR_ALLONES_Field is HAL.UInt12;
 
    --  Mode Register
-   type RSWDT_RSWDT_MR_Register is record
+   type RSWDT_MR_Register is record
       --  Watchdog Counter Value
-      WDV            : RSWDT_RSWDT_MR_WDV_Field := 16#0#;
+      WDV            : RSWDT_MR_WDV_Field := 16#0#;
       --  Watchdog Fault Interrupt Enable
       WDFIEN         : Boolean := False;
       --  Watchdog Reset Enable
@@ -59,7 +59,7 @@ package SAM_SVD.RSWDT is
       --  Watchdog Disable
       WDDIS          : Boolean := False;
       --  Must Always Be Written with 0xFFF
-      ALLONES        : RSWDT_RSWDT_MR_ALLONES_Field := 16#0#;
+      ALLONES        : RSWDT_MR_ALLONES_Field := 16#0#;
       --  Watchdog Debug Halt
       WDDBGHLT       : Boolean := False;
       --  Watchdog Idle Halt
@@ -70,7 +70,7 @@ package SAM_SVD.RSWDT is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RSWDT_RSWDT_MR_Register use record
+   for RSWDT_MR_Register use record
       WDV            at 0 range 0 .. 11;
       WDFIEN         at 0 range 12 .. 12;
       WDRSTEN        at 0 range 13 .. 13;
@@ -83,7 +83,7 @@ package SAM_SVD.RSWDT is
    end record;
 
    --  Status Register
-   type RSWDT_RSWDT_SR_Register is record
+   type RSWDT_SR_Register is record
       --  Read-only. Watchdog Underflow
       WDUNF         : Boolean;
       --  unspecified
@@ -92,7 +92,7 @@ package SAM_SVD.RSWDT is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RSWDT_RSWDT_SR_Register use record
+   for RSWDT_SR_Register use record
       WDUNF         at 0 range 0 .. 0;
       Reserved_1_31 at 0 range 1 .. 31;
    end record;
@@ -104,18 +104,18 @@ package SAM_SVD.RSWDT is
    --  Reinforced Safety Watchdog Timer
    type RSWDT_Peripheral is record
       --  Control Register
-      RSWDT_CR : aliased RSWDT_RSWDT_CR_Register;
+      CR : aliased RSWDT_CR_Register;
       --  Mode Register
-      RSWDT_MR : aliased RSWDT_RSWDT_MR_Register;
+      MR : aliased RSWDT_MR_Register;
       --  Status Register
-      RSWDT_SR : aliased RSWDT_RSWDT_SR_Register;
+      SR : aliased RSWDT_SR_Register;
    end record
      with Volatile;
 
    for RSWDT_Peripheral use record
-      RSWDT_CR at 16#0# range 0 .. 31;
-      RSWDT_MR at 16#4# range 0 .. 31;
-      RSWDT_SR at 16#8# range 0 .. 31;
+      CR at 16#0# range 0 .. 31;
+      MR at 16#4# range 0 .. 31;
+      SR at 16#8# range 0 .. 31;
    end record;
 
    --  Reinforced Safety Watchdog Timer

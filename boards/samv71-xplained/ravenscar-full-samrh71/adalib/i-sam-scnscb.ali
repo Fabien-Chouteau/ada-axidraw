@@ -1,0 +1,96 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U interfaces.sam.scnscb%s  i-sam-scnscb.ads	dd901c4c NE OL PR PK
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W system%s		system.ads		system.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D i-sam.ads		20210927130812 3bba8a63 interfaces.sam%s
+D i-sam-scnscb.ads	20210927130812 bcfe797a interfaces.sam.scnscb%s
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+G c Z s s [scnscb_ictr_registerIP interfaces__sam__scnscb 23 9 none]
+G c Z s s [scnscb_actlr_registerIP interfaces__sam__scnscb 52 9 none]
+G c Z s s [scnscb_peripheralIP interfaces__sam__scnscb 106 9 none]
+X 1 interfac.ads
+38K9*Interfaces 231e15 3|12r9 20r45 28r23 38r42 39r44 40r44 41r49 42r46 43r47
+. 44r48 45r40 46r44 47r44 48r48 49r47 54r24 58r24 78r24 123r5
+X 2 i-sam.ads
+13K20*SAM 1|38k9 2|139e19 3|12r20 20r56 28r34 38r53 39r55 40r55 41r60 42r57
+. 43r58 44r59 45r51 46r55 47r55 48r59 49r58 54r35 58r35 78r35 123r16
+24M9*Bit 3|38r57 39r59 40r59 41r64 42r61 43r62 44r63 47r59 48r63 49r62
+26M9*UInt2 3|54r39
+28M9*UInt3 3|78r39
+30M9*UInt4 3|20r60
+32M9*UInt5 3|45r55 46r59
+36M9*UInt7 3|58r39
+74M9*UInt28 3|28r38
+132m4*SCnSCB_Base{4|80M9} 3|121r30
+X 3 i-sam-scnscb.ads
+12K24*SCnSCB 2|13k20 3|123l20 123e26
+20M12*SCnSCB_ICTR_INTLINESNUM_Field{2|30M9} 26r23
+23R9*SCnSCB_ICTR_Register 30e6 33r8 108r23
+26m7*INTLINESNUM{20M12} 34r7
+28m7*Reserved_4_31{2|74M9} 35r7
+38M12*SCnSCB_ACTLR_DISFOLD_Field{2|24M9} 56r24
+39M12*SCnSCB_ACTLR_FPEXCODIS_Field{2|24M9} 60r24
+40M12*SCnSCB_ACTLR_DISRAMODE_Field{2|24M9} 63r24
+41M12*SCnSCB_ACTLR_DISITMATBFLUSH_Field{2|24M9} 65r24
+42M12*SCnSCB_ACTLR_DISBTACREAD_Field{2|24M9} 66r24
+43M12*SCnSCB_ACTLR_DISBTACALLOC_Field{2|24M9} 67r24
+44M12*SCnSCB_ACTLR_DISCRITAXIRUR_Field{2|24M9} 68r24
+45M12*SCnSCB_ACTLR_DISDI_Field{2|32M9} 69r24
+46M12*SCnSCB_ACTLR_DISISSCH1_Field{2|32M9} 70r24
+47M12*SCnSCB_ACTLR_DISDYNADD_Field{2|24M9} 72r24
+48M12*SCnSCB_ACTLR_DISCRITAXIRUW_Field{2|24M9} 74r24
+49M12*SCnSCB_ACTLR_DISFPUISSOPT_Field{2|24M9} 76r24
+52R9*SCnSCB_ACTLR_Register 80e6 83r8 110r23
+54m7*Reserved_0_1{2|26M9} 84r7
+56m7*DISFOLD{38M12} 85r7
+58m7*Reserved_3_9{2|36M9} 86r7
+60m7*FPEXCODIS{39M12} 87r7
+63m7*DISRAMODE{40M12} 88r7
+65m7*DISITMATBFLUSH{41M12} 89r7
+66m7*DISBTACREAD{42M12} 90r7
+67m7*DISBTACALLOC{43M12} 91r7
+68m7*DISCRITAXIRUR{44M12} 92r7
+69m7*DISDI{45M12} 93r7
+70m7*DISISSCH1{46M12} 94r7
+72m7*DISDYNADD{47M12} 95r7
+74m7*DISCRITAXIRUW{48M12} 96r7
+76m7*DISFPUISSOPT{49M12} 97r7
+78m7*Reserved_29_31{2|28M9} 98r7
+106R9*SCnSCB_Peripheral 112e6 114r8 120r28
+108r7*ICTR{23R9} 115r7
+110r7*ACTLR{52R9} 116r7
+120r4*SCnSCB_Periph{106R9}
+X 4 system.ads
+50K9*System 3|10w6 31r24 81r24 4|164e11
+80M9*Address
+104n41*Low_Order_First{104E9} 3|31r31 81r31
+

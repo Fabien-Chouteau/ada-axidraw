@@ -1,0 +1,90 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB SS ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.strings.wide_wide_bounded.wide_wide_hash%b  a-szbzha.adb  6aaace4b NE OL SU GE
+W ada.strings.wide_wide_bounded%s  a-stzbou.adb	a-stzbou.ali
+W system%s		system.ads		system.ali
+W system.string_hash%s	s-strhas.adb		s-strhas.ali
+
+U ada.strings.wide_wide_bounded.wide_wide_hash%s  a-szbzha.ads  8e8f783e BN NE OL PR GE
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.strings.wide_wide_bounded%s  a-stzbou.adb	a-stzbou.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-contai.ads		20210927095552 61e5e089 ada.containers%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-finali.ads		20210927095552 bf4f806b ada.finalization%s
+D a-stream.ads		20210927095552 119b8fb3 ada.streams%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-stzbou.ads		20210927095552 ab06e6d7 ada.strings.wide_wide_bounded%s
+D a-szbzha.ads		20210927095552 446c7e60 ada.strings.wide_wide_bounded.wide_wide_hash%s
+D a-szbzha.adb		20210927095552 085a68bf ada.strings.wide_wide_bounded.wide_wide_hash%b
+D a-stzmap.ads		20210927095552 e0c31b30 ada.strings.wide_wide_maps%s
+D a-stzsup.ads		20210927095552 4166b55b ada.strings.wide_wide_superbounded%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-finroo.ads		20210927095552 4ff27390 system.finalization_root%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210927095552 7bdda3fa system.stream_attributes%s
+D s-strhas.ads		20210927095552 269cd894 system.string_hash%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [wide_wide_hash ada__strings__wide_wide_bounded 24 40 none]
+X 1 ada.ads
+16K9*Ada 20e8 10|18r6 22r10 24r10 28r22 11|32r10 36r8 41r5
+X 2 a-contai.ads
+16K13*Containers 28e19 10|18w10 26r10 11|34r10 36r12
+19M9*Hash_Type 10|26r21 11|34r21 38r46
+X 6 a-string.ads
+16K13*Strings 35e16 10|22r14 24r14 28r26 11|32r14 41r9
+X 9 a-stzbou.ads
+39K21*Wide_Wide_Bounded 937e34 10|22r22 24r22 28r34 11|32r22 41r17
+46k12*Generic_Bounded_Length 935e30 10|22r40
+50R12 Bounded_Wide_Wide_String<13|51R9> 10|25r18[21] 11|33r18[10|21]
+67V16 To_Wide_Wide_String{wide_wide_string} 11|40s25[10|21]
+X 10 a-szbzha.ads
+21K17 Bounded[9|46] 25r10 11|33r10 40r17
+24v40*Wide_Wide_Hash 9|39k21 10|25>4 28r52 11|32b40 41l35 41t49
+25r4 Key{9|50R12[21]} 11|33b4 40r46
+X 11 a-szbzha.adb
+37V13 Hash[26|60]{2|19M9} 40s11
+X 17 system.ads
+50K9*System 11|30r6 37r25 17|164e11
+X 26 s-strhas.ads
+45K16*String_Hash 11|30w13 37r32 26|64e23
+60v13*Hash 11|37r44
+

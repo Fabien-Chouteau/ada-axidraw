@@ -1,0 +1,41 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U io_exceptions%s	ioexcept.ads		15b36750 NE OL PU
+W ada%s			ada.ads			ada.ali
+W ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-ioexce.ads		20210927095552 e4a01f64 ada.io_exceptions%s
+D ioexcept.ads		20210927095552 f1137834 io_exceptions%s
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+X 1 ada.ads
+16K9*Ada 20e8 3|22r6 24r31
+X 2 a-ioexce.ads
+18K13*IO_Exceptions 30e22 3|22w10 24r35
+X 3 ioexcept.ads
+24K9*IO_Exceptions=24:35
+

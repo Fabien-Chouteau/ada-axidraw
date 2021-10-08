@@ -1,0 +1,42 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U system.bb.mcu_parameters%s  s-bbmcpa.ads	681cf034 NE OL PR PK
+W system.bb%s		s-bb.ads		s-bb.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+G a e
+X 1 system.ads
+50K9*System 164e11 3|37r9 45r5
+X 2 s-bb.ads
+40K16*BB 1|50k9 2|95e14 3|37r16 45r12
+X 3 s-bbmcpa.ads
+37K19*MCU_Parameters 2|40k16 3|45l15 45e29
+41N4*Number_Of_Interrupts
+43b4*Has_FPU{boolean}
+

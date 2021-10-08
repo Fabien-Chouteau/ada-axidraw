@@ -1,0 +1,68 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.machine_state_operations%b  s-mastop.adb  c037c078 NE OL PK
+W system%s		system.ads		system.ali
+
+U system.machine_state_operations%s  s-mastop.ads  36cc3f15 NE OL PK
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-mastop.ads		20210927095552 41db9a44 system.machine_state_operations%s
+D s-mastop.adb		20210927095552 81ec5a3c system.machine_state_operations%b
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+G a e
+G c Z s b [machine_state_length system__machine_state_operations 51 13 none]
+G c Z s b [allocate_machine_state system__machine_state_operations 57 13 none]
+G c Z s b [free_machine_state system__machine_state_operations 60 14 none]
+G c Z s b [get_code_loc system__machine_state_operations 69 13 none]
+G c Z s b [pop_frame system__machine_state_operations 76 14 none]
+G c Z s b [fetch_code system__machine_state_operations 82 13 none]
+G c Z s b [set_machine_state system__machine_state_operations 96 14 none]
+X 1 system.ads
+50K9*System 164e11 2|34r6 36r9 38r24 44r30 51r41 100r5 3|38r14 85r13 108r5
+80M9*Address 2|38r31 44r37
+82m4*Null_Address{80M9} 3|50r29 68r27 77r14
+X 2 s-mastop.ads
+36K16*Machine_State_Operations 1|50k9 2|100l12 100e36 3|38b21 108l12 108t36
+38M12*Code_Loc{1|80M9} 69r53 82r31 82r48 3|57r31 57r48 75r53
+44M9*Machine_State<1|80M9> 57r43 60r45 69r31 76r29 96r37
+51V13*Machine_State_Length{4|54I9} 3|84b13 88l8 88t28
+57V13*Allocate_Machine_State{44M9} 3|48b13 51l8 51t30
+60U14*Free_Machine_State 60=34 3|66b14 69l8 69t26
+60m34 M{44M9} 3|66b34 68m7
+69V13*Get_Code_Loc{38M12} 69>27 3|75b13 78l8 78t20
+69m27 M{44M9} 3|75b27
+76U14*Pop_Frame 76>25 3|94b14 97l8 97t17
+76m25 M{44M9} 3|94b25
+82V13*Fetch_Code{38M12} 82>25 3|57b13 60l8 60t18
+82m25 Loc{38M12} 3|57b25 59r14
+96U14*Set_Machine_State 96>33 3|103b14 106l8 106t25
+96m33 M{44M9} 3|103b33
+X 4 s-stoele.ads
+42K16*Storage_Elements 2|34w13 51r48 3|85r20 4|116e28
+54I9*Storage_Offset<integer> 2|51r65 3|85r37
+

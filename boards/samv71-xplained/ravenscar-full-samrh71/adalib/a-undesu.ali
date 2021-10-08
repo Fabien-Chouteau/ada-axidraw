@@ -1,0 +1,82 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.unchecked_deallocate_subpool%b  a-undesu.adb  fe6bf1f5 NE OL PU SU
+W ada%s			ada.ads			ada.ali
+W system%s		system.ads		system.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+W system.storage_pools.subpools.finalization%s  s-spsufi.adb  s-spsufi.ali
+
+U ada.unchecked_deallocate_subpool%s  a-undesu.ads  121b0fd0 NE OL SU
+W ada%s			ada.ads			ada.ali
+W system%s		system.ads		system.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-finali.ads		20210927095552 bf4f806b ada.finalization%s
+D a-stream.ads		20210927095552 119b8fb3 ada.streams%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D a-undesu.ads		20210927095552 8632051e ada.unchecked_deallocate_subpool%s
+D a-undesu.adb		20210927095552 f3810922 ada.unchecked_deallocate_subpool%b
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-finmas.ads		20210927095552 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20210927095552 4ff27390 system.finalization_root%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210927095552 e9fa2dd8 system.storage_pools%s
+D s-stposu.ads		20210927095552 e251976f system.storage_pools.subpools%s
+D s-spsufi.ads		20210927095552 69896aa6 system.storage_pools.subpools.finalization%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [unchecked_deallocate_subpool ada 18 15 none]
+X 1 ada.ads
+16K9*Ada 20e8 10|18r11 11|38r11 43r5
+X 10 a-undesu.ads
+18U15*Unchecked_Deallocate_Subpool 1|16k9 10|19=4 11|38b15 43l9 43t37
+19p4 Subpool{22|56P9} 11|39b4 42m29
+X 13 system.ads
+50K9*System 10|16r6 19r21 11|32r6 33r6 35r5 36r5 39r21 13|164e11
+X 21 s-stopoo.ads
+39K16*Storage_Pools 10|16r13 19r28 11|32r13 33r13 35r12 36r12 39r28 21|100e25
+X 22 s-stposu.ads
+40K30*Subpools 10|16w27 19r42 11|32w27 33r27 35r26 36r26 39r42 22|360e34
+56P9*Subpool_Handle(51R9) 10|19r51 11|39r51
+X 23 s-spsufi.ads
+34K39*Finalization 11|33w36 36r35 23|48e47
+41U14*Finalize_And_Deallocate 11|42s4
+

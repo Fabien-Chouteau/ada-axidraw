@@ -1,0 +1,144 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+
+U system.arith_64%b	s-arit64.adb		2f9cb76c NE OL PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.unchecked_conversion%s
+W system%s		system.ads		system.ali
+W system.arith_double%s
+
+U system.arith_64%s	s-arit64.ads		e8b015ba NE OL PU PK
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-arit64.ads		20210927095552 5f88d2b0 system.arith_64%s
+D s-arit64.adb		20210927095552 900c023e system.arith_64%b
+D s-aridou.ads		20210927095552 e01867e2 system.arith_double%s
+D s-aridou.adb		20210927095552 96fc8392 system.arith_double%b
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [add_with_ovflo_check64 system__arith_64 46 13 none]
+G c Z s b [subtract_with_ovflo_check64 system__arith_64 50 13 none]
+G c Z s b [multiply_with_ovflo_check64 system__arith_64 54 13 none]
+G c Z s b [scaled_divide64 system__arith_64 60 14 none]
+G c Z s b [double_divide64 system__arith_64 78 14 none]
+G c Z b b [add_with_ovflo_check system__arith_64__impl 56 13 41_4]
+G c Z b b [subtract_with_ovflo_check system__arith_64__impl 60 13 41_4]
+G c Z b b [multiply_with_ovflo_check system__arith_64__impl 64 13 41_4]
+G c Z b b [scaled_divide system__arith_64__impl 70 14 41_4]
+G c Z b b [double_divide system__arith_64__impl 82 14 41_4]
+G c Z b b [to_uns system__arith_64__impl 39 13 41_4]
+G c Z b b [to_int system__arith_64__impl 40 13 41_4]
+G c Z b b [Oadd system__arith_64__impl 49 13 41_4]
+G c Z b b [Oadd system__arith_64__impl 51 13 41_4]
+G c Z b b [Omultiply system__arith_64__impl 55 13 41_4]
+G c Z b b [Odivide system__arith_64__impl 59 13 41_4]
+G c Z b b [Oconcat system__arith_64__impl 63 13 41_4]
+G c Z b b [Oabs system__arith_64__impl 67 13 41_4]
+G c Z b b [Orem system__arith_64__impl 74 13 41_4]
+G c Z b b [le3 system__arith_64__impl 78 13 41_4]
+G c Z b b [lo system__arith_64__impl 81 13 41_4]
+G c Z b b [hi system__arith_64__impl 85 13 41_4]
+G c Z b b [sub3 system__arith_64__impl 89 14 41_4]
+G c Z b b [to_neg_int system__arith_64__impl 92 13 41_4]
+G c Z b b [to_pos_int system__arith_64__impl 98 13 41_4]
+G c Z b b [raise_error system__arith_64__impl 103 14 41_4]
+X 4 interfac.ads
+38K9*Interfaces 231e15 6|39w6 44r21 7|36r21 37r21 39r8
+55I9*Integer_64<long_long_integer> 6|44r32
+79M9*Unsigned_32 7|37r32
+82M9*Unsigned_64 7|36r32
+139V13*Shift_Left{79M9} 8|50i18
+164V13*Shift_Left{82M9} 8|44i18
+169V13*Shift_Right{82M9} 8|47i18
+X 5 system.ads
+50K9*System 164e11 6|41r9 96r5 7|32r6 34r14 64r5
+X 6 s-arit64.ads
+41K16*Arith_64 5|50k9 6|96l12 96e20 7|34b21 64l12 64t20
+44I12*Int64{4|55I9} 46r44 46r58 50r49 50r63 54r49 54r63 61r17 62r21 73r17
+. 74r21 79r17 80r21 91r17 92r21 7|41r38 43r44 43r58 46r49 46r63 49r49 49r63
+. 53r17 54r21 59r17 60r21
+46V13*Add_With_Ovflo_Check64{44I12} 46>37 46>40 7|43b13
+46i37 X{44I12} 7|43b37
+46i40 Y{44I12} 7|43b40
+50V13*Subtract_With_Ovflo_Check64{44I12} 50>42 50>45 7|46b13
+50i42 X{44I12} 7|46b42
+50i45 Y{44I12} 7|46b45
+54V13*Multiply_With_Ovflo_Check64{44I12} 54>42 54>45 55i<c,__gnat_mulv64>22
+. 7|49b13
+54i42 X{44I12} 7|49b42
+54i45 Y{44I12} 7|49b45
+60U14*Scaled_Divide64 61>7 61>10 61>13 62<7 62<10 63>7 75r34 7|52b14
+61i7 X{44I12} 7|53b7
+61i10 Y{44I12} 7|53b10
+61i13 Z{44I12} 7|53b13
+62i7 Q{44I12} 7|54b7
+62i10 R{44I12} 7|54b10
+63b7 Round{boolean} 7|55b7
+72U14*Scaled_Divide=75:34
+73i7 X{44I12}
+73i10 Y{44I12}
+73i13 Z{44I12}
+74i7 Q{44I12}
+74i10 R{44I12}
+75b7 Round{boolean}
+78U14*Double_Divide64 79>7 79>10 79>13 80<7 80<10 81>7 93r34 7|58b14
+79i7 X{44I12} 7|59b7
+79i10 Y{44I12} 7|59b10
+79i13 Z{44I12} 7|59b13
+80i7 Q{44I12} 7|60b7
+80i10 R{44I12} 7|60b10
+81b7 Round{boolean} 7|61b7
+90U14*Double_Divide=93:34
+91i7 X{44I12}
+91i10 Y{44I12}
+91i13 Z{44I12}
+92i7 Q{44I12}
+92i10 R{44I12}
+93b7 Round{boolean}
+X 7 s-arit64.adb
+36M12 Uns64{4|82M9} 41r45
+37M12 Uns32{4|79M9} 41r52
+41K12 Impl[8|53] 44r14 47r14 50r14 56r14 62r14
+X 8 s-aridou.ads
+53k16*Arith_Double 7|32w13 41r24 8|94e24
+56V13 Add_With_Ovflo_Check{4|55I9} 7|44r19[41]
+60V13 Subtract_With_Ovflo_Check{4|55I9} 7|47r19[41]
+64V13 Multiply_With_Ovflo_Check{4|55I9} 7|50r19[41]
+70U14 Scaled_Divide 7|56r19[41]
+82U14 Double_Divide 7|62r19[41]
+

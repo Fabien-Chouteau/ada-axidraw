@@ -1,0 +1,53 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U gnat.compiler_version%b  g-comver.adb		eaa85249 NE OL PK GE
+W gnat%s		gnat.ads		gnat.ali
+W system%s		system.ads		system.ali
+
+U gnat.compiler_version%s  g-comver.ads		76d6b035 BN NE OL PU PK GE
+W gnat%s		gnat.ads		gnat.ali
+
+D gnat.ads		20210927095552 b5988c27 gnat%s
+D g-comver.ads		20210927095552 c34e3c12 gnat.compiler_version%s
+D g-comver.adb		20210927095552 7332810e gnat.compiler_version%b
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+G c Z s b [compiler_version gnat 49 14 none]
+X 1 gnat.ads
+34K9*GNAT 57e9 2|49r9 61r5 3|38r14 81r5
+X 2 g-comver.ads
+49k14*Compiler_Version 1|34k9 2|61l10 61e26 3|38b19 81l10 81t26
+52V13*Version{string} 3|62b13 79l8 79t15
+X 3 g-comver.adb
+40N4 Ver_Len_Max 51r41
+44a4 Ver_Prefix{string} 51r55 66r16 68r34 72r34
+48m4 GNAT_Version_Address{4|80M9} 49r22 53r33
+51a4 GNAT_Version{string} 52r24 53m8 53r8 66r41 67r13 68r20 71r13 72r20 78r14
+66i11 J{integer} 67r27 68r59 71r27 72r59
+X 4 system.ads
+50K9*System 3|36w6 48r36 4|164e11
+80M9*Address 3|48r43
+

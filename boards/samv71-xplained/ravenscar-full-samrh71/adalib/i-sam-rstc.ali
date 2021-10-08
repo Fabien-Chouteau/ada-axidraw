@@ -1,0 +1,112 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RR NO_ELABORATION_CODE
+
+U interfaces.sam.rstc%s	i-sam-rstc.ads		8028dd03 NE OL PR PK
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W system%s		system.ads		system.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D i-sam.ads		20210927130812 3bba8a63 interfaces.sam%s
+D i-sam-rstc.ads	20210927130812 e146b835 interfaces.sam.rstc%s
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+G c Z s s [rstc_cr_registerIP interfaces__sam__rstc 37 9 none]
+G c Z s s [rstc_sr_registerIP interfaces__sam__rstc 93 9 none]
+G c Z s s [rstc_mr_registerIP interfaces__sam__rstc 135 9 none]
+G c Z s s [rstc_peripheralIP interfaces__sam__rstc 166 9 none]
+X 1 interfac.ads
+38K9*Interfaces 231e15 3|12r9 20r37 21r36 22r38 23r36 41r24 47r24 51r24 89r35
+. 90r35 95r24 99r24 105r24 119r35 120r36 137r23 141r23 145r23 186r5
+68M9*Unsigned_8
+X 2 i-sam.ads
+13K20*SAM 1|38k9 2|139e19 3|12r20 20r48 21r47 22r49 23r47 41r35 47r35 51r35
+. 89r46 90r46 95r35 99r35 105r35 119r46 120r47 137r34 141r34 145r34 186r16
+23M9*Byte<1|68M9> 3|23r51 51r39 95r39
+24M9*Bit 3|20r52 21r51 22r53 89r50 90r50 119r50 120r51 137r38 141r38
+26M9*UInt2 3|41r39
+28M9*UInt3 3|47r39
+32M9*UInt5 3|99r39
+48M9*UInt14 3|105r39
+58M9*UInt20 3|145r38
+115m4*RSTC_Base{4|80M9} 3|184r30
+X 3 i-sam-rstc.ads
+12K24*RSTC 2|13k20 3|186l20 186e24
+20M12*RSTC_CR_PROCRST_Field{2|24M9} 39r24
+21M12*RSTC_CR_EXTRST_Field{2|24M9} 43r24
+22M12*RSTC_CR_PERIIDON_Field{2|24M9} 45r24
+23M12*RSTC_CR_PERIID_Field{2|23M9} 49r24
+26E9*CR_KEYSelect 31e6 32r8 53r24
+28n7*CR_KEYSelect_Reset{26E9} 33r7 53r40
+30n7*PASSWD{26E9} 34r7
+37R9*RSTC_CR_Register 55e6 58r8 168r20
+39m7*PROCRST{20M12} 59r7
+41m7*Reserved_1_2{2|26M9} 60r7
+43m7*EXTRST{21M12} 61r7
+45m7*PERIIDON{22M12} 62r7
+47m7*Reserved_5_7{2|28M9} 63r7
+49m7*PERIID{23M12} 64r7
+51m7*Reserved_16_23{2|23M9} 65r7
+53e7*KEY{26E9} 66r7
+70E9*SR_RSTTYPSelect 81e6 82r8 97r24
+72n7*GENERAL_RST{70E9} 83r7
+74n7*WDT_RST{70E9} 84r7
+76n7*SOFT_RST{70E9} 85r7
+78n7*CPU_FAIL_RST{70E9} 86r7
+80n7*SLCK_XTAL_RST{70E9} 87r7
+89M12*RSTC_SR_NRSTL_Field{2|24M9} 101r24
+90M12*RSTC_SR_SRCMP_Field{2|24M9} 103r24
+93R9*RSTC_SR_Register 107e6 110r8 170r20
+95m7*Reserved_0_7{2|23M9} 111r7
+97e7*RSTTYP{70E9} 112r7
+99m7*Reserved_11_15{2|32M9} 113r7
+101m7*NRSTL{89M12} 114r7
+103m7*SRCMP{90M12} 115r7
+105m7*Reserved_18_31{2|48M9} 116r7
+119M12*RSTC_MR_SCKSW_Field{2|24M9} 139r23
+120M12*RSTC_MR_CPUFEN_Field{2|24M9} 143r23
+123E9*MR_KEYSelect 129e6 130r8 147r23
+125n7*MR_KEYSelect_Reset{123E9} 131r7 147r39
+128n7*PASSWD{123E9} 132r7
+135R9*RSTC_MR_Register 149e6 152r8 172r20
+137m7*Reserved_0_0{2|24M9} 153r7
+139m7*SCKSW{119M12} 154r7
+141m7*Reserved_2_2{2|24M9} 155r7
+143m7*CPUFEN{120M12} 156r7
+145m7*Reserved_4_23{2|58M9} 157r7
+147e7*KEY{123E9} 158r7
+166R9*RSTC_Peripheral 174e6 176r8 183r26
+168r7*CR{37R9} 177r7
+170r7*SR{93R9} 178r7
+172r7*MR{135R9} 179r7
+183r4*RSTC_Periph{166R9}
+X 4 system.ads
+50K9*System 3|10w6 56r24 108r24 150r24 4|164e11
+80M9*Address
+104n41*Low_Order_First{104E9} 3|56r31 108r31 150r31
+

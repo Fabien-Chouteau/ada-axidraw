@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from ATSAMV71Q21.svd
+--  This spec has been automatically generated from ATSAMRH71F20C.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -14,10 +14,10 @@ package SAM_SVD.CHIPID is
    -- Registers --
    ---------------
 
-   subtype CHIPID_CHIPID_CIDR_VERSION_Field is HAL.UInt5;
+   subtype CHIPID_CIDR_VERSION_Field is HAL.UInt5;
 
    --  Embedded Processor
-   type CHIPID_CIDR_EPROCSelect is
+   type CIDR_EPROCSelect is
      (--  Cortex-M7
       SAMx7,
       --  ARM946ES
@@ -35,7 +35,7 @@ package SAM_SVD.CHIPID is
       --  Cortex-M4
       CM4)
      with Size => 3;
-   for CHIPID_CIDR_EPROCSelect use
+   for CIDR_EPROCSelect use
      (SAMx7 => 0,
       ARM946ES => 1,
       ARM7TDMI => 2,
@@ -46,7 +46,7 @@ package SAM_SVD.CHIPID is
       CM4 => 7);
 
    --  Nonvolatile Program Memory Size
-   type CHIPID_CIDR_NVPSIZSelect is
+   type CIDR_NVPSIZSelect is
      (--  None
       NONE,
       --  8 Kbytes
@@ -70,7 +70,7 @@ package SAM_SVD.CHIPID is
       --  2048 Kbytes
       Val_2048K)
      with Size => 4;
-   for CHIPID_CIDR_NVPSIZSelect use
+   for CIDR_NVPSIZSelect use
      (NONE => 0,
       Val_8K => 1,
       Val_16K => 2,
@@ -84,7 +84,7 @@ package SAM_SVD.CHIPID is
       Val_2048K => 14);
 
    --  Second Nonvolatile Program Memory Size
-   type CHIPID_CIDR_NVPSIZ2Select is
+   type CIDR_NVPSIZ2Select is
      (--  None
       NONE,
       --  8 Kbytes
@@ -106,7 +106,7 @@ package SAM_SVD.CHIPID is
       --  2048 Kbytes
       Val_2048K)
      with Size => 4;
-   for CHIPID_CIDR_NVPSIZ2Select use
+   for CIDR_NVPSIZ2Select use
      (NONE => 0,
       Val_8K => 1,
       Val_16K => 2,
@@ -119,7 +119,7 @@ package SAM_SVD.CHIPID is
       Val_2048K => 14);
 
    --  Internal SRAM Size
-   type CHIPID_CIDR_SRAMSIZSelect is
+   type CIDR_SRAMSIZSelect is
      (--  48 Kbytes
       Val_48K,
       --  192 Kbytes
@@ -153,7 +153,7 @@ package SAM_SVD.CHIPID is
       --  512 Kbytes
       Val_512K)
      with Size => 4;
-   for CHIPID_CIDR_SRAMSIZSelect use
+   for CIDR_SRAMSIZSelect use
      (Val_48K => 0,
       Val_192K => 1,
       Val_384K => 2,
@@ -172,15 +172,15 @@ package SAM_SVD.CHIPID is
       Val_512K => 15);
 
    --  Architecture Identifier
-   type CHIPID_CIDR_ARCHSelect is
-     (--  SAM V71
-      SAMV71)
+   type CIDR_ARCHSelect is
+     (--  SAMRH71
+      SAMRH71)
      with Size => 8;
-   for CHIPID_CIDR_ARCHSelect use
-     (SAMV71 => 18);
+   for CIDR_ARCHSelect use
+     (SAMRH71 => 34);
 
    --  Nonvolatile Program Memory Type
-   type CHIPID_CIDR_NVPTYPSelect is
+   type CIDR_NVPTYPSelect is
      (--  ROM
       ROM,
       --  ROMless or on-chip Flash
@@ -192,7 +192,7 @@ package SAM_SVD.CHIPID is
       --  SRAM emulating ROM
       SRAM)
      with Size => 3;
-   for CHIPID_CIDR_NVPTYPSelect use
+   for CIDR_NVPTYPSelect use
      (ROM => 0,
       ROMLESS => 1,
       FLASH => 2,
@@ -200,28 +200,28 @@ package SAM_SVD.CHIPID is
       SRAM => 4);
 
    --  Chip ID Register
-   type CHIPID_CHIPID_CIDR_Register is record
+   type CHIPID_CIDR_Register is record
       --  Read-only. Version of the Device
-      VERSION : CHIPID_CHIPID_CIDR_VERSION_Field;
+      VERSION : CHIPID_CIDR_VERSION_Field;
       --  Read-only. Embedded Processor
-      EPROC   : CHIPID_CIDR_EPROCSelect;
+      EPROC   : CIDR_EPROCSelect;
       --  Read-only. Nonvolatile Program Memory Size
-      NVPSIZ  : CHIPID_CIDR_NVPSIZSelect;
+      NVPSIZ  : CIDR_NVPSIZSelect;
       --  Read-only. Second Nonvolatile Program Memory Size
-      NVPSIZ2 : CHIPID_CIDR_NVPSIZ2Select;
+      NVPSIZ2 : CIDR_NVPSIZ2Select;
       --  Read-only. Internal SRAM Size
-      SRAMSIZ : CHIPID_CIDR_SRAMSIZSelect;
+      SRAMSIZ : CIDR_SRAMSIZSelect;
       --  Read-only. Architecture Identifier
-      ARCH    : CHIPID_CIDR_ARCHSelect;
+      ARCH    : CIDR_ARCHSelect;
       --  Read-only. Nonvolatile Program Memory Type
-      NVPTYP  : CHIPID_CIDR_NVPTYPSelect;
+      NVPTYP  : CIDR_NVPTYPSelect;
       --  Read-only. Extension Flag
       EXT     : Boolean;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for CHIPID_CHIPID_CIDR_Register use record
+   for CHIPID_CIDR_Register use record
       VERSION at 0 range 0 .. 4;
       EPROC   at 0 range 5 .. 7;
       NVPSIZ  at 0 range 8 .. 11;
@@ -239,15 +239,15 @@ package SAM_SVD.CHIPID is
    --  Chip Identifier
    type CHIPID_Peripheral is record
       --  Chip ID Register
-      CHIPID_CIDR : aliased CHIPID_CHIPID_CIDR_Register;
+      CIDR : aliased CHIPID_CIDR_Register;
       --  Chip ID Extension Register
-      CHIPID_EXID : aliased HAL.UInt32;
+      EXID : aliased HAL.UInt32;
    end record
      with Volatile;
 
    for CHIPID_Peripheral use record
-      CHIPID_CIDR at 16#0# range 0 .. 31;
-      CHIPID_EXID at 16#4# range 0 .. 31;
+      CIDR at 16#0# range 0 .. 31;
+      EXID at 16#4# range 0 .. 31;
    end record;
 
    --  Chip Identifier

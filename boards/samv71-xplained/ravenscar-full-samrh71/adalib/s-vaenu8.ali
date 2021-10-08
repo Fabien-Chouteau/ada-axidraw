@@ -1,0 +1,76 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.val_enum_8%s	s-vaenu8.ads		72369abf NE OL PR PK
+W ada%s			ada.ads			ada.ali
+Z ada.unchecked_conversion%s
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+Z system.val_util%s	s-valuti.adb		s-valuti.ali
+W system.value_n%s
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-vaenu8.ads		20210927095552 b7b91426 system.val_enum_8%s
+D s-valuti.ads		20210927095552 aca0b6fe system.val_util%s
+D s-valuen.ads		20210927095552 72b74993 system.value_n%s
+D s-valuen.adb		20210927095552 82820e8f system.value_n%b
+G a e
+G c Z s s [value_enumeration system__val_enum_8__impl 45 13 41_4]
+G c Z s s [valid_value_enumeration system__val_enum_8__impl 70 13 41_4]
+G c Z s s [value_enumeration_pos system__val_enum_8__impl 38 13 41_4]
+X 3 interfac.ads
+38K9*Interfaces 231e15 5|35w6 41r33
+46I9*Integer_8<short_short_integer> 5|41r44
+X 4 system.ads
+50K9*System 164e11 5|36r6 38r9 45r17 54r17 61r5
+80M9*Address 5|45r24 54r24
+X 5 s-vaenu8.ads
+38K16*Val_Enum_8 4|50k9 5|61l12 61e22
+41K12*Impl[7|40] 46r17 50r14 55r17 59r14
+43V13*Value_Enumeration_8=50:19{natural}
+44a7 Names{string}
+45m7 Indexes{4|80M9}
+46p7 Hash{7|43P9[41]}
+47i7 Num{natural}
+48a7 Str{string}
+52V13*Valid_Value_Enumeration_8=59:19{boolean}
+53a7 Names{string}
+54m7 Indexes{4|80M9}
+55p7 Hash{7|43P9[41]}
+56i7 Num{natural}
+57a7 Str{string}
+X 7 s-valuen.ads
+40k16*Value_N 5|36w13 41r24 7|82e19
+43P9*Hash_Function_Ptr(integer) 5|46r22[41] 55r22[41]
+45V13*Value_Enumeration{natural} 5|50r19[41]
+70V13*Valid_Value_Enumeration{boolean} 5|59r19[41]
+

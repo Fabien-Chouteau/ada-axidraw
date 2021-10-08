@@ -1,0 +1,89 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U system.checked_pools%s  s-chepoo.ads		e5ecbf94 EE OL PK
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+Z system.put_images%s	s-putima.adb		s-putima.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-finali.ads		20210927095552 bf4f806b ada.finalization%s
+D a-stream.ads		20210927095552 119b8fb3 ada.streams%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-chepoo.ads		20210927095552 7b01371d system.checked_pools%s
+D s-finroo.ads		20210927095552 4ff27390 system.finalization_root%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210927095552 e9fa2dd8 system.storage_pools%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s s [checked_poolDF system__checked_pools 57 9 none]
+G c Z s s [checked_poolIP system__checked_pools 57 9 none]
+X 3 a-finali.ads
+53U14*Initialize<13|44p14>
+54U14*Finalize<13|43p14>
+X 11 system.ads
+50K9*System 164e11 12|32r6 33r6 35r9 38r10 46r34 47r34 58r10 59r5
+80M9*Address 12|45r34
+X 12 s-chepoo.ads
+35K16*Checked_Pools 11|50k9 12|57E9 59l12 59e25
+37H9*Checked_Pool<19|42R9> 3|53P14 54P14 12|43p14 44r41 57c9 58e65 13|42p14
+. 19|46p14 53p14 60p13
+43x14*Dereference 44=7 45>7 46>7 47>7
+44r7 Pool{37R9}
+45m7 Storage_Address{11|80M9}
+46i7 Size_In_Storage_Elements{17|61I12}
+47i7 Alignment{17|61I12}
+X 13 s-finroo.ads
+42U14*Adjust
+X 17 s-stoele.ads
+42K16*Storage_Elements 12|32w13 46r41 47r41 17|116e28
+54I9*Storage_Offset<integer>
+61I12*Storage_Count{54I9} 12|46r58 47r58
+X 19 s-stopoo.ads
+39K16*Storage_Pools 12|33w13 38r17 58r17 19|100e25
+42H9*Root_Storage_Pool<3|50R9> 12|38r31 58r31 19|67e62
+46x14*Allocate
+53x14*Deallocate
+60y13*Storage_Size{17|61I12}
+

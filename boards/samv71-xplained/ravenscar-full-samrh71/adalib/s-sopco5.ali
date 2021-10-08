@@ -1,0 +1,62 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB SS ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.string_ops_concat_5%b  s-sopco5.adb	fdb3b757 NE OL PK
+W system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U system.string_ops_concat_5%s  s-sopco5.ads	4cc1aaea NE OL PU PK
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-sopco5.ads		20210927095552 161545bf system.string_ops_concat_5%s
+D s-sopco5.adb		20210927095552 eba6f2e8 system.string_ops_concat_5%b
+G a e
+G c Z s b [str_concat_5 system__string_ops_concat_5 43 13 none]
+X 1 system.ads
+50K9*System 164e11 5|40r9 46r5 6|38r14 68r5
+94V14*"="{boolean} 6|46r20
+X 5 s-sopco5.ads
+40K16*String_Ops_Concat_5 1|50k9 5|46l12 46e31 6|38b21 68l12 68t31
+43V13*Str_Concat_5{string} 43>27 43>31 43>35 43>39 43>43 6|44b13 66l8 66t20
+43a27 S1{string} 6|44b27 46r10 51r39 55r25 55r37 58r16 58r34 58r57 59r16
+. 59r34 60r16 60r34 61r16 61r34 62r16
+43a31 S2{string} 6|44b31 47r17 51r51 59r57
+43a35 S3{string} 6|44b35 47r22 52r45 60r57
+43a39 S4{string} 6|44b39 47r27 53r45 61r57
+43a43 S5{string} 6|44b43 47r32 54r45 62r57
+X 6 s-sopco5.adb
+51i13 L12{natural} 52r39 59r45 60r27
+52i13 L13{natural} 53r39 60r45 61r27
+53i13 L14{natural} 54r39 61r45 62r27
+54i13 L15{natural} 55r48
+55a13 R{string} 58m13 59m13 60m13 61m13 62m13 62r34 63r20
+

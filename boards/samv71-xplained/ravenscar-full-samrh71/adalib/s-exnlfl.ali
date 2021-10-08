@@ -1,0 +1,53 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_RECURSION
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.exn_lflt%s	s-exnlfl.ads		41852175 NE OL PK
+Z interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+Z system.double_real%s
+W system.exponr%s
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-dourea.ads		20210927095552 8a0ecf55 system.double_real%s
+D s-dourea.adb		20210927095552 6aeeb936 system.double_real%b
+D s-dorepr.adb		20210927095552 e195a66d system.double_real.product
+D s-exnlfl.ads		20210927095552 3a76fe2b system.exn_lflt%s
+D s-exponr.ads		20210927095552 2127300b system.exponr%s
+D s-exponr.adb		20210927095552 7c6b8c30 system.exponr%b
+G a e
+G c Z s s [exn_long_floatR system__exn_lflt__exn_long_floatGP2476 38 13 none]
+G c Z s s [exn_long_float system__exn_lflt 38 13 none]
+X 2 system.ads
+50K9*System 164e11 6|34r6 36r9 41r5
+X 6 s-exnlfl.ads
+36K16*Exn_LFlt 2|50k9 6|41l12 41e20
+38V13*Exn_Long_Float[7|38]{long_float} 39r26 8|52b17
+X 7 s-exponr.ads
+38v17*Exponr 2|50k9 6|34w13 38r35
+

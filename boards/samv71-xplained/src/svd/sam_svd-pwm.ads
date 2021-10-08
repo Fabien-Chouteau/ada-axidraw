@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from ATSAMV71Q21.svd
+--  This spec has been automatically generated from ATSAMRH71F20C.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -15,18 +15,18 @@ package SAM_SVD.PWM is
    ---------------
 
    --  CLKA Divide Factor
-   type PWM_CLK_DIVASelect is
+   type CLK_DIVASelect is
      (--  CLKA clock is turned off
       CLKA_POFF,
       --  CLKA clock is clock selected by PREA
       PREA)
      with Size => 8;
-   for PWM_CLK_DIVASelect use
+   for CLK_DIVASelect use
      (CLKA_POFF => 0,
       PREA => 1);
 
    --  CLKA Source Clock Selection
-   type PWM_CLK_PREASelect is
+   type CLK_PREASelect is
      (--  Peripheral clock
       CLK,
       --  Peripheral clock/2
@@ -50,7 +50,7 @@ package SAM_SVD.PWM is
       --  Peripheral clock/1024
       CLK_DIV1024)
      with Size => 4;
-   for PWM_CLK_PREASelect use
+   for CLK_PREASelect use
      (CLK => 0,
       CLK_DIV2 => 1,
       CLK_DIV4 => 2,
@@ -64,18 +64,18 @@ package SAM_SVD.PWM is
       CLK_DIV1024 => 10);
 
    --  CLKB Divide Factor
-   type PWM_CLK_DIVBSelect is
+   type CLK_DIVBSelect is
      (--  CLKB clock is turned off
       CLKB_POFF,
       --  CLKB clock is clock selected by PREB
       PREB)
      with Size => 8;
-   for PWM_CLK_DIVBSelect use
+   for CLK_DIVBSelect use
      (CLKB_POFF => 0,
       PREB => 1);
 
    --  CLKB Source Clock Selection
-   type PWM_CLK_PREBSelect is
+   type CLK_PREBSelect is
      (--  Peripheral clock
       CLK,
       --  Peripheral clock/2
@@ -99,7 +99,7 @@ package SAM_SVD.PWM is
       --  Peripheral clock/1024
       CLK_DIV1024)
      with Size => 4;
-   for PWM_CLK_PREBSelect use
+   for CLK_PREBSelect use
      (CLK => 0,
       CLK_DIV2 => 1,
       CLK_DIV4 => 2,
@@ -113,24 +113,24 @@ package SAM_SVD.PWM is
       CLK_DIV1024 => 10);
 
    --  PWM Clock Register
-   type PWM_PWM_CLK_Register is record
+   type PWM_CLK_Register is record
       --  CLKA Divide Factor
-      DIVA           : PWM_CLK_DIVASelect := SAM_SVD.PWM.CLKA_POFF;
+      DIVA           : CLK_DIVASelect := SAM_SVD.PWM.CLKA_POFF;
       --  CLKA Source Clock Selection
-      PREA           : PWM_CLK_PREASelect := SAM_SVD.PWM.CLK;
+      PREA           : CLK_PREASelect := SAM_SVD.PWM.CLK;
       --  unspecified
       Reserved_12_15 : HAL.UInt4 := 16#0#;
       --  CLKB Divide Factor
-      DIVB           : PWM_CLK_DIVBSelect := SAM_SVD.PWM.CLKB_POFF;
+      DIVB           : CLK_DIVBSelect := SAM_SVD.PWM.CLKB_POFF;
       --  CLKB Source Clock Selection
-      PREB           : PWM_CLK_PREBSelect := SAM_SVD.PWM.CLK;
+      PREB           : CLK_PREBSelect := SAM_SVD.PWM.CLK;
       --  unspecified
       Reserved_28_31 : HAL.UInt4 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_CLK_Register use record
+   for PWM_CLK_Register use record
       DIVA           at 0 range 0 .. 7;
       PREA           at 0 range 8 .. 11;
       Reserved_12_15 at 0 range 12 .. 15;
@@ -139,12 +139,12 @@ package SAM_SVD.PWM is
       Reserved_28_31 at 0 range 28 .. 31;
    end record;
 
-   --  PWM_PWM_ENA_CHID array
-   type PWM_PWM_ENA_CHID_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_ENA_CHID array
+   type PWM_ENA_CHID_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_ENA_CHID
-   type PWM_PWM_ENA_CHID_Field
+   --  Type definition for PWM_ENA_CHID
+   type PWM_ENA_CHID_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -153,38 +153,37 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  CHID as an array
-            Arr : PWM_PWM_ENA_CHID_Field_Array;
+            Arr : PWM_ENA_CHID_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_ENA_CHID_Field use record
+   for PWM_ENA_CHID_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Enable Register
-   type PWM_PWM_ENA_Register is record
+   type PWM_ENA_Register is record
       --  Write-only. Channel ID
-      CHID          : PWM_PWM_ENA_CHID_Field :=
-                       (As_Array => False, Val => 16#0#);
+      CHID          : PWM_ENA_CHID_Field := (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_ENA_Register use record
+   for PWM_ENA_Register use record
       CHID          at 0 range 0 .. 3;
       Reserved_4_31 at 0 range 4 .. 31;
    end record;
 
-   --  PWM_PWM_DIS_CHID array
-   type PWM_PWM_DIS_CHID_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_DIS_CHID array
+   type PWM_DIS_CHID_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_DIS_CHID
-   type PWM_PWM_DIS_CHID_Field
+   --  Type definition for PWM_DIS_CHID
+   type PWM_DIS_CHID_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -193,38 +192,37 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  CHID as an array
-            Arr : PWM_PWM_DIS_CHID_Field_Array;
+            Arr : PWM_DIS_CHID_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_DIS_CHID_Field use record
+   for PWM_DIS_CHID_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Disable Register
-   type PWM_PWM_DIS_Register is record
+   type PWM_DIS_Register is record
       --  Write-only. Channel ID
-      CHID          : PWM_PWM_DIS_CHID_Field :=
-                       (As_Array => False, Val => 16#0#);
+      CHID          : PWM_DIS_CHID_Field := (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_DIS_Register use record
+   for PWM_DIS_Register use record
       CHID          at 0 range 0 .. 3;
       Reserved_4_31 at 0 range 4 .. 31;
    end record;
 
-   --  PWM_PWM_SR_CHID array
-   type PWM_PWM_SR_CHID_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_SR_CHID array
+   type PWM_SR_CHID_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_SR_CHID
-   type PWM_PWM_SR_CHID_Field
+   --  Type definition for PWM_SR_CHID
+   type PWM_SR_CHID_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -233,37 +231,37 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  CHID as an array
-            Arr : PWM_PWM_SR_CHID_Field_Array;
+            Arr : PWM_SR_CHID_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_SR_CHID_Field use record
+   for PWM_SR_CHID_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Status Register
-   type PWM_PWM_SR_Register is record
+   type PWM_SR_Register is record
       --  Read-only. Channel ID
-      CHID          : PWM_PWM_SR_CHID_Field;
+      CHID          : PWM_SR_CHID_Field;
       --  unspecified
       Reserved_4_31 : HAL.UInt28;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_SR_Register use record
+   for PWM_SR_Register use record
       CHID          at 0 range 0 .. 3;
       Reserved_4_31 at 0 range 4 .. 31;
    end record;
 
-   --  PWM_PWM_IER1_CHID array
-   type PWM_PWM_IER1_CHID_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_IER1_CHID array
+   type PWM_IER1_CHID_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_IER1_CHID
-   type PWM_PWM_IER1_CHID_Field
+   --  Type definition for PWM_IER1_CHID
+   type PWM_IER1_CHID_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -272,22 +270,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  CHID as an array
-            Arr : PWM_PWM_IER1_CHID_Field_Array;
+            Arr : PWM_IER1_CHID_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_IER1_CHID_Field use record
+   for PWM_IER1_CHID_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_IER1_FCHID array
-   type PWM_PWM_IER1_FCHID_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_IER1_FCHID array
+   type PWM_IER1_FCHID_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_IER1_FCHID
-   type PWM_PWM_IER1_FCHID_Field
+   --  Type definition for PWM_IER1_FCHID
+   type PWM_IER1_FCHID_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -296,25 +294,25 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  FCHID as an array
-            Arr : PWM_PWM_IER1_FCHID_Field_Array;
+            Arr : PWM_IER1_FCHID_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_IER1_FCHID_Field use record
+   for PWM_IER1_FCHID_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Interrupt Enable Register 1
-   type PWM_PWM_IER1_Register is record
+   type PWM_IER1_Register is record
       --  Write-only. Counter Event on Channel 0 Interrupt Enable
-      CHID           : PWM_PWM_IER1_CHID_Field :=
+      CHID           : PWM_IER1_CHID_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Write-only. Fault Protection Trigger on Channel 0 Interrupt Enable
-      FCHID          : PWM_PWM_IER1_FCHID_Field :=
+      FCHID          : PWM_IER1_FCHID_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
@@ -322,19 +320,19 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_IER1_Register use record
+   for PWM_IER1_Register use record
       CHID           at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       FCHID          at 0 range 16 .. 19;
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   --  PWM_PWM_IDR1_CHID array
-   type PWM_PWM_IDR1_CHID_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_IDR1_CHID array
+   type PWM_IDR1_CHID_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_IDR1_CHID
-   type PWM_PWM_IDR1_CHID_Field
+   --  Type definition for PWM_IDR1_CHID
+   type PWM_IDR1_CHID_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -343,22 +341,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  CHID as an array
-            Arr : PWM_PWM_IDR1_CHID_Field_Array;
+            Arr : PWM_IDR1_CHID_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_IDR1_CHID_Field use record
+   for PWM_IDR1_CHID_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_IDR1_FCHID array
-   type PWM_PWM_IDR1_FCHID_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_IDR1_FCHID array
+   type PWM_IDR1_FCHID_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_IDR1_FCHID
-   type PWM_PWM_IDR1_FCHID_Field
+   --  Type definition for PWM_IDR1_FCHID
+   type PWM_IDR1_FCHID_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -367,25 +365,25 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  FCHID as an array
-            Arr : PWM_PWM_IDR1_FCHID_Field_Array;
+            Arr : PWM_IDR1_FCHID_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_IDR1_FCHID_Field use record
+   for PWM_IDR1_FCHID_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Interrupt Disable Register 1
-   type PWM_PWM_IDR1_Register is record
+   type PWM_IDR1_Register is record
       --  Write-only. Counter Event on Channel 0 Interrupt Disable
-      CHID           : PWM_PWM_IDR1_CHID_Field :=
+      CHID           : PWM_IDR1_CHID_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Write-only. Fault Protection Trigger on Channel 0 Interrupt Disable
-      FCHID          : PWM_PWM_IDR1_FCHID_Field :=
+      FCHID          : PWM_IDR1_FCHID_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
@@ -393,19 +391,19 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_IDR1_Register use record
+   for PWM_IDR1_Register use record
       CHID           at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       FCHID          at 0 range 16 .. 19;
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   --  PWM_PWM_IMR1_CHID array
-   type PWM_PWM_IMR1_CHID_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_IMR1_CHID array
+   type PWM_IMR1_CHID_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_IMR1_CHID
-   type PWM_PWM_IMR1_CHID_Field
+   --  Type definition for PWM_IMR1_CHID
+   type PWM_IMR1_CHID_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -414,22 +412,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  CHID as an array
-            Arr : PWM_PWM_IMR1_CHID_Field_Array;
+            Arr : PWM_IMR1_CHID_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_IMR1_CHID_Field use record
+   for PWM_IMR1_CHID_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_IMR1_FCHID array
-   type PWM_PWM_IMR1_FCHID_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_IMR1_FCHID array
+   type PWM_IMR1_FCHID_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_IMR1_FCHID
-   type PWM_PWM_IMR1_FCHID_Field
+   --  Type definition for PWM_IMR1_FCHID
+   type PWM_IMR1_FCHID_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -438,43 +436,43 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  FCHID as an array
-            Arr : PWM_PWM_IMR1_FCHID_Field_Array;
+            Arr : PWM_IMR1_FCHID_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_IMR1_FCHID_Field use record
+   for PWM_IMR1_FCHID_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Interrupt Mask Register 1
-   type PWM_PWM_IMR1_Register is record
+   type PWM_IMR1_Register is record
       --  Read-only. Counter Event on Channel 0 Interrupt Mask
-      CHID           : PWM_PWM_IMR1_CHID_Field;
+      CHID           : PWM_IMR1_CHID_Field;
       --  unspecified
       Reserved_4_15  : HAL.UInt12;
       --  Read-only. Fault Protection Trigger on Channel 0 Interrupt Mask
-      FCHID          : PWM_PWM_IMR1_FCHID_Field;
+      FCHID          : PWM_IMR1_FCHID_Field;
       --  unspecified
       Reserved_20_31 : HAL.UInt12;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_IMR1_Register use record
+   for PWM_IMR1_Register use record
       CHID           at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       FCHID          at 0 range 16 .. 19;
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   --  PWM_PWM_ISR1_CHID array
-   type PWM_PWM_ISR1_CHID_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_ISR1_CHID array
+   type PWM_ISR1_CHID_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_ISR1_CHID
-   type PWM_PWM_ISR1_CHID_Field
+   --  Type definition for PWM_ISR1_CHID
+   type PWM_ISR1_CHID_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -483,22 +481,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  CHID as an array
-            Arr : PWM_PWM_ISR1_CHID_Field_Array;
+            Arr : PWM_ISR1_CHID_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_ISR1_CHID_Field use record
+   for PWM_ISR1_CHID_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_ISR1_FCHID array
-   type PWM_PWM_ISR1_FCHID_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_ISR1_FCHID array
+   type PWM_ISR1_FCHID_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_ISR1_FCHID
-   type PWM_PWM_ISR1_FCHID_Field
+   --  Type definition for PWM_ISR1_FCHID
+   type PWM_ISR1_FCHID_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -507,43 +505,43 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  FCHID as an array
-            Arr : PWM_PWM_ISR1_FCHID_Field_Array;
+            Arr : PWM_ISR1_FCHID_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_ISR1_FCHID_Field use record
+   for PWM_ISR1_FCHID_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Interrupt Status Register 1
-   type PWM_PWM_ISR1_Register is record
+   type PWM_ISR1_Register is record
       --  Read-only. Counter Event on Channel 0
-      CHID           : PWM_PWM_ISR1_CHID_Field;
+      CHID           : PWM_ISR1_CHID_Field;
       --  unspecified
       Reserved_4_15  : HAL.UInt12;
       --  Read-only. Fault Protection Trigger on Channel 0
-      FCHID          : PWM_PWM_ISR1_FCHID_Field;
+      FCHID          : PWM_ISR1_FCHID_Field;
       --  unspecified
       Reserved_20_31 : HAL.UInt12;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_ISR1_Register use record
+   for PWM_ISR1_Register use record
       CHID           at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       FCHID          at 0 range 16 .. 19;
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   --  PWM_PWM_SCM_SYNC array
-   type PWM_PWM_SCM_SYNC_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_SCM_SYNC array
+   type PWM_SCM_SYNC_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_SCM_SYNC
-   type PWM_PWM_SCM_SYNC_Field
+   --  Type definition for PWM_SCM_SYNC
+   type PWM_SCM_SYNC_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -552,18 +550,18 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  SYNC as an array
-            Arr : PWM_PWM_SCM_SYNC_Field_Array;
+            Arr : PWM_SCM_SYNC_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_SCM_SYNC_Field use record
+   for PWM_SCM_SYNC_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  Synchronous Channels Update Mode
-   type PWM_SCM_UPDMSelect is
+   type SCM_UPDMSelect is
      (--  Manual write of double buffer registers and manual update of synchronous
 --  channels
       MODE0,
@@ -574,35 +572,35 @@ package SAM_SVD.PWM is
 --  automatic update of synchronous channels
       MODE2)
      with Size => 2;
-   for PWM_SCM_UPDMSelect use
+   for SCM_UPDMSelect use
      (MODE0 => 0,
       MODE1 => 1,
       MODE2 => 2);
 
-   subtype PWM_PWM_SCM_PTRCS_Field is HAL.UInt3;
+   subtype PWM_SCM_PTRCS_Field is HAL.UInt3;
 
    --  PWM Sync Channels Mode Register
-   type PWM_PWM_SCM_Register is record
+   type PWM_SCM_Register is record
       --  Synchronous Channel 0
-      SYNC           : PWM_PWM_SCM_SYNC_Field :=
+      SYNC           : PWM_SCM_SYNC_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Synchronous Channels Update Mode
-      UPDM           : PWM_SCM_UPDMSelect := SAM_SVD.PWM.MODE0;
+      UPDM           : SCM_UPDMSelect := SAM_SVD.PWM.MODE0;
       --  unspecified
       Reserved_18_19 : HAL.UInt2 := 16#0#;
       --  DMA Controller Transfer Request Mode
       PTRM           : Boolean := False;
       --  DMA Controller Transfer Request Comparison Selection
-      PTRCS          : PWM_PWM_SCM_PTRCS_Field := 16#0#;
+      PTRCS          : PWM_SCM_PTRCS_Field := 16#0#;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_SCM_Register use record
+   for PWM_SCM_Register use record
       SYNC           at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       UPDM           at 0 range 16 .. 17;
@@ -612,25 +610,25 @@ package SAM_SVD.PWM is
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   subtype PWM_PWM_DMAR_DMADUTY_Field is HAL.UInt24;
+   subtype PWM_DMAR_DMADUTY_Field is HAL.UInt24;
 
    --  PWM DMA Register
-   type PWM_PWM_DMAR_Register is record
+   type PWM_DMAR_Register is record
       --  Write-only. Duty-Cycle Holding Register for DMA Access
-      DMADUTY        : PWM_PWM_DMAR_DMADUTY_Field := 16#0#;
+      DMADUTY        : PWM_DMAR_DMADUTY_Field := 16#0#;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_DMAR_Register use record
+   for PWM_DMAR_Register use record
       DMADUTY        at 0 range 0 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
    --  PWM Sync Channels Update Control Register
-   type PWM_PWM_SCUC_Register is record
+   type PWM_SCUC_Register is record
       --  Synchronous Channels Update Unlock
       UPDULOCK      : Boolean := False;
       --  unspecified
@@ -639,55 +637,55 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_SCUC_Register use record
+   for PWM_SCUC_Register use record
       UPDULOCK      at 0 range 0 .. 0;
       Reserved_1_31 at 0 range 1 .. 31;
    end record;
 
-   subtype PWM_PWM_SCUP_UPR_Field is HAL.UInt4;
-   subtype PWM_PWM_SCUP_UPRCNT_Field is HAL.UInt4;
+   subtype PWM_SCUP_UPR_Field is HAL.UInt4;
+   subtype PWM_SCUP_UPRCNT_Field is HAL.UInt4;
 
    --  PWM Sync Channels Update Period Register
-   type PWM_PWM_SCUP_Register is record
+   type PWM_SCUP_Register is record
       --  Update Period
-      UPR           : PWM_PWM_SCUP_UPR_Field := 16#0#;
+      UPR           : PWM_SCUP_UPR_Field := 16#0#;
       --  Update Period Counter
-      UPRCNT        : PWM_PWM_SCUP_UPRCNT_Field := 16#0#;
+      UPRCNT        : PWM_SCUP_UPRCNT_Field := 16#0#;
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_SCUP_Register use record
+   for PWM_SCUP_Register use record
       UPR           at 0 range 0 .. 3;
       UPRCNT        at 0 range 4 .. 7;
       Reserved_8_31 at 0 range 8 .. 31;
    end record;
 
-   subtype PWM_PWM_SCUPUPD_UPRUPD_Field is HAL.UInt4;
+   subtype PWM_SCUPUPD_UPRUPD_Field is HAL.UInt4;
 
    --  PWM Sync Channels Update Period Update Register
-   type PWM_PWM_SCUPUPD_Register is record
+   type PWM_SCUPUPD_Register is record
       --  Write-only. Update Period Update
-      UPRUPD        : PWM_PWM_SCUPUPD_UPRUPD_Field := 16#0#;
+      UPRUPD        : PWM_SCUPUPD_UPRUPD_Field := 16#0#;
       --  unspecified
       Reserved_4_31 : HAL.UInt28 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_SCUPUPD_Register use record
+   for PWM_SCUPUPD_Register use record
       UPRUPD        at 0 range 0 .. 3;
       Reserved_4_31 at 0 range 4 .. 31;
    end record;
 
-   --  PWM_PWM_IER2_CMPM array
-   type PWM_PWM_IER2_CMPM_Field_Array is array (0 .. 7) of Boolean
+   --  PWM_IER2_CMPM array
+   type PWM_IER2_CMPM_Field_Array is array (0 .. 7) of Boolean
      with Component_Size => 1, Size => 8;
 
-   --  Type definition for PWM_PWM_IER2_CMPM
-   type PWM_PWM_IER2_CMPM_Field
+   --  Type definition for PWM_IER2_CMPM
+   type PWM_IER2_CMPM_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -696,22 +694,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt8;
          when True =>
             --  CMPM as an array
-            Arr : PWM_PWM_IER2_CMPM_Field_Array;
+            Arr : PWM_IER2_CMPM_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 8;
 
-   for PWM_PWM_IER2_CMPM_Field use record
+   for PWM_IER2_CMPM_Field use record
       Val at 0 range 0 .. 7;
       Arr at 0 range 0 .. 7;
    end record;
 
-   --  PWM_PWM_IER2_CMPU array
-   type PWM_PWM_IER2_CMPU_Field_Array is array (0 .. 7) of Boolean
+   --  PWM_IER2_CMPU array
+   type PWM_IER2_CMPU_Field_Array is array (0 .. 7) of Boolean
      with Component_Size => 1, Size => 8;
 
-   --  Type definition for PWM_PWM_IER2_CMPU
-   type PWM_PWM_IER2_CMPU_Field
+   --  Type definition for PWM_IER2_CMPU
+   type PWM_IER2_CMPU_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -720,18 +718,18 @@ package SAM_SVD.PWM is
             Val : HAL.UInt8;
          when True =>
             --  CMPU as an array
-            Arr : PWM_PWM_IER2_CMPU_Field_Array;
+            Arr : PWM_IER2_CMPU_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 8;
 
-   for PWM_PWM_IER2_CMPU_Field use record
+   for PWM_IER2_CMPU_Field use record
       Val at 0 range 0 .. 7;
       Arr at 0 range 0 .. 7;
    end record;
 
    --  PWM Interrupt Enable Register 2
-   type PWM_PWM_IER2_Register is record
+   type PWM_IER2_Register is record
       --  Write-only. Write Ready for Synchronous Channels Update Interrupt
       --  Enable
       WRDY           : Boolean := False;
@@ -743,10 +741,10 @@ package SAM_SVD.PWM is
       --  unspecified
       Reserved_4_7   : HAL.UInt4 := 16#0#;
       --  Write-only. Comparison 0 Match Interrupt Enable
-      CMPM           : PWM_PWM_IER2_CMPM_Field :=
+      CMPM           : PWM_IER2_CMPM_Field :=
                         (As_Array => False, Val => 16#0#);
       --  Write-only. Comparison 0 Update Interrupt Enable
-      CMPU           : PWM_PWM_IER2_CMPU_Field :=
+      CMPU           : PWM_IER2_CMPU_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
@@ -754,7 +752,7 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_IER2_Register use record
+   for PWM_IER2_Register use record
       WRDY           at 0 range 0 .. 0;
       Reserved_1_2   at 0 range 1 .. 2;
       UNRE           at 0 range 3 .. 3;
@@ -764,12 +762,12 @@ package SAM_SVD.PWM is
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   --  PWM_PWM_IDR2_CMPM array
-   type PWM_PWM_IDR2_CMPM_Field_Array is array (0 .. 7) of Boolean
+   --  PWM_IDR2_CMPM array
+   type PWM_IDR2_CMPM_Field_Array is array (0 .. 7) of Boolean
      with Component_Size => 1, Size => 8;
 
-   --  Type definition for PWM_PWM_IDR2_CMPM
-   type PWM_PWM_IDR2_CMPM_Field
+   --  Type definition for PWM_IDR2_CMPM
+   type PWM_IDR2_CMPM_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -778,22 +776,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt8;
          when True =>
             --  CMPM as an array
-            Arr : PWM_PWM_IDR2_CMPM_Field_Array;
+            Arr : PWM_IDR2_CMPM_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 8;
 
-   for PWM_PWM_IDR2_CMPM_Field use record
+   for PWM_IDR2_CMPM_Field use record
       Val at 0 range 0 .. 7;
       Arr at 0 range 0 .. 7;
    end record;
 
-   --  PWM_PWM_IDR2_CMPU array
-   type PWM_PWM_IDR2_CMPU_Field_Array is array (0 .. 7) of Boolean
+   --  PWM_IDR2_CMPU array
+   type PWM_IDR2_CMPU_Field_Array is array (0 .. 7) of Boolean
      with Component_Size => 1, Size => 8;
 
-   --  Type definition for PWM_PWM_IDR2_CMPU
-   type PWM_PWM_IDR2_CMPU_Field
+   --  Type definition for PWM_IDR2_CMPU
+   type PWM_IDR2_CMPU_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -802,18 +800,18 @@ package SAM_SVD.PWM is
             Val : HAL.UInt8;
          when True =>
             --  CMPU as an array
-            Arr : PWM_PWM_IDR2_CMPU_Field_Array;
+            Arr : PWM_IDR2_CMPU_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 8;
 
-   for PWM_PWM_IDR2_CMPU_Field use record
+   for PWM_IDR2_CMPU_Field use record
       Val at 0 range 0 .. 7;
       Arr at 0 range 0 .. 7;
    end record;
 
    --  PWM Interrupt Disable Register 2
-   type PWM_PWM_IDR2_Register is record
+   type PWM_IDR2_Register is record
       --  Write-only. Write Ready for Synchronous Channels Update Interrupt
       --  Disable
       WRDY           : Boolean := False;
@@ -825,10 +823,10 @@ package SAM_SVD.PWM is
       --  unspecified
       Reserved_4_7   : HAL.UInt4 := 16#0#;
       --  Write-only. Comparison 0 Match Interrupt Disable
-      CMPM           : PWM_PWM_IDR2_CMPM_Field :=
+      CMPM           : PWM_IDR2_CMPM_Field :=
                         (As_Array => False, Val => 16#0#);
       --  Write-only. Comparison 0 Update Interrupt Disable
-      CMPU           : PWM_PWM_IDR2_CMPU_Field :=
+      CMPU           : PWM_IDR2_CMPU_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
@@ -836,7 +834,7 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_IDR2_Register use record
+   for PWM_IDR2_Register use record
       WRDY           at 0 range 0 .. 0;
       Reserved_1_2   at 0 range 1 .. 2;
       UNRE           at 0 range 3 .. 3;
@@ -846,12 +844,12 @@ package SAM_SVD.PWM is
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   --  PWM_PWM_IMR2_CMPM array
-   type PWM_PWM_IMR2_CMPM_Field_Array is array (0 .. 7) of Boolean
+   --  PWM_IMR2_CMPM array
+   type PWM_IMR2_CMPM_Field_Array is array (0 .. 7) of Boolean
      with Component_Size => 1, Size => 8;
 
-   --  Type definition for PWM_PWM_IMR2_CMPM
-   type PWM_PWM_IMR2_CMPM_Field
+   --  Type definition for PWM_IMR2_CMPM
+   type PWM_IMR2_CMPM_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -860,22 +858,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt8;
          when True =>
             --  CMPM as an array
-            Arr : PWM_PWM_IMR2_CMPM_Field_Array;
+            Arr : PWM_IMR2_CMPM_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 8;
 
-   for PWM_PWM_IMR2_CMPM_Field use record
+   for PWM_IMR2_CMPM_Field use record
       Val at 0 range 0 .. 7;
       Arr at 0 range 0 .. 7;
    end record;
 
-   --  PWM_PWM_IMR2_CMPU array
-   type PWM_PWM_IMR2_CMPU_Field_Array is array (0 .. 7) of Boolean
+   --  PWM_IMR2_CMPU array
+   type PWM_IMR2_CMPU_Field_Array is array (0 .. 7) of Boolean
      with Component_Size => 1, Size => 8;
 
-   --  Type definition for PWM_PWM_IMR2_CMPU
-   type PWM_PWM_IMR2_CMPU_Field
+   --  Type definition for PWM_IMR2_CMPU
+   type PWM_IMR2_CMPU_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -884,18 +882,18 @@ package SAM_SVD.PWM is
             Val : HAL.UInt8;
          when True =>
             --  CMPU as an array
-            Arr : PWM_PWM_IMR2_CMPU_Field_Array;
+            Arr : PWM_IMR2_CMPU_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 8;
 
-   for PWM_PWM_IMR2_CMPU_Field use record
+   for PWM_IMR2_CMPU_Field use record
       Val at 0 range 0 .. 7;
       Arr at 0 range 0 .. 7;
    end record;
 
    --  PWM Interrupt Mask Register 2
-   type PWM_PWM_IMR2_Register is record
+   type PWM_IMR2_Register is record
       --  Read-only. Write Ready for Synchronous Channels Update Interrupt Mask
       WRDY           : Boolean;
       --  unspecified
@@ -905,16 +903,16 @@ package SAM_SVD.PWM is
       --  unspecified
       Reserved_4_7   : HAL.UInt4;
       --  Read-only. Comparison 0 Match Interrupt Mask
-      CMPM           : PWM_PWM_IMR2_CMPM_Field;
+      CMPM           : PWM_IMR2_CMPM_Field;
       --  Read-only. Comparison 0 Update Interrupt Mask
-      CMPU           : PWM_PWM_IMR2_CMPU_Field;
+      CMPU           : PWM_IMR2_CMPU_Field;
       --  unspecified
       Reserved_24_31 : HAL.UInt8;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_IMR2_Register use record
+   for PWM_IMR2_Register use record
       WRDY           at 0 range 0 .. 0;
       Reserved_1_2   at 0 range 1 .. 2;
       UNRE           at 0 range 3 .. 3;
@@ -924,12 +922,12 @@ package SAM_SVD.PWM is
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   --  PWM_PWM_ISR2_CMPM array
-   type PWM_PWM_ISR2_CMPM_Field_Array is array (0 .. 7) of Boolean
+   --  PWM_ISR2_CMPM array
+   type PWM_ISR2_CMPM_Field_Array is array (0 .. 7) of Boolean
      with Component_Size => 1, Size => 8;
 
-   --  Type definition for PWM_PWM_ISR2_CMPM
-   type PWM_PWM_ISR2_CMPM_Field
+   --  Type definition for PWM_ISR2_CMPM
+   type PWM_ISR2_CMPM_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -938,22 +936,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt8;
          when True =>
             --  CMPM as an array
-            Arr : PWM_PWM_ISR2_CMPM_Field_Array;
+            Arr : PWM_ISR2_CMPM_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 8;
 
-   for PWM_PWM_ISR2_CMPM_Field use record
+   for PWM_ISR2_CMPM_Field use record
       Val at 0 range 0 .. 7;
       Arr at 0 range 0 .. 7;
    end record;
 
-   --  PWM_PWM_ISR2_CMPU array
-   type PWM_PWM_ISR2_CMPU_Field_Array is array (0 .. 7) of Boolean
+   --  PWM_ISR2_CMPU array
+   type PWM_ISR2_CMPU_Field_Array is array (0 .. 7) of Boolean
      with Component_Size => 1, Size => 8;
 
-   --  Type definition for PWM_PWM_ISR2_CMPU
-   type PWM_PWM_ISR2_CMPU_Field
+   --  Type definition for PWM_ISR2_CMPU
+   type PWM_ISR2_CMPU_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -962,18 +960,18 @@ package SAM_SVD.PWM is
             Val : HAL.UInt8;
          when True =>
             --  CMPU as an array
-            Arr : PWM_PWM_ISR2_CMPU_Field_Array;
+            Arr : PWM_ISR2_CMPU_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 8;
 
-   for PWM_PWM_ISR2_CMPU_Field use record
+   for PWM_ISR2_CMPU_Field use record
       Val at 0 range 0 .. 7;
       Arr at 0 range 0 .. 7;
    end record;
 
    --  PWM Interrupt Status Register 2
-   type PWM_PWM_ISR2_Register is record
+   type PWM_ISR2_Register is record
       --  Read-only. Write Ready for Synchronous Channels Update
       WRDY           : Boolean;
       --  unspecified
@@ -983,16 +981,16 @@ package SAM_SVD.PWM is
       --  unspecified
       Reserved_4_7   : HAL.UInt4;
       --  Read-only. Comparison 0 Match
-      CMPM           : PWM_PWM_ISR2_CMPM_Field;
+      CMPM           : PWM_ISR2_CMPM_Field;
       --  Read-only. Comparison 0 Update
-      CMPU           : PWM_PWM_ISR2_CMPU_Field;
+      CMPU           : PWM_ISR2_CMPU_Field;
       --  unspecified
       Reserved_24_31 : HAL.UInt8;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_ISR2_Register use record
+   for PWM_ISR2_Register use record
       WRDY           at 0 range 0 .. 0;
       Reserved_1_2   at 0 range 1 .. 2;
       UNRE           at 0 range 3 .. 3;
@@ -1002,12 +1000,12 @@ package SAM_SVD.PWM is
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   --  PWM_PWM_OOV_OOVH array
-   type PWM_PWM_OOV_OOVH_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OOV_OOVH array
+   type PWM_OOV_OOVH_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OOV_OOVH
-   type PWM_PWM_OOV_OOVH_Field
+   --  Type definition for PWM_OOV_OOVH
+   type PWM_OOV_OOVH_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1016,22 +1014,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OOVH as an array
-            Arr : PWM_PWM_OOV_OOVH_Field_Array;
+            Arr : PWM_OOV_OOVH_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OOV_OOVH_Field use record
+   for PWM_OOV_OOVH_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_OOV_OOVL array
-   type PWM_PWM_OOV_OOVL_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OOV_OOVL array
+   type PWM_OOV_OOVL_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OOV_OOVL
-   type PWM_PWM_OOV_OOVL_Field
+   --  Type definition for PWM_OOV_OOVL
+   type PWM_OOV_OOVL_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1040,25 +1038,25 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OOVL as an array
-            Arr : PWM_PWM_OOV_OOVL_Field_Array;
+            Arr : PWM_OOV_OOVL_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OOV_OOVL_Field use record
+   for PWM_OOV_OOVL_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Output Override Value Register
-   type PWM_PWM_OOV_Register is record
+   type PWM_OOV_Register is record
       --  Output Override Value for PWMH output of the channel 0
-      OOVH           : PWM_PWM_OOV_OOVH_Field :=
+      OOVH           : PWM_OOV_OOVH_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Output Override Value for PWML output of the channel 0
-      OOVL           : PWM_PWM_OOV_OOVL_Field :=
+      OOVL           : PWM_OOV_OOVL_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
@@ -1066,19 +1064,19 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_OOV_Register use record
+   for PWM_OOV_Register use record
       OOVH           at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       OOVL           at 0 range 16 .. 19;
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   --  PWM_PWM_OS_OSH array
-   type PWM_PWM_OS_OSH_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OS_OSH array
+   type PWM_OS_OSH_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OS_OSH
-   type PWM_PWM_OS_OSH_Field
+   --  Type definition for PWM_OS_OSH
+   type PWM_OS_OSH_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1087,22 +1085,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OSH as an array
-            Arr : PWM_PWM_OS_OSH_Field_Array;
+            Arr : PWM_OS_OSH_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OS_OSH_Field use record
+   for PWM_OS_OSH_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_OS_OSL array
-   type PWM_PWM_OS_OSL_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OS_OSL array
+   type PWM_OS_OSL_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OS_OSL
-   type PWM_PWM_OS_OSL_Field
+   --  Type definition for PWM_OS_OSL
+   type PWM_OS_OSL_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1111,45 +1109,43 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OSL as an array
-            Arr : PWM_PWM_OS_OSL_Field_Array;
+            Arr : PWM_OS_OSL_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OS_OSL_Field use record
+   for PWM_OS_OSL_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Output Selection Register
-   type PWM_PWM_OS_Register is record
+   type PWM_OS_Register is record
       --  Output Selection for PWMH output of the channel 0
-      OSH            : PWM_PWM_OS_OSH_Field :=
-                        (As_Array => False, Val => 16#0#);
+      OSH            : PWM_OS_OSH_Field := (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Output Selection for PWML output of the channel 0
-      OSL            : PWM_PWM_OS_OSL_Field :=
-                        (As_Array => False, Val => 16#0#);
+      OSL            : PWM_OS_OSL_Field := (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_OS_Register use record
+   for PWM_OS_Register use record
       OSH            at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       OSL            at 0 range 16 .. 19;
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   --  PWM_PWM_OSS_OSSH array
-   type PWM_PWM_OSS_OSSH_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OSS_OSSH array
+   type PWM_OSS_OSSH_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OSS_OSSH
-   type PWM_PWM_OSS_OSSH_Field
+   --  Type definition for PWM_OSS_OSSH
+   type PWM_OSS_OSSH_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1158,22 +1154,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OSSH as an array
-            Arr : PWM_PWM_OSS_OSSH_Field_Array;
+            Arr : PWM_OSS_OSSH_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OSS_OSSH_Field use record
+   for PWM_OSS_OSSH_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_OSS_OSSL array
-   type PWM_PWM_OSS_OSSL_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OSS_OSSL array
+   type PWM_OSS_OSSL_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OSS_OSSL
-   type PWM_PWM_OSS_OSSL_Field
+   --  Type definition for PWM_OSS_OSSL
+   type PWM_OSS_OSSL_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1182,25 +1178,25 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OSSL as an array
-            Arr : PWM_PWM_OSS_OSSL_Field_Array;
+            Arr : PWM_OSS_OSSL_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OSS_OSSL_Field use record
+   for PWM_OSS_OSSL_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Output Selection Set Register
-   type PWM_PWM_OSS_Register is record
+   type PWM_OSS_Register is record
       --  Write-only. Output Selection Set for PWMH output of the channel 0
-      OSSH           : PWM_PWM_OSS_OSSH_Field :=
+      OSSH           : PWM_OSS_OSSH_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Write-only. Output Selection Set for PWML output of the channel 0
-      OSSL           : PWM_PWM_OSS_OSSL_Field :=
+      OSSL           : PWM_OSS_OSSL_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
@@ -1208,19 +1204,19 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_OSS_Register use record
+   for PWM_OSS_Register use record
       OSSH           at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       OSSL           at 0 range 16 .. 19;
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   --  PWM_PWM_OSC_OSCH array
-   type PWM_PWM_OSC_OSCH_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OSC_OSCH array
+   type PWM_OSC_OSCH_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OSC_OSCH
-   type PWM_PWM_OSC_OSCH_Field
+   --  Type definition for PWM_OSC_OSCH
+   type PWM_OSC_OSCH_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1229,22 +1225,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OSCH as an array
-            Arr : PWM_PWM_OSC_OSCH_Field_Array;
+            Arr : PWM_OSC_OSCH_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OSC_OSCH_Field use record
+   for PWM_OSC_OSCH_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_OSC_OSCL array
-   type PWM_PWM_OSC_OSCL_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OSC_OSCL array
+   type PWM_OSC_OSCL_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OSC_OSCL
-   type PWM_PWM_OSC_OSCL_Field
+   --  Type definition for PWM_OSC_OSCL
+   type PWM_OSC_OSCL_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1253,25 +1249,25 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OSCL as an array
-            Arr : PWM_PWM_OSC_OSCL_Field_Array;
+            Arr : PWM_OSC_OSCL_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OSC_OSCL_Field use record
+   for PWM_OSC_OSCL_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Output Selection Clear Register
-   type PWM_PWM_OSC_Register is record
+   type PWM_OSC_Register is record
       --  Write-only. Output Selection Clear for PWMH output of the channel 0
-      OSCH           : PWM_PWM_OSC_OSCH_Field :=
+      OSCH           : PWM_OSC_OSCH_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Write-only. Output Selection Clear for PWML output of the channel 0
-      OSCL           : PWM_PWM_OSC_OSCL_Field :=
+      OSCL           : PWM_OSC_OSCL_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
@@ -1279,19 +1275,19 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_OSC_Register use record
+   for PWM_OSC_Register use record
       OSCH           at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       OSCL           at 0 range 16 .. 19;
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   --  PWM_PWM_OSSUPD_OSSUPH array
-   type PWM_PWM_OSSUPD_OSSUPH_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OSSUPD_OSSUPH array
+   type PWM_OSSUPD_OSSUPH_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OSSUPD_OSSUPH
-   type PWM_PWM_OSSUPD_OSSUPH_Field
+   --  Type definition for PWM_OSSUPD_OSSUPH
+   type PWM_OSSUPD_OSSUPH_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1300,22 +1296,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OSSUPH as an array
-            Arr : PWM_PWM_OSSUPD_OSSUPH_Field_Array;
+            Arr : PWM_OSSUPD_OSSUPH_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OSSUPD_OSSUPH_Field use record
+   for PWM_OSSUPD_OSSUPH_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_OSSUPD_OSSUPL array
-   type PWM_PWM_OSSUPD_OSSUPL_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OSSUPD_OSSUPL array
+   type PWM_OSSUPD_OSSUPL_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OSSUPD_OSSUPL
-   type PWM_PWM_OSSUPD_OSSUPL_Field
+   --  Type definition for PWM_OSSUPD_OSSUPL
+   type PWM_OSSUPD_OSSUPL_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1324,25 +1320,25 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OSSUPL as an array
-            Arr : PWM_PWM_OSSUPD_OSSUPL_Field_Array;
+            Arr : PWM_OSSUPD_OSSUPL_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OSSUPD_OSSUPL_Field use record
+   for PWM_OSSUPD_OSSUPL_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Output Selection Set Update Register
-   type PWM_PWM_OSSUPD_Register is record
+   type PWM_OSSUPD_Register is record
       --  Write-only. Output Selection Set for PWMH output of the channel 0
-      OSSUPH         : PWM_PWM_OSSUPD_OSSUPH_Field :=
+      OSSUPH         : PWM_OSSUPD_OSSUPH_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Write-only. Output Selection Set for PWML output of the channel 0
-      OSSUPL         : PWM_PWM_OSSUPD_OSSUPL_Field :=
+      OSSUPL         : PWM_OSSUPD_OSSUPL_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
@@ -1350,19 +1346,19 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_OSSUPD_Register use record
+   for PWM_OSSUPD_Register use record
       OSSUPH         at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       OSSUPL         at 0 range 16 .. 19;
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   --  PWM_PWM_OSCUPD_OSCUPH array
-   type PWM_PWM_OSCUPD_OSCUPH_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OSCUPD_OSCUPH array
+   type PWM_OSCUPD_OSCUPH_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OSCUPD_OSCUPH
-   type PWM_PWM_OSCUPD_OSCUPH_Field
+   --  Type definition for PWM_OSCUPD_OSCUPH
+   type PWM_OSCUPD_OSCUPH_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1371,22 +1367,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OSCUPH as an array
-            Arr : PWM_PWM_OSCUPD_OSCUPH_Field_Array;
+            Arr : PWM_OSCUPD_OSCUPH_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OSCUPD_OSCUPH_Field use record
+   for PWM_OSCUPD_OSCUPH_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_OSCUPD_OSCUPL array
-   type PWM_PWM_OSCUPD_OSCUPL_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_OSCUPD_OSCUPL array
+   type PWM_OSCUPD_OSCUPL_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_OSCUPD_OSCUPL
-   type PWM_PWM_OSCUPD_OSCUPL_Field
+   --  Type definition for PWM_OSCUPD_OSCUPL
+   type PWM_OSCUPD_OSCUPL_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1395,25 +1391,25 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  OSCUPL as an array
-            Arr : PWM_PWM_OSCUPD_OSCUPL_Field_Array;
+            Arr : PWM_OSCUPD_OSCUPL_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_OSCUPD_OSCUPL_Field use record
+   for PWM_OSCUPD_OSCUPL_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Output Selection Clear Update Register
-   type PWM_PWM_OSCUPD_Register is record
+   type PWM_OSCUPD_Register is record
       --  Write-only. Output Selection Clear for PWMH output of the channel 0
-      OSCUPH         : PWM_PWM_OSCUPD_OSCUPH_Field :=
+      OSCUPH         : PWM_OSCUPD_OSCUPH_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Write-only. Output Selection Clear for PWML output of the channel 0
-      OSCUPL         : PWM_PWM_OSCUPD_OSCUPL_Field :=
+      OSCUPL         : PWM_OSCUPD_OSCUPL_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
@@ -1421,82 +1417,82 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_OSCUPD_Register use record
+   for PWM_OSCUPD_Register use record
       OSCUPH         at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       OSCUPL         at 0 range 16 .. 19;
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   subtype PWM_PWM_FMR_FPOL_Field is HAL.UInt8;
-   subtype PWM_PWM_FMR_FMOD_Field is HAL.UInt8;
-   subtype PWM_PWM_FMR_FFIL_Field is HAL.UInt8;
+   subtype PWM_FMR_FPOL_Field is HAL.UInt8;
+   subtype PWM_FMR_FMOD_Field is HAL.UInt8;
+   subtype PWM_FMR_FFIL_Field is HAL.UInt8;
 
    --  PWM Fault Mode Register
-   type PWM_PWM_FMR_Register is record
+   type PWM_FMR_Register is record
       --  Fault Polarity
-      FPOL           : PWM_PWM_FMR_FPOL_Field := 16#0#;
+      FPOL           : PWM_FMR_FPOL_Field := 16#0#;
       --  Fault Activation Mode
-      FMOD           : PWM_PWM_FMR_FMOD_Field := 16#0#;
+      FMOD           : PWM_FMR_FMOD_Field := 16#0#;
       --  Fault Filtering
-      FFIL           : PWM_PWM_FMR_FFIL_Field := 16#0#;
+      FFIL           : PWM_FMR_FFIL_Field := 16#0#;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_FMR_Register use record
+   for PWM_FMR_Register use record
       FPOL           at 0 range 0 .. 7;
       FMOD           at 0 range 8 .. 15;
       FFIL           at 0 range 16 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   subtype PWM_PWM_FSR_FIV_Field is HAL.UInt8;
-   subtype PWM_PWM_FSR_FS_Field is HAL.UInt8;
+   subtype PWM_FSR_FIV_Field is HAL.UInt8;
+   subtype PWM_FSR_FS_Field is HAL.UInt8;
 
    --  PWM Fault Status Register
-   type PWM_PWM_FSR_Register is record
+   type PWM_FSR_Register is record
       --  Read-only. Fault Input Value
-      FIV            : PWM_PWM_FSR_FIV_Field;
+      FIV            : PWM_FSR_FIV_Field;
       --  Read-only. Fault Status
-      FS             : PWM_PWM_FSR_FS_Field;
+      FS             : PWM_FSR_FS_Field;
       --  unspecified
       Reserved_16_31 : HAL.UInt16;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_FSR_Register use record
+   for PWM_FSR_Register use record
       FIV            at 0 range 0 .. 7;
       FS             at 0 range 8 .. 15;
       Reserved_16_31 at 0 range 16 .. 31;
    end record;
 
-   subtype PWM_PWM_FCR_FCLR_Field is HAL.UInt8;
+   subtype PWM_FCR_FCLR_Field is HAL.UInt8;
 
    --  PWM Fault Clear Register
-   type PWM_PWM_FCR_Register is record
+   type PWM_FCR_Register is record
       --  Write-only. Fault Clear
-      FCLR          : PWM_PWM_FCR_FCLR_Field := 16#0#;
+      FCLR          : PWM_FCR_FCLR_Field := 16#0#;
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_FCR_Register use record
+   for PWM_FCR_Register use record
       FCLR          at 0 range 0 .. 7;
       Reserved_8_31 at 0 range 8 .. 31;
    end record;
 
-   --  PWM_PWM_FPV1_FPVH array
-   type PWM_PWM_FPV1_FPVH_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_FPV1_FPVH array
+   type PWM_FPV1_FPVH_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_FPV1_FPVH
-   type PWM_PWM_FPV1_FPVH_Field
+   --  Type definition for PWM_FPV1_FPVH
+   type PWM_FPV1_FPVH_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1505,22 +1501,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  FPVH as an array
-            Arr : PWM_PWM_FPV1_FPVH_Field_Array;
+            Arr : PWM_FPV1_FPVH_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_FPV1_FPVH_Field use record
+   for PWM_FPV1_FPVH_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_FPV1_FPVL array
-   type PWM_PWM_FPV1_FPVL_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_FPV1_FPVL array
+   type PWM_FPV1_FPVL_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_FPV1_FPVL
-   type PWM_PWM_FPV1_FPVL_Field
+   --  Type definition for PWM_FPV1_FPVL
+   type PWM_FPV1_FPVL_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1529,25 +1525,25 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  FPVL as an array
-            Arr : PWM_PWM_FPV1_FPVL_Field_Array;
+            Arr : PWM_FPV1_FPVL_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_FPV1_FPVL_Field use record
+   for PWM_FPV1_FPVL_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Fault Protection Value Register 1
-   type PWM_PWM_FPV1_Register is record
+   type PWM_FPV1_Register is record
       --  Fault Protection Value for PWMH output on channel 0
-      FPVH           : PWM_PWM_FPV1_FPVH_Field :=
+      FPVH           : PWM_FPV1_FPVH_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Fault Protection Value for PWML output on channel 0
-      FPVL           : PWM_PWM_FPV1_FPVL_Field :=
+      FPVL           : PWM_FPV1_FPVL_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
@@ -1555,23 +1551,22 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_FPV1_Register use record
+   for PWM_FPV1_Register use record
       FPVH           at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       FPVL           at 0 range 16 .. 19;
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   --  PWM_PWM_FPE_FPE array element
-   subtype PWM_PWM_FPE_FPE_Element is HAL.UInt8;
+   --  PWM_FPE_FPE array element
+   subtype PWM_FPE_FPE_Element is HAL.UInt8;
 
-   --  PWM_PWM_FPE_FPE array
-   type PWM_PWM_FPE_FPE_Field_Array is array (0 .. 3)
-     of PWM_PWM_FPE_FPE_Element
+   --  PWM_FPE_FPE array
+   type PWM_FPE_FPE_Field_Array is array (0 .. 3) of PWM_FPE_FPE_Element
      with Component_Size => 8, Size => 32;
 
    --  PWM Fault Protection Enable Register
-   type PWM_PWM_FPE_Register
+   type PWM_FPE_Register
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1580,23 +1575,23 @@ package SAM_SVD.PWM is
             Val : HAL.UInt32;
          when True =>
             --  FPE as an array
-            Arr : PWM_PWM_FPE_FPE_Field_Array;
+            Arr : PWM_FPE_FPE_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_FPE_Register use record
+   for PWM_FPE_Register use record
       Val at 0 range 0 .. 31;
       Arr at 0 range 0 .. 31;
    end record;
 
-   --  PWM_PWM_ELMR_CSEL array
-   type PWM_PWM_ELMR_CSEL_Field_Array is array (0 .. 7) of Boolean
+   --  PWM_ELMR_CSEL array
+   type PWM_ELMR_CSEL_Field_Array is array (0 .. 7) of Boolean
      with Component_Size => 1, Size => 8;
 
-   --  Type definition for PWM_PWM_ELMR_CSEL
-   type PWM_PWM_ELMR_CSEL_Field
+   --  Type definition for PWM_ELMR_CSEL
+   type PWM_ELMR_CSEL_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1605,20 +1600,20 @@ package SAM_SVD.PWM is
             Val : HAL.UInt8;
          when True =>
             --  CSEL as an array
-            Arr : PWM_PWM_ELMR_CSEL_Field_Array;
+            Arr : PWM_ELMR_CSEL_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 8;
 
-   for PWM_PWM_ELMR_CSEL_Field use record
+   for PWM_ELMR_CSEL_Field use record
       Val at 0 range 0 .. 7;
       Arr at 0 range 0 .. 7;
    end record;
 
-   --  PWM Event Line 0 Mode Register 0
-   type PWM_PWM_ELMR_Register is record
+   --  PWM Event Line 0 Mode Register
+   type PWM_ELMR_Register is record
       --  Comparison 0 Selection
-      CSEL          : PWM_PWM_ELMR_CSEL_Field :=
+      CSEL          : PWM_ELMR_CSEL_Field :=
                        (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_8_31 : HAL.UInt24 := 16#0#;
@@ -1626,20 +1621,20 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_ELMR_Register use record
+   for PWM_ELMR_Register use record
       CSEL          at 0 range 0 .. 7;
       Reserved_8_31 at 0 range 8 .. 31;
    end record;
 
-   --  PWM Event Line 0 Mode Register 0
-   type PWM_PWM_ELMR_Registers is array (0 .. 1) of PWM_PWM_ELMR_Register;
+   --  PWM Event Line 0 Mode Register
+   type PWM_ELMR_Registers is array (0 .. 1) of PWM_ELMR_Register;
 
-   subtype PWM_PWM_SSPR_SPRD_Field is HAL.UInt24;
+   subtype PWM_SSPR_SPRD_Field is HAL.UInt24;
 
    --  PWM Spread Spectrum Register
-   type PWM_PWM_SSPR_Register is record
+   type PWM_SSPR_Register is record
       --  Spread Spectrum Limit Value
-      SPRD           : PWM_PWM_SSPR_SPRD_Field := 16#0#;
+      SPRD           : PWM_SSPR_SPRD_Field := 16#0#;
       --  Spread Spectrum Counter Mode
       SPRDM          : Boolean := False;
       --  unspecified
@@ -1648,35 +1643,35 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_SSPR_Register use record
+   for PWM_SSPR_Register use record
       SPRD           at 0 range 0 .. 23;
       SPRDM          at 0 range 24 .. 24;
       Reserved_25_31 at 0 range 25 .. 31;
    end record;
 
-   subtype PWM_PWM_SSPUP_SPRDUP_Field is HAL.UInt24;
+   subtype PWM_SSPUP_SPRDUP_Field is HAL.UInt24;
 
    --  PWM Spread Spectrum Update Register
-   type PWM_PWM_SSPUP_Register is record
+   type PWM_SSPUP_Register is record
       --  Write-only. Spread Spectrum Limit Value Update
-      SPRDUP         : PWM_PWM_SSPUP_SPRDUP_Field := 16#0#;
+      SPRDUP         : PWM_SSPUP_SPRDUP_Field := 16#0#;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_SSPUP_Register use record
+   for PWM_SSPUP_Register use record
       SPRDUP         at 0 range 0 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   --  PWM_PWM_SMMR_GCEN array
-   type PWM_PWM_SMMR_GCEN_Field_Array is array (0 .. 1) of Boolean
+   --  PWM_SMMR_GCEN array
+   type PWM_SMMR_GCEN_Field_Array is array (0 .. 1) of Boolean
      with Component_Size => 1, Size => 2;
 
-   --  Type definition for PWM_PWM_SMMR_GCEN
-   type PWM_PWM_SMMR_GCEN_Field
+   --  Type definition for PWM_SMMR_GCEN
+   type PWM_SMMR_GCEN_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1685,22 +1680,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt2;
          when True =>
             --  GCEN as an array
-            Arr : PWM_PWM_SMMR_GCEN_Field_Array;
+            Arr : PWM_SMMR_GCEN_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 2;
 
-   for PWM_PWM_SMMR_GCEN_Field use record
+   for PWM_SMMR_GCEN_Field use record
       Val at 0 range 0 .. 1;
       Arr at 0 range 0 .. 1;
    end record;
 
-   --  PWM_PWM_SMMR_DOWN array
-   type PWM_PWM_SMMR_DOWN_Field_Array is array (0 .. 1) of Boolean
+   --  PWM_SMMR_DOWN array
+   type PWM_SMMR_DOWN_Field_Array is array (0 .. 1) of Boolean
      with Component_Size => 1, Size => 2;
 
-   --  Type definition for PWM_PWM_SMMR_DOWN
-   type PWM_PWM_SMMR_DOWN_Field
+   --  Type definition for PWM_SMMR_DOWN
+   type PWM_SMMR_DOWN_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1709,25 +1704,25 @@ package SAM_SVD.PWM is
             Val : HAL.UInt2;
          when True =>
             --  DOWN as an array
-            Arr : PWM_PWM_SMMR_DOWN_Field_Array;
+            Arr : PWM_SMMR_DOWN_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 2;
 
-   for PWM_PWM_SMMR_DOWN_Field use record
+   for PWM_SMMR_DOWN_Field use record
       Val at 0 range 0 .. 1;
       Arr at 0 range 0 .. 1;
    end record;
 
    --  PWM Stepper Motor Mode Register
-   type PWM_PWM_SMMR_Register is record
-      --  Gray Count ENable
-      GCEN           : PWM_PWM_SMMR_GCEN_Field :=
+   type PWM_SMMR_Register is record
+      --  Gray Count Enable
+      GCEN           : PWM_SMMR_GCEN_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_2_15  : HAL.UInt14 := 16#0#;
-      --  DOWN Count
-      DOWN           : PWM_PWM_SMMR_DOWN_Field :=
+      --  Down Count
+      DOWN           : PWM_SMMR_DOWN_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_18_31 : HAL.UInt14 := 16#0#;
@@ -1735,19 +1730,19 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_SMMR_Register use record
+   for PWM_SMMR_Register use record
       GCEN           at 0 range 0 .. 1;
       Reserved_2_15  at 0 range 2 .. 15;
       DOWN           at 0 range 16 .. 17;
       Reserved_18_31 at 0 range 18 .. 31;
    end record;
 
-   --  PWM_PWM_FPV2_FPZH array
-   type PWM_PWM_FPV2_FPZH_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_FPV2_FPZH array
+   type PWM_FPV2_FPZH_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_FPV2_FPZH
-   type PWM_PWM_FPV2_FPZH_Field
+   --  Type definition for PWM_FPV2_FPZH
+   type PWM_FPV2_FPZH_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1756,22 +1751,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  FPZH as an array
-            Arr : PWM_PWM_FPV2_FPZH_Field_Array;
+            Arr : PWM_FPV2_FPZH_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_FPV2_FPZH_Field use record
+   for PWM_FPV2_FPZH_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
-   --  PWM_PWM_FPV2_FPZL array
-   type PWM_PWM_FPV2_FPZL_Field_Array is array (0 .. 3) of Boolean
+   --  PWM_FPV2_FPZL array
+   type PWM_FPV2_FPZL_Field_Array is array (0 .. 3) of Boolean
      with Component_Size => 1, Size => 4;
 
-   --  Type definition for PWM_PWM_FPV2_FPZL
-   type PWM_PWM_FPV2_FPZL_Field
+   --  Type definition for PWM_FPV2_FPZL
+   type PWM_FPV2_FPZL_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1780,25 +1775,25 @@ package SAM_SVD.PWM is
             Val : HAL.UInt4;
          when True =>
             --  FPZL as an array
-            Arr : PWM_PWM_FPV2_FPZL_Field_Array;
+            Arr : PWM_FPV2_FPZL_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 4;
 
-   for PWM_PWM_FPV2_FPZL_Field use record
+   for PWM_FPV2_FPZL_Field use record
       Val at 0 range 0 .. 3;
       Arr at 0 range 0 .. 3;
    end record;
 
    --  PWM Fault Protection Value 2 Register
-   type PWM_PWM_FPV2_Register is record
+   type PWM_FPV2_Register is record
       --  Fault Protection to Hi-Z for PWMH output on channel 0
-      FPZH           : PWM_PWM_FPV2_FPZH_Field :=
+      FPZH           : PWM_FPV2_FPZH_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_4_15  : HAL.UInt12 := 16#0#;
       --  Fault Protection to Hi-Z for PWML output on channel 0
-      FPZL           : PWM_PWM_FPV2_FPZL_Field :=
+      FPZL           : PWM_FPV2_FPZL_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
@@ -1806,7 +1801,7 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_FPV2_Register use record
+   for PWM_FPV2_Register use record
       FPZH           at 0 range 0 .. 3;
       Reserved_4_15  at 0 range 4 .. 15;
       FPZL           at 0 range 16 .. 19;
@@ -1814,7 +1809,7 @@ package SAM_SVD.PWM is
    end record;
 
    --  Write Protection Command
-   type PWM_WPCR_WPCMDSelect is
+   type WPCR_WPCMDSelect is
      (--  Disables the software write protection of the register groups of which the
 --  bit WPRGx is at '1'.
       DISABLE_SW_PROT,
@@ -1828,17 +1823,17 @@ package SAM_SVD.PWM is
 --  through the PIO interface.
       ENABLE_HW_PROT)
      with Size => 2;
-   for PWM_WPCR_WPCMDSelect use
+   for WPCR_WPCMDSelect use
      (DISABLE_SW_PROT => 0,
       ENABLE_SW_PROT => 1,
       ENABLE_HW_PROT => 2);
 
-   --  PWM_PWM_WPCR_WPRG array
-   type PWM_PWM_WPCR_WPRG_Field_Array is array (0 .. 5) of Boolean
+   --  PWM_WPCR_WPRG array
+   type PWM_WPCR_WPRG_Field_Array is array (0 .. 5) of Boolean
      with Component_Size => 1, Size => 6;
 
-   --  Type definition for PWM_PWM_WPCR_WPRG
-   type PWM_PWM_WPCR_WPRG_Field
+   --  Type definition for PWM_WPCR_WPRG
+   type PWM_WPCR_WPRG_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1847,52 +1842,52 @@ package SAM_SVD.PWM is
             Val : HAL.UInt6;
          when True =>
             --  WPRG as an array
-            Arr : PWM_PWM_WPCR_WPRG_Field_Array;
+            Arr : PWM_WPCR_WPRG_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 6;
 
-   for PWM_PWM_WPCR_WPRG_Field use record
+   for PWM_WPCR_WPRG_Field use record
       Val at 0 range 0 .. 5;
       Arr at 0 range 0 .. 5;
    end record;
 
    --  Write Protection Key
-   type PWM_WPCR_WPKEYSelect is
+   type WPCR_WPKEYSelect is
      (--  Reset value for the field
-      PWM_WPCR_WPKEYSelect_Reset,
+      WPCR_WPKEYSelect_Reset,
       --  Writing any other value in this field aborts the write operation of the
---  WPCMD field.Always reads as 0
+--  WPCMD field. Always reads as 0
       PASSWD)
      with Size => 24;
-   for PWM_WPCR_WPKEYSelect use
-     (PWM_WPCR_WPKEYSelect_Reset => 0,
+   for WPCR_WPKEYSelect use
+     (WPCR_WPKEYSelect_Reset => 0,
       PASSWD => 5265229);
 
    --  PWM Write Protection Control Register
-   type PWM_PWM_WPCR_Register is record
+   type PWM_WPCR_Register is record
       --  Write-only. Write Protection Command
-      WPCMD : PWM_WPCR_WPCMDSelect := SAM_SVD.PWM.DISABLE_SW_PROT;
+      WPCMD : WPCR_WPCMDSelect := SAM_SVD.PWM.DISABLE_SW_PROT;
       --  Write-only. Write Protection Register Group 0
-      WPRG  : PWM_PWM_WPCR_WPRG_Field := (As_Array => False, Val => 16#0#);
+      WPRG  : PWM_WPCR_WPRG_Field := (As_Array => False, Val => 16#0#);
       --  Write-only. Write Protection Key
-      WPKEY : PWM_WPCR_WPKEYSelect := PWM_WPCR_WPKEYSelect_Reset;
+      WPKEY : WPCR_WPKEYSelect := WPCR_WPKEYSelect_Reset;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_WPCR_Register use record
+   for PWM_WPCR_Register use record
       WPCMD at 0 range 0 .. 1;
       WPRG  at 0 range 2 .. 7;
       WPKEY at 0 range 8 .. 31;
    end record;
 
-   --  PWM_PWM_WPSR_WPSWS array
-   type PWM_PWM_WPSR_WPSWS_Field_Array is array (0 .. 5) of Boolean
+   --  PWM_WPSR_WPSWS array
+   type PWM_WPSR_WPSWS_Field_Array is array (0 .. 5) of Boolean
      with Component_Size => 1, Size => 6;
 
-   --  Type definition for PWM_PWM_WPSR_WPSWS
-   type PWM_PWM_WPSR_WPSWS_Field
+   --  Type definition for PWM_WPSR_WPSWS
+   type PWM_WPSR_WPSWS_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1901,22 +1896,22 @@ package SAM_SVD.PWM is
             Val : HAL.UInt6;
          when True =>
             --  WPSWS as an array
-            Arr : PWM_PWM_WPSR_WPSWS_Field_Array;
+            Arr : PWM_WPSR_WPSWS_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 6;
 
-   for PWM_PWM_WPSR_WPSWS_Field use record
+   for PWM_WPSR_WPSWS_Field use record
       Val at 0 range 0 .. 5;
       Arr at 0 range 0 .. 5;
    end record;
 
-   --  PWM_PWM_WPSR_WPHWS array
-   type PWM_PWM_WPSR_WPHWS_Field_Array is array (0 .. 5) of Boolean
+   --  PWM_WPSR_WPHWS array
+   type PWM_WPSR_WPHWS_Field_Array is array (0 .. 5) of Boolean
      with Component_Size => 1, Size => 6;
 
-   --  Type definition for PWM_PWM_WPSR_WPHWS
-   type PWM_PWM_WPSR_WPHWS_Field
+   --  Type definition for PWM_WPSR_WPHWS
+   type PWM_WPSR_WPHWS_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
@@ -1925,37 +1920,37 @@ package SAM_SVD.PWM is
             Val : HAL.UInt6;
          when True =>
             --  WPHWS as an array
-            Arr : PWM_PWM_WPSR_WPHWS_Field_Array;
+            Arr : PWM_WPSR_WPHWS_Field_Array;
       end case;
    end record
      with Unchecked_Union, Size => 6;
 
-   for PWM_PWM_WPSR_WPHWS_Field use record
+   for PWM_WPSR_WPHWS_Field use record
       Val at 0 range 0 .. 5;
       Arr at 0 range 0 .. 5;
    end record;
 
-   subtype PWM_PWM_WPSR_WPVSRC_Field is HAL.UInt16;
+   subtype PWM_WPSR_WPVSRC_Field is HAL.UInt16;
 
    --  PWM Write Protection Status Register
-   type PWM_PWM_WPSR_Register is record
+   type PWM_WPSR_Register is record
       --  Read-only. Write Protect SW Status
-      WPSWS          : PWM_PWM_WPSR_WPSWS_Field;
+      WPSWS          : PWM_WPSR_WPSWS_Field;
       --  unspecified
       Reserved_6_6   : HAL.Bit;
       --  Read-only. Write Protect Violation Status
       WPVS           : Boolean;
       --  Read-only. Write Protect HW Status
-      WPHWS          : PWM_PWM_WPSR_WPHWS_Field;
+      WPHWS          : PWM_WPSR_WPHWS_Field;
       --  unspecified
       Reserved_14_15 : HAL.UInt2;
       --  Read-only. Write Protect Violation Source
-      WPVSRC         : PWM_PWM_WPSR_WPVSRC_Field;
+      WPVSRC         : PWM_WPSR_WPVSRC_Field;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_WPSR_Register use record
+   for PWM_WPSR_Register use record
       WPSWS          at 0 range 0 .. 5;
       Reserved_6_6   at 0 range 6 .. 6;
       WPVS           at 0 range 7 .. 7;
@@ -1964,60 +1959,47 @@ package SAM_SVD.PWM is
       WPVSRC         at 0 range 16 .. 31;
    end record;
 
-   subtype PWM_PWM_VERSION_VERSION_Field is HAL.UInt12;
-   subtype PWM_PWM_VERSION_MFN_Field is HAL.UInt3;
-
-   --  Version Register
-   type PWM_PWM_VERSION_Register is record
-      --  Read-only. Version of the Hardware Module
-      VERSION        : PWM_PWM_VERSION_VERSION_Field;
-      --  unspecified
-      Reserved_12_15 : HAL.UInt4;
-      --  Read-only. Metal Fix Number
-      MFN            : PWM_PWM_VERSION_MFN_Field;
-      --  unspecified
-      Reserved_19_31 : HAL.UInt13;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PWM_PWM_VERSION_Register use record
-      VERSION        at 0 range 0 .. 11;
-      Reserved_12_15 at 0 range 12 .. 15;
-      MFN            at 0 range 16 .. 18;
-      Reserved_19_31 at 0 range 19 .. 31;
-   end record;
-
    -------------------------------------
    -- PWM_PWM_CMP cluster's Registers --
    -------------------------------------
 
-   subtype PWM_PWM_CMPV_PWM_PWM_CMP_CV_Field is HAL.UInt24;
+   subtype PWM_CMPV_PWM_PWM_CMP_CV_Field is HAL.UInt24;
 
-   --  PWM Comparison 0 Value Register
-   type PWM_PWM_CMPV_PWM_PWM_CMP_Register is record
+   --  Comparison x Value Mode
+   type CMPV_CVMSelect is
+     (--  Compare when counter is incrementing
+      COMPARE_AT_INCREMENT,
+      --  Compare when counter is decrementing
+      COMPARE_AT_DECREMENT)
+     with Size => 1;
+   for CMPV_CVMSelect use
+     (COMPARE_AT_INCREMENT => 0,
+      COMPARE_AT_DECREMENT => 1);
+
+   --  PWM Comparison x Value Register
+   type PWM_CMPV_PWM_PWM_CMP_Register is record
       --  Comparison x Value
-      CV             : PWM_PWM_CMPV_PWM_PWM_CMP_CV_Field := 16#0#;
+      CV             : PWM_CMPV_PWM_PWM_CMP_CV_Field := 16#0#;
       --  Comparison x Value Mode
-      CVM            : Boolean := False;
+      CVM            : CMPV_CVMSelect := SAM_SVD.PWM.COMPARE_AT_INCREMENT;
       --  unspecified
       Reserved_25_31 : HAL.UInt7 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_CMPV_PWM_PWM_CMP_Register use record
+   for PWM_CMPV_PWM_PWM_CMP_Register use record
       CV             at 0 range 0 .. 23;
       CVM            at 0 range 24 .. 24;
       Reserved_25_31 at 0 range 25 .. 31;
    end record;
 
-   subtype PWM_PWM_CMPVUPD_PWM_PWM_CMP_CVUPD_Field is HAL.UInt24;
+   subtype PWM_CMPVUPD_PWM_PWM_CMP_CVUPD_Field is HAL.UInt24;
 
-   --  PWM Comparison 0 Value Update Register
-   type PWM_PWM_CMPVUPD_PWM_PWM_CMP_Register is record
+   --  PWM Comparison x Value Update Register
+   type PWM_CMPVUPD_PWM_PWM_CMP_Register is record
       --  Write-only. Comparison x Value Update
-      CVUPD          : PWM_PWM_CMPVUPD_PWM_PWM_CMP_CVUPD_Field := 16#0#;
+      CVUPD          : PWM_CMPVUPD_PWM_PWM_CMP_CVUPD_Field := 16#0#;
       --  Write-only. Comparison x Value Mode Update
       CVMUPD         : Boolean := False;
       --  unspecified
@@ -2026,41 +2008,41 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_CMPVUPD_PWM_PWM_CMP_Register use record
+   for PWM_CMPVUPD_PWM_PWM_CMP_Register use record
       CVUPD          at 0 range 0 .. 23;
       CVMUPD         at 0 range 24 .. 24;
       Reserved_25_31 at 0 range 25 .. 31;
    end record;
 
-   subtype PWM_PWM_CMPM_PWM_PWM_CMP_CTR_Field is HAL.UInt4;
-   subtype PWM_PWM_CMPM_PWM_PWM_CMP_CPR_Field is HAL.UInt4;
-   subtype PWM_PWM_CMPM_PWM_PWM_CMP_CPRCNT_Field is HAL.UInt4;
-   subtype PWM_PWM_CMPM_PWM_PWM_CMP_CUPR_Field is HAL.UInt4;
-   subtype PWM_PWM_CMPM_PWM_PWM_CMP_CUPRCNT_Field is HAL.UInt4;
+   subtype PWM_CMPM_PWM_PWM_CMP_CTR_Field is HAL.UInt4;
+   subtype PWM_CMPM_PWM_PWM_CMP_CPR_Field is HAL.UInt4;
+   subtype PWM_CMPM_PWM_PWM_CMP_CPRCNT_Field is HAL.UInt4;
+   subtype PWM_CMPM_PWM_PWM_CMP_CUPR_Field is HAL.UInt4;
+   subtype PWM_CMPM_PWM_PWM_CMP_CUPRCNT_Field is HAL.UInt4;
 
-   --  PWM Comparison 0 Mode Register
-   type PWM_PWM_CMPM_PWM_PWM_CMP_Register is record
+   --  PWM Comparison x Mode Register
+   type PWM_CMPM_PWM_PWM_CMP_Register is record
       --  Comparison x Enable
       CEN            : Boolean := False;
       --  unspecified
       Reserved_1_3   : HAL.UInt3 := 16#0#;
       --  Comparison x Trigger
-      CTR            : PWM_PWM_CMPM_PWM_PWM_CMP_CTR_Field := 16#0#;
+      CTR            : PWM_CMPM_PWM_PWM_CMP_CTR_Field := 16#0#;
       --  Comparison x Period
-      CPR            : PWM_PWM_CMPM_PWM_PWM_CMP_CPR_Field := 16#0#;
+      CPR            : PWM_CMPM_PWM_PWM_CMP_CPR_Field := 16#0#;
       --  Comparison x Period Counter
-      CPRCNT         : PWM_PWM_CMPM_PWM_PWM_CMP_CPRCNT_Field := 16#0#;
+      CPRCNT         : PWM_CMPM_PWM_PWM_CMP_CPRCNT_Field := 16#0#;
       --  Comparison x Update Period
-      CUPR           : PWM_PWM_CMPM_PWM_PWM_CMP_CUPR_Field := 16#0#;
+      CUPR           : PWM_CMPM_PWM_PWM_CMP_CUPR_Field := 16#0#;
       --  Comparison x Update Period Counter
-      CUPRCNT        : PWM_PWM_CMPM_PWM_PWM_CMP_CUPRCNT_Field := 16#0#;
+      CUPRCNT        : PWM_CMPM_PWM_PWM_CMP_CUPRCNT_Field := 16#0#;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_CMPM_PWM_PWM_CMP_Register use record
+   for PWM_CMPM_PWM_PWM_CMP_Register use record
       CEN            at 0 range 0 .. 0;
       Reserved_1_3   at 0 range 1 .. 3;
       CTR            at 0 range 4 .. 7;
@@ -2071,31 +2053,31 @@ package SAM_SVD.PWM is
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   subtype PWM_PWM_CMPMUPD_PWM_PWM_CMP_CTRUPD_Field is HAL.UInt4;
-   subtype PWM_PWM_CMPMUPD_PWM_PWM_CMP_CPRUPD_Field is HAL.UInt4;
-   subtype PWM_PWM_CMPMUPD_PWM_PWM_CMP_CUPRUPD_Field is HAL.UInt4;
+   subtype PWM_CMPMUPD_PWM_PWM_CMP_CTRUPD_Field is HAL.UInt4;
+   subtype PWM_CMPMUPD_PWM_PWM_CMP_CPRUPD_Field is HAL.UInt4;
+   subtype PWM_CMPMUPD_PWM_PWM_CMP_CUPRUPD_Field is HAL.UInt4;
 
-   --  PWM Comparison 0 Mode Update Register
-   type PWM_PWM_CMPMUPD_PWM_PWM_CMP_Register is record
+   --  PWM Comparison x Mode Update Register
+   type PWM_CMPMUPD_PWM_PWM_CMP_Register is record
       --  Write-only. Comparison x Enable Update
       CENUPD         : Boolean := False;
       --  unspecified
       Reserved_1_3   : HAL.UInt3 := 16#0#;
       --  Write-only. Comparison x Trigger Update
-      CTRUPD         : PWM_PWM_CMPMUPD_PWM_PWM_CMP_CTRUPD_Field := 16#0#;
+      CTRUPD         : PWM_CMPMUPD_PWM_PWM_CMP_CTRUPD_Field := 16#0#;
       --  Write-only. Comparison x Period Update
-      CPRUPD         : PWM_PWM_CMPMUPD_PWM_PWM_CMP_CPRUPD_Field := 16#0#;
+      CPRUPD         : PWM_CMPMUPD_PWM_PWM_CMP_CPRUPD_Field := 16#0#;
       --  unspecified
       Reserved_12_15 : HAL.UInt4 := 16#0#;
       --  Write-only. Comparison x Update Period Update
-      CUPRUPD        : PWM_PWM_CMPMUPD_PWM_PWM_CMP_CUPRUPD_Field := 16#0#;
+      CUPRUPD        : PWM_CMPMUPD_PWM_PWM_CMP_CUPRUPD_Field := 16#0#;
       --  unspecified
       Reserved_20_31 : HAL.UInt12 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_CMPMUPD_PWM_PWM_CMP_Register use record
+   for PWM_CMPMUPD_PWM_PWM_CMP_Register use record
       CENUPD         at 0 range 0 .. 0;
       Reserved_1_3   at 0 range 1 .. 3;
       CTRUPD         at 0 range 4 .. 7;
@@ -2107,22 +2089,22 @@ package SAM_SVD.PWM is
 
    --  PWM Comparison 0 Value Register
    type PWM_PWM_CMP_Cluster is record
-      --  PWM Comparison 0 Value Register
-      PWM_CMPV    : aliased PWM_PWM_CMPV_PWM_PWM_CMP_Register;
-      --  PWM Comparison 0 Value Update Register
-      PWM_CMPVUPD : aliased PWM_PWM_CMPVUPD_PWM_PWM_CMP_Register;
-      --  PWM Comparison 0 Mode Register
-      PWM_CMPM    : aliased PWM_PWM_CMPM_PWM_PWM_CMP_Register;
-      --  PWM Comparison 0 Mode Update Register
-      PWM_CMPMUPD : aliased PWM_PWM_CMPMUPD_PWM_PWM_CMP_Register;
+      --  PWM Comparison x Value Register
+      CMPV    : aliased PWM_CMPV_PWM_PWM_CMP_Register;
+      --  PWM Comparison x Value Update Register
+      CMPVUPD : aliased PWM_CMPVUPD_PWM_PWM_CMP_Register;
+      --  PWM Comparison x Mode Register
+      CMPM    : aliased PWM_CMPM_PWM_PWM_CMP_Register;
+      --  PWM Comparison x Mode Update Register
+      CMPMUPD : aliased PWM_CMPMUPD_PWM_PWM_CMP_Register;
    end record
      with Size => 128;
 
    for PWM_PWM_CMP_Cluster use record
-      PWM_CMPV    at 16#0# range 0 .. 31;
-      PWM_CMPVUPD at 16#4# range 0 .. 31;
-      PWM_CMPM    at 16#8# range 0 .. 31;
-      PWM_CMPMUPD at 16#C# range 0 .. 31;
+      CMPV    at 16#0# range 0 .. 31;
+      CMPVUPD at 16#4# range 0 .. 31;
+      CMPM    at 16#8# range 0 .. 31;
+      CMPMUPD at 16#C# range 0 .. 31;
    end record;
 
    --  PWM Comparison 0 Value Register
@@ -2133,7 +2115,7 @@ package SAM_SVD.PWM is
    ----------------------------------------
 
    --  Channel Pre-scaler
-   type PWM_CMR_CPRESelect is
+   type CMR_CPRESelect is
      (--  Peripheral clock
       MCK,
       --  Peripheral clock/2
@@ -2161,7 +2143,7 @@ package SAM_SVD.PWM is
       --  Clock B
       CLKB)
      with Size => 4;
-   for PWM_CMR_CPRESelect use
+   for CMR_CPRESelect use
      (MCK => 0,
       MCK_DIV_2 => 1,
       MCK_DIV_4 => 2,
@@ -2176,20 +2158,64 @@ package SAM_SVD.PWM is
       CLKA => 11,
       CLKB => 12);
 
-   --  PWM Channel Mode Register (ch_num = 0)
-   type PWM_PWM_CMR_PWM_PWM_CH_NUM_Register is record
+   --  Channel Alignment
+   type CMR_CALGSelect is
+     (--  Left aligned
+      LEFT_ALIGNED,
+      --  Center aligned
+      CENTER_ALIGNED)
+     with Size => 1;
+   for CMR_CALGSelect use
+     (LEFT_ALIGNED => 0,
+      CENTER_ALIGNED => 1);
+
+   --  Channel Polarity
+   type CMR_CPOLSelect is
+     (--  Waveform starts at low level
+      LOW_POLARITY,
+      --  Waveform starts at high level
+      HIGH_POLARITY)
+     with Size => 1;
+   for CMR_CPOLSelect use
+     (LOW_POLARITY => 0,
+      HIGH_POLARITY => 1);
+
+   --  Counter Event Selection
+   type CMR_CESSelect is
+     (--  At the end of PWM period
+      SINGLE_EVENT,
+      --  At half of PWM period AND at the end of PWM period
+      DOUBLE_EVENT)
+     with Size => 1;
+   for CMR_CESSelect use
+     (SINGLE_EVENT => 0,
+      DOUBLE_EVENT => 1);
+
+   --  Update Selection
+   type CMR_UPDSSelect is
+     (--  At the next end of PWM period
+      UPDATE_AT_PERIOD,
+      --  At the next end of Half PWM period
+      UPDATE_AT_HALF_PERIOD)
+     with Size => 1;
+   for CMR_UPDSSelect use
+     (UPDATE_AT_PERIOD => 0,
+      UPDATE_AT_HALF_PERIOD => 1);
+
+   --  PWM Channel Mode Register
+   type PWM_CMR_PWM_PWM_CH_NUM_Register is record
       --  Channel Pre-scaler
-      CPRE           : PWM_CMR_CPRESelect := SAM_SVD.PWM.MCK;
+      CPRE           : CMR_CPRESelect := SAM_SVD.PWM.MCK;
       --  unspecified
       Reserved_4_7   : HAL.UInt4 := 16#0#;
       --  Channel Alignment
-      CALG           : Boolean := False;
+      CALG           : CMR_CALGSelect := SAM_SVD.PWM.LEFT_ALIGNED;
       --  Channel Polarity
-      CPOL           : Boolean := False;
+      CPOL           : CMR_CPOLSelect := SAM_SVD.PWM.LOW_POLARITY;
       --  Counter Event Selection
-      CES            : Boolean := False;
+      CES            : CMR_CESSelect := SAM_SVD.PWM.SINGLE_EVENT;
       --  Update Selection
-      UPDS           : Boolean := False;
+      UPDS           : CMR_UPDSSelect := SAM_SVD.PWM.UPDATE_AT_PERIOD;
       --  Disabled Polarity Inverted
       DPOLI          : Boolean := False;
       --  Timer Counter Trigger Selection
@@ -2210,7 +2236,7 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_CMR_PWM_PWM_CH_NUM_Register use record
+   for PWM_CMR_PWM_PWM_CH_NUM_Register use record
       CPRE           at 0 range 0 .. 3;
       Reserved_4_7   at 0 range 4 .. 7;
       CALG           at 0 range 8 .. 8;
@@ -2227,164 +2253,164 @@ package SAM_SVD.PWM is
       Reserved_20_31 at 0 range 20 .. 31;
    end record;
 
-   subtype PWM_PWM_CDTY_PWM_PWM_CH_NUM_CDTY_Field is HAL.UInt24;
+   subtype PWM_CDTY_PWM_PWM_CH_NUM_CDTY_Field is HAL.UInt24;
 
-   --  PWM Channel Duty Cycle Register (ch_num = 0)
-   type PWM_PWM_CDTY_PWM_PWM_CH_NUM_Register is record
+   --  PWM Channel Duty Cycle Register
+   type PWM_CDTY_PWM_PWM_CH_NUM_Register is record
       --  Channel Duty-Cycle
-      CDTY           : PWM_PWM_CDTY_PWM_PWM_CH_NUM_CDTY_Field := 16#0#;
+      CDTY           : PWM_CDTY_PWM_PWM_CH_NUM_CDTY_Field := 16#0#;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_CDTY_PWM_PWM_CH_NUM_Register use record
+   for PWM_CDTY_PWM_PWM_CH_NUM_Register use record
       CDTY           at 0 range 0 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   subtype PWM_PWM_CDTYUPD_PWM_PWM_CH_NUM_CDTYUPD_Field is HAL.UInt24;
+   subtype PWM_CDTYUPD_PWM_PWM_CH_NUM_CDTYUPD_Field is HAL.UInt24;
 
-   --  PWM Channel Duty Cycle Update Register (ch_num = 0)
-   type PWM_PWM_CDTYUPD_PWM_PWM_CH_NUM_Register is record
+   --  PWM Channel Duty Cycle Update Register
+   type PWM_CDTYUPD_PWM_PWM_CH_NUM_Register is record
       --  Write-only. Channel Duty-Cycle Update
-      CDTYUPD        : PWM_PWM_CDTYUPD_PWM_PWM_CH_NUM_CDTYUPD_Field := 16#0#;
+      CDTYUPD        : PWM_CDTYUPD_PWM_PWM_CH_NUM_CDTYUPD_Field := 16#0#;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_CDTYUPD_PWM_PWM_CH_NUM_Register use record
+   for PWM_CDTYUPD_PWM_PWM_CH_NUM_Register use record
       CDTYUPD        at 0 range 0 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   subtype PWM_PWM_CPRD_PWM_PWM_CH_NUM_CPRD_Field is HAL.UInt24;
+   subtype PWM_CPRD_PWM_PWM_CH_NUM_CPRD_Field is HAL.UInt24;
 
-   --  PWM Channel Period Register (ch_num = 0)
-   type PWM_PWM_CPRD_PWM_PWM_CH_NUM_Register is record
+   --  PWM Channel Period Register
+   type PWM_CPRD_PWM_PWM_CH_NUM_Register is record
       --  Channel Period
-      CPRD           : PWM_PWM_CPRD_PWM_PWM_CH_NUM_CPRD_Field := 16#0#;
+      CPRD           : PWM_CPRD_PWM_PWM_CH_NUM_CPRD_Field := 16#0#;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_CPRD_PWM_PWM_CH_NUM_Register use record
+   for PWM_CPRD_PWM_PWM_CH_NUM_Register use record
       CPRD           at 0 range 0 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   subtype PWM_PWM_CPRDUPD_PWM_PWM_CH_NUM_CPRDUPD_Field is HAL.UInt24;
+   subtype PWM_CPRDUPD_PWM_PWM_CH_NUM_CPRDUPD_Field is HAL.UInt24;
 
-   --  PWM Channel Period Update Register (ch_num = 0)
-   type PWM_PWM_CPRDUPD_PWM_PWM_CH_NUM_Register is record
+   --  PWM Channel Period Update Register
+   type PWM_CPRDUPD_PWM_PWM_CH_NUM_Register is record
       --  Write-only. Channel Period Update
-      CPRDUPD        : PWM_PWM_CPRDUPD_PWM_PWM_CH_NUM_CPRDUPD_Field := 16#0#;
+      CPRDUPD        : PWM_CPRDUPD_PWM_PWM_CH_NUM_CPRDUPD_Field := 16#0#;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_CPRDUPD_PWM_PWM_CH_NUM_Register use record
+   for PWM_CPRDUPD_PWM_PWM_CH_NUM_Register use record
       CPRDUPD        at 0 range 0 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   subtype PWM_PWM_CCNT_PWM_PWM_CH_NUM_CNT_Field is HAL.UInt24;
+   subtype PWM_CCNT_PWM_PWM_CH_NUM_CNT_Field is HAL.UInt24;
 
-   --  PWM Channel Counter Register (ch_num = 0)
-   type PWM_PWM_CCNT_PWM_PWM_CH_NUM_Register is record
+   --  PWM Channel Counter Register
+   type PWM_CCNT_PWM_PWM_CH_NUM_Register is record
       --  Read-only. Channel Counter Register
-      CNT            : PWM_PWM_CCNT_PWM_PWM_CH_NUM_CNT_Field;
+      CNT            : PWM_CCNT_PWM_PWM_CH_NUM_CNT_Field;
       --  unspecified
       Reserved_24_31 : HAL.UInt8;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_CCNT_PWM_PWM_CH_NUM_Register use record
+   for PWM_CCNT_PWM_PWM_CH_NUM_Register use record
       CNT            at 0 range 0 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   subtype PWM_PWM_DT_PWM_PWM_CH_NUM_DTH_Field is HAL.UInt16;
-   subtype PWM_PWM_DT_PWM_PWM_CH_NUM_DTL_Field is HAL.UInt16;
+   subtype PWM_DT_PWM_PWM_CH_NUM_DTH_Field is HAL.UInt16;
+   subtype PWM_DT_PWM_PWM_CH_NUM_DTL_Field is HAL.UInt16;
 
-   --  PWM Channel Dead Time Register (ch_num = 0)
-   type PWM_PWM_DT_PWM_PWM_CH_NUM_Register is record
+   --  PWM Channel Dead Time Register
+   type PWM_DT_PWM_PWM_CH_NUM_Register is record
       --  Dead-Time Value for PWMHx Output
-      DTH : PWM_PWM_DT_PWM_PWM_CH_NUM_DTH_Field := 16#0#;
+      DTH : PWM_DT_PWM_PWM_CH_NUM_DTH_Field := 16#0#;
       --  Dead-Time Value for PWMLx Output
-      DTL : PWM_PWM_DT_PWM_PWM_CH_NUM_DTL_Field := 16#0#;
+      DTL : PWM_DT_PWM_PWM_CH_NUM_DTL_Field := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_DT_PWM_PWM_CH_NUM_Register use record
+   for PWM_DT_PWM_PWM_CH_NUM_Register use record
       DTH at 0 range 0 .. 15;
       DTL at 0 range 16 .. 31;
    end record;
 
-   subtype PWM_PWM_DTUPD_PWM_PWM_CH_NUM_DTHUPD_Field is HAL.UInt16;
-   subtype PWM_PWM_DTUPD_PWM_PWM_CH_NUM_DTLUPD_Field is HAL.UInt16;
+   subtype PWM_DTUPD_PWM_PWM_CH_NUM_DTHUPD_Field is HAL.UInt16;
+   subtype PWM_DTUPD_PWM_PWM_CH_NUM_DTLUPD_Field is HAL.UInt16;
 
-   --  PWM Channel Dead Time Update Register (ch_num = 0)
-   type PWM_PWM_DTUPD_PWM_PWM_CH_NUM_Register is record
+   --  PWM Channel Dead Time Update Register
+   type PWM_DTUPD_PWM_PWM_CH_NUM_Register is record
       --  Write-only. Dead-Time Value Update for PWMHx Output
-      DTHUPD : PWM_PWM_DTUPD_PWM_PWM_CH_NUM_DTHUPD_Field := 16#0#;
+      DTHUPD : PWM_DTUPD_PWM_PWM_CH_NUM_DTHUPD_Field := 16#0#;
       --  Write-only. Dead-Time Value Update for PWMLx Output
-      DTLUPD : PWM_PWM_DTUPD_PWM_PWM_CH_NUM_DTLUPD_Field := 16#0#;
+      DTLUPD : PWM_DTUPD_PWM_PWM_CH_NUM_DTLUPD_Field := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_PWM_DTUPD_PWM_PWM_CH_NUM_Register use record
+   for PWM_DTUPD_PWM_PWM_CH_NUM_Register use record
       DTHUPD at 0 range 0 .. 15;
       DTLUPD at 0 range 16 .. 31;
    end record;
 
-   --  PWM Channel Mode Register (ch_num = 0)
+   --  PWM Channel Mode Register
    type PWM_PWM_CH_NUM_Cluster is record
-      --  PWM Channel Mode Register (ch_num = 0)
-      PWM_CMR     : aliased PWM_PWM_CMR_PWM_PWM_CH_NUM_Register;
-      --  PWM Channel Duty Cycle Register (ch_num = 0)
-      PWM_CDTY    : aliased PWM_PWM_CDTY_PWM_PWM_CH_NUM_Register;
-      --  PWM Channel Duty Cycle Update Register (ch_num = 0)
-      PWM_CDTYUPD : aliased PWM_PWM_CDTYUPD_PWM_PWM_CH_NUM_Register;
-      --  PWM Channel Period Register (ch_num = 0)
-      PWM_CPRD    : aliased PWM_PWM_CPRD_PWM_PWM_CH_NUM_Register;
-      --  PWM Channel Period Update Register (ch_num = 0)
-      PWM_CPRDUPD : aliased PWM_PWM_CPRDUPD_PWM_PWM_CH_NUM_Register;
-      --  PWM Channel Counter Register (ch_num = 0)
-      PWM_CCNT    : aliased PWM_PWM_CCNT_PWM_PWM_CH_NUM_Register;
-      --  PWM Channel Dead Time Register (ch_num = 0)
-      PWM_DT      : aliased PWM_PWM_DT_PWM_PWM_CH_NUM_Register;
-      --  PWM Channel Dead Time Update Register (ch_num = 0)
-      PWM_DTUPD   : aliased PWM_PWM_DTUPD_PWM_PWM_CH_NUM_Register;
+      --  PWM Channel Mode Register
+      CMR     : aliased PWM_CMR_PWM_PWM_CH_NUM_Register;
+      --  PWM Channel Duty Cycle Register
+      CDTY    : aliased PWM_CDTY_PWM_PWM_CH_NUM_Register;
+      --  PWM Channel Duty Cycle Update Register
+      CDTYUPD : aliased PWM_CDTYUPD_PWM_PWM_CH_NUM_Register;
+      --  PWM Channel Period Register
+      CPRD    : aliased PWM_CPRD_PWM_PWM_CH_NUM_Register;
+      --  PWM Channel Period Update Register
+      CPRDUPD : aliased PWM_CPRDUPD_PWM_PWM_CH_NUM_Register;
+      --  PWM Channel Counter Register
+      CCNT    : aliased PWM_CCNT_PWM_PWM_CH_NUM_Register;
+      --  PWM Channel Dead Time Register
+      DT      : aliased PWM_DT_PWM_PWM_CH_NUM_Register;
+      --  PWM Channel Dead Time Update Register
+      DTUPD   : aliased PWM_DTUPD_PWM_PWM_CH_NUM_Register;
    end record
      with Size => 256;
 
    for PWM_PWM_CH_NUM_Cluster use record
-      PWM_CMR     at 16#0# range 0 .. 31;
-      PWM_CDTY    at 16#4# range 0 .. 31;
-      PWM_CDTYUPD at 16#8# range 0 .. 31;
-      PWM_CPRD    at 16#C# range 0 .. 31;
-      PWM_CPRDUPD at 16#10# range 0 .. 31;
-      PWM_CCNT    at 16#14# range 0 .. 31;
-      PWM_DT      at 16#18# range 0 .. 31;
-      PWM_DTUPD   at 16#1C# range 0 .. 31;
+      CMR     at 16#0# range 0 .. 31;
+      CDTY    at 16#4# range 0 .. 31;
+      CDTYUPD at 16#8# range 0 .. 31;
+      CPRD    at 16#C# range 0 .. 31;
+      CPRDUPD at 16#10# range 0 .. 31;
+      CCNT    at 16#14# range 0 .. 31;
+      DT      at 16#18# range 0 .. 31;
+      DTUPD   at 16#1C# range 0 .. 31;
    end record;
 
-   --  PWM Channel Mode Register (ch_num = 0)
+   --  PWM Channel Mode Register
    type PWM_PWM_CH_NUM_Clusters is array (0 .. 3) of PWM_PWM_CH_NUM_Cluster;
 
    --  PWM Channel Mode Update Register (ch_num = 0)
-   type PWM_CMUPD_Register is record
+   type CMUPD_Register is record
       --  unspecified
       Reserved_0_8   : HAL.UInt9 := 16#0#;
       --  Write-only. Channel Polarity Update
@@ -2399,7 +2425,7 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_CMUPD_Register use record
+   for CMUPD_Register use record
       Reserved_0_8   at 0 range 0 .. 8;
       CPOLUP         at 0 range 9 .. 9;
       Reserved_10_12 at 0 range 10 .. 12;
@@ -2407,10 +2433,10 @@ package SAM_SVD.PWM is
       Reserved_14_31 at 0 range 14 .. 31;
    end record;
 
-   subtype PWM_ETRG_MAXCNT_Field is HAL.UInt24;
+   subtype ETRG_MAXCNT_Field is HAL.UInt24;
 
    --  External Trigger Mode
-   type PWM_ETRG1_TRGMODESelect is
+   type ETRG1_TRGMODESelect is
      (--  External trigger is not enabled.
       OFF,
       --  External PWM Reset Mode
@@ -2420,35 +2446,35 @@ package SAM_SVD.PWM is
       --  Cycle-by-cycle Duty Mode
       MODE3)
      with Size => 2;
-   for PWM_ETRG1_TRGMODESelect use
+   for ETRG1_TRGMODESelect use
      (OFF => 0,
       MODE1 => 1,
       MODE2 => 2,
       MODE3 => 3);
 
    --  Edge Selection
-   type PWM_ETRG1_TRGEDGESelect is
-     (--  TRGMODE = 1: TRGINx event detection on falling edge.TRGMODE = 2, 3: TRGINx
+   type ETRG1_TRGEDGESelect is
+     (--  TRGMODE = 1: TRGINx event detection on falling edge. TRGMODE = 2, 3: TRGINx
 --  active level is 0
       FALLING_ZERO,
-      --  TRGMODE = 1: TRGINx event detection on rising edge.TRGMODE = 2, 3: TRGINx
+      --  TRGMODE = 1: TRGINx event detection on rising edge. TRGMODE = 2, 3: TRGINx
 --  active level is 1
       RISING_ONE)
      with Size => 1;
-   for PWM_ETRG1_TRGEDGESelect use
+   for ETRG1_TRGEDGESelect use
      (FALLING_ZERO => 0,
       RISING_ONE => 1);
 
    --  PWM External Trigger Register (trg_num = 1)
-   type PWM_ETRG_Register is record
+   type ETRG_Register is record
       --  Maximum Counter value
-      MAXCNT         : PWM_ETRG_MAXCNT_Field := 16#0#;
+      MAXCNT         : ETRG_MAXCNT_Field := 16#0#;
       --  External Trigger Mode
-      TRGMODE        : PWM_ETRG1_TRGMODESelect := SAM_SVD.PWM.OFF;
+      TRGMODE        : ETRG1_TRGMODESelect := SAM_SVD.PWM.OFF;
       --  unspecified
       Reserved_26_27 : HAL.UInt2 := 16#0#;
       --  Edge Selection
-      TRGEDGE        : PWM_ETRG1_TRGEDGESelect := SAM_SVD.PWM.FALLING_ZERO;
+      TRGEDGE        : ETRG1_TRGEDGESelect := SAM_SVD.PWM.FALLING_ZERO;
       --  Filtered input
       TRGFILT        : Boolean := False;
       --  Trigger Source
@@ -2459,7 +2485,7 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_ETRG_Register use record
+   for ETRG_Register use record
       MAXCNT         at 0 range 0 .. 23;
       TRGMODE        at 0 range 24 .. 25;
       Reserved_26_27 at 0 range 26 .. 27;
@@ -2469,12 +2495,12 @@ package SAM_SVD.PWM is
       RFEN           at 0 range 31 .. 31;
    end record;
 
-   subtype PWM_LEBR_LEBDELAY_Field is HAL.UInt7;
+   subtype LEBR_LEBDELAY_Field is HAL.UInt7;
 
    --  PWM Leading-Edge Blanking Register (trg_num = 1)
-   type PWM_LEBR_Register is record
+   type LEBR_Register is record
       --  Leading-Edge Blanking Delay for TRGINx
-      LEBDELAY       : PWM_LEBR_LEBDELAY_Field := 16#0#;
+      LEBDELAY       : LEBR_LEBDELAY_Field := 16#0#;
       --  unspecified
       Reserved_7_15  : HAL.UInt9 := 16#0#;
       --  PWML Falling Edge Enable
@@ -2491,7 +2517,7 @@ package SAM_SVD.PWM is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PWM_LEBR_Register use record
+   for LEBR_Register use record
       LEBDELAY       at 0 range 0 .. 6;
       Reserved_7_15  at 0 range 7 .. 15;
       PWMLFEN        at 0 range 16 .. 16;
@@ -2516,147 +2542,144 @@ package SAM_SVD.PWM is
    --  Pulse Width Modulation Controller
    type PWM_Peripheral is record
       --  PWM Clock Register
-      PWM_CLK        : aliased PWM_PWM_CLK_Register;
+      CLK            : aliased PWM_CLK_Register;
       --  PWM Enable Register
-      PWM_ENA        : aliased PWM_PWM_ENA_Register;
+      ENA            : aliased PWM_ENA_Register;
       --  PWM Disable Register
-      PWM_DIS        : aliased PWM_PWM_DIS_Register;
+      DIS            : aliased PWM_DIS_Register;
       --  PWM Status Register
-      PWM_SR         : aliased PWM_PWM_SR_Register;
+      SR             : aliased PWM_SR_Register;
       --  PWM Interrupt Enable Register 1
-      PWM_IER1       : aliased PWM_PWM_IER1_Register;
+      IER1           : aliased PWM_IER1_Register;
       --  PWM Interrupt Disable Register 1
-      PWM_IDR1       : aliased PWM_PWM_IDR1_Register;
+      IDR1           : aliased PWM_IDR1_Register;
       --  PWM Interrupt Mask Register 1
-      PWM_IMR1       : aliased PWM_PWM_IMR1_Register;
+      IMR1           : aliased PWM_IMR1_Register;
       --  PWM Interrupt Status Register 1
-      PWM_ISR1       : aliased PWM_PWM_ISR1_Register;
+      ISR1           : aliased PWM_ISR1_Register;
       --  PWM Sync Channels Mode Register
-      PWM_SCM        : aliased PWM_PWM_SCM_Register;
+      SCM            : aliased PWM_SCM_Register;
       --  PWM DMA Register
-      PWM_DMAR       : aliased PWM_PWM_DMAR_Register;
+      DMAR           : aliased PWM_DMAR_Register;
       --  PWM Sync Channels Update Control Register
-      PWM_SCUC       : aliased PWM_PWM_SCUC_Register;
+      SCUC           : aliased PWM_SCUC_Register;
       --  PWM Sync Channels Update Period Register
-      PWM_SCUP       : aliased PWM_PWM_SCUP_Register;
+      SCUP           : aliased PWM_SCUP_Register;
       --  PWM Sync Channels Update Period Update Register
-      PWM_SCUPUPD    : aliased PWM_PWM_SCUPUPD_Register;
+      SCUPUPD        : aliased PWM_SCUPUPD_Register;
       --  PWM Interrupt Enable Register 2
-      PWM_IER2       : aliased PWM_PWM_IER2_Register;
+      IER2           : aliased PWM_IER2_Register;
       --  PWM Interrupt Disable Register 2
-      PWM_IDR2       : aliased PWM_PWM_IDR2_Register;
+      IDR2           : aliased PWM_IDR2_Register;
       --  PWM Interrupt Mask Register 2
-      PWM_IMR2       : aliased PWM_PWM_IMR2_Register;
+      IMR2           : aliased PWM_IMR2_Register;
       --  PWM Interrupt Status Register 2
-      PWM_ISR2       : aliased PWM_PWM_ISR2_Register;
+      ISR2           : aliased PWM_ISR2_Register;
       --  PWM Output Override Value Register
-      PWM_OOV        : aliased PWM_PWM_OOV_Register;
+      OOV            : aliased PWM_OOV_Register;
       --  PWM Output Selection Register
-      PWM_OS         : aliased PWM_PWM_OS_Register;
+      OS             : aliased PWM_OS_Register;
       --  PWM Output Selection Set Register
-      PWM_OSS        : aliased PWM_PWM_OSS_Register;
+      OSS            : aliased PWM_OSS_Register;
       --  PWM Output Selection Clear Register
-      PWM_OSC        : aliased PWM_PWM_OSC_Register;
+      OSC            : aliased PWM_OSC_Register;
       --  PWM Output Selection Set Update Register
-      PWM_OSSUPD     : aliased PWM_PWM_OSSUPD_Register;
+      OSSUPD         : aliased PWM_OSSUPD_Register;
       --  PWM Output Selection Clear Update Register
-      PWM_OSCUPD     : aliased PWM_PWM_OSCUPD_Register;
+      OSCUPD         : aliased PWM_OSCUPD_Register;
       --  PWM Fault Mode Register
-      PWM_FMR        : aliased PWM_PWM_FMR_Register;
+      FMR            : aliased PWM_FMR_Register;
       --  PWM Fault Status Register
-      PWM_FSR        : aliased PWM_PWM_FSR_Register;
+      FSR            : aliased PWM_FSR_Register;
       --  PWM Fault Clear Register
-      PWM_FCR        : aliased PWM_PWM_FCR_Register;
+      FCR            : aliased PWM_FCR_Register;
       --  PWM Fault Protection Value Register 1
-      PWM_FPV1       : aliased PWM_PWM_FPV1_Register;
+      FPV1           : aliased PWM_FPV1_Register;
       --  PWM Fault Protection Enable Register
-      PWM_FPE        : aliased PWM_PWM_FPE_Register;
-      --  PWM Event Line 0 Mode Register 0
-      PWM_ELMR       : aliased PWM_PWM_ELMR_Registers;
+      FPE            : aliased PWM_FPE_Register;
+      --  PWM Event Line 0 Mode Register
+      ELMR           : aliased PWM_ELMR_Registers;
       --  PWM Spread Spectrum Register
-      PWM_SSPR       : aliased PWM_PWM_SSPR_Register;
+      SSPR           : aliased PWM_SSPR_Register;
       --  PWM Spread Spectrum Update Register
-      PWM_SSPUP      : aliased PWM_PWM_SSPUP_Register;
+      SSPUP          : aliased PWM_SSPUP_Register;
       --  PWM Stepper Motor Mode Register
-      PWM_SMMR       : aliased PWM_PWM_SMMR_Register;
+      SMMR           : aliased PWM_SMMR_Register;
       --  PWM Fault Protection Value 2 Register
-      PWM_FPV2       : aliased PWM_PWM_FPV2_Register;
+      FPV2           : aliased PWM_FPV2_Register;
       --  PWM Write Protection Control Register
-      PWM_WPCR       : aliased PWM_PWM_WPCR_Register;
+      WPCR           : aliased PWM_WPCR_Register;
       --  PWM Write Protection Status Register
-      PWM_WPSR       : aliased PWM_PWM_WPSR_Register;
-      --  Version Register
-      PWM_VERSION    : aliased PWM_PWM_VERSION_Register;
+      WPSR           : aliased PWM_WPSR_Register;
       --  PWM Comparison 0 Value Register
       PWM_PWM_CMP    : aliased PWM_PWM_CMP_Clusters;
-      --  PWM Channel Mode Register (ch_num = 0)
+      --  PWM Channel Mode Register
       PWM_PWM_CH_NUM : aliased PWM_PWM_CH_NUM_Clusters;
       --  PWM Channel Mode Update Register (ch_num = 0)
-      PWM_CMUPD0     : aliased PWM_CMUPD_Register;
+      CMUPD0         : aliased CMUPD_Register;
       --  PWM Channel Mode Update Register (ch_num = 1)
-      PWM_CMUPD1     : aliased PWM_CMUPD_Register;
+      CMUPD1         : aliased CMUPD_Register;
       --  PWM External Trigger Register (trg_num = 1)
-      PWM_ETRG1      : aliased PWM_ETRG_Register;
+      ETRG1          : aliased ETRG_Register;
       --  PWM Leading-Edge Blanking Register (trg_num = 1)
-      PWM_LEBR1      : aliased PWM_LEBR_Register;
+      LEBR1          : aliased LEBR_Register;
       --  PWM Channel Mode Update Register (ch_num = 2)
-      PWM_CMUPD2     : aliased PWM_CMUPD_Register;
+      CMUPD2         : aliased CMUPD_Register;
       --  PWM External Trigger Register (trg_num = 2)
-      PWM_ETRG2      : aliased PWM_ETRG_Register;
+      ETRG2          : aliased ETRG_Register;
       --  PWM Leading-Edge Blanking Register (trg_num = 2)
-      PWM_LEBR2      : aliased PWM_LEBR_Register;
+      LEBR2          : aliased LEBR_Register;
       --  PWM Channel Mode Update Register (ch_num = 3)
-      PWM_CMUPD3     : aliased PWM_CMUPD_Register;
+      CMUPD3         : aliased CMUPD_Register;
    end record
      with Volatile;
 
    for PWM_Peripheral use record
-      PWM_CLK        at 16#0# range 0 .. 31;
-      PWM_ENA        at 16#4# range 0 .. 31;
-      PWM_DIS        at 16#8# range 0 .. 31;
-      PWM_SR         at 16#C# range 0 .. 31;
-      PWM_IER1       at 16#10# range 0 .. 31;
-      PWM_IDR1       at 16#14# range 0 .. 31;
-      PWM_IMR1       at 16#18# range 0 .. 31;
-      PWM_ISR1       at 16#1C# range 0 .. 31;
-      PWM_SCM        at 16#20# range 0 .. 31;
-      PWM_DMAR       at 16#24# range 0 .. 31;
-      PWM_SCUC       at 16#28# range 0 .. 31;
-      PWM_SCUP       at 16#2C# range 0 .. 31;
-      PWM_SCUPUPD    at 16#30# range 0 .. 31;
-      PWM_IER2       at 16#34# range 0 .. 31;
-      PWM_IDR2       at 16#38# range 0 .. 31;
-      PWM_IMR2       at 16#3C# range 0 .. 31;
-      PWM_ISR2       at 16#40# range 0 .. 31;
-      PWM_OOV        at 16#44# range 0 .. 31;
-      PWM_OS         at 16#48# range 0 .. 31;
-      PWM_OSS        at 16#4C# range 0 .. 31;
-      PWM_OSC        at 16#50# range 0 .. 31;
-      PWM_OSSUPD     at 16#54# range 0 .. 31;
-      PWM_OSCUPD     at 16#58# range 0 .. 31;
-      PWM_FMR        at 16#5C# range 0 .. 31;
-      PWM_FSR        at 16#60# range 0 .. 31;
-      PWM_FCR        at 16#64# range 0 .. 31;
-      PWM_FPV1       at 16#68# range 0 .. 31;
-      PWM_FPE        at 16#6C# range 0 .. 31;
-      PWM_ELMR       at 16#7C# range 0 .. 63;
-      PWM_SSPR       at 16#A0# range 0 .. 31;
-      PWM_SSPUP      at 16#A4# range 0 .. 31;
-      PWM_SMMR       at 16#B0# range 0 .. 31;
-      PWM_FPV2       at 16#C0# range 0 .. 31;
-      PWM_WPCR       at 16#E4# range 0 .. 31;
-      PWM_WPSR       at 16#E8# range 0 .. 31;
-      PWM_VERSION    at 16#FC# range 0 .. 31;
+      CLK            at 16#0# range 0 .. 31;
+      ENA            at 16#4# range 0 .. 31;
+      DIS            at 16#8# range 0 .. 31;
+      SR             at 16#C# range 0 .. 31;
+      IER1           at 16#10# range 0 .. 31;
+      IDR1           at 16#14# range 0 .. 31;
+      IMR1           at 16#18# range 0 .. 31;
+      ISR1           at 16#1C# range 0 .. 31;
+      SCM            at 16#20# range 0 .. 31;
+      DMAR           at 16#24# range 0 .. 31;
+      SCUC           at 16#28# range 0 .. 31;
+      SCUP           at 16#2C# range 0 .. 31;
+      SCUPUPD        at 16#30# range 0 .. 31;
+      IER2           at 16#34# range 0 .. 31;
+      IDR2           at 16#38# range 0 .. 31;
+      IMR2           at 16#3C# range 0 .. 31;
+      ISR2           at 16#40# range 0 .. 31;
+      OOV            at 16#44# range 0 .. 31;
+      OS             at 16#48# range 0 .. 31;
+      OSS            at 16#4C# range 0 .. 31;
+      OSC            at 16#50# range 0 .. 31;
+      OSSUPD         at 16#54# range 0 .. 31;
+      OSCUPD         at 16#58# range 0 .. 31;
+      FMR            at 16#5C# range 0 .. 31;
+      FSR            at 16#60# range 0 .. 31;
+      FCR            at 16#64# range 0 .. 31;
+      FPV1           at 16#68# range 0 .. 31;
+      FPE            at 16#6C# range 0 .. 31;
+      ELMR           at 16#7C# range 0 .. 63;
+      SSPR           at 16#A0# range 0 .. 31;
+      SSPUP          at 16#A4# range 0 .. 31;
+      SMMR           at 16#B0# range 0 .. 31;
+      FPV2           at 16#C0# range 0 .. 31;
+      WPCR           at 16#E4# range 0 .. 31;
+      WPSR           at 16#E8# range 0 .. 31;
       PWM_PWM_CMP    at 16#130# range 0 .. 1023;
       PWM_PWM_CH_NUM at 16#200# range 0 .. 1023;
-      PWM_CMUPD0     at 16#400# range 0 .. 31;
-      PWM_CMUPD1     at 16#420# range 0 .. 31;
-      PWM_ETRG1      at 16#42C# range 0 .. 31;
-      PWM_LEBR1      at 16#430# range 0 .. 31;
-      PWM_CMUPD2     at 16#440# range 0 .. 31;
-      PWM_ETRG2      at 16#44C# range 0 .. 31;
-      PWM_LEBR2      at 16#450# range 0 .. 31;
-      PWM_CMUPD3     at 16#460# range 0 .. 31;
+      CMUPD0         at 16#400# range 0 .. 31;
+      CMUPD1         at 16#420# range 0 .. 31;
+      ETRG1          at 16#42C# range 0 .. 31;
+      LEBR1          at 16#430# range 0 .. 31;
+      CMUPD2         at 16#440# range 0 .. 31;
+      ETRG2          at 16#44C# range 0 .. 31;
+      LEBR2          at 16#450# range 0 .. 31;
+      CMUPD3         at 16#460# range 0 .. 31;
    end record;
 
    --  Pulse Width Modulation Controller

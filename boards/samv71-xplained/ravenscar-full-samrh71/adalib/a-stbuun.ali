@@ -1,0 +1,241 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FINALIZATION
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_ACCESS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U ada.strings.text_buffers.unbounded%b  a-stbuun.adb  4bad597c NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.utf_encoding%s  a-stuten.adb	a-stuten.ali
+W ada.strings.utf_encoding.conversions%s  a-suenco.adb  a-suenco.ali
+W ada.strings.utf_encoding.strings%s  a-suenst.adb  a-suenst.ali
+W ada.strings.utf_encoding.wide_strings%s  a-suewst.adb  a-suewst.ali
+W ada.strings.utf_encoding.wide_wide_strings%s  a-suezst.adb  a-suezst.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.unchecked_deallocation%s
+Z system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+U ada.strings.text_buffers.unbounded%s  a-stbuun.ads  dda14c72 EE OL PF PR PK
+W ada%s			ada.ads			ada.ali
+W ada.finalization%s	a-finali.ads		a-finali.ali
+W ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.put_images%s	s-putima.adb		s-putima.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-finali.ads		20210927095552 bf4f806b ada.finalization%s
+D a-stream.ads		20210927095552 119b8fb3 ada.streams%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-sttebu.adb		20210927095552 15e06adb ada.strings.text_buffers%b
+D a-stbuun.ads		20210927095552 7ace507d ada.strings.text_buffers.unbounded%s
+D a-stbuun.adb		20210927095552 967d827c ada.strings.text_buffers.unbounded%b
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-suenco.ads		20210927095552 9bf077d7 ada.strings.utf_encoding.conversions%s
+D a-suenst.ads		20210927095552 7e912418 ada.strings.utf_encoding.strings%s
+D a-suewst.ads		20210927095552 90b69721 ada.strings.utf_encoding.wide_strings%s
+D a-suezst.ads		20210927095552 1161e3f6 ada.strings.utf_encoding.wide_wide_strings%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210927095552 c3a8ac65 ada.unchecked_deallocation%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-finmas.ads		20210927095552 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20210927095552 4ff27390 system.finalization_root%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210927095552 e9fa2dd8 system.storage_pools%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s s [buffer_typeDIC ada__strings__text_buffers__unbounded 80 9 none]
+G c Z s b [get ada__strings__text_buffers__unbounded 25 13 none]
+G c Z s b [wide_get ada__strings__text_buffers__unbounded 28 13 none]
+G c Z s b [wide_wide_get ada__strings__text_buffers__unbounded 32 13 none]
+G c Z s b [get_utf_8 ada__strings__text_buffers__unbounded 37 13 none]
+G c Z s b [wide_get_utf_16 ada__strings__text_buffers__unbounded 42 13 none]
+G c Z s b [put_utf_8_implementation ada__strings__text_buffers__unbounded 49 14 none]
+G c Z s s [buffer_typeDIC ada__strings__text_buffers__unbounded__mapping 116 12 54_4]
+G c Z s s [put ada__strings__text_buffers__unbounded__mapping 118 28 54_4]
+G c Z s s [wide_put ada__strings__text_buffers__unbounded__mapping 120 28 54_4]
+G c Z s s [wide_wide_put ada__strings__text_buffers__unbounded__mapping 123 28 54_4]
+G c Z s s [put_utf_8 ada__strings__text_buffers__unbounded__mapping 126 28 54_4]
+G c Z s s [wide_put_utf_16 ada__strings__text_buffers__unbounded__mapping 130 28 54_4]
+G c Z s s [new_line ada__strings__text_buffers__unbounded__mapping 133 28 54_4]
+G c Z s s [buffer_typeDF ada__strings__text_buffers__unbounded__mapping 116 12 54_4]
+G c Z s s [buffer_typeIP ada__strings__text_buffers__unbounded__mapping 116 12 54_4]
+G c Z s b [initialize ada__strings__text_buffers__unbounded 74 25 none]
+G c Z s b [finalize ada__strings__text_buffers__unbounded 77 25 none]
+G c Z s s [chunkIP ada__strings__text_buffers__unbounded 58 9 none]
+G c Z s s [managed_chunk_listDF ada__strings__text_buffers__unbounded 63 9 none]
+G c Z s s [managed_chunk_listIP ada__strings__text_buffers__unbounded 63 9 none]
+G c Z s s [buffer_typeDF ada__strings__text_buffers__unbounded 80 9 none]
+G c Z s s [buffer_typeDI ada__strings__text_buffers__unbounded 80 9 none]
+G c Z s s [buffer_typeIP ada__strings__text_buffers__unbounded 80 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 8|16r6 17r9 63r35 87r5 9|32r6 33r6 34r6 35r6 36r6 37r14 177r29
+. 193r5
+X 3 a-finali.ads
+40K13*Finalization 68e21 8|16w10 63r39
+50H9*Limited_Controlled<21|40R9> 66e55 8|63r52
+X 5 a-string.ads
+16K13*Strings 1|16k9 5|35e16 8|17r13 87r9 9|33r10 34r10 35r10 36r10 37r18
+. 193r9
+X 6 a-sttebu.ads
+17K21*Text_Buffers 5|16k13 6|136e29 8|17r21 87r17 9|37r26 193r17
+21I9*Text_Buffer_Count<integer>
+26H9*Root_Buffer_Type 88e14 8|23r28 50r23 9|133r23
+49V13*Current_Indent{21I9} 8|26s51 30s16 35s16 40s16 45s16
+70i7*Indentation{natural} 9|111m20 111r48
+73b7*Indent_Pending{boolean} 9|112m20 112r48
+76i7*UTF_8_Length{natural} 9|71r62 113m20 113r48 161m20 161r20
+79i7*UTF_8_Column{positive} 9|114m20 114r48 162m20 162r20
+83b7*All_7_Bits{boolean} 9|49r43 115m20 115r48 143m20 143r20
+85b7*All_8_Bits{boolean} 9|49r17 116m20 116r48
+115k12 Output_Mapping 134e22 8|54r27
+116H12*Buffer_Type<26R9> 8|80r36[54]
+118U28*Put<29p14>
+120U28*Wide_Put<31p14>
+123U28*Wide_Wide_Put<34p14>
+126U28*Put_UTF_8<37p14>
+130U28*Wide_Put_UTF_16<41p14>
+133U28*New_Line<45p14>
+X 8 a-stbuun.ads
+17K34*Unbounded 6|17k21 8|49E14 87l30 87e39 9|37b39 193l30 193t39
+23R9*Buffer_Type<6|26R9> 6|49p13 8|25p13 25r34 28p13 28r39 32p13 33r23 37p13
+. 38r23 42p13 43r23 52r28 80c9 85e14 9|39r34 56r39 61r44 68r23 101r25 105r39
+. 124r23 136r61 140r61 168r35
+25V13*Get{string} 25=18 26r21 9|39t4
+25r18 Buffer{23R9} 26r67
+28V13*Wide_Get{wide_string} 28=23 29r21 9|56t4
+28r23 Buffer{23R9} 30r32
+32V13*Wide_Wide_Get{wide_wide_string} 33=7 34r21 9|61t4
+33r7 Buffer{23R9} 35r32
+37V13*Get_UTF_8{10|59A12} 38=7 39r21 9|50s46 52s17 58s48 64s53 67t4 129s12
+38r7 Buffer{23R9} 40r32
+42V13*Wide_Get_UTF_16{10|62A12} 43=7 44r21 9|123t4
+43r7 Buffer{23R9} 45r32
+49U14 Put_UTF_8_Implementation 50=7 51>7 54r43 9|132b14 169l8 169t32
+50c7 Buffer<6|26R9> 52r18 9|133b7 168m48 168r48
+51a7 Item{10|59A12} 9|134b7 142r22
+54K12 Mapping[6|115] 80r28
+56R9 Chunk 57r36 58c9 58d16 61e14 65r29 9|149r28 155r52 177r57
+57P9 Chunk_Access(56R9) 59r15 69r23 9|74r19 177r64 178r13 182r23
+58R9 Chunk
+58i16*Length{positive} 60r47 9|145r61
+59p7*Next{57P9} 9|91r38 95r27 154r37 155m22 156r51 178r46 184r24 189m24
+60a7*Chars{string} 9|78r50 81r63 82r54 89r42 164m39
+63R9 Managed_Chunk_List<3|50R9> 72e14 74P25 74r51 77P25 77r49 81r14 9|171r40
+. 176r38 21|42p14
+65r7*First_Chunk{58R9} 9|74m47 173m34 178r34 189m12
+69p7*Current_Chunk{57P9} 9|145r47 149r54 156m31 164r25 173m12
+74U25 Initialize<3|53p14> 74=37 9|171b14 174l8 174t18 190s7
+74r37 List{63R9} 9|171b26 173m7 173m29 173r29
+77U25 Finalize<3|54p14> 77=35 9|118s13 176b14 191l8 191t16
+77r35 List{63R9} 9|176b24 178r29 189m7 190m19
+81r7 List{63R9} 9|74m42 118m30 145r42 149r49 156m26 164m20
+83i7 Last_Used{natural} 9|117m20 117r48 145r23 157m26 163m20 163r20 164r53
+X 9 a-stbuun.adb
+39V13 Get{string}
+39r18 Buffer{8|23R9}
+56V13 Wide_Get{wide_string}
+56r23 Buffer{8|23R9}
+61V13 Wide_Wide_Get{wide_wide_string}
+61r28 Buffer{8|23R9}
+67V13 Get_UTF_8{10|59A12}
+68r7 Buffer{8|23R9}
+71a14 Result{10|59A12} 79r34 81m19 87m24 87r24 87r48
+73i13 Target_First{positive} 78r31 81r27 82m19 82r35 87r32 92m19
+74p13 Ptr{8|57P9} 77r19 78r46 81r59 82r50 89r38 91r34 95m16 95r23
+75i13 Target_Last{positive} 78m16 79r19 81r43
+86a22 Final_Target{string} 89r22 89r54
+101r13 Defaulted{8|23R9} 111r38 112r38 113r38 114r38 115r38 116r38 117r38
+105a13 Dummy(8|23R9)
+123V13 Wide_Get_UTF_16{10|62A12}
+124r7 Buffer{8|23R9}
+136U17 Buffer_Type_Implementation 136=45 140b17 166l11 166t37 168s7
+136r45 Buffer{8|23R9} 140b45 143m13 145r16 145r35 149r42 156m19 157m19 161m13
+. 162m13 163m13 164m13 164r13 164r46
+142e14 Char=142:22{character} 143r60 164r67
+149r19 Cc{8|58R9} 152r43 154r34 155r19 156r48
+150i19 Max{positive} 152r34
+151i19 Length{natural} 155r69
+177U17 Free[17|20] 185s13
+178p7 Ptr{8|57P9} 180r13 182r39 184m13 184r20
+182p13 Old_Ptr{8|57P9} 185m19 185r19
+X 10 a-stuten.ads
+42K21*UTF_Encoding 8|38r43 43r43 51r14 60r15 9|33r18 34r18 35r18 36r18 50r17
+. 58r14 64r14 68r43 71r23 86r37 124r43 128r9 129r48 134r16 10|144e29
+56n29*UTF_8{56E9} 9|129r61
+59A12*UTF_8_String{string}<integer> 8|38r56 51r27 60r28 9|68r56 71r36 86r50
+. 134r29
+62A12*UTF_16_Wide_String{wide_string}<integer> 8|43r56 9|124r56
+X 11 a-suenco.ads
+20K34*Conversions 9|33w31 128r22 11|61e41
+37V13*Convert{10|62A12} 9|128s34
+39e7 Input_Scheme{10|56E9} 9|129r32
+X 12 a-suenst.ads
+20K34*Strings 9|34w31 50r30 12|65e37
+57V13*Decode{string} 9|50s38
+X 13 a-suewst.ads
+20K34*Wide_Strings 9|35w31 58r27 13|67e42
+59V13*Decode{wide_string} 9|58s40
+X 14 a-suezst.ads
+21K34*Wide_Wide_Strings 9|36w31 64r27 14|64e47
+56V13*Decode{wide_wide_string} 9|64s45
+X 17 a-uncdea.ads
+20u15*Unchecked_Deallocation 9|32w10 177r33
+X 21 s-finroo.ads
+42U14*Adjust
+

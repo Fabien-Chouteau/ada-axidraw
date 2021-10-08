@@ -1,0 +1,93 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U interfaces.sam.trng%s	i-sam-trng.ads		c9bf7a7e NE OL PR PK
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W system%s		system.ads		system.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D i-sam.ads		20210927130812 3bba8a63 interfaces.sam%s
+D i-sam-trng.ads	20210927130812 a8d11f48 interfaces.sam.trng%s
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+G c Z s s [trng_cr_registerIP interfaces__sam__trng 34 9 none]
+G c Z s s [trng_ier_registerIP interfaces__sam__trng 54 9 none]
+G c Z s s [trng_idr_registerIP interfaces__sam__trng 71 9 none]
+G c Z s s [trng_imr_registerIP interfaces__sam__trng 88 9 none]
+G c Z s s [trng_isr_registerIP interfaces__sam__trng 105 9 none]
+G c Z s s [trng_peripheralIP interfaces__sam__trng 124 9 none]
+X 1 interfac.ads
+38K9*Interfaces 231e15 3|12r9 20r36 38r22 51r37 58r23 68r37 75r23 85r37 92r23
+. 102r37 109r23 136r23 153r5
+79M9*Unsigned_32
+X 2 i-sam.ads
+13K20*SAM 1|38k9 2|139e19 3|12r20 20r47 38r33 51r48 58r34 68r48 75r34 85r48
+. 92r34 102r48 109r34 136r34 153r16
+21M9*UInt32<1|79M9> 3|136r38
+24M9*Bit 3|20r51 51r52 68r52 85r52 102r52
+36M9*UInt7 3|38r37
+80M9*UInt31 3|58r38 75r38 92r38 109r38
+128m4*TRNG_Base{4|80M9} 3|151r30
+X 3 i-sam-trng.ads
+12K24*TRNG 2|13k20 3|153l20 153e24
+20M12*TRNG_CR_ENABLE_Field{2|24M9} 36r22
+23E9*CR_WAKEYSelect 28e6 29r8 40r22
+25n7*CR_WAKEYSelect_Reset{23E9} 30r7 40r40
+27n7*PASSWD{23E9} 31r7
+34R9*TRNG_CR_Register 42e6 45r8 126r23
+36m7*ENABLE{20M12} 46r7
+38m7*Reserved_1_7{2|36M9} 47r7
+40e7*WAKEY{23E9} 48r7
+51M12*TRNG_IER_DATRDY_Field{2|24M9} 56r23
+54R9*TRNG_IER_Register 60e6 63r8 128r23
+56m7*DATRDY{51M12} 64r7
+58m7*Reserved_1_31{2|80M9} 65r7
+68M12*TRNG_IDR_DATRDY_Field{2|24M9} 73r23
+71R9*TRNG_IDR_Register 77e6 80r8 130r23
+73m7*DATRDY{68M12} 81r7
+75m7*Reserved_1_31{2|80M9} 82r7
+85M12*TRNG_IMR_DATRDY_Field{2|24M9} 90r23
+88R9*TRNG_IMR_Register 94e6 97r8 132r23
+90m7*DATRDY{85M12} 98r7
+92m7*Reserved_1_31{2|80M9} 99r7
+102M12*TRNG_ISR_DATRDY_Field{2|24M9} 107r23
+105R9*TRNG_ISR_Register 111e6 114r8 134r23
+107m7*DATRDY{102M12} 115r7
+109m7*Reserved_1_31{2|80M9} 116r7
+124R9*TRNG_Peripheral 138e6 140r8 150r26
+126r7*CR{34R9} 141r7
+128r7*IER{54R9} 142r7
+130r7*IDR{71R9} 143r7
+132r7*IMR{88R9} 144r7
+134r7*ISR{105R9} 145r7
+136m7*ODATA{2|21M9} 146r7
+150r4*TRNG_Periph{124R9}
+X 4 system.ads
+50K9*System 3|10w6 43r24 61r24 78r24 95r24 112r24 4|164e11
+80M9*Address
+104n41*Low_Order_First{104E9} 3|43r31 61r31 78r31 95r31 112r31
+

@@ -1,0 +1,105 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U interfaces.sam.systick%s  i-sam-systick.ads	5a57de4c NE OL PR PK
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W system%s		system.ads		system.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D i-sam.ads		20210927130812 3bba8a63 interfaces.sam%s
+D i-sam-systick.ads	20210927130812 3b39bb7a interfaces.sam.systick%s
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+G c Z s s [systick_csr_registerIP interfaces__sam__systick 56 9 none]
+G c Z s s [systick_rvr_registerIP interfaces__sam__systick 85 9 none]
+G c Z s s [systick_cvr_registerIP interfaces__sam__systick 103 9 none]
+G c Z s s [systick_calib_registerIP interfaces__sam__systick 142 9 none]
+G c Z s s [systick_peripheralIP interfaces__sam__systick 168 9 none]
+X 1 interfac.ads
+38K9*Interfaces 231e15 3|12r9 53r43 58r44 60r45 62r47 64r24 68r24 82r40 90r24
+. 100r41 107r24 117r41 146r24 191r5
+68M9*Unsigned_8
+X 2 i-sam.ads
+13K20*SAM 1|38k9 2|139e19 3|12r20 53r54 58r55 60r56 62r58 64r35 68r35 82r51
+. 90r35 100r52 107r35 117r52 146r35 191r16
+23M9*Byte<1|68M9> 3|90r39 107r39
+24M9*Bit 3|53r58
+34M9*UInt6 3|146r39
+46M9*UInt13 3|64r39
+50M9*UInt15 3|68r39
+66M9*UInt24 3|82r55 100r56 117r56
+134m4*SysTick_Base{4|80M9} 3|189r30
+X 3 i-sam-systick.ads
+12K24*SysTick 2|13k20 3|58r59 60r60 62r62 191l20 191e27
+21E9*CSR_ENABLESelect 26e6 27r8 58r24
+23n7*VALUE_0{21E9} 28r7 58r67
+25n7*VALUE_1{21E9} 29r7
+32E9*CSR_TICKINTSelect 37e6 38r8 60r24
+34n7*VALUE_0{32E9} 39r7 60r68
+36n7*VALUE_1{32E9} 40r7
+43E9*CSR_CLKSOURCESelect 48e6 49r8 62r24
+45n7*VALUE_0{43E9} 50r7
+47n7*VALUE_1{43E9} 51r7 62r70
+53M12*SysTick_CSR_COUNTFLAG_Field{2|24M9} 66r24
+56R9*SysTick_CSR_Register 70e6 73r8 170r23
+58e7*ENABLE{21E9} 74r7
+60e7*TICKINT{32E9} 75r7
+62e7*CLKSOURCE{43E9} 76r7
+64m7*Reserved_3_15{2|46M9} 77r7
+66m7*COUNTFLAG{53M12} 78r7
+68m7*Reserved_17_31{2|50M9} 79r7
+82M12*SysTick_RVR_RELOAD_Field{2|66M9} 88r24
+85R9*SysTick_RVR_Register 92e6 95r8 172r23
+88m7*RELOAD{82M12} 96r7
+90m7*Reserved_24_31{2|23M9} 97r7
+100M12*SysTick_CVR_CURRENT_Field{2|66M9} 105r24
+103R9*SysTick_CVR_Register 109e6 112r8 174r23
+105m7*CURRENT{100M12} 113r7
+107m7*Reserved_24_31{2|23M9} 114r7
+117M12*SysTick_CALIB_TENMS_Field{2|66M9} 144r24
+120E9*CALIB_SKEWSelect 125e6 126r8 148r24
+122n7*VALUE_0{120E9} 127r7
+124n7*VALUE_1{120E9} 128r7
+131E9*CALIB_NOREFSelect 136e6 137r8 151r24
+133n7*VALUE_0{131E9} 138r7
+135n7*VALUE_1{131E9} 139r7
+142R9*SysTick_CALIB_Register 153e6 156r8 176r23
+144m7*TENMS{117M12} 157r7
+146m7*Reserved_24_29{2|34M9} 158r7
+148e7*SKEW{120E9} 159r7
+151e7*NOREF{131E9} 160r7
+168R9*SysTick_Peripheral 178e6 180r8 188r29
+170r7*CSR{56R9} 181r7
+172r7*RVR{85R9} 182r7
+174r7*CVR{103R9} 183r7
+176r7*CALIB{142R9} 184r7
+188r4*SysTick_Periph{168R9}
+X 4 system.ads
+50K9*System 3|10w6 71r24 93r24 110r24 154r24 4|164e11
+80M9*Address
+104n41*Low_Order_First{104E9} 3|71r31 93r31 110r31 154r31
+

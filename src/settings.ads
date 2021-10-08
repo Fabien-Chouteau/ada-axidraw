@@ -80,7 +80,7 @@ package Settings is
    ------------
 
    Home_Coordinate : constant Gcode.Float_Position :=
-     (300.0, -210.0, 1.0);
+     (300.0, -207.0, 1.0);
    --  Coordinates of the home position
 
    Homing_Directions : constant Gcode.Axis_Directions :=

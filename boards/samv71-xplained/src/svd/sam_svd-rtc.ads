@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from ATSAMV71Q21.svd
+--  This spec has been automatically generated from ATSAMRH71F20C.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -15,7 +15,7 @@ package SAM_SVD.RTC is
    ---------------
 
    --  Time Event Selection
-   type RTC_CR_TIMEVSELSelect is
+   type CR_TIMEVSELSelect is
      (--  Minute change
       MINUTE,
       --  Hour change
@@ -25,14 +25,14 @@ package SAM_SVD.RTC is
       --  Every day at noon
       NOON)
      with Size => 2;
-   for RTC_CR_TIMEVSELSelect use
+   for CR_TIMEVSELSelect use
      (MINUTE => 0,
       HOUR => 1,
       MIDNIGHT => 2,
       NOON => 3);
 
    --  Calendar Event Selection
-   type RTC_CR_CALEVSELSelect is
+   type CR_CALEVSELSelect is
      (--  Week change (every Monday at time 00:00:00)
       WEEK,
       --  Month change (every 01 of each month at time 00:00:00)
@@ -40,13 +40,13 @@ package SAM_SVD.RTC is
       --  Year change (every January 1 at time 00:00:00)
       YEAR)
      with Size => 2;
-   for RTC_CR_CALEVSELSelect use
+   for CR_CALEVSELSelect use
      (WEEK => 0,
       MONTH => 1,
       YEAR => 2);
 
    --  Control Register
-   type RTC_RTC_CR_Register is record
+   type RTC_CR_Register is record
       --  Update Request Time Register
       UPDTIM         : Boolean := False;
       --  Update Request Calendar Register
@@ -54,18 +54,18 @@ package SAM_SVD.RTC is
       --  unspecified
       Reserved_2_7   : HAL.UInt6 := 16#0#;
       --  Time Event Selection
-      TIMEVSEL       : RTC_CR_TIMEVSELSelect := SAM_SVD.RTC.MINUTE;
+      TIMEVSEL       : CR_TIMEVSELSelect := SAM_SVD.RTC.MINUTE;
       --  unspecified
       Reserved_10_15 : HAL.UInt6 := 16#0#;
       --  Calendar Event Selection
-      CALEVSEL       : RTC_CR_CALEVSELSelect := SAM_SVD.RTC.WEEK;
+      CALEVSEL       : CR_CALEVSELSelect := SAM_SVD.RTC.WEEK;
       --  unspecified
       Reserved_18_31 : HAL.UInt14 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_CR_Register use record
+   for RTC_CR_Register use record
       UPDTIM         at 0 range 0 .. 0;
       UPDCAL         at 0 range 1 .. 1;
       Reserved_2_7   at 0 range 2 .. 7;
@@ -75,10 +75,10 @@ package SAM_SVD.RTC is
       Reserved_18_31 at 0 range 18 .. 31;
    end record;
 
-   subtype RTC_RTC_MR_CORRECTION_Field is HAL.UInt7;
+   subtype RTC_MR_CORRECTION_Field is HAL.UInt7;
 
    --  RTCOUT0 OutputSource Selection
-   type RTC_MR_OUT0Select is
+   type MR_OUT0Select is
      (--  No waveform, stuck at '0'
       NO_WAVE,
       --  1 Hz square wave
@@ -96,7 +96,7 @@ package SAM_SVD.RTC is
       --  Duty cycle programmable pulse
       PROG_PULSE)
      with Size => 3;
-   for RTC_MR_OUT0Select use
+   for MR_OUT0Select use
      (NO_WAVE => 0,
       FREQ1HZ => 1,
       FREQ32HZ => 2,
@@ -107,7 +107,7 @@ package SAM_SVD.RTC is
       PROG_PULSE => 7);
 
    --  RTCOUT1 Output Source Selection
-   type RTC_MR_OUT1Select is
+   type MR_OUT1Select is
      (--  No waveform, stuck at '0'
       NO_WAVE,
       --  1 Hz square wave
@@ -125,7 +125,7 @@ package SAM_SVD.RTC is
       --  Duty cycle programmable pulse
       PROG_PULSE)
      with Size => 3;
-   for RTC_MR_OUT1Select use
+   for MR_OUT1Select use
      (NO_WAVE => 0,
       FREQ1HZ => 1,
       FREQ32HZ => 2,
@@ -136,7 +136,7 @@ package SAM_SVD.RTC is
       PROG_PULSE => 7);
 
    --  High Duration of the Output Pulse
-   type RTC_MR_THIGHSelect is
+   type MR_THIGHSelect is
      (--  31.2 ms
       H_31MS,
       --  15.6 ms
@@ -154,7 +154,7 @@ package SAM_SVD.RTC is
       --  15.2 us
       H_15US)
      with Size => 3;
-   for RTC_MR_THIGHSelect use
+   for MR_THIGHSelect use
      (H_31MS => 0,
       H_16MS => 1,
       H_4MS => 2,
@@ -165,7 +165,7 @@ package SAM_SVD.RTC is
       H_15US => 7);
 
    --  Period of the Output Pulse
-   type RTC_MR_TPERIODSelect is
+   type MR_TPERIODSelect is
      (--  1 second
       P_1S,
       --  500 ms
@@ -175,14 +175,14 @@ package SAM_SVD.RTC is
       --  125 ms
       P_125MS)
      with Size => 2;
-   for RTC_MR_TPERIODSelect use
+   for MR_TPERIODSelect use
      (P_1S => 0,
       P_500MS => 1,
       P_250MS => 2,
       P_125MS => 3);
 
    --  Mode Register
-   type RTC_RTC_MR_Register is record
+   type RTC_MR_Register is record
       --  12-/24-hour Mode
       HRMOD          : Boolean := False;
       --  PERSIAN Calendar
@@ -194,30 +194,30 @@ package SAM_SVD.RTC is
       --  unspecified
       Reserved_5_7   : HAL.UInt3 := 16#0#;
       --  Slow Clock Correction
-      CORRECTION     : RTC_RTC_MR_CORRECTION_Field := 16#0#;
+      CORRECTION     : RTC_MR_CORRECTION_Field := 16#0#;
       --  HIGH PPM Correction
       HIGHPPM        : Boolean := False;
       --  RTCOUT0 OutputSource Selection
-      OUT0           : RTC_MR_OUT0Select := SAM_SVD.RTC.NO_WAVE;
-      --  unspecified
-      Reserved_19_19 : HAL.Bit := 16#0#;
+      OUT0           : MR_OUT0Select := SAM_SVD.RTC.NO_WAVE;
+      --  PIO Line Enable
+      EN0            : Boolean := False;
       --  RTCOUT1 Output Source Selection
-      OUT1           : RTC_MR_OUT1Select := SAM_SVD.RTC.NO_WAVE;
-      --  unspecified
-      Reserved_23_23 : HAL.Bit := 16#0#;
+      OUT1           : MR_OUT1Select := SAM_SVD.RTC.NO_WAVE;
+      --  PIO Line Enable
+      EN1            : Boolean := False;
       --  High Duration of the Output Pulse
-      THIGH          : RTC_MR_THIGHSelect := SAM_SVD.RTC.H_31MS;
+      THIGH          : MR_THIGHSelect := SAM_SVD.RTC.H_31MS;
       --  unspecified
       Reserved_27_27 : HAL.Bit := 16#0#;
       --  Period of the Output Pulse
-      TPERIOD        : RTC_MR_TPERIODSelect := SAM_SVD.RTC.P_1S;
+      TPERIOD        : MR_TPERIODSelect := SAM_SVD.RTC.P_1S;
       --  unspecified
       Reserved_30_31 : HAL.UInt2 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_MR_Register use record
+   for RTC_MR_Register use record
       HRMOD          at 0 range 0 .. 0;
       PERSIAN        at 0 range 1 .. 1;
       Reserved_2_3   at 0 range 2 .. 3;
@@ -226,31 +226,31 @@ package SAM_SVD.RTC is
       CORRECTION     at 0 range 8 .. 14;
       HIGHPPM        at 0 range 15 .. 15;
       OUT0           at 0 range 16 .. 18;
-      Reserved_19_19 at 0 range 19 .. 19;
+      EN0            at 0 range 19 .. 19;
       OUT1           at 0 range 20 .. 22;
-      Reserved_23_23 at 0 range 23 .. 23;
+      EN1            at 0 range 23 .. 23;
       THIGH          at 0 range 24 .. 26;
       Reserved_27_27 at 0 range 27 .. 27;
       TPERIOD        at 0 range 28 .. 29;
       Reserved_30_31 at 0 range 30 .. 31;
    end record;
 
-   subtype RTC_RTC_TIMR_SEC_Field is HAL.UInt7;
-   subtype RTC_RTC_TIMR_MIN_Field is HAL.UInt7;
-   subtype RTC_RTC_TIMR_HOUR_Field is HAL.UInt6;
+   subtype RTC_TIMR_SEC_Field is HAL.UInt7;
+   subtype RTC_TIMR_MIN_Field is HAL.UInt7;
+   subtype RTC_TIMR_HOUR_Field is HAL.UInt6;
 
    --  Time Register
-   type RTC_RTC_TIMR_Register is record
+   type RTC_TIMR_Register is record
       --  Current Second
-      SEC            : RTC_RTC_TIMR_SEC_Field := 16#0#;
+      SEC            : RTC_TIMR_SEC_Field := 16#0#;
       --  unspecified
       Reserved_7_7   : HAL.Bit := 16#0#;
       --  Current Minute
-      MIN            : RTC_RTC_TIMR_MIN_Field := 16#0#;
+      MIN            : RTC_TIMR_MIN_Field := 16#0#;
       --  unspecified
       Reserved_15_15 : HAL.Bit := 16#0#;
       --  Current Hour
-      HOUR           : RTC_RTC_TIMR_HOUR_Field := 16#0#;
+      HOUR           : RTC_TIMR_HOUR_Field := 16#0#;
       --  Ante Meridiem Post Meridiem Indicator
       AMPM           : Boolean := False;
       --  unspecified
@@ -259,7 +259,7 @@ package SAM_SVD.RTC is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_TIMR_Register use record
+   for RTC_TIMR_Register use record
       SEC            at 0 range 0 .. 6;
       Reserved_7_7   at 0 range 7 .. 7;
       MIN            at 0 range 8 .. 14;
@@ -269,33 +269,33 @@ package SAM_SVD.RTC is
       Reserved_23_31 at 0 range 23 .. 31;
    end record;
 
-   subtype RTC_RTC_CALR_CENT_Field is HAL.UInt7;
-   subtype RTC_RTC_CALR_YEAR_Field is HAL.UInt8;
-   subtype RTC_RTC_CALR_MONTH_Field is HAL.UInt5;
-   subtype RTC_RTC_CALR_DAY_Field is HAL.UInt3;
-   subtype RTC_RTC_CALR_DATE_Field is HAL.UInt6;
+   subtype RTC_CALR_CENT_Field is HAL.UInt7;
+   subtype RTC_CALR_YEAR_Field is HAL.UInt8;
+   subtype RTC_CALR_MONTH_Field is HAL.UInt5;
+   subtype RTC_CALR_DAY_Field is HAL.UInt3;
+   subtype RTC_CALR_DATE_Field is HAL.UInt6;
 
    --  Calendar Register
-   type RTC_RTC_CALR_Register is record
+   type RTC_CALR_Register is record
       --  Current Century
-      CENT           : RTC_RTC_CALR_CENT_Field := 16#0#;
+      CENT           : RTC_CALR_CENT_Field := 16#0#;
       --  unspecified
       Reserved_7_7   : HAL.Bit := 16#0#;
       --  Current Year
-      YEAR           : RTC_RTC_CALR_YEAR_Field := 16#0#;
+      YEAR           : RTC_CALR_YEAR_Field := 16#0#;
       --  Current Month
-      MONTH          : RTC_RTC_CALR_MONTH_Field := 16#0#;
+      MONTH          : RTC_CALR_MONTH_Field := 16#0#;
       --  Current Day in Current Week
-      DAY            : RTC_RTC_CALR_DAY_Field := 16#0#;
+      DAY            : RTC_CALR_DAY_Field := 16#0#;
       --  Current Day in Current Month
-      DATE           : RTC_RTC_CALR_DATE_Field := 16#0#;
+      DATE           : RTC_CALR_DATE_Field := 16#0#;
       --  unspecified
       Reserved_30_31 : HAL.UInt2 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_CALR_Register use record
+   for RTC_CALR_Register use record
       CENT           at 0 range 0 .. 6;
       Reserved_7_7   at 0 range 7 .. 7;
       YEAR           at 0 range 8 .. 15;
@@ -305,22 +305,22 @@ package SAM_SVD.RTC is
       Reserved_30_31 at 0 range 30 .. 31;
    end record;
 
-   subtype RTC_RTC_TIMALR_SEC_Field is HAL.UInt7;
-   subtype RTC_RTC_TIMALR_MIN_Field is HAL.UInt7;
-   subtype RTC_RTC_TIMALR_HOUR_Field is HAL.UInt6;
+   subtype RTC_TIMALR_SEC_Field is HAL.UInt7;
+   subtype RTC_TIMALR_MIN_Field is HAL.UInt7;
+   subtype RTC_TIMALR_HOUR_Field is HAL.UInt6;
 
    --  Time Alarm Register
-   type RTC_RTC_TIMALR_Register is record
+   type RTC_TIMALR_Register is record
       --  Second Alarm
-      SEC            : RTC_RTC_TIMALR_SEC_Field := 16#0#;
+      SEC            : RTC_TIMALR_SEC_Field := 16#0#;
       --  Second Alarm Enable
       SECEN          : Boolean := False;
       --  Minute Alarm
-      MIN            : RTC_RTC_TIMALR_MIN_Field := 16#0#;
+      MIN            : RTC_TIMALR_MIN_Field := 16#0#;
       --  Minute Alarm Enable
       MINEN          : Boolean := False;
       --  Hour Alarm
-      HOUR           : RTC_RTC_TIMALR_HOUR_Field := 16#0#;
+      HOUR           : RTC_TIMALR_HOUR_Field := 16#0#;
       --  AM/PM Indicator
       AMPM           : Boolean := False;
       --  Hour Alarm Enable
@@ -331,7 +331,7 @@ package SAM_SVD.RTC is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_TIMALR_Register use record
+   for RTC_TIMALR_Register use record
       SEC            at 0 range 0 .. 6;
       SECEN          at 0 range 7 .. 7;
       MIN            at 0 range 8 .. 14;
@@ -342,21 +342,21 @@ package SAM_SVD.RTC is
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   subtype RTC_RTC_CALALR_MONTH_Field is HAL.UInt5;
-   subtype RTC_RTC_CALALR_DATE_Field is HAL.UInt6;
+   subtype RTC_CALALR_MONTH_Field is HAL.UInt5;
+   subtype RTC_CALALR_DATE_Field is HAL.UInt6;
 
    --  Calendar Alarm Register
-   type RTC_RTC_CALALR_Register is record
+   type RTC_CALALR_Register is record
       --  unspecified
       Reserved_0_15  : HAL.UInt16 := 16#0#;
       --  Month Alarm
-      MONTH          : RTC_RTC_CALALR_MONTH_Field := 16#0#;
+      MONTH          : RTC_CALALR_MONTH_Field := 16#0#;
       --  unspecified
       Reserved_21_22 : HAL.UInt2 := 16#0#;
       --  Month Alarm Enable
       MTHEN          : Boolean := False;
       --  Date Alarm
-      DATE           : RTC_RTC_CALALR_DATE_Field := 16#0#;
+      DATE           : RTC_CALALR_DATE_Field := 16#0#;
       --  unspecified
       Reserved_30_30 : HAL.Bit := 16#0#;
       --  Date Alarm Enable
@@ -365,7 +365,7 @@ package SAM_SVD.RTC is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_CALALR_Register use record
+   for RTC_CALALR_Register use record
       Reserved_0_15  at 0 range 0 .. 15;
       MONTH          at 0 range 16 .. 20;
       Reserved_21_22 at 0 range 21 .. 22;
@@ -376,62 +376,62 @@ package SAM_SVD.RTC is
    end record;
 
    --  Acknowledge for Update
-   type RTC_SR_ACKUPDSelect is
+   type SR_ACKUPDSelect is
      (--  Time and calendar registers cannot be updated.
       FREERUN,
       --  Time and calendar registers can be updated.
       UPDATE)
      with Size => 1;
-   for RTC_SR_ACKUPDSelect use
+   for SR_ACKUPDSelect use
      (FREERUN => 0,
       UPDATE => 1);
 
    --  Alarm Flag
-   type RTC_SR_ALARMSelect is
+   type SR_ALARMSelect is
      (--  No alarm matching condition occurred.
       NO_ALARMEVENT,
       --  An alarm matching condition has occurred.
       ALARMEVENT)
      with Size => 1;
-   for RTC_SR_ALARMSelect use
+   for SR_ALARMSelect use
      (NO_ALARMEVENT => 0,
       ALARMEVENT => 1);
 
    --  Second Event
-   type RTC_SR_SECSelect is
+   type SR_SECSelect is
      (--  No second event has occurred since the last clear.
       NO_SECEVENT,
       --  At least one second event has occurred since the last clear.
       SECEVENT)
      with Size => 1;
-   for RTC_SR_SECSelect use
+   for SR_SECSelect use
      (NO_SECEVENT => 0,
       SECEVENT => 1);
 
    --  Time Event
-   type RTC_SR_TIMEVSelect is
+   type SR_TIMEVSelect is
      (--  No time event has occurred since the last clear.
       NO_TIMEVENT,
       --  At least one time event has occurred since the last clear.
       TIMEVENT)
      with Size => 1;
-   for RTC_SR_TIMEVSelect use
+   for SR_TIMEVSelect use
      (NO_TIMEVENT => 0,
       TIMEVENT => 1);
 
    --  Calendar Event
-   type RTC_SR_CALEVSelect is
+   type SR_CALEVSelect is
      (--  No calendar event has occurred since the last clear.
       NO_CALEVENT,
       --  At least one calendar event has occurred since the last clear.
       CALEVENT)
      with Size => 1;
-   for RTC_SR_CALEVSelect use
+   for SR_CALEVSelect use
      (NO_CALEVENT => 0,
       CALEVENT => 1);
 
    --  Time and/or Date Free Running Error
-   type RTC_SR_TDERRSelect is
+   type SR_TDERRSelect is
      (--  The internal free running counters are carrying valid values since the last
 --  read of the Status Register (RTC_SR).
       CORRECT,
@@ -439,31 +439,31 @@ package SAM_SVD.RTC is
 --  time, non-BCD values) since the last read and/or they are still invalid.
       ERR_TIMEDATE)
      with Size => 1;
-   for RTC_SR_TDERRSelect use
+   for SR_TDERRSelect use
      (CORRECT => 0,
       ERR_TIMEDATE => 1);
 
    --  Status Register
-   type RTC_RTC_SR_Register is record
+   type RTC_SR_Register is record
       --  Read-only. Acknowledge for Update
-      ACKUPD        : RTC_SR_ACKUPDSelect;
+      ACKUPD        : SR_ACKUPDSelect;
       --  Read-only. Alarm Flag
-      ALARM         : RTC_SR_ALARMSelect;
+      ALARM         : SR_ALARMSelect;
       --  Read-only. Second Event
-      SEC           : RTC_SR_SECSelect;
+      SEC           : SR_SECSelect;
       --  Read-only. Time Event
-      TIMEV         : RTC_SR_TIMEVSelect;
+      TIMEV         : SR_TIMEVSelect;
       --  Read-only. Calendar Event
-      CALEV         : RTC_SR_CALEVSelect;
+      CALEV         : SR_CALEVSelect;
       --  Read-only. Time and/or Date Free Running Error
-      TDERR         : RTC_SR_TDERRSelect;
+      TDERR         : SR_TDERRSelect;
       --  unspecified
       Reserved_6_31 : HAL.UInt26;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_SR_Register use record
+   for RTC_SR_Register use record
       ACKUPD        at 0 range 0 .. 0;
       ALARM         at 0 range 1 .. 1;
       SEC           at 0 range 2 .. 2;
@@ -474,7 +474,7 @@ package SAM_SVD.RTC is
    end record;
 
    --  Status Clear Command Register
-   type RTC_RTC_SCCR_Register is record
+   type RTC_SCCR_Register is record
       --  Write-only. Acknowledge Clear
       ACKCLR        : Boolean := False;
       --  Write-only. Alarm Clear
@@ -493,7 +493,7 @@ package SAM_SVD.RTC is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_SCCR_Register use record
+   for RTC_SCCR_Register use record
       ACKCLR        at 0 range 0 .. 0;
       ALRCLR        at 0 range 1 .. 1;
       SECCLR        at 0 range 2 .. 2;
@@ -504,7 +504,7 @@ package SAM_SVD.RTC is
    end record;
 
    --  Interrupt Enable Register
-   type RTC_RTC_IER_Register is record
+   type RTC_IER_Register is record
       --  Write-only. Acknowledge Update Interrupt Enable
       ACKEN         : Boolean := False;
       --  Write-only. Alarm Interrupt Enable
@@ -523,7 +523,7 @@ package SAM_SVD.RTC is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_IER_Register use record
+   for RTC_IER_Register use record
       ACKEN         at 0 range 0 .. 0;
       ALREN         at 0 range 1 .. 1;
       SECEN         at 0 range 2 .. 2;
@@ -534,7 +534,7 @@ package SAM_SVD.RTC is
    end record;
 
    --  Interrupt Disable Register
-   type RTC_RTC_IDR_Register is record
+   type RTC_IDR_Register is record
       --  Write-only. Acknowledge Update Interrupt Disable
       ACKDIS        : Boolean := False;
       --  Write-only. Alarm Interrupt Disable
@@ -553,7 +553,7 @@ package SAM_SVD.RTC is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_IDR_Register use record
+   for RTC_IDR_Register use record
       ACKDIS        at 0 range 0 .. 0;
       ALRDIS        at 0 range 1 .. 1;
       SECDIS        at 0 range 2 .. 2;
@@ -564,7 +564,7 @@ package SAM_SVD.RTC is
    end record;
 
    --  Interrupt Mask Register
-   type RTC_RTC_IMR_Register is record
+   type RTC_IMR_Register is record
       --  Read-only. Acknowledge Update Interrupt Mask
       ACK           : Boolean;
       --  Read-only. Alarm Interrupt Mask
@@ -583,7 +583,7 @@ package SAM_SVD.RTC is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_IMR_Register use record
+   for RTC_IMR_Register use record
       ACK           at 0 range 0 .. 0;
       ALR           at 0 range 1 .. 1;
       SEC           at 0 range 2 .. 2;
@@ -594,7 +594,7 @@ package SAM_SVD.RTC is
    end record;
 
    --  Valid Entry Register
-   type RTC_RTC_VER_Register is record
+   type RTC_VER_Register is record
       --  Read-only. Non-valid Time
       NVTIM         : Boolean;
       --  Read-only. Non-valid Calendar
@@ -609,7 +609,7 @@ package SAM_SVD.RTC is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_VER_Register use record
+   for RTC_VER_Register use record
       NVTIM         at 0 range 0 .. 0;
       NVCAL         at 0 range 1 .. 1;
       NVTIMALR      at 0 range 2 .. 2;
@@ -617,28 +617,21 @@ package SAM_SVD.RTC is
       Reserved_4_31 at 0 range 4 .. 31;
    end record;
 
-   subtype RTC_RTC_VERSION_VERSION_Field is HAL.UInt12;
-   subtype RTC_RTC_VERSION_MFN_Field is HAL.UInt3;
+   subtype RTC_MSR_MS_Field is HAL.UInt10;
 
-   --  Version Register
-   type RTC_RTC_VERSION_Register is record
-      --  Read-only. Version of the Hardware Module
-      VERSION        : RTC_RTC_VERSION_VERSION_Field;
+   --  Milliseconds Register
+   type RTC_MSR_Register is record
+      --  Read-only. Number of 1/1024 seconds elapsed within 1 second
+      MS             : RTC_MSR_MS_Field;
       --  unspecified
-      Reserved_12_15 : HAL.UInt4;
-      --  Read-only. Metal Fix Number
-      MFN            : RTC_RTC_VERSION_MFN_Field;
-      --  unspecified
-      Reserved_19_31 : HAL.UInt13;
+      Reserved_10_31 : HAL.UInt22;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTC_RTC_VERSION_Register use record
-      VERSION        at 0 range 0 .. 11;
-      Reserved_12_15 at 0 range 12 .. 15;
-      MFN            at 0 range 16 .. 18;
-      Reserved_19_31 at 0 range 19 .. 31;
+   for RTC_MSR_Register use record
+      MS             at 0 range 0 .. 9;
+      Reserved_10_31 at 0 range 10 .. 31;
    end record;
 
    -----------------
@@ -648,48 +641,48 @@ package SAM_SVD.RTC is
    --  Real-time Clock
    type RTC_Peripheral is record
       --  Control Register
-      RTC_CR      : aliased RTC_RTC_CR_Register;
+      CR     : aliased RTC_CR_Register;
       --  Mode Register
-      RTC_MR      : aliased RTC_RTC_MR_Register;
+      MR     : aliased RTC_MR_Register;
       --  Time Register
-      RTC_TIMR    : aliased RTC_RTC_TIMR_Register;
+      TIMR   : aliased RTC_TIMR_Register;
       --  Calendar Register
-      RTC_CALR    : aliased RTC_RTC_CALR_Register;
+      CALR   : aliased RTC_CALR_Register;
       --  Time Alarm Register
-      RTC_TIMALR  : aliased RTC_RTC_TIMALR_Register;
+      TIMALR : aliased RTC_TIMALR_Register;
       --  Calendar Alarm Register
-      RTC_CALALR  : aliased RTC_RTC_CALALR_Register;
+      CALALR : aliased RTC_CALALR_Register;
       --  Status Register
-      RTC_SR      : aliased RTC_RTC_SR_Register;
+      SR     : aliased RTC_SR_Register;
       --  Status Clear Command Register
-      RTC_SCCR    : aliased RTC_RTC_SCCR_Register;
+      SCCR   : aliased RTC_SCCR_Register;
       --  Interrupt Enable Register
-      RTC_IER     : aliased RTC_RTC_IER_Register;
+      IER    : aliased RTC_IER_Register;
       --  Interrupt Disable Register
-      RTC_IDR     : aliased RTC_RTC_IDR_Register;
+      IDR    : aliased RTC_IDR_Register;
       --  Interrupt Mask Register
-      RTC_IMR     : aliased RTC_RTC_IMR_Register;
+      IMR    : aliased RTC_IMR_Register;
       --  Valid Entry Register
-      RTC_VER     : aliased RTC_RTC_VER_Register;
-      --  Version Register
-      RTC_VERSION : aliased RTC_RTC_VERSION_Register;
+      VER    : aliased RTC_VER_Register;
+      --  Milliseconds Register
+      MSR    : aliased RTC_MSR_Register;
    end record
      with Volatile;
 
    for RTC_Peripheral use record
-      RTC_CR      at 16#0# range 0 .. 31;
-      RTC_MR      at 16#4# range 0 .. 31;
-      RTC_TIMR    at 16#8# range 0 .. 31;
-      RTC_CALR    at 16#C# range 0 .. 31;
-      RTC_TIMALR  at 16#10# range 0 .. 31;
-      RTC_CALALR  at 16#14# range 0 .. 31;
-      RTC_SR      at 16#18# range 0 .. 31;
-      RTC_SCCR    at 16#1C# range 0 .. 31;
-      RTC_IER     at 16#20# range 0 .. 31;
-      RTC_IDR     at 16#24# range 0 .. 31;
-      RTC_IMR     at 16#28# range 0 .. 31;
-      RTC_VER     at 16#2C# range 0 .. 31;
-      RTC_VERSION at 16#FC# range 0 .. 31;
+      CR     at 16#0# range 0 .. 31;
+      MR     at 16#4# range 0 .. 31;
+      TIMR   at 16#8# range 0 .. 31;
+      CALR   at 16#C# range 0 .. 31;
+      TIMALR at 16#10# range 0 .. 31;
+      CALALR at 16#14# range 0 .. 31;
+      SR     at 16#18# range 0 .. 31;
+      SCCR   at 16#1C# range 0 .. 31;
+      IER    at 16#20# range 0 .. 31;
+      IDR    at 16#24# range 0 .. 31;
+      IMR    at 16#28# range 0 .. 31;
+      VER    at 16#2C# range 0 .. 31;
+      MSR    at 16#D0# range 0 .. 31;
    end record;
 
    --  Real-time Clock

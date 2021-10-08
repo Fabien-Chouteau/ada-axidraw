@@ -1,0 +1,83 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U interfaces.sam.nvic%s	i-sam-nvic.ads		ddfd46ab NE OL PR PK
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W system%s		system.ads		system.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D i-sam.ads		20210927130812 3bba8a63 interfaces.sam%s
+D i-sam-nvic.ads	20210927130812 bc93239d interfaces.sam.nvic%s
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+G c Z s s [Tnvic_iser_registersBIP interfaces__sam__nvic 23 4 none]
+G c Z s s [Tnvic_icer_registersBIP interfaces__sam__nvic 28 4 none]
+G c Z s s [Tnvic_ispr_registersBIP interfaces__sam__nvic 33 4 none]
+G c Z s s [Tnvic_icpr_registersBIP interfaces__sam__nvic 38 4 none]
+G c Z s s [Tnvic_iabr_registersBIP interfaces__sam__nvic 43 4 none]
+G c Z s s [Tnvic_ip_registersBIP interfaces__sam__nvic 48 4 none]
+G c Z s s [nvic_stir_registerIP interfaces__sam__nvic 53 9 none]
+G c Z s s [nvic_peripheralIP interfaces__sam__nvic 73 9 none]
+X 1 interfac.ads
+38K9*Interfaces 231e15 3|12r9 23r50 28r50 33r50 38r50 43r50 48r50 50r37 58r23
+. 105r5
+68M9*Unsigned_8
+79M9*Unsigned_32
+X 2 i-sam.ads
+13K20*SAM 1|38k9 2|139e19 3|12r20 23r61 28r61 33r61 38r61 43r61 48r61 50r48
+. 58r34 105r16
+21M9*UInt32<1|79M9> 3|23r65 28r65 33r65 38r65 43r65
+23M9*Byte<1|68M9> 3|48r65
+38M9*UInt9 3|50r52
+64M9*UInt23 3|58r38
+135m4*NVIC_Base{4|80M9} 3|103r30
+X 3 i-sam-nvic.ads
+12K24*NVIC 2|13k20 3|105l20 105e24
+23A9*NVIC_ISER_Registers(2|21M9)<integer> 75r22
+28A9*NVIC_ICER_Registers(2|21M9)<integer> 77r22
+33A9*NVIC_ISPR_Registers(2|21M9)<integer> 79r22
+38A9*NVIC_ICPR_Registers(2|21M9)<integer> 81r22
+43A9*NVIC_IABR_Registers(2|21M9)<integer> 83r22
+48A9*NVIC_IP_Registers(2|23M9)<integer> 85r22
+50M12*NVIC_STIR_INTID_Field{2|38M9} 56r23
+53R9*NVIC_STIR_Register 60e6 63r8 87r22
+56m7*INTID{50M12} 64r7
+58m7*Reserved_9_31{2|64M9} 65r7
+73R9*NVIC_Peripheral 89e6 91r8 102r26
+75a7*ISER{23A9} 92r7
+77a7*ICER{28A9} 93r7
+79a7*ISPR{33A9} 94r7
+81a7*ICPR{38A9} 95r7
+83a7*IABR{43A9} 96r7
+85a7*IP{48A9} 97r7
+87r7*STIR{53R9} 98r7
+102r4*NVIC_Periph{73R9}
+X 4 system.ads
+50K9*System 3|10w6 61r24 4|164e11
+80M9*Address
+104n41*Low_Order_First{104E9} 3|61r31
+

@@ -1,0 +1,89 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U interfaces.sam.rtt%s	i-sam-rtt.ads		81508581 NE OL PR PK
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W system%s		system.ads		system.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D i-sam.ads		20210927130812 3bba8a63 interfaces.sam%s
+D i-sam-rtt.ads		20210927130812 e03ee0b7 interfaces.sam.rtt%s
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+G c Z s s [rtt_mr_registerIP interfaces__sam__rtt 28 9 none]
+G c Z s s [rtt_sr_registerIP interfaces__sam__rtt 67 9 none]
+G c Z s s [rtt_peripheralIP interfaces__sam__rtt 89 9 none]
+X 1 interfac.ads
+38K9*Interfaces 231e15 3|12r9 20r35 21r35 22r38 23r35 24r35 25r35 38r24 42r24
+. 46r24 63r33 64r35 73r23 93r20 95r20 112r5
+71M9*Unsigned_16
+79M9*Unsigned_32
+X 2 i-sam.ads
+13K20*SAM 1|38k9 2|139e19 3|12r20 20r46 21r46 22r49 23r46 24r46 25r46 38r35
+. 42r35 46r35 63r44 64r46 73r34 93r31 95r31 112r16
+21M9*UInt32<1|79M9> 3|93r35 95r35
+22M9*UInt16<1|71M9> 3|20r50
+24M9*Bit 3|21r50 22r53 23r50 24r50 25r50 38r39 63r48 64r50
+28M9*UInt3 3|42r39
+36M9*UInt7 3|46r39
+78M9*UInt30 3|73r38
+118m4*RTT_Base{4|80M9} 3|110r30
+X 3 i-sam-rtt.ads
+12K24*RTT 2|13k20 3|112l20 112e23
+20M12*RTT_MR_RTPRES_Field{2|22M9} 30r24
+21M12*RTT_MR_ALMIEN_Field{2|24M9} 32r24
+22M12*RTT_MR_RTTINCIEN_Field{2|24M9} 34r24
+23M12*RTT_MR_RTTRST_Field{2|24M9} 36r24
+24M12*RTT_MR_RTTDIS_Field{2|24M9} 40r24
+25M12*RTT_MR_RTC1HZ_Field{2|24M9} 44r24
+28R9*RTT_MR_Register 48e6 51r8 91r20
+30m7*RTPRES{20M12} 52r7
+32m7*ALMIEN{21M12} 53r7
+34m7*RTTINCIEN{22M12} 54r7
+36m7*RTTRST{23M12} 55r7
+38m7*Reserved_19_19{2|24M9} 56r7
+40m7*RTTDIS{24M12} 57r7
+42m7*Reserved_21_23{2|28M9} 58r7
+44m7*RTC1HZ{25M12} 59r7
+46m7*Reserved_25_31{2|36M9} 60r7
+63M12*RTT_SR_ALMS_Field{2|24M9} 69r23
+64M12*RTT_SR_RTTINC_Field{2|24M9} 71r23
+67R9*RTT_SR_Register 75e6 78r8 97r20
+69m7*ALMS{63M12} 79r7
+71m7*RTTINC{64M12} 80r7
+73m7*Reserved_2_31{2|78M9} 81r7
+89R9*RTT_Peripheral 99e6 101r8 109r25
+91r7*MR{28R9} 102r7
+93m7*AR{2|21M9} 103r7
+95m7*VR{2|21M9} 104r7
+97r7*SR{67R9} 105r7
+109r4*RTT_Periph{89R9}
+X 4 system.ads
+50K9*System 3|10w6 49r24 76r24 4|164e11
+80M9*Address
+104n41*Low_Order_First{104E9} 3|49r31 76r31
+

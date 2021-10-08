@@ -1,0 +1,96 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U ada.finalization%s	a-finali.ads		86c56e5a EE OL PU PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+Z system.put_images%s	s-putima.adb		s-putima.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-finali.ads		20210927095552 bf4f806b ada.finalization%s
+D a-stream.ads		20210927095552 119b8fb3 ada.streams%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-finroo.ads		20210927095552 4ff27390 system.finalization_root%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s s [initialize ada__finalization 46 14 none]
+G c Z s s [adjust ada__finalization 47 14 none]
+G c Z s s [finalize ada__finalization 48 14 none]
+G c Z s s [initialize ada__finalization 53 14 none]
+G c Z s s [finalize ada__finalization 54 14 none]
+G c Z s s [controlledDA ada__finalization 59 9 none]
+G c Z s s [controlledDF ada__finalization 59 9 none]
+G c Z s s [controlledIP ada__finalization 59 9 none]
+G c Z s s [limited_controlledDF ada__finalization 65 9 none]
+G c Z s s [limited_controlledIP ada__finalization 65 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 3|40r9 68r5
+X 3 a-finali.ads
+40K13*Finalization 1|16k9 3|57E12 68l9 68e21
+43H9*Controlled<12|40R9> 44r41 46P14 46r42 47P14 47r42 48P14 48r42 59c9 59e72
+46U14*Initialize<12|44p14> 46=26
+46r26 Object{43R9}
+47U14*Adjust<12|42p14> 47=26
+47r26 Object{43R9}
+48U14*Finalize<12|43p14> 48=26
+48r26 Object{43R9}
+50H9*Limited_Controlled<12|40R9> 51r41 53P14 53r42 54P14 54r42 65c9 66e55
+. 12|42p14
+53U14*Initialize<12|44p14> 53=26
+53r26 Object{50R9}
+54U14*Finalize<12|43p14> 54=26
+54r26 Object{50R9}
+57K12 SFR=57:31 59r36 66r19
+X 11 system.ads
+50K9*System 3|37r6 57r24 11|164e11
+X 12 s-finroo.ads
+34K16*Finalization_Root 3|37w13 57r31 12|46e29
+40H9*Root_Controlled 3|59r40 66r23 12|40e55
+

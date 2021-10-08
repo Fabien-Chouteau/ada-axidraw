@@ -1,0 +1,62 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.text_io%b	s-textio.adb		a10375bd NE OL PK
+W system%s		system.ads		system.ali
+W system.semihosting%s	s-semiho.adb		s-semiho.ali
+
+U system.text_io%s	s-textio.ads		78c3609c NE OL PR PK
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-semiho.ads		20210927095552 bee239dc system.semihosting%s
+D s-textio.ads		20210927095552 22178fc9 system.text_io%s
+D s-textio.adb		20210927095552 3df6c3a8 system.text_io%b
+G a e
+G c Z s b [initialize system__text_io 43 14 none]
+G c Z s b [is_tx_ready system__text_io 55 13 none]
+G c Z s b [put system__text_io 62 14 none]
+G c Z s b [use_cr_lf_for_new_line system__text_io 66 13 none]
+G c Z s b [is_rx_ready system__text_io 74 13 none]
+G c Z s b [get system__text_io 79 13 none]
+X 1 system.ads
+50K9*System 164e11 3|35r9 82r5 4|34r6 36r14 66r7 76r7 85r5
+X 2 s-semiho.ads
+37K16*Semihosting 50e23 4|34w13 66r14 76r14
+41U14*Put 4|76s26
+47U14*Get 4|66s26
+X 3 s-textio.ads
+35K16*Text_IO 1|50k9 3|82l12 82e19 4|36b21 85l12 85t19
+43U14*Initialize 4|42b14 45l8 45t18
+47b4*Initialized{boolean} 4|44m7
+55V13*Is_Tx_Ready{boolean} 4|51b13
+62U14*Put 62>19 4|74b14 77l8 77t11
+62e19 C{character} 4|74b19 76r31
+66V13*Use_Cr_Lf_For_New_Line{boolean} 4|83b13
+74V13*Is_Rx_Ready{boolean} 4|57b13
+79V13*Get{character} 4|63b13 68l8 68t11
+X 4 s-textio.adb
+64e7 Item{character} 66m31 67r14
+

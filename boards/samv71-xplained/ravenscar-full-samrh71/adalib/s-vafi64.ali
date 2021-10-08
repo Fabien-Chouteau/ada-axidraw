@@ -1,0 +1,99 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.val_fixed_64%s	s-vafi64.ads		839afee3 NE OL PR PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.arith_64%s	s-arit64.adb		s-arit64.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+Z system.val_util%s	s-valuti.adb		s-valuti.ali
+W system.value_f%s
+Z system.value_r%s
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-arit64.ads		20210927095552 5f88d2b0 system.arith_64%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D s-vafi64.ads		20210927095552 2ff3dc11 system.val_fixed_64%s
+D s-valuti.ads		20210927095552 aca0b6fe system.val_util%s
+D s-valuef.ads		20210927095552 44d93748 system.value_f%s
+D s-valuef.adb		20210927095552 45163ab6 system.value_f%b
+D s-valuer.ads		20210927095552 2aeea103 system.value_r%s
+D s-valuer.adb		20210927095552 5e5f062c system.value_r%b
+G a e
+G c Z s s [scan_fixed system__val_fixed_64__impl 50 13 46_4]
+G c Z s s [value_fixed system__val_fixed_64__impl 83 13 46_4]
+G c Z s s [scan_raw_real system__val_fixed_64__impl__impl 48 13 49_4_46_4]
+G c Z s s [value_raw_real system__val_fixed_64__impl__impl 91 13 49_4_46_4]
+G c Z s s [as_digit system__val_fixed_64__impl__impl 42 13 49_4_46_4]
+G c Z s s [round_extra system__val_fixed_64__impl__impl 45 14 49_4_46_4]
+G c Z s s [scan_decimal_digits system__val_fixed_64__impl__impl 53 14 49_4_46_4]
+G c Z s s [scan_integral_digits system__val_fixed_64__impl__impl 76 14 49_4_46_4]
+G c Z s s [integer_to_fixed system__val_fixed_64__impl 52 13 46_4]
+X 4 interfac.ads
+38K9*Interfaces 231e15 11|36w6 43r21 44r21
+55I9*Integer_64<long_long_integer> 11|43r32
+82M9*Unsigned_64 11|44r32
+X 5 system.ads
+50K9*System 164e11 11|37r6 38r6 40r9 60r5
+X 6 s-arit64.ads
+41K16*Arith_64 96e20 11|37w13 46r47
+44I12*Int64{4|55I9}
+54V13*Multiply_With_Ovflo_Check64{44I12} 55i<c,__gnat_mulv64>22
+60U14*Scaled_Divide64 11|46r56
+X 11 s-vafi64.ads
+40K16*Val_Fixed_64 5|50k9 11|60l12 60e24
+43I12*Int64{4|55I9} 46r33 52r13 53r13 53r27 57r27 57r40 57r54
+44M12*Uns64{4|82M9} 46r40
+46K12*Impl[13|47] 54r14 58r14
+48V13*Scan_Fixed64=54:19{4|55I9}
+49a7 Str{string}
+50p7 Ptr(integer)
+51i7 Max{integer}
+52i7 Num{4|55I9}
+53i7 Den{4|55I9}
+56V13*Value_Fixed64=58:19{4|55I9}
+57a7 Str{string}
+57i21 Num{4|55I9}
+57i34 Den{4|55I9}
+X 13 s-valuef.ads
+47k16*Value_F 11|38w13 46r24 13|94e19
+50V13*Scan_Fixed{4|55I9} 11|54r19[46]
+83V13*Value_Fixed{4|55I9} 11|58r19[46]
+

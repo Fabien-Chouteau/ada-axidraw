@@ -1,0 +1,126 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -g
+A -fno-optimize-sibling-calls
+A -fno-inline-functions-called-once
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_CONVERSION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+
+U system.traceback%b	s-traceb.adb		15ab3b04 NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+Z system%s		system.ads		system.ali
+
+U system.traceback%s	s-traceb.ads		c15f2dca NE OL PK
+W system%s		system.ads		system.ali
+W system.traceback_entries%s  s-traent.adb	s-traent.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-traceb.ads		20210927095552 bd2311fe system.traceback%s
+D s-traceb.adb		20210927095552 a6130d95 system.traceback%b
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [call_chain system__traceback 46 14 none]
+G c Z b b [unwind_backtrace system__traceback 69 13 none]
+G c Z b b [unwind_vrs_get system__traceback 75 13 none]
+G c Z b b [backtrace_callback system__traceback 111 13 none]
+G c Z b b [unwind_context_typeIP system__traceback 58 9 none]
+G c Z b b [callback_params_typeIP system__traceback 96 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 5|35r6 125r42 180r47
+X 2 a-unccon.ads
+20v14*Unchecked_Conversion 5|35w10 125r46 180r51
+X 3 system.ads
+50K9*System 164e11 4|38r6 40r9 47r28 50r21 50r39 51r21 51r39 77r5 5|37r14
+. 39r8 64r48 71r14 80r19 100r21 101r21 113r14 123r14 126r10 130r12 173r28
+. 176r21 176r39 177r21 177r39 181r10 208r5
+80M9*Address 4|50r28 51r28 5|64r55 71r21 80r26 100r28 101r28 113r21 123r21
+. 126r17 130r19 176r28 177r28 181r17
+82m4*Null_Address{80M9} 4|50r46 51r46 5|176r46 177r46
+X 4 s-traceb.ads
+40K16*Traceback 3|50k9 4|77l12 77e21 5|37b21 208l12 208t21
+46U14*Call_Chain 47=7 48>7 49<7 50>7 51>7 52>7 5|172b14 206l8 206t18
+47a7 Traceback{6|52A9} 5|173b7 192m58 192r58
+48i7 Max_Len{natural} 5|174b7 194r33
+49i7 Len{natural} 5|175b7 205m7
+50m7 Exclude_Min{3|80M9} 5|176b7 195r33
+51m7 Exclude_Max{3|80M9} 5|177b7 196r33
+52i7 Skip_Frames{natural} 5|178b7 197r33
+X 5 s-traceb.adb
+41E9 Unwind_Reason_Code 48e19 49r26 65r22 71r37 113r37 123r37 185r13
+42n7 URC_OK{41E9} 137r17 143r17 157r17 165r14
+43n7 URC_FOREIGN_EXCEPTION_CAUGHT{41E9} 52r25
+44n7 URC_END_OF_STACK{41E9} 53r25
+45n7 URC_HANDLER_FOUND{41E9} 54r25
+46n7 URC_INSTALL_CONTEXT{41E9} 55r25
+47n7 URC_CONTINUE_UNWIND{41E9} 56r25
+48n7 URC_FAILURE{41E9} 151r17
+58R9 Unwind_Context_Type 59r38
+59P9 Unwind_Context_Acc(58R9) 60r26 64r21 76r19 112r14 122r14
+63P9 Unwind_Trace_Fn(41E9) 64>16 64>41 66r26 70r14
+64p16 UC{59P9}
+64m41 Data{3|80M9}
+69V13 Unwind_Backtrace{41E9} 70>7 71>7 72b<c,_Unwind_Backtrace>22 201s14
+70p7 Func{63P9}
+71m7 Data{3|80M9}
+75V13 Unwind_VRS_Get{integer} 76>7 77>7 78>7 79>7 80>7 81b<c,_Unwind_VRS_Get>22
+. 148s10
+76p7 UC{59P9}
+77i7 Reg_Class{integer}
+78i7 Reg_Num{integer}
+79i7 Data_Rep{integer}
+80m7 Addr{3|80M9}
+85i4 UVRSR_OK{integer} 149r69
+88i4 UVRSC_CORE{integer} 148r30
+91i4 UVRSD_UINT32{integer} 148r46
+94P9 Tracebacks_Array_Ptr(6|52A9) 97r21 181r26
+96R9 Callback_Params_Type 103e14 109r43 183r24
+97p7*Tracebacks{94P9} 163r14 192m18
+98i7*Max_Len{natural} 142r31 194m18
+99i7*Len{natural} 142r17 162m14 162r28 163r33 193m18 205r21
+100m7*Exclude_Min{3|80M9} 156r23 195m18
+101m7*Exclude_Max{3|80M9} 156r45 196m18
+102i7*Skip_Frames{natural} 135r17 136m17 136r39 197m18
+109P9 Callback_Params_Acc(96R9) 126r26 127r25
+111V13 Backtrace_Callback{41E9} 112>7 113>7 114r26 121b13 166l8 166t26 201r32
+112p7 UC{59P9} 122b7 148r26
+113m7 Data{3|80M9} 123b7 127r68
+125V16 To_Callback_Params[2|20]{109P9} 127s48
+127p7 Params{109P9} 135r10 136r10 136r32 142r10 142r24 156r16 156r38 162r7
+. 162r21 163r7 163r26
+130m7 PC{3|80M9} 148m60 148r60 156r10 163r41
+180V16 To_Tracebacks_Array_Ptr[2|20]{94P9} 192s33
+183r7 Params{96R9} 192m7 201m59 201r59 205r14
+185e7 Res{41E9} 186r28 201m7
+X 6 s-traent.ads
+43K16*Traceback_Entries 4|38w13 47r35 5|39r15 173r35 6|63e29
+52A9*Tracebacks_Array(46M12)<integer> 4|47r53 5|94r40 173r53
+

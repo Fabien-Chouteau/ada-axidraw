@@ -1,0 +1,73 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.multiprocessors.spin_locks%b  s-musplo.adb  5f7c11fe NE OL PK
+W system.multiprocessors%s  s-multip.adb	s-multip.ali
+
+U system.multiprocessors.spin_locks%s  s-musplo.ads  9ac42bf1 BN NE OL PR PK
+W system.multiprocessors%s  s-multip.adb	s-multip.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-musplo.ads		20210927095552 69fa25c4 system.multiprocessors.spin_locks%s
+D s-musplo.adb		20210927095552 3686343a system.multiprocessors.spin_locks%b
+G a e
+G c Z s b [lock system__multiprocessors__spin_locks 46 14 none]
+G c Z s b [locked system__multiprocessors__spin_locks 50 13 none]
+G c Z s b [try_lock system__multiprocessors__spin_locks 54 14 none]
+G c Z s b [unlock system__multiprocessors__spin_locks 59 14 none]
+G c Z s s [spin_lockIP system__multiprocessors__spin_locks 41 9 none]
+X 1 system.ads
+50K9*System 164e11 7|29r9 63r5 8|29r14 89r5
+X 6 s-multip.ads
+18K16*Multiprocessors 1|50k9 6|31e27 7|29r16 63r12 8|29r21 89r12
+X 7 s-musplo.ads
+29K32*Spin_Locks 6|18k16 7|63l28 63e38 8|29b37 89l28 89t38
+36M9*Atomic_Flag 37r19 39r24 42r22 8|63r25 64r18 65r16 78r44
+39m4*Unlocked{36M9} 42r37 8|53r28 69r64
+41R9*Spin_Lock 43e14 46r35 50r29 54r39 59r37 8|35r35 51r29 60r39 76r37
+42m7*Flag{36M9} 8|53r20 69m46 86m27
+46U14*Lock 46=20 47r19 8|35b14 45l8 45t12
+46r20 Slock{41R9} 8|35b20 42m20
+50V13*Locked{boolean} 50>21 51r19 8|51b13 54l8 54t14
+50r21 Slock{41R9} 8|51b21 53r14
+54U14*Try_Lock 54=24 54<50 55r19 8|42s10 60b14 70l8 70t16
+54r24 Slock{41R9} 8|60b24 69m40 69r40
+54b50 Succeeded{boolean} 8|60b50 69m7
+59U14*Unlock 59=22 60r19 8|76b14 87l8 87t14
+59r22 Slock{41R9} 8|76b22 86m21 86r21
+X 8 s-musplo.adb
+36b7 Succeeded{boolean} 42m27 43r20
+62V16*Lock_Test_And_Set{7|36M9} 63^10 64>10 66b33 69s21
+63p10 Ptr(7|36M9)
+64m10 Value{7|36M9}
+78U17*Lock_Release 78^31 79b33 86s7
+78p31 Ptr(7|36M9)
+

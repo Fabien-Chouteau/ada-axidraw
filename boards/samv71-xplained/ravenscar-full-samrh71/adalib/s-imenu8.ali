@@ -1,0 +1,62 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.img_enum_8%s	s-imenu8.ads		b50313f1 NE OL PU PK
+W ada%s			ada.ads			ada.ali
+Z ada.unchecked_conversion%s
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.image_n%s
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-imagen.ads		20210927095552 875093bf system.image_n%s
+D s-imagen.adb		20210927095552 ea5fc2b9 system.image_n%b
+D s-imenu8.ads		20210927095552 856b4744 system.img_enum_8%s
+G a e
+G c Z s s [image_enumeration system__img_enum_8__impl 44 14 41_4]
+X 3 interfac.ads
+38K9*Interfaces 231e15 7|35w6 41r33
+46I9*Integer_8<short_short_integer> 7|41r44
+X 4 system.ads
+50K9*System 164e11 7|36r6 38r9 48r17 51r5
+80M9*Address 7|48r24
+X 5 s-imagen.ads
+41k16*Image_N 63e19 7|36w13 41r24
+44U14*Image_Enumeration 7|49r19[41]
+X 7 s-imenu8.ads
+38K16*Img_Enum_8 4|50k9 7|51l12 51e22
+41K12*Impl[5|41] 49r14
+43U14*Image_Enumeration_8=49:19
+44i7 Pos{natural}
+45a7 S{string}
+46i7 P{natural}
+47a7 Names{string}
+48m7 Indexes{4|80M9}
+

@@ -1,0 +1,50 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.exp_uns%s	s-expuns.ads		5ddb8045 NE OL PK
+W system%s		system.ads		system.ali
+W system.exponu%s
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-expuns.ads		20210927095552 5f0d790d system.exp_uns%s
+D s-exponu.ads		20210927095552 7305628e system.exponu%s
+D s-exponu.adb		20210927095552 8a973155 system.exponu%b
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+G a e
+G c Z s s [exp_unsignedR system__exp_uns__exp_unsignedGP2788 44 13 none]
+G c Z s s [exp_unsigned system__exp_uns 44 13 none]
+X 1 system.ads
+50K9*System 164e11 2|37r6 38r6 40r9 47r5
+X 2 s-expuns.ads
+40K16*Exp_Uns 1|50k9 2|47l12 47e19
+42M12*Unsigned{5|46M9} 44r41
+44V13*Exp_Unsigned[3|38]{5|46M9} 45r26 4|32b17
+X 3 s-exponu.ads
+38v17*Exponu 1|50k9 2|37w13 44r33
+X 5 s-unstyp.ads
+40K16*Unsigned_Types 2|38w13 42r24 5|251e26
+46M9*Unsigned 2|42r39
+

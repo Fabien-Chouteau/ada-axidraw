@@ -1,0 +1,151 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U interfaces.sam.fpu%s	i-sam-fpu.ads		f64adb72 NE OL PR PK
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W system%s		system.ads		system.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D i-sam.ads		20210927130812 3bba8a63 interfaces.sam%s
+D i-sam-fpu.ads		20210927130812 9724be44 interfaces.sam.fpu%s
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+G c Z s s [fpu_fpccr_registerIP interfaces__sam__fpu 31 9 none]
+G c Z s s [fpu_fpcar_registerIP interfaces__sam__fpu 90 9 none]
+G c Z s s [fpu_fpdscr_registerIP interfaces__sam__fpu 111 9 none]
+G c Z s s [fpu_mvfr0_registerIP interfaces__sam__fpu 147 9 none]
+G c Z s s [fpu_mvfr1_registerIP interfaces__sam__fpu 190 9 none]
+G c Z s s [fpu_mvfr2_registerIP interfaces__sam__fpu 219 9 none]
+G c Z s s [fpu_peripheralIP interfaces__sam__fpu 242 9 none]
+X 1 interfac.ads
+38K9*Interfaces 231e15 3|12r9 20r38 21r36 22r38 23r37 24r37 25r37 26r38 27r37
+. 28r37 39r23 55r23 60r23 87r39 92r22 105r38 106r35 107r35 108r36 113r24
+. 123r24 137r48 138r48 139r48 140r49 141r38 142r43 143r45 144r49 184r40 185r42
+. 186r39 187r44 198r23 216r40 221r23 226r23 271r5
+71M9*Unsigned_16
+X 2 i-sam.ads
+13K20*SAM 1|38k9 2|139e19 3|12r20 20r49 21r47 22r49 23r48 24r48 25r48 26r49
+. 27r48 28r48 39r34 55r34 60r34 87r50 92r33 105r49 106r46 107r46 108r47 113r35
+. 123r35 137r59 138r59 139r59 140r60 141r49 142r54 143r56 144r60 184r51 185r53
+. 186r50 187r55 198r34 216r51 221r34 226r34 271r16
+22M9*UInt16<1|71M9> 3|198r38
+24M9*Bit 3|20r53 21r51 22r53 23r52 24r52 25r52 26r53 27r52 28r52 39r38 55r38
+. 106r50 107r50 108r51
+26M9*UInt2 3|105r53
+28M9*UInt3 3|92r37
+30M9*UInt4 3|137r63 138r63 139r63 140r64 141r53 142r58 143r60 144r64 184r55
+. 185r57 186r54 187r59 216r55 221r38
+32M9*UInt5 3|123r39
+60M9*UInt21 3|60r38
+62M9*UInt22 3|113r39
+66M9*UInt24 3|226r38
+76M9*UInt29 3|87r54
+137m4*FPU_Base{4|80M9} 3|269r30
+X 3 i-sam-fpu.ads
+12K24*FPU 2|13k20 3|271l20 271e23
+20M12*FPU_FPCCR_LSPACT_Field{2|24M9} 34r23
+21M12*FPU_FPCCR_USER_Field{2|24M9} 37r23
+22M12*FPU_FPCCR_THREAD_Field{2|24M9} 42r23
+23M12*FPU_FPCCR_HFRDY_Field{2|24M9} 45r23
+24M12*FPU_FPCCR_MMRDY_Field{2|24M9} 49r23
+25M12*FPU_FPCCR_BFRDY_Field{2|24M9} 53r23
+26M12*FPU_FPCCR_MONRDY_Field{2|24M9} 58r23
+27M12*FPU_FPCCR_LSPEN_Field{2|24M9} 62r23
+28M12*FPU_FPCCR_ASPEN_Field{2|24M9} 67r23
+31R9*FPU_FPCCR_Register 69e6 72r8 244r24
+34m7*LSPACT{20M12} 73r7
+37m7*USER{21M12} 74r7
+39m7*Reserved_2_2{2|24M9} 75r7
+42m7*THREAD{22M12} 76r7
+45m7*HFRDY{23M12} 77r7
+49m7*MMRDY{24M12} 78r7
+53m7*BFRDY{25M12} 79r7
+55m7*Reserved_7_7{2|24M9} 80r7
+58m7*MONRDY{26M12} 81r7
+60m7*Reserved_9_29{2|60M9} 82r7
+62m7*LSPEN{27M12} 83r7
+67m7*ASPEN{28M12} 84r7
+87M12*FPU_FPCAR_ADDRESS_Field{2|76M9} 95r22
+90R9*FPU_FPCAR_Register 97e6 100r8 246r24
+92m7*Reserved_0_2{2|28M9} 101r7
+95m7*ADDRESS{87M12} 102r7
+105M12*FPU_FPDSCR_RMode_Field{2|26M9} 115r24
+106M12*FPU_FPDSCR_FZ_Field{2|24M9} 117r24
+107M12*FPU_FPDSCR_DN_Field{2|24M9} 119r24
+108M12*FPU_FPDSCR_AHP_Field{2|24M9} 121r24
+111R9*FPU_FPDSCR_Register 125e6 128r8 248r24
+113m7*Reserved_0_21{2|62M9} 129r7
+115m7*RMode{105M12} 130r7
+117m7*FZ{106M12} 131r7
+119m7*DN{107M12} 132r7
+121m7*AHP{108M12} 133r7
+123m7*Reserved_27_31{2|32M9} 134r7
+137M12*FPU_MVFR0_A_SIMD_registers_Field{2|30M9} 149r27
+138M12*FPU_MVFR0_Single_precision_Field{2|30M9} 152r27
+139M12*FPU_MVFR0_Double_precision_Field{2|30M9} 155r27
+140M12*FPU_MVFR0_FP_excep_trapping_Field{2|30M9} 158r27
+141M12*FPU_MVFR0_Divide_Field{2|30M9} 160r27
+142M12*FPU_MVFR0_Square_root_Field{2|30M9} 163r27
+143M12*FPU_MVFR0_Short_vectors_Field{2|30M9} 165r27
+144M12*FPU_MVFR0_FP_rounding_modes_Field{2|30M9} 168r27
+147R9*FPU_MVFR0_Register 170e6 173r8 250r24
+149m7*A_SIMD_registers{137M12} 174r7
+152m7*Single_precision{138M12} 175r7
+155m7*Double_precision{139M12} 176r7
+158m7*FP_excep_trapping{140M12} 177r7
+160m7*Divide{141M12} 178r7
+163m7*Square_root{142M12} 179r7
+165m7*Short_vectors{143M12} 180r7
+168m7*FP_rounding_modes{144M12} 181r7
+184M12*FPU_MVFR1_FtZ_mode_Field{2|30M9} 193r23
+185M12*FPU_MVFR1_D_NaN_mode_Field{2|30M9} 196r23
+186M12*FPU_MVFR1_FP_HPFP_Field{2|30M9} 200r23
+187M12*FPU_MVFR1_FP_fused_MAC_Field{2|30M9} 203r23
+190R9*FPU_MVFR1_Register 205e6 208r8 252r24
+193m7*FtZ_mode{184M12} 209r7
+196m7*D_NaN_mode{185M12} 210r7
+198m7*Reserved_8_23{2|22M9} 211r7
+200m7*FP_HPFP{186M12} 212r7
+203m7*FP_fused_MAC{187M12} 213r7
+216M12*FPU_MVFR2_VFP_Misc_Field{2|30M9} 224r23
+219R9*FPU_MVFR2_Register 228e6 231r8 254r24
+221m7*Reserved_0_3{2|30M9} 232r7
+224m7*VFP_Misc{216M12} 233r7
+226m7*Reserved_8_31{2|66M9} 234r7
+242R9*FPU_Peripheral 256e6 258r8 268r25
+244r7*FPCCR{31R9} 259r7
+246r7*FPCAR{90R9} 260r7
+248r7*FPDSCR{111R9} 261r7
+250r7*MVFR0{147R9} 262r7
+252r7*MVFR1{190R9} 263r7
+254r7*MVFR2{219R9} 264r7
+268r4*FPU_Periph{242R9}
+X 4 system.ads
+50K9*System 3|10w6 70r24 98r24 126r24 171r24 206r24 229r24 4|164e11
+80M9*Address
+104n41*Low_Order_First{104E9} 3|70r31 98r31 126r31 171r31 206r31 229r31
+

@@ -1,0 +1,144 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.numerics.long_long_complex_elementary_functions%b  a-nllcef.ads  cbe143bd NE OL PU PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+Z ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
+W ada.numerics.generic_complex_elementary_functions%s
+Z ada.numerics.generic_complex_types%s
+Z ada.numerics.generic_elementary_functions%s
+Z ada.numerics.long_elementary_functions%s  a-nlelfu.ads  a-nlelfu.ali
+W ada.numerics.long_long_complex_types%s  a-nllcty.ads  a-nllcty.ali
+Z ada.numerics.long_long_elementary_functions%s  a-nllefu.ads  a-nllefu.ali
+Z system.fat_llf%s	s-fatllf.ads		s-fatllf.ali
+
+U ada.numerics.long_long_complex_elementary_functions%s  a-nllcef.ads  b1f85ac8 EB NE OL PU PK
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.generic_complex_elementary_functions%s
+Z ada.numerics.generic_complex_types%s
+W ada.numerics.long_long_complex_types%s  a-nllcty.ads  a-nllcty.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-numeri.ads		20210927095552 84bea7a3 ada.numerics%s
+D a-nuelfu.ads		20210927095552 51c3d5d5 ada.numerics.elementary_functions%s
+D a-ngcefu.ads		20210927095552 228ead62 ada.numerics.generic_complex_elementary_functions%s
+D a-ngcefu.adb		20210927095552 3d2a1513 ada.numerics.generic_complex_elementary_functions%b
+D a-ngcoty.ads		20210927095552 e7845fd0 ada.numerics.generic_complex_types%s
+D a-ngcoty.adb		20210927095552 401af2c5 ada.numerics.generic_complex_types%b
+D a-ngelfu.ads		20210927095552 ac447086 ada.numerics.generic_elementary_functions%s
+D a-ngelfu.adb		20210927095552 1a32e079 ada.numerics.generic_elementary_functions%b
+D a-nlelfu.ads		20210927095552 4a933b1e ada.numerics.long_elementary_functions%s
+D a-nllcef.ads		20210927095552 cbe143bd ada.numerics.long_long_complex_elementary_functions%s
+D a-nllcef.ads		20210927095552 cbe143bd ada.numerics.long_long_complex_elementary_functions%b
+D a-nllcty.ads		20210927095552 dc2913b4 ada.numerics.long_long_complex_types%s
+D a-nllcty.ads		20210927095552 dc2913b4 ada.numerics.long_long_complex_types%s
+D a-nllefu.ads		20210927095552 a34f74c3 ada.numerics.long_long_elementary_functions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-exnllf.ads		20210927095552 17d83e5b system.exn_llf%s
+D s-exponr.ads		20210927095552 2127300b system.exponr%s
+D s-fatgen.ads		20210927095552 d28c6cfe system.fat_gen%s
+D s-fatgen.adb		20210927095552 f61e99f3 system.fat_gen%b
+D s-fatllf.ads		20210927095552 4d5c1475 system.fat_llf%s
+D s-gcmain.ads		20210927095552 f623c353 system.generic_c_math_interface%s
+D s-libdou.ads		20210927095552 642b3a67 system.libm_double%s
+D s-libpre.ads		20210927095552 f93cda94 system.libm_prefix%s
+D s-libsin.ads		20210927095552 7070a09c system.libm_single%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+G a e
+G c Z s s [sqrt ada__numerics__long_long_complex_elementary_functions 24 13 19_1]
+G c Z s s [log ada__numerics__long_long_complex_elementary_functions 26 13 19_1]
+G c Z s s [exp ada__numerics__long_long_complex_elementary_functions 28 13 19_1]
+G c Z s s [exp ada__numerics__long_long_complex_elementary_functions 29 13 19_1]
+G c Z s s [Oexpon ada__numerics__long_long_complex_elementary_functions 31 13 19_1]
+G c Z s s [Oexpon ada__numerics__long_long_complex_elementary_functions 32 13 19_1]
+G c Z s s [Oexpon ada__numerics__long_long_complex_elementary_functions 33 13 19_1]
+G c Z s s [sin ada__numerics__long_long_complex_elementary_functions 35 13 19_1]
+G c Z s s [cos ada__numerics__long_long_complex_elementary_functions 36 13 19_1]
+G c Z s s [tan ada__numerics__long_long_complex_elementary_functions 37 13 19_1]
+G c Z s s [cot ada__numerics__long_long_complex_elementary_functions 38 13 19_1]
+G c Z s s [arcsin ada__numerics__long_long_complex_elementary_functions 40 13 19_1]
+G c Z s s [arccos ada__numerics__long_long_complex_elementary_functions 41 13 19_1]
+G c Z s s [arctan ada__numerics__long_long_complex_elementary_functions 42 13 19_1]
+G c Z s s [arccot ada__numerics__long_long_complex_elementary_functions 43 13 19_1]
+G c Z s s [sinh ada__numerics__long_long_complex_elementary_functions 45 13 19_1]
+G c Z s s [cosh ada__numerics__long_long_complex_elementary_functions 46 13 19_1]
+G c Z s s [tanh ada__numerics__long_long_complex_elementary_functions 47 13 19_1]
+G c Z s s [coth ada__numerics__long_long_complex_elementary_functions 48 13 19_1]
+G c Z s s [arcsinh ada__numerics__long_long_complex_elementary_functions 50 13 19_1]
+G c Z s s [arccosh ada__numerics__long_long_complex_elementary_functions 51 13 19_1]
+G c Z s s [arctanh ada__numerics__long_long_complex_elementary_functions 52 13 19_1]
+G c Z s s [arccoth ada__numerics__long_long_complex_elementary_functions 53 13 19_1]
+G c Z s s [sqrt ada__numerics__long_long_complex_elementary_functions__elementary_functions 44 13 36_4_19_1]
+G c Z s s [log ada__numerics__long_long_complex_elementary_functions__elementary_functions 68 13 36_4_19_1]
+G c Z s s [log ada__numerics__long_long_complex_elementary_functions__elementary_functions 73 13 36_4_19_1]
+G c Z s s [exp ada__numerics__long_long_complex_elementary_functions__elementary_functions 79 13 36_4_19_1]
+G c Z s s [Oexpon ada__numerics__long_long_complex_elementary_functions__elementary_functions 84 13 36_4_19_1]
+G c Z s s [sin ada__numerics__long_long_complex_elementary_functions__elementary_functions 93 13 36_4_19_1]
+G c Z s s [sin ada__numerics__long_long_complex_elementary_functions__elementary_functions 99 13 36_4_19_1]
+G c Z s s [cos ada__numerics__long_long_complex_elementary_functions__elementary_functions 105 13 36_4_19_1]
+G c Z s s [cos ada__numerics__long_long_complex_elementary_functions__elementary_functions 111 13 36_4_19_1]
+G c Z s s [tan ada__numerics__long_long_complex_elementary_functions__elementary_functions 117 13 36_4_19_1]
+G c Z s s [tan ada__numerics__long_long_complex_elementary_functions__elementary_functions 122 13 36_4_19_1]
+G c Z s s [cot ada__numerics__long_long_complex_elementary_functions__elementary_functions 127 13 36_4_19_1]
+G c Z s s [cot ada__numerics__long_long_complex_elementary_functions__elementary_functions 131 13 36_4_19_1]
+G c Z s s [arcsin ada__numerics__long_long_complex_elementary_functions__elementary_functions 135 13 36_4_19_1]
+G c Z s s [arcsin ada__numerics__long_long_complex_elementary_functions__elementary_functions 140 13 36_4_19_1]
+G c Z s s [arccos ada__numerics__long_long_complex_elementary_functions__elementary_functions 146 13 36_4_19_1]
+G c Z s s [arccos ada__numerics__long_long_complex_elementary_functions__elementary_functions 151 13 36_4_19_1]
+G c Z s s [arctan ada__numerics__long_long_complex_elementary_functions__elementary_functions 157 13 36_4_19_1]
+G c Z s s [arctan ada__numerics__long_long_complex_elementary_functions__elementary_functions 165 13 36_4_19_1]
+G c Z s s [arccot ada__numerics__long_long_complex_elementary_functions__elementary_functions 174 13 36_4_19_1]
+G c Z s s [arccot ada__numerics__long_long_complex_elementary_functions__elementary_functions 182 13 36_4_19_1]
+G c Z s s [sinh ada__numerics__long_long_complex_elementary_functions__elementary_functions 191 13 36_4_19_1]
+G c Z s s [cosh ada__numerics__long_long_complex_elementary_functions__elementary_functions 196 13 36_4_19_1]
+G c Z s s [tanh ada__numerics__long_long_complex_elementary_functions__elementary_functions 202 13 36_4_19_1]
+G c Z s s [coth ada__numerics__long_long_complex_elementary_functions__elementary_functions 208 13 36_4_19_1]
+G c Z s s [arcsinh ada__numerics__long_long_complex_elementary_functions__elementary_functions 213 13 36_4_19_1]
+G c Z s s [arccosh ada__numerics__long_long_complex_elementary_functions__elementary_functions 218 13 36_4_19_1]
+G c Z s s [arctanh ada__numerics__long_long_complex_elementary_functions__elementary_functions 224 13 36_4_19_1]
+G c Z s s [arccoth ada__numerics__long_long_complex_elementary_functions__elementary_functions 229 13 36_4_19_1]
+X 1 ada.ads
+16K9*Ada 20e8 13|16r6 17r6 19r9 20r7 21r37 22r14
+X 3 a-numeri.ads
+16K13*Numerics 1|16k9 3|35e17 13|16r10 17r10 19r13 20r11 21r41 22r18
+X 5 a-ngcefu.ads
+21k22*Generic_Complex_Elementary_Functions 55e54 13|17w19 20r20
+X 13 a-nllcef.ads
+19K22*Long_Long_Complex_Elementary_Functions[5|21] 3|16k13 13|22r27
+X 15 a-nllcty.ads
+18K22*Long_Long_Complex_Types[7|39] 13|16w19 21r50
+

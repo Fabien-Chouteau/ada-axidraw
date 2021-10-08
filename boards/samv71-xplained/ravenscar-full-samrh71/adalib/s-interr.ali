@@ -1,0 +1,139 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_IMPLICIT_LOOPS
+RR NO_ELABORATION_CODE
+
+U system.interrupts%b	s-interr.adb		667b1458 NE OL PK
+W system%s		system.ads		system.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.restricted%s  s-tasres.ads	s-tasres.ali
+W system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+
+U system.interrupts%s	s-interr.ads		af042219 EB NE OL PK
+W system%s		system.ads		system.ali
+W system.os_interface%s	s-osinte.ads		s-osinte.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbbosu.ads		20210927095552 0f820a2a system.bb.board_support%s
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbcpsp.ads		20210927095552 ccfc81c7 system.bb.cpu_specific%s
+D s-bbinte.ads		20210927095552 c88d39da system.bb.interrupts%s
+D s-bbinte.adb		20210927095552 a342b37b system.bb.interrupts%b
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-bbthre.ads		20210927095552 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20210927095552 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20210927095552 ad086247 system.bb.time%s
+D s-imagei.ads		20210927095552 0d3f86a7 system.image_i%s
+D s-imgint.ads		20210927095552 bdb6f5ec system.img_int%s
+D s-interr.ads		20210927095552 d74bd991 system.interrupts%s
+D s-interr.adb		20210927095552 79bba053 system.interrupts%b
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-osinte.ads		20210927095552 229b14dd system.os_interface%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20210927095552 801abd01 system.task_info%s
+D s-taspri.ads		20210927095552 37f162b4 system.task_primitives%s
+D s-taskin.ads		20210927095552 989d56fd system.tasking%s
+D s-tasres.ads		20210927095552 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20210927095552 c88b6d9a system.tasking.restricted.stages%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [install_restricted_handlers system__interrupts 88 14 none]
+G c Z s b [install_restricted_handlers_sequential system__interrupts 97 14 none]
+G c Z s s [E3sIP system__interrupts 68 4 none]
+G c Z s s [handler_itemIP system__interrupts 72 9 none]
+G c Z s s [handler_arrayIP system__interrupts 78 9 none]
+G c Z b b [install_handler system__interrupts 68 14 none]
+G c Z b b [default_handler system__interrupts 71 14 none]
+X 4 system.ads
+50K9*System 164e11 19|42r6 45r9 52r42 53r35 57r33 60r29 104r5 20|36r6 38r14
+. 71r43 78r43 132r7 134r10 146r11 178r5
+116I12*Any_Priority{integer}
+118I12*Interrupt_Priority{116I12} 19|52r49 53r42 89r18 20|48r21 60r40 143r18
+X 10 s-bbinte.ads
+48I12*Interrupt_ID{13|75I12}
+X 13 s-bbpara.ads
+75I12*Interrupt_Range{integer}
+X 19 s-interr.ads
+45K16*Interrupts 4|50k9 19|104l12 104e22 20|38b21 178l12 178t22
+52i4*Default_Interrupt_Priority{4|118I12}
+57I9*Ada_Interrupt_ID<integer>
+60I9*Interrupt_ID<integer> 66r35 73r19 20|53r34 68r43 80r35 127r43
+66I12*System_Interrupt_Id{60I9}
+68P9*Parameterless_Handler 74r19 20|45r17 79r26
+70I9*Handler_Index<integer> 78r33
+72R9*Handler_Item 75e14 78r60
+73i7*Interrupt{60I9} 20|153r38 160r43
+74p7*Handler{68P9} 20|154r26
+78A9*Handler_Array(72R9)<70I9> 90r18 20|144r18
+88U14*Install_Restricted_Handlers 89>7 90>7 20|142b14 163l8 163t35
+89i7 Prio{4|118I12} 20|143b7 154r35
+90a7 Handlers{78A9} 20|144b7 149r16 153r25 154r13 160r30
+97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
+. 20|169b14 176l8 176t46
+X 20 s-interr.adb
+44R9 Handler_Entry 50e14 51r36 53r51
+45p7*Handler{19|68P9} 80r61 172r31
+48i7*PO_Priority{4|118I12} 135r36
+53A9 Handlers_Table(44R9)<19|60I9> 54r36 59r20
+59a4 User_Handlers{53A9} 80r20 135r10 153m10 171r16 172r13
+68U14 Install_Handler 68>31 127b14 136l8 136t23 160s13 173s13
+68i31 Interrupt{19|60I9} 127b31 134r44 135r25
+71U14 Default_Handler 71>31 78b14 117l8 117t23 133r10
+71i31 Interrupt{22|61I12} 78b31 80r49
+79p7 Handler{19|68P9} 82r10 106r10
+149i11 J<integer> 153r35 154r23 160r40
+171i11 J<integer> 172r28 173r30
+X 22 s-osinte.ads
+51K16*OS_Interface 19|42w13 57r40 60r36 20|71r50 78r50 132r14 134r17 22|211e24
+58I12*Interrupt_Range{10|48I12} 19|57r53 60r49
+61I12*Interrupt_ID{10|48I12} 20|71r63 78r63 134r30
+84U14*Attach_Handler=88:35 20|132s27
+X 24 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 29 s-taskin.ads
+58K16*Tasking 20|36r13 146r18 29|453e19
+398V13*Get_Sec_Stack{24|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 30 s-tasres.ads
+34K24*Restricted 20|36r21 146r26 30|35e30
+X 31 s-tarest.ads
+50K35*Stages 20|36w32 146r37 31|271e37
+124e4*Partition_Elaboration_Policy{character} 20|159r13
+232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
+

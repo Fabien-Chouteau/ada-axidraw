@@ -1,0 +1,76 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.relative_delays%b  s-reldel.adb	55480fe9 NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W system%s		system.ads		system.ali
+
+U system.relative_delays%s  s-reldel.ads	8838ca11 NE OL PK
+W system%s		system.ads		system.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-reatim.ads		20210927095552 cfe92427 ada.real_time%s
+D a-retide.ads		20210927095552 081cdaa4 ada.real_time.delays%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbbosu.ads		20210927095552 0f820a2a system.bb.board_support%s
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbinte.ads		20210927095552 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-bbthre.ads		20210927095552 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20210927095552 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20210927095552 ad086247 system.bb.time%s
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-osinte.ads		20210927095552 229b14dd system.os_interface%s
+D s-reldel.ads		20210927095552 d2ec2544 system.relative_delays%s
+D s-reldel.adb		20210927095552 484d0e8a system.relative_delays%b
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+G a e
+G c Z s b [delay_for system__relative_delays 38 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 18|32r6 32r25
+X 2 a-reatim.ads
+40K13*Real_Time 181e18 18|32w10 32r29
+50M9*Time<14|46M9>
+60I9*Time_Span<14|81I9>
+67V13*Clock{50M9}<14|134p13> 18|40s19
+71V14*"+"{50M9} 18|40s25
+120V13*To_Time_Span{60I9} 18|40s27
+X 4 system.ads
+50K9*System 164e11 17|36r9 44r5 18|34r14 43r5
+X 14 s-bbtime.ads
+46M9*Time
+81I9*Time_Span<long_long_integer>
+X 17 s-reldel.ads
+36K16*Relative_Delays 4|50k9 17|44l12 44e27 18|34b21 43l12 43t27
+38U14*Delay_For 38>25 18|36b14 41l8 41t17
+38o25 D{duration} 18|36b25 40r41
+

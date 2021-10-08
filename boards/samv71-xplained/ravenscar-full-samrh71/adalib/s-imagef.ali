@@ -1,0 +1,111 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.image_f%b	s-imagef.adb		d04449fe NE OL PK GE
+W system%s		system.ads		system.ali
+W system.image_i%s
+W system.img_util%s	s-imguti.adb		s-imguti.ali
+
+U system.image_f%s	s-imagef.ads		5b48303c BN NE OL PU PK GE
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-imagef.ads		20210927095552 019cdf69 system.image_f%s
+D s-imagef.adb		20210927095552 b79d6f1f system.image_f%b
+D s-imagei.ads		20210927095552 0d3f86a7 system.image_i%s
+D s-imagei.adb		20210927095552 5fb230a8 system.image_i%b
+D s-imguti.ads		20210927095552 6b7a7f2f system.img_util%s
+G a e
+G c Z s b [image_f system 45 16 none]
+X 1 system.ads
+50K9*System 164e11 2|45r9 88r5 3|32r6 33r6 33r27 35r14 57r27 362r5
+X 2 s-imagef.ads
+38I9 Int 41r22 42r23 49r14 52r14 53r14 68r14 71r14 72r14 3|37r34 57r43 60r11
+. 204r14 207r14 208r14 232r14 235r14 236r14 256r20 257r20 268r11 283r12 284r12
+40U19 Scaled_Divide 41>12 41>15 41>18 42<12 42<15 43>12 3|300s10
+41*12 X{38I9}
+41*15 Y{38I9}
+41*18 Z{38I9}
+42*12 Q{38I9}
+42*15 R{38I9} 3|300r39
+43b12 Round{boolean} 3|300r48
+45k16*Image_F 1|50k9 2|38z9 40z19 88l12 88e19 3|35b21 362l12 362t19
+48U14*Image_Fixed 49>7 50=7 51<7 52>7 53>7 54>7 55>7 3|203b14 225l8 225t19
+49*7 V{38I9} 3|204b7 217r10 224r24
+50a7 S{string} 3|205b7 212r22 218m10 224m27
+51i7 P{natural} 3|206b7 219m10 221m10 224m30
+52*7 Num{38I9} 3|207b7 224r33
+53*7 Den{38I9} 3|208b7 224r38
+54i7 For0{natural} 3|209b7 224r43
+55i7 Aft0{natural} 3|210b7 224r49 224r58
+67U14*Set_Image_Fixed 68>7 69=7 70=7 71>7 72>7 73>7 74>7 75>7 76>7 77>7 3|224s7
+. 231b14 360l8 360t23
+68*7 V{38I9} 3|232b7 283r19 290r10
+69a7 S{string} 3|233b7 359m40
+70i7 P{natural} 3|234b7 359m43
+71*7 Num{38I9} 3|235b7 243r22 256r31
+72*7 Den{38I9} 3|236b7 243r39 257r31
+73i7 For0{natural} 3|237b7 255r63
+74i7 Aft0{natural} 3|238b7 247r37
+75i7 Fore{natural} 3|239b7 359r53
+76i7 Aft{natural} 3|240b7 247r57 359r59
+77i7 Exp{natural} 3|241b7 247r26 359r64
+X 3 s-imagef.adb
+37i4 Maxdigs{natural} 255r27 255r52 265r41 265r56 272r26 276r36 311r23 314r33
+. 314r62 319r53 337r30 342r33 345r33 348r30
+57K12 Image_I[4|40] 63r14
+59U14 Set_Image_Integer=63:22 304s16 317s13
+60*7 V{2|38I9}
+61a7 S{string}
+62i7 P{natural}
+246i7 A{natural} 255r49 260r32
+254i7 D{integer} 256r57 257r58 260r36 307r30
+256*7 Y{2|38I9} 284r19
+257*7 Z{2|38I9} 300r33
+260i7 AF{natural} 265r36
+265i7 N{natural} 276r32 297r21
+268*7 Q{2|38I9} 300m36 303r16 304r35 314r43 314r54 317r36 325r19
+272a7 Buf{string} 317m39 317r39 330r42 342r55
+273i7 Len{natural} 316m13 317m44 317r44 319r33 319r46 330r30 330r52 331r28
+. 337r40 341r30 342r43
+276a7 Digs{string} 291m10 304m38 304r38 327m22 330m19 338m19 342m19 355m10
+. 359m27 359r27
+277i7 Ndigs{natural} 292m10 294m10 304m44 304r44 324r16 326r22 331m19 338r25
+. 342r25 345m16 345r25 354r10 356m10 359r33
+280i7 Scale{integer} 307m13 307r22 348m13 348r22 359r46
+283*7 XX{2|38I9} 298r20 300r25 300m44
+284*7 YY{2|38I9} 300r29 311m13
+297i11 J{integer} 302r13
+337i20 K{integer} 338r33
+341i20 K{integer} 342r49 342r60
+X 4 s-imagei.ads
+40k16*Image_I 3|32w13 57r34 4|61e19
+51U14 Set_Image_Integer 3|63r22[57]
+X 6 s-imguti.ads
+34K16*Img_Util 3|33w13 33r34 6|81e20
+42U14*Set_Decimal_Digits 3|359s7
+

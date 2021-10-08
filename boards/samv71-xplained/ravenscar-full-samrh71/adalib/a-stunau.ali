@@ -1,0 +1,98 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB SS ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_ALLOCATORS
+RV NO_LOCAL_ALLOCATORS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_ACCESS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.strings.unbounded.aux%b  a-stunau.adb	76dd486c NE OL PK
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z system%s		system.ads		system.ali
+
+U ada.strings.unbounded.aux%s  a-stunau.ads	7e6717bf BN NE OL PR PK
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-charac.ads		20210927095552 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210927095552 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-finali.ads		20210927095552 bf4f806b ada.finalization%s
+D a-stream.ads		20210927095552 119b8fb3 ada.streams%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-strmap.ads		20210927095552 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210927095552 08aeb57a ada.strings.unbounded%s
+D a-stunau.ads		20210927095552 76c9a2c5 ada.strings.unbounded.aux%s
+D a-stunau.adb		20210927095552 0014eaa9 ada.strings.unbounded.aux%b
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-finroo.ads		20210927095552 4ff27390 system.finalization_root%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210927095552 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [get_string ada__strings__unbounded__aux 54 14 none]
+G c Z s b [set_string ada__strings__unbounded__aux 71 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 11|37r9 79r5 12|32r14 68r5
+X 7 a-string.ads
+16K13*Strings 1|16k9 7|35e16 11|37r13 79r9 12|32r18 68r9
+X 10 a-strunb.ads
+55K21*Unbounded 7|16k13 10|786e26 11|37r21 79r17 12|32r26 68r17
+60R9*Unbounded_String<5|43R9> 748e15 11|55r11 72r20 12|39r11 56r20
+72P9*String_Access(string) 12|60r13
+76U14*Free 12|65s7
+746p7*Reference{72P9} 12|44r27 60r32 63m9 64r14
+747i7*Last{natural} 12|48r14 62m9
+X 11 a-stunau.ads
+37K31*Aux 10|55k21 11|79l27 79e30 12|32b36 68l27 68t30
+40A12*Big_String{string}<integer> 41r36 47r41 12|43r19
+47P9*Big_String_Access(40A12) 48r8 56r15 12|40r15
+54U14*Get_String 55>7 56<7 57<7 58r19 12|38b14 49l8 49t18
+55r7 U{10|60R9} 12|39b7 44r25 48r12
+56p7 S{47P9} 12|40b7 47m7
+57i7 L{natural} 12|41b7 48m7
+71U14*Set_String 72<7 73>7 74^7 75r19 12|55b14 66l8 66t18
+72r7 U{10|60R9} 12|56b7 60r30 62m7 63m7 64r12
+73i7 Length{positive} 12|57b7 62r17 63r39
+74p7 Set 12|58b7 64r7
+74a43 S{string}
+X 12 a-stunau.adb
+43a7 X{11|40A12} 44m11 44r11 47m12 47r12
+58a43 S{string}
+60p7 Old{10|72P9} 65m13 65r13
+

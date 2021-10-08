@@ -1,0 +1,64 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.strings.wide_hash%b  a-stwiha.adb		6b9e898f NE OL PU SU
+W ada.strings%s		a-string.ads		a-string.ali
+W system%s		system.ads		system.ali
+W system.string_hash%s	s-strhas.adb		s-strhas.ali
+
+U ada.strings.wide_hash%s  a-stwiha.ads		70939944 NE OL PU SU
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.strings%s		a-string.ads		a-string.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-contai.ads		20210927095552 61e5e089 ada.containers%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-stwiha.ads		20210927095552 81da1e5a ada.strings.wide_hash%s
+D a-stwiha.adb		20210927095552 ccd84f41 ada.strings.wide_hash%b
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-strhas.ads		20210927095552 269cd894 system.string_hash%s
+D s-strhas.adb		20210927095552 2e038444 system.string_hash%b
+G a e
+G c Z s b [wide_hash ada__strings 18 22 none]
+X 1 ada.ads
+16K9*Ada 20e8 4|16r6 18r10 21r14 5|32r10 35r8 40r5
+X 2 a-contai.ads
+16K13*Containers 28e19 4|16w10 19r30 5|33r30 35r12
+19M9*Hash_Type 4|19r41 5|33r41 37r36
+X 3 a-string.ads
+16K13*Strings 35e16 4|18r14 21r18 5|32r14 40r9
+X 4 a-stwiha.ads
+18V22*Wide_Hash{2|19M9} 3|16k13 4|19>4 21r26 5|32b22 40l17 40t26
+19a4 Key{wide_string} 5|33b4 39r21
+X 5 a-stwiha.adb
+36V13 Hash_Fun[7|60]{2|19M9} 39s11 8|44b13
+X 6 system.ads
+50K9*System 5|30r6 36r29 6|164e11
+X 7 s-strhas.ads
+45K16*String_Hash 5|30w13 36r36 7|64e23
+60v13*Hash 5|36r48
+

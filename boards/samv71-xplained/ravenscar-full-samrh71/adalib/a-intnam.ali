@@ -1,0 +1,143 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.interrupts.names%s  a-intnam.ads		d5bd1d7f NE OL PK
+W ada.interrupts%s	a-interr.adb		a-interr.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-interr.ads		20210927095552 bdf68b51 ada.interrupts%s
+D a-intnam.ads		20210927130812 684b962e ada.interrupts.names%s
+D a-taside.ads		20210927095552 00e3a3f6 ada.task_identification%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbbosu.ads		20210927095552 0f820a2a system.bb.board_support%s
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbinte.ads		20210927095552 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-bbthre.ads		20210927095552 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20210927095552 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20210927095552 ad086247 system.bb.time%s
+D s-interr.ads		20210927095552 d74bd991 system.interrupts%s
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-osinte.ads		20210927095552 229b14dd system.os_interface%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20210927095552 801abd01 system.task_info%s
+D s-taspri.ads		20210927095552 37f162b4 system.task_primitives%s
+D s-taskin.ads		20210927095552 989d56fd system.tasking%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+X 1 ada.ads
+16K9*Ada 20e8 4|10r9 88r5
+X 3 a-interr.ads
+40K13*Interrupts 1|16k9 3|100e19 4|10r13 88r9
+42I9*Interrupt_ID<18|57I9> 4|21r46 22r46 23r46 24r46 25r46 26r46 27r46 28r46
+. 29r46 30r46 31r46 32r46 33r46 34r46 35r46 36r46 37r46 38r46 39r46 40r46
+. 41r46 42r46 43r46 44r46 45r46 46r46 47r46 48r46 49r46 50r46 51r46 52r46
+. 53r46 54r46 55r46 56r46 57r46 58r46 59r46 60r46 61r46 62r46 63r46 64r46
+. 65r46 66r46 67r46 68r46 69r46 70r46 71r46 72r46 73r46 74r46 75r46 76r46
+. 77r46 78r46 79r46 80r46 81r46 82r46 83r46 84r46 85r46 86r46
+X 4 a-intnam.ads
+10K24*Names 3|40k13 4|88l20 88e25
+21i4*Sys_Tick_Interrupt{3|42I9}
+22i4*SUPC_Interrupt{3|42I9}
+23i4*RSTC_Interrupt{3|42I9}
+24i4*RTC_Interrupt{3|42I9}
+25i4*RTT_Interrupt{3|42I9}
+26i4*WDT_Interrupt{3|42I9}
+27i4*PMC_Interrupt{3|42I9}
+28i4*MATRIX0_Interrupt{3|42I9}
+29i4*FLEXCOM0_Interrupt{3|42I9}
+30i4*FLEXCOM1_Interrupt{3|42I9}
+31i4*NMIC_Interrupt{3|42I9}
+32i4*FLEXCOM2_Interrupt{3|42I9}
+33i4*FLEXCOM3_Interrupt{3|42I9}
+34i4*FLEXCOM4_Interrupt{3|42I9}
+35i4*CCW_Interrupt{3|42I9}
+36i4*CCF_Interrupt{3|42I9}
+37i4*FPU_Interrupt{3|42I9}
+38i4*IXC_Interrupt{3|42I9}
+39i4*FLEXCOM5_Interrupt{3|42I9}
+40i4*FLEXCOM6_Interrupt{3|42I9}
+41i4*FLEXCOM7_Interrupt{3|42I9}
+42i4*TC0_Interrupt{3|42I9}
+43i4*TC1_Interrupt{3|42I9}
+44i4*TC2_Interrupt{3|42I9}
+45i4*TC3_Interrupt{3|42I9}
+46i4*TC4_Interrupt{3|42I9}
+47i4*TC5_Interrupt{3|42I9}
+48i4*PWM0_Interrupt{3|42I9}
+49i4*PWM1_Interrupt{3|42I9}
+50i4*ICM_Interrupt{3|42I9}
+51i4*MCAN0_INT0_Interrupt{3|42I9}
+52i4*MCAN0_INT1_Interrupt{3|42I9}
+53i4*MCAN1_INT0_Interrupt{3|42I9}
+54i4*MCAN1_INT1_Interrupt{3|42I9}
+55i4*TCMECC_INTFIX_Interrupt{3|42I9}
+56i4*TCMECC_INTNOFIX_Interrupt{3|42I9}
+57i4*FLEXRAMECC_INTFIX_Interrupt{3|42I9}
+58i4*FLEXRAMECC_INTNOFIX_Interrupt{3|42I9}
+59i4*SHA_Interrupt{3|42I9}
+60i4*FLEXCOM8_Interrupt{3|42I9}
+61i4*FLEXCOM9_Interrupt{3|42I9}
+62i4*RSWDT_Interrupt{3|42I9}
+63i4*QSPI_Interrupt{3|42I9}
+64i4*HEFC_INT0_Interrupt{3|42I9}
+65i4*HEFC_INTFIX_Interrupt{3|42I9}
+66i4*HEFC_INTNOFIX_Interrupt{3|42I9}
+67i4*TC6_Interrupt{3|42I9}
+68i4*TC7_Interrupt{3|42I9}
+69i4*TC8_Interrupt{3|42I9}
+70i4*TC9_Interrupt{3|42I9}
+71i4*TC10_Interrupt{3|42I9}
+72i4*TC11_Interrupt{3|42I9}
+73i4*HEMC_INTSDRAMC_Interrupt{3|42I9}
+74i4*HEMC_INTFIX_Interrupt{3|42I9}
+75i4*HEMC_INTNOFIX_Interrupt{3|42I9}
+76i4*SFR_Interrupt{3|42I9}
+77i4*TRNG_Interrupt{3|42I9}
+78i4*XDMAC_Interrupt{3|42I9}
+79i4*SPW_Interrupt{3|42I9}
+80i4*IP1553_Interrupt{3|42I9}
+81i4*GMAC_Interrupt{3|42I9}
+82i4*GMAC_Q1_Interrupt{3|42I9}
+83i4*GMAC_Q2_Interrupt{3|42I9}
+84i4*GMAC_Q3_Interrupt{3|42I9}
+85i4*GMAC_Q4_Interrupt{3|42I9}
+86i4*GMAC_Q5_Interrupt{3|42I9}
+X 18 s-interr.ads
+57I9*Ada_Interrupt_ID<integer>
+97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
+X 22 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 27 s-taskin.ads
+398V13*Get_Sec_Stack{22|46P9} 399i<c,__gnat_get_secondary_stack>22
+

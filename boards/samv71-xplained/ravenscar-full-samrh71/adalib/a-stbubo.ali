@@ -1,0 +1,184 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U ada.strings.text_buffers.bounded%b  a-stbubo.adb  1281b288 NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.utf_encoding%s  a-stuten.adb	a-stuten.ali
+W ada.strings.utf_encoding.conversions%s  a-suenco.adb  a-suenco.ali
+W ada.strings.utf_encoding.strings%s  a-suenst.adb  a-suenst.ali
+W ada.strings.utf_encoding.wide_strings%s  a-suewst.adb  a-suewst.ali
+W ada.strings.utf_encoding.wide_wide_strings%s  a-suezst.adb  a-suezst.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U ada.strings.text_buffers.bounded%s  a-stbubo.ads  51ccc89c EE OL PF PU PK
+W ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.put_images%s	s-putima.adb		s-putima.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-sttebu.adb		20210927095552 15e06adb ada.strings.text_buffers%b
+D a-stbubo.ads		20210927095552 49ec54f8 ada.strings.text_buffers.bounded%s
+D a-stbubo.adb		20210927095552 3fdbc168 ada.strings.text_buffers.bounded%b
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-suenco.ads		20210927095552 9bf077d7 ada.strings.utf_encoding.conversions%s
+D a-suenst.ads		20210927095552 7e912418 ada.strings.utf_encoding.strings%s
+D a-suewst.ads		20210927095552 90b69721 ada.strings.utf_encoding.wide_strings%s
+D a-suezst.ads		20210927095552 1161e3f6 ada.strings.utf_encoding.wide_wide_strings%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s s [buffer_typePartial_DIC ada__strings__text_buffers__bounded 22 9 none]
+G c Z s s [buffer_typeDIC ada__strings__text_buffers__bounded 22 9 none]
+G c Z s b [text_truncated ada__strings__text_buffers__bounded 26 13 none]
+G c Z s b [get ada__strings__text_buffers__bounded 28 13 none]
+G c Z s b [wide_get ada__strings__text_buffers__bounded 31 13 none]
+G c Z s b [wide_wide_get ada__strings__text_buffers__bounded 35 13 none]
+G c Z s b [get_utf_8 ada__strings__text_buffers__bounded 40 13 none]
+G c Z s b [wide_get_utf_16 ada__strings__text_buffers__bounded 45 13 none]
+G c Z s b [put_utf_8_implementation ada__strings__text_buffers__bounded 52 14 none]
+G c Z s s [buffer_typeDIC ada__strings__text_buffers__bounded__mapping 116 12 57_4]
+G c Z s s [put ada__strings__text_buffers__bounded__mapping 118 28 57_4]
+G c Z s s [wide_put ada__strings__text_buffers__bounded__mapping 120 28 57_4]
+G c Z s s [wide_wide_put ada__strings__text_buffers__bounded__mapping 123 28 57_4]
+G c Z s s [put_utf_8 ada__strings__text_buffers__bounded__mapping 126 28 57_4]
+G c Z s s [wide_put_utf_16 ada__strings__text_buffers__bounded__mapping 130 28 57_4]
+G c Z s s [new_line ada__strings__text_buffers__bounded__mapping 133 28 57_4]
+G c Z s s [buffer_typeDF ada__strings__text_buffers__bounded__mapping 116 12 57_4]
+G c Z s s [buffer_typeIP ada__strings__text_buffers__bounded__mapping 116 12 57_4]
+G c Z s s [convertible_to_utf_8_stringIP ada__strings__text_buffers__bounded 62 9 none]
+G c Z s s [buffer_typeDF ada__strings__text_buffers__bounded 65 9 none]
+G c Z s s [buffer_typeIP ada__strings__text_buffers__bounded 65 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 5|18r9 73r5 6|32r6 33r6 34r6 35r6 36r14 147r5
+X 2 a-string.ads
+16K13*Strings 1|16k9 2|35e16 5|18r13 73r9 6|32r10 33r10 34r10 35r10 36r18
+. 147r9
+X 3 a-sttebu.ads
+17K21*Text_Buffers 2|16k13 3|136e29 5|18r21 73r17 6|36r26 147r17
+21I9*Text_Buffer_Count<integer> 5|22r39 60r6 60r35 65r39 6|84r33 138r27
+26H9*Root_Buffer_Type 88e14 5|23r10 53r23 6|119r23
+49V13*Current_Indent{21I9} 5|29s51 33s16 38s16 43s16 48s16
+70i7*Indentation{natural} 6|98m20 98r48
+73b7*Indent_Pending{boolean} 6|99m20 99r48
+76i7*UTF_8_Length{natural} 6|84r59 100m20 100r48 129r23 136m20 136r20 138r53
+79i7*UTF_8_Column{positive} 6|101m20 101r48 137m20 137r20
+83b7*All_7_Bits{boolean} 6|59r43 102m20 102r48 134m20 134r20
+85b7*All_8_Bits{boolean} 6|59r17 103m20 103r48
+115k12 Output_Mapping 134e22 5|57r27
+116H12*Buffer_Type<26R9> 5|66r19[57]
+118U28*Put<29p14>
+120U28*Wide_Put<31p14>
+123U28*Wide_Wide_Put<34p14>
+126U28*Put_UTF_8<37p14>
+130U28*Wide_Put_UTF_16<41p14>
+133U28*New_Line<45p14>
+X 5 a-stbubo.ads
+18K34*Bounded 3|17k21 5|52E14 73l30 73e37 6|36b39 147l30 147t37
+22R9*Buffer_Type<3|26R9> 3|49p13 5|22d22 26p13 26r38 28p13 28r34 31p13 31r39
+. 35p13 36r23 40p13 41r23 45p13 46r23 55r28 65c9 71e14 6|46r38 49r34 66r39
+. 71r44 78r23 88r25 92r39 110r23 122r61 126r61 143r38
+22i22*Max_Characters{3|21I9} 65r22 70r49 6|129r54
+26V13*Text_Truncated{boolean} 24s40 26>29 6|46b13
+26r29 Buffer{22R9} 6|47r7
+28V13*Get{string} 28=18 29r21 6|49t4
+28r18 Buffer{22R9} 29r67
+31V13*Wide_Get{wide_string} 31=23 32r21 6|66t4
+31r23 Buffer{22R9} 33r32
+35V13*Wide_Wide_Get{wide_wide_string} 36=7 37r21 6|71t4
+36r7 Buffer{22R9} 38r32
+40V13*Get_UTF_8{7|59A12} 41=7 42r21 6|60s46 62s17 68s48 74s53 77t4 115s12
+41r7 Buffer{22R9} 43r32
+45V13*Wide_Get_UTF_16{7|62A12} 46=7 47r21 6|109t4
+46r7 Buffer{22R9} 48r32
+52U14 Put_UTF_8_Implementation 53=7 54>7 57r43 6|118b14 145l8 145t32
+53c7 Buffer<3|26R9> 55r18 6|119b7 143m51 143r51
+54a7 Item{7|59A12} 6|120b7 128r22 142r10
+57K12 Mapping[3|115] 66r11
+59I12 Positive_Text_Buffer_Count{3|21I9} 63r13
+62A9 Convertible_To_UTF_8_String(character)<3|21I9> 70r15
+67b7 Truncated{boolean} 6|47r14 104m20 104r48 130m23
+70a7 Chars{62A9} 6|84r21 138m20
+X 6 a-stbubo.adb
+49V13 Get{string}
+49r18 Buffer{5|22R9}
+66V13 Wide_Get{wide_string}
+66r23 Buffer{5|22R9}
+71V13 Wide_Wide_Get{wide_wide_string}
+71r28 Buffer{5|22R9}
+77V13 Get_UTF_8{7|59A12}
+78r7 Buffer{5|22R9}
+82a9 Result{7|59A12}
+88r13 Defaulted{5|22R9} 98r38 99r38 100r38 101r38 102r38 103r38 104r38
+92a13 Dummy(5|22R9)
+109V13 Wide_Get_UTF_16{7|62A12}
+110r7 Buffer{5|22R9}
+122U17 Buffer_Type_Implementation 122=45 126b17 140l11 140t37 143s10
+122r45 Buffer{5|22R9} 126b45 129r16 129r47 130m16 134m13 136m13 137m13 138m13
+. 138r46
+128e14 Char=128:22{character} 134r60 138r71
+X 7 a-stuten.ads
+42K21*UTF_Encoding 5|41r43 46r43 54r16 6|32r18 33r18 34r18 35r18 60r17 68r14
+. 74r14 78r43 82r27 83r11 110r43 114r9 115r48 120r16 7|144e29
+56n29*UTF_8{56E9} 6|115r61
+59A12*UTF_8_String{string}<integer> 5|41r56 54r29 6|78r56 82r40 83r24 120r29
+62A12*UTF_16_Wide_String{wide_string}<integer> 5|46r56 6|110r56
+X 8 a-suenco.ads
+20K34*Conversions 6|32w31 114r22 8|61e41
+37V13*Convert{7|62A12} 6|114s34
+39e7 Input_Scheme{7|56E9} 6|115r32
+X 9 a-suenst.ads
+20K34*Strings 6|33w31 60r30 9|65e37
+57V13*Decode{string} 6|60s38
+X 10 a-suewst.ads
+20K34*Wide_Strings 6|34w31 68r27 10|67e42
+59V13*Decode{wide_string} 6|68s40
+X 11 a-suezst.ads
+21K34*Wide_Wide_Strings 6|35w31 74r27 11|64e47
+56V13*Decode{wide_wide_string} 6|74s45
+

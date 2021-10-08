@@ -1,0 +1,123 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_EXCEPTIONS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.interrupts%b	a-interr.adb		800bd20c NE OL PK
+W ada%s			ada.ads			ada.ali
+Z system%s		system.ads		system.ali
+
+U ada.interrupts%s	a-interr.ads		ef1862a2 BN NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.task_identification%s  a-taside.adb	a-taside.ali
+W system%s		system.ads		system.ali
+W system.interrupts%s	s-interr.adb		s-interr.ali
+W system.multiprocessors%s  s-multip.adb	s-multip.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-interr.ads		20210927095552 bdf68b51 ada.interrupts%s
+D a-interr.adb		20210927095552 3dfd595d ada.interrupts%b
+D a-taside.ads		20210927095552 00e3a3f6 ada.task_identification%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbbosu.ads		20210927095552 0f820a2a system.bb.board_support%s
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbinte.ads		20210927095552 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-bbthre.ads		20210927095552 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20210927095552 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20210927095552 ad086247 system.bb.time%s
+D s-interr.ads		20210927095552 d74bd991 system.interrupts%s
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-osinte.ads		20210927095552 229b14dd system.os_interface%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20210927095552 801abd01 system.task_info%s
+D s-taspri.ads		20210927095552 37f162b4 system.task_primitives%s
+D s-taskin.ads		20210927095552 989d56fd system.tasking%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [is_reserved ada__interrupts 46 13 none]
+G c Z s b [is_attached ada__interrupts 51 13 none]
+G c Z s b [current_handler ada__interrupts 56 13 none]
+G c Z s b [attach_handler ada__interrupts 62 14 none]
+G c Z s b [exchange_handler ada__interrupts 69 14 none]
+G c Z s b [detach_handler ada__interrupts 77 14 none]
+G c Z s b [reference ada__interrupts 81 13 none]
+G c Z s b [get_cpu ada__interrupts 85 13 none]
+G c Z s s [E3sIP ada__interrupts 44 4 none]
+X 1 ada.ads
+16K9*Ada 20e8 3|38r6 40r9 49r16 54r16 79r27 90r16 100r5 4|34r14 124r5
+X 3 a-interr.ads
+40K13*Interrupts 1|16k9 3|44E4 100l9 100e19 4|34b18 124l9 124t19
+42I9*Interrupt_ID<18|57I9> 46r38 51r38 57r19 64r21 72r21 77r42 81r36 86r19
+. 4|42r21 53r19 64r42 76r21 87r19 98r38 108r38 118r36
+44P9*Parameterless_Handler 57r40 63r21 70r25 71r21 4|41r21 53r40 74r25 75r21
+46V13*Is_Reserved{boolean} 46>26 93r19 4|108b13 112l8 112t19
+46i26 Interrupt{42I9} 4|108b26
+51V13*Is_Attached{boolean} 51>26 94r19 4|98b13 102l8 102t19
+51i26 Interrupt{42I9} 4|98b26
+56V13*Current_Handler{44P9} 57>7 95r19 4|52b13 58l8 58t23
+57i7 Interrupt{42I9} 4|53b7
+62U14*Attach_Handler 63>7 64>7 96r19 4|40b14 46l8 46t22
+63p7 New_Handler{44P9} 4|41b7
+64i7 Interrupt{42I9} 4|42b7
+69U14*Exchange_Handler 70<7 71>7 72>7 98r19 4|73b14 80l8 80t24
+70p7 Old_Handler{44P9} 4|74b7
+71p7 New_Handler{44P9} 4|75b7
+72i7 Interrupt{42I9} 4|76b7
+77U14*Detach_Handler 77>30 97r19 4|64b14 67l8 67t22
+77i30 Interrupt{42I9} 4|64b30
+81V13*Reference{7|80M9} 81>24 4|118b13 122l8 122t17
+81i24 Interrupt{42I9} 4|118b24
+85V13*Get_CPU{19|21I9} 86>7 99r19 4|86b13 92l8 92t15
+86i7 Interrupt{42I9} 4|87b7
+X 5 a-taside.ads
+45K13*Task_Identification 3|38w10 49r20 54r20 79r31 90r20 5|104e28
+47@22*Tasking_State 3|49r40 54r40 79r51 90r40
+X 7 system.ads
+50K9*System 3|36r6 37r6 42r29 81r57 86r40 4|87r40 91r14 118r57 121r14 7|164e11
+80M9*Address 3|81r64 4|118r64
+82m4*Null_Address{80M9} 4|121r21
+X 18 s-interr.ads
+45K16*Interrupts 3|36w13 42r36 18|104e22
+57I9*Ada_Interrupt_ID<integer> 3|42r47
+97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
+X 19 s-multip.ads
+18K16*Multiprocessors 3|37w13 86r47 4|87r47 91r21 19|31e27
+21I9*CPU_Range<short_short_integer> 3|86r63 4|87r63
+25i4*Not_A_Specific_CPU{21I9} 4|91r37
+X 22 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 27 s-taskin.ads
+398V13*Get_Sec_Stack{22|46P9} 399i<c,__gnat_get_secondary_stack>22
+

@@ -1,0 +1,210 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_ACCESS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U system.bb.timing_events%b  s-bbtiev.adb	31406e11 NE OL PK
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.board_support%s  s-bbbosu.adb	s-bbbosu.ali
+W system.bb.parameters%s  s-bbpara.ads		s-bbpara.ali
+W system.bb.threads%s	s-bbthre.adb		s-bbthre.ali
+W system.bb.threads.queues%s  s-bbthqu.adb	s-bbthqu.ali
+
+U system.bb.timing_events%s  s-bbtiev.ads	46dadacb BN EE OL PF PR PK
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.time%s	s-bbtime.adb		s-bbtime.ali
+W system.multiprocessors%s  s-multip.adb	s-multip.ali
+Z system.put_images%s	s-putima.adb		s-putima.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbbosu.ads		20210927095552 0f820a2a system.bb.board_support%s
+D s-bbbosu.adb		20210927095552 21f80941 system.bb.board_support%b
+D s-bbsumu.adb		20210927095552 cbb92b04 system.bb.board_support.multiprocessors
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbcppr.adb		20210927095552 0d3346b0 system.bb.cpu_primitives%b
+D s-bcpcst.ads		20210927095552 1841a1ac system.bb.cpu_primitives.context_switch_trigger%s
+D s-bbcpsp.ads		20210927095552 ccfc81c7 system.bb.cpu_specific%s
+D s-bbinte.ads		20210927095552 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-bbprot.ads		20210927095552 f48a7e85 system.bb.protection%s
+D s-bbprot.adb		20210927095552 a4657a6f system.bb.protection%b
+D s-bbthre.ads		20210927095552 c94b446f system.bb.threads%s
+D s-bbthre.adb		20210927095552 40388c8b system.bb.threads%b
+D s-bbthqu.ads		20210927095552 cd23d79e system.bb.threads.queues%s
+D s-bbthqu.adb		20210927095552 d73a8d13 system.bb.threads.queues%b
+D s-bbtime.ads		20210927095552 ad086247 system.bb.time%s
+D s-bbtiev.ads		20210927095552 110cc417 system.bb.timing_events%s
+D s-bbtiev.adb		20210927095552 67a172c1 system.bb.timing_events%b
+D s-maccod.ads		20210927095552 6d68a701 system.machine_code%s
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [set_handler system__bb__timing_events 42 14 none]
+G c Z s b [cancel_handler system__bb__timing_events 54 14 none]
+G c Z s b [time_of_event system__bb__timing_events 60 13 none]
+G c Z s b [get_next_timeout system__bb__timing_events 63 13 none]
+G c Z s b [execute_expired_timing_events system__bb__timing_events 69 14 none]
+G c Z s s [timing_eventDF system__bb__timing_events 73 9 none]
+G c Z s s [timing_eventIP system__bb__timing_events 73 9 none]
+G c Z b b [insert system__bb__timing_events 44 14 none]
+G c Z b b [extract system__bb__timing_events 104 14 none]
+X 9 system.ads
+50K9*System 164e11 29|29r6 30r6 32r9 44r17 60r57 64r16 64r51 69r51 74r17
+. 74r40 89r13 94r5 30|29r6 30r6 31r6 32r6 34r14 36r13 37r8 38r8 39r8 69r24
+. 134r24 164r17 167r20 232r20 261r51 331r16 331r51 336r17 346r57 349r17 443r5
+116I12*Any_Priority{integer}
+118I12*Interrupt_Priority{116I12} 30|288r40
+X 10 s-bb.ads
+40K16*BB 9|50k9 10|95e14 29|29r13 32r16 44r24 60r64 64r58 69r58 74r24 74r47
+. 94r12 30|29r13 30r13 31r13 32r13 34r21 36r20 38r15 39r15 69r31 134r31 164r24
+. 167r27 232r27 261r58 331r58 336r24 346r64 349r24 443r12
+X 12 s-bbbosu.ads
+47K19*Board_Support 158e28 30|32w16 38r18
+139K12*Multiprocessors 157e23 30|38r32
+148V16*Current_CPU{32|23I12} 30|56s26 57s24 70s41 78s26 81s58 86s26 86s59
+. 91s33 95s33 113s22 117s33 122s46 135s41 142s30 143s25 143s59 149s37 150s36
+. 168s43 233s36 262s41 362s32 396s37
+X 16 s-bbcppr.adb
+106U14 SV_Call_Handler 107i24
+109U14 Sys_Tick_Handler 110i24
+112U14 Interrupt_Request_Handler 113i24
+X 21 s-bbpara.ads
+46K19*Parameters 130e25 30|29w16 69r34 134r34
+127b4*Multiprocessor{boolean} 30|69r45 134r45
+X 24 s-bbthre.ads
+48K19*Threads 298e22 30|30w16 31r16 39r18
+64P9*Thread_Id(61R9) 30|266r25
+239V13*Thread_Self{64P9} 30|285s18
+254V13*Get_Priority{integer} 30|286s26
+X 26 s-bbthqu.ads
+41K27*Queues 315e29 30|31w24 288r7 318r7
+119U14*Change_Priority 30|288s14 318s14
+X 28 s-bbtime.ads
+43K19*Time 184e19 29|29w16 44r27 60r67 64r61 69r61 74r27 74r50 30|36r23 164r27
+. 167r30 197r24 198r10 221r25 232r30 247r27 248r13 261r61 331r61 336r27 346r67
+. 349r27
+46M9*Time 29|44r32 60r72 64r66 69r66 74r32 74r55 30|36r28 164r32 167r35 232r35
+. 261r66 331r66 336r32 346r72 349r32
+140V13*Get_Next_Timeout{46M9} 30|197s29 221s30 247s32
+143U14*Update_Alarm 30|198s15 248s18
+X 29 s-bbtiev.ads
+32K19*Timing_Events 10|40k16 29|73E9 94l15 94e28 30|34b24 443l15 443t28
+35R9*Timing_Event 38r42 40r43 42p14 43r24 54p14 55r26 60p13 60r36 73c9 92e14
+. 30|163r24 229r26 346r36
+37P9*Timing_Event_Handler 38=27 45r17 78r17 30|165r17 264r25
+38c27 Event<35R9>
+40P9*Timing_Event_Access(35R9) 83r14 86r14 30|41r34 45r27 104r44 263r25 333r24
+. 359r44 393r27 397r21
+42U14*Set_Handler 43=7 44>7 45>7 30|162b14 222l8 222t19
+43r7 Event{35R9} 30|163b7 173r10 177m19 177r19 180m7 186m10 187m10 191m18
+. 191r18 211r14 219r14 220r25
+44m7 At_Time{28|46M9} 30|164b7 186r27 220r41 221r59
+45p7 Handler{37P9} 30|165b7 180r24 182r10 207r14 219r30
+54U14*Cancel_Handler 55=7 56<7 30|228b14 255l8 255t22
+55r7 Event{35R9} 30|229b7 237r10 241m19 241r19 244m10 254r22
+56b7 Cancelled{boolean} 30|230b7 243m10 251m10
+60V13*Time_Of_Event{28|46M9} 60>28 30|346b13 353l8 353t21
+60r28 Event{35R9} 30|346b28 348r10 351r17
+63V13*Get_Next_Timeout{28|46M9} 64>7 65r19 30|330b13 340l8 340t24
+64i7 CPU_Id{32|23I12} 30|331b7 333r61
+69U14*Execute_Expired_Timing_Events 69>45 30|261b14 324l8 324t37
+69m45 Now{28|46M9} 30|261b45 292r53 323r64
+74m7*Timeout{28|46M9} 30|100r44 100r60 102r44 102r61 128r40 128r57 130r40
+. 130r57 186m16 220r31 292r42 323r54 338r27 351r23 403r39 403r55 425r38 425r55
+78p7*Handler{37P9} 30|61r25 173r16 180m13 211r20 219r20 237r16 244m16 254r28
+. 296r27 309m16 348r16
+83p7*Next{40P9} 30|65r25 81r33 99r30 100r39 127r26 128r35 156r29 369r41 377m21
+. 377r35 380r16 381r16 384m13 407m16 424r28 425r33 427r40 432m16 432r36 435r25
+. 436r25 439m22
+86p7*Prev{40P9} 30|57r37 65r52 80r33 87r33 95r46 101r30 102r39 117r46 123r28
+. 129r26 130r35 150r49 155r29 374r31 377r16 381m21 381r35 385m13 410m35 433m16
+. 436m30
+89i7*CPU{32|23I12} 30|70r35 135r35 187m16
+X 30 s-bbtiev.adb
+41a4 Events_Table(29|40P9) 56r12 57r10 78r12 81r40 86r12 86r41 91r19 95r19
+. 113r8 117r19 122r32 142r12 143r11 143r41 149r23 150r22 263r48 315r19 322r22
+. 323r32 333r47 367r10 369m10 402r10 403r17 407r24 409r13 410r13 413m10 418r25
+. 422r25
+44U14 Insert 45>7 46<7 191s10 392b14 441l8 441t14
+45p7 Event{29|40P9} 61r19 65r19 65r46 70r29 78r41 80r23 81r23 87r23 99r20
+. 100r29 100r54 101r20 102r29 102r55 393b7 403r49 407r10 410r43 413r35 425r49
+. 432r10 433r10 436r38 439r30
+46b7 Is_First{boolean} 79r12 394b7 405m10 420m10
+104U14 Extract 104>23 105<23 177s10 241s10 302s10 359b14 386l8 386t15
+104p23 Event{29|40P9} 122r23 123r22 127r20 128r29 128r51 129r20 130r29 130r51
+. 135r29 142r45 155r19 156r19 359b23 367r34 369r35 374r25 377r10 377r29 380r10
+. 381r10 381r29 384r7 385r7
+105b23 Was_First{boolean} 144r22 360b23 368m10 376m10
+167m7 Next_Alarm{28|46M9} 197m10 198r29
+168i7 CPU_Id{32|23I12} 187r27 197r47 221r48
+169b7 Was_First{boolean} 177m43 194r10
+170b7 Is_First{boolean} 191m42 194r28
+232m7 Next_Alarm{28|46M9} 247m13 248r32
+233i7 CPU_Id{32|23I12} 247r50
+234b7 Was_First{boolean} 241m43 246r13
+262i7 CPU_Id{32|23I12} 263r62 315r33 322r36 323r46
+263p7 Event{29|40P9} 272r10 292r13 292r36 296r21 302r19 309r10 313r19 315m10
+264p7 Handler{29|37P9} 296m10 298r25 313r10
+265b7 Was_First{boolean} 302m26 304r25
+266p7 Self_Id{24|64P9} 285m7 286r40 288r31 318r31
+267i7 Caller_Priority{integer} 286m7 318r40
+333p7 Event{29|40P9} 335r10 338r17
+362i7 CPU_Id{32|23I12} 367r24 369r24
+396i7 CPU_Id{32|23I12} 402r24 403r31 407r38 409r27 410r27 413r24 418r39 422r39
+397p7 Aux_Pointer{29|40P9} 422m10 424r16 425r21 427m13 427r28 432r24 433r24
+. 435r13 436r13 439r10
+X 32 s-multip.ads
+18K16*Multiprocessors 29|30w13 64r23 89r20 30|37r15 331r23 32|31e27
+21I9*CPU_Range<short_short_integer>
+23I12*CPU{21I9} 29|64r39 89r36 30|41r26 168r29 233r29 262r34 331r39 362r25
+. 396r30
+

@@ -1,0 +1,72 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.img_decimal_64%s  s-imde64.ads		901f2c80 NE OL PU PK
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.image_d%s
+Z system.img_lli%s	s-imglli.ads		s-imglli.ali
+Z system.img_util%s	s-imguti.adb		s-imguti.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-imaged.ads		20210927095552 fe69ad8a system.image_d%s
+D s-imaged.adb		20210927095552 613cc81d system.image_d%b
+D s-imagei.ads		20210927095552 0d3f86a7 system.image_i%s
+D s-imde64.ads		20210927095552 d94e4600 system.img_decimal_64%s
+D s-imglli.ads		20210927095552 3723d9ff system.img_lli%s
+D s-imguti.ads		20210927095552 6b7a7f2f system.img_util%s
+G a e
+G c Z s s [image_decimal system__img_decimal_64__impl 43 14 44_4]
+G c Z s s [set_image_decimal system__img_decimal_64__impl 55 14 44_4]
+X 1 interfac.ads
+38K9*Interfaces 231e15 6|36w6 42r21
+55I9*Integer_64<long_long_integer> 6|42r32
+X 2 system.ads
+50K9*System 164e11 6|37r6 39r9 63r5
+X 3 s-imaged.ads
+40k16*Image_D 72e19 6|37w13 44r24
+43U14*Image_Decimal 6|51r19[44]
+55U14*Set_Image_Decimal 6|61r19[44]
+X 6 s-imde64.ads
+39K16*Img_Decimal_64 2|50k9 6|63l12 63e26
+42I12*Int64{1|55I9} 44r33 47r15 54r15
+44K12*Impl[3|40] 51r14 61r14
+46U14*Image_Decimal64=51:19
+47i7 V{1|55I9}
+48a7 S{string}
+49i7 P{natural}
+50i7 Scale{integer}
+53U14*Set_Image_Decimal64=61:19
+54i7 V{1|55I9}
+55a7 S{string}
+56i7 P{natural}
+57i7 Scale{integer}
+58i7 Fore{natural}
+59i7 Aft{natural}
+60i7 Exp{natural}
+

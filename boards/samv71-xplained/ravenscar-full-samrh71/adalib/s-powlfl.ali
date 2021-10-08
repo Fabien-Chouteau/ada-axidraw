@@ -1,0 +1,40 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.powten_lflt%s	s-powlfl.ads		7ecf7718 NE OL PU PK
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-powlfl.ads		20210927095552 241b984d system.powten_lflt%s
+G a e
+X 1 system.ads
+50K9*System 164e11 2|34r9 91r5
+X 2 s-powlfl.ads
+34K16*Powten_LFlt 1|50k9 2|91l12 91e23
+37N4*Maxpow_Exact 41r25
+41N4*Maxpow 44r34
+44a4*Powten(long_float)
+

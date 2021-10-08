@@ -1,0 +1,111 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.val_util%b	s-valuti.adb		879d81a3 NE OL PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W system%s		system.ads		system.ali
+W system.case_util%s	s-casuti.adb		s-casuti.ali
+
+U system.val_util%s	s-valuti.ads		f67459ab NE OL PU PK
+W system%s		system.ads		system.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-casuti.ads		20210927095552 3fd5b654 system.case_util%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-valuti.ads		20210927095552 aca0b6fe system.val_util%s
+D s-valuti.adb		20210927095552 14e88109 system.val_util%b
+G a e
+G c Z s b [bad_value system__val_util 37 14 none]
+G c Z s b [normalize_string system__val_util 41 14 none]
+G c Z s b [scan_sign system__val_util 50 14 none]
+G c Z s b [scan_plus_sign system__val_util 76 14 none]
+G c Z s b [scan_exponent system__val_util 84 13 none]
+G c Z s b [scan_trailing_blanks system__val_util 103 14 none]
+G c Z s b [scan_underscore system__val_util 107 14 none]
+X 4 system.ads
+50K9*System 164e11 9|34r9 124r5 10|32r6 32r28 34r14 342r5
+92V14*">"{boolean} 10|45r19
+X 5 s-casuti.ads
+42K16*Case_Util 69e21 10|32w13 32r35
+47V13*To_Upper{character} 10|87s22
+X 9 s-valuti.ads
+34K16*Val_Util 4|50k9 9|124l12 124e20 10|34b21 342l12 342t20
+37U14*Bad_Value 37>25 38r22 10|40b14 51l8 51t17 189s10 199s13 212s13 237s10
+. 247s13 261s13 272s13 290s13 324s10 338s10
+37a25 S{string} 10|40b25 45r10 47r12 47r15 47r26 49r67
+41U14*Normalize_String 42=7 43<7 43<10 10|57b14 90l8 90t24
+42a7 S{string} 10|58b7 62r12 63r12 67r29 79r13 85r10 87m13 87r32
+43i7 F{integer} 10|59b7 62m7 67r13 67r32 68m10 68r15 73r10 85r13 86r19
+43i10 L{integer} 10|59b10 63m7 67r18 73r14 79r16 80m10 80r15 86r24
+50U14*Scan_Sign 51>7 52^7 53>7 54<7 55<7 10|223b14 280l8 280t17
+51a7 Str{string} 10|224b7 237r21 242r13 247r24 255r10 261r24 266r13 272r24
+52p7 Ptr(integer) 10|225b7 230r22 246r13 260r13 271r13 279r7
+53i7 Max{integer} 10|226b7 236r14 245r17 259r17 270r17
+54b7 Minus{boolean} 10|227b7 256m10 267m10 276m10
+55i7 Start{positive} 10|228b7 251m7 260r24 271r24
+76U14*Scan_Plus_Sign 77>7 78^7 79>7 80<7 10|179b14 217l8 217t22
+77a7 Str{string} 10|180b7 189r21 194r13 199r24 207r10 212r24
+78p7 Ptr(integer) 10|181b7 185r22 198r13 211r13 216r7
+79i7 Max{integer} 10|182b7 188r14 197r17 210r17
+80i7 Start{positive} 10|183b7 203m7 211r24
+84V13*Scan_Exponent{integer} 85>7 86^7 87>7 88>7 10|96b13 173l8 173t21
+85a7 Str{string} 10|97b7 108r18 108r42 117r10 126r13 139r10 153r43 160r13
+. 161r30 163r23
+86p7 Ptr(integer) 10|98b7 102r22 161r38 171r7
+87i7 Max{integer} 10|99b7 107r15 120r17 129r17 158r24 161r43
+88b7 Real{boolean} 10|100b7 129r33
+103U14*Scan_Trailing_Blanks 103>36 103>50 10|286b14 293l8 293t28
+103a36 Str{string} 10|286b36 288r21 289r13 290r24
+103i50 P{positive} 10|286b50 288r16
+107U14*Scan_Underscore 108>7 109=7 110^7 111>7 112>7 10|161s13 299b14 340l8
+. 340t23
+108a7 Str{string} 10|300b7 324r21 330r12 338r21
+109i7 P{natural} 10|301b7 309m7 309r12 322r10 323r21 330r17 337r21
+110p7 Ptr(integer) 10|302b7 323r10 337r10
+111i7 Max{integer} 10|303b7 322r14
+112b7 Ext{boolean} 10|304b7 333r18
+X 10 s-valuti.adb
+86i14 J{integer} 87r16 87r35
+102i7 P{natural} 107r10 108r23 108r47 115m7 115r12 117r15 118m10 118r15 120r13
+. 126r18 127m10 127r15 129r13 139r15 153r48 156m10 156r15 158r20 160r18 161m35
+. 161r35 163r28 171r18
+103b7 M{boolean} 123m13 132m13 136m10 167r10
+104i7 X{integer} 149m7 152r13 153m13 153r18 168m10 168r16 172r14
+185i7 P{natural} 188r10 194r18 195m10 195r15 197r13 198r24 203r16 207r15
+. 208m10 208r15 210r13 216r18
+230i7 P{natural} 236r10 242r18 243m10 243r15 245r13 246r24 251r16 255r15
+. 257m10 257r15 259r13 266r18 268m10 268r15 270r13 279r18
+288i11 J{integer} 289r18
+306e7 C{character} 330m7 332r10 333r32 333r56
+

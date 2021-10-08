@@ -4,7 +4,7 @@ project SAMV71_XPLAINED Extends "../../ada_axidraw.gpr" is
    for Source_Dirs use ("src/**", "../Ada_Drivers_Library/hal/src");
    for Object_Dir use "obj";
    for Target use "arm-eabi";
-   for Runtime ("ada") use "ravenscar-full-samv71";
+   for Runtime ("ada") use SAMV71_XPLAINED'Project_Dir & "/ravenscar-full-samrh71";
    for Main use ("main.adb");
    for Create_Missing_Dirs use "True";
 
@@ -15,7 +15,9 @@ project SAMV71_XPLAINED Extends "../../ada_axidraw.gpr" is
    Build : Build_Type := external ("Build", "Debug");
 
    Build_Switches := ("-gnat12", "-gnatwa", "-gnatwe",
-                      "-gnatw.X"); --  "-gnatyg", "-gnaty-d",
+                      "-gnatw.X",
+                      "-ffunction-sections", -- Create a linker section for each function
+                      "-fdata-sections");  -- Create a linker section for each data
    case Build is
       when "Debug" =>
          Build_Switches := Build_Switches & ("-g", "-O0");
@@ -27,5 +29,11 @@ project SAMV71_XPLAINED Extends "../../ada_axidraw.gpr" is
    package Compiler is
       for Default_Switches ("ada") use Build_Switches;
    end Compiler;
+
+   package Linker is
+      for Default_Switches ("Ada") use
+        ("-Wl,--print-memory-usage",
+         "-Wl,--gc-sections");
+   end Linker;
 
 end SAMV71_XPLAINED;

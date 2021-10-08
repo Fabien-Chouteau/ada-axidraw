@@ -1,0 +1,132 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U system.pool_global%b	s-pooglo.adb		021224f8 NE OL PK
+W system%s		system.ads		system.ali
+W system.memory%s	s-memory.adb		s-memory.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+
+U system.pool_global%s	s-pooglo.ads		29da5924 EB EE OL PF PK
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+Z system.put_images%s	s-putima.adb		s-putima.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-finali.ads		20210927095552 bf4f806b ada.finalization%s
+D a-stream.ads		20210927095552 119b8fb3 ada.streams%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-finroo.ads		20210927095552 4ff27390 system.finalization_root%s
+D s-memory.ads		20210927095552 597d6634 system.memory%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-pooglo.ads		20210927095552 ede33ef8 system.pool_global%s
+D s-pooglo.adb		20210927095552 5f7651ec system.pool_global%b
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210927095552 e9fa2dd8 system.storage_pools%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [storage_size system__pool_global 56 24 none]
+G c Z s b [allocate system__pool_global 60 25 none]
+G c Z s b [deallocate system__pool_global 66 25 none]
+G c Z s s [unbounded_no_reclaim_poolDF system__pool_global 53 9 none]
+G c Z s s [unbounded_no_reclaim_poolIP system__pool_global 53 9 none]
+X 3 a-finali.ads
+53U14*Initialize<12|44p14>
+54U14*Finalize<12|43p14>
+X 11 system.ads
+50K9*System 164e11 15|35w6 36r6 37r6 39r9 54r6 58r14 62r26 63r22 64r22 68r22
+. 69r22 70r22 79r5 16|32r6 32r32 33r6 35r14 37r24 45r26 53r25 54r25 85r29
+. 89r34 107r22 111r11 125r29 128r41 156r5
+80M9*Address 15|62r33 68r29 16|45r33 53r32 54r32 85r36 89r41 107r29 125r36
+. 128r48
+82m4*Null_Address{80M9} 16|67r22
+84N4*Storage_Unit 16|89r56 128r63
+94V14*"="{boolean} 16|67r20
+X 12 s-finroo.ads
+42U14*Adjust
+X 13 s-memory.ads
+45K16*Memory 107e18 16|33w13 61r20 61r34 130r13 134r10
+48M9*size_t 16|61r41
+53V13*Alloc{11|80M9} 103i<c,__gnat_malloc>22 16|61s27
+68U14*Free 104i<c,__gnat_free>22 16|130s20 134s17
+76V13*Realloc{11|80M9} 105i<c,__gnat_realloc>22
+X 15 s-pooglo.ads
+39K16*Pool_Global 11|50k9 15|79l12 79e23 16|35b21 156l12 156t23
+53R9*Unbounded_No_Reclaim_Pool<21|42R9> 3|53P14 54P14 12|42p14 15|54e61 56P24
+. 57r14 60P25 61r29 66P25 67r29 77r33 16|44r29 106r29 143r15
+56V24*Storage_Size{19|61I12}<21|60p13> 57>7 16|142b24 154l8 154t20
+57r7 Pool{53R9} 16|143b7 146r29
+60U25*Allocate<21|46p14> 61=7 62<7 63>7 64>7 16|43b25 99l8 99t16
+61r7 Pool{53R9} 16|44b7 50r29
+62m7 Address{11|80M9} 16|45b7 94m10 97m10
+63i7 Storage_Size{19|61I12} 16|46b7 52r42
+64i7 Alignment{19|61I12} 16|47b7 57r10 58r41 74r10 79r55 80r62
+66U25*Deallocate<21|53p14> 67=7 68>7 69>7 70>7 16|105b25 136l8 136t18
+67r7 Pool{53R9} 16|106b7 112r29
+68m7 Address{11|80M9} 16|107b7 128r15 134r23
+69i7 Storage_Size{19|61I12} 16|108b7 113r29
+70i7 Alignment{19|61I12} 16|109b7 120r10
+77r4*Global_Pool_Object{53R9}
+X 16 s-pooglo.adb
+37K12 SSE=37:31 46r22 47r22 49r11 108r22 109r22 144r15 153r14
+52i7 Aligned_Size{19|61I12} 58m10 58r26 61r49
+53m7 Aligned_Address{11|80M9} 78m10 88r16 94r21
+54m7 Allocated{11|80M9} 61m7 67r10 79r25 80r30 91r30 97r21
+85m13 Saved_Address{11|80M9} 86m33 86r33 87m17 87r17 91m13
+125m13 Saved_Address{11|80M9} 126m33 126r33 127m17 127r17 130r26
+X 19 s-stoele.ads
+42K16*Storage_Elements 15|37w13 58r21 63r29 64r29 69r29 70r29 16|37r31 111r18
+. 19|116e28
+54I9*Storage_Offset<integer> 16|89r18 128r25
+61I12*Storage_Count{54I9} 15|58r38 63r46 64r46 69r46 70r46 16|46r26 47r26
+. 52r25 108r26 109r26 144r19 153r18
+85V14*"-"{11|80M9} 16|89s16 128s23
+104M9*Integer_Address 16|79r38 80r45
+106V13*To_Address{11|80M9} 16|78s29
+111V13*To_Integer{104M9} 16|79s13 80s18
+X 21 s-stopoo.ads
+39K16*Storage_Pools 15|36w13 54r13 16|32w13 32r39 21|100e25
+42H9*Root_Storage_Pool<3|50R9> 15|54r27 21|67e62
+

@@ -1,0 +1,57 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.img_int%s	s-imgint.ads		ea5d9c1e NE OL PU PK
+W system%s		system.ads		system.ali
+W system.image_i%s
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-imagei.ads		20210927095552 0d3f86a7 system.image_i%s
+D s-imagei.adb		20210927095552 5fb230a8 system.image_i%b
+D s-imgint.ads		20210927095552 bdb6f5ec system.img_int%s
+G a e
+G c Z s s [image_integer system__img_int__impl 43 14 41_4]
+G c Z s s [set_image_integer system__img_int__impl 51 14 41_4]
+G c Z s s [set_digits system__img_int__impl 36 14 41_4]
+X 1 system.ads
+50K9*System 164e11 4|36r6 38r9 55r5
+X 2 s-imagei.ads
+40k16*Image_I 61e19 4|36w13 41r24
+43U14*Image_Integer 4|47r19[41]
+51U14*Set_Image_Integer 4|53r19[41]
+X 4 s-imgint.ads
+38K16*Img_Int 1|50k9 4|55l12 55e19
+41K12*Impl[2|40] 47r14 53r14
+43U14*Image_Integer=47:19
+44i7 V{integer}
+45a7 S{string}
+46i7 P{natural}
+49U14*Set_Image_Integer=53:19
+50i7 V{integer}
+51a7 S{string}
+52i7 P{natural}
+

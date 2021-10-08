@@ -1,6 +1,19 @@
+with HAL; use HAL;
+
+with SAM_SVD.PIO; use SAM_SVD.PIO;
 with HAL.GPIO; use HAL.GPIO;
 
 package body SAM.PIO is
+
+   ----------------
+   -- Select_Pin --
+   ----------------
+
+   procedure Select_Pin (G : GPIO_Group_Index; P : GPIO_Pin_Index) is
+      MSKR : UInt32 with Address => PIO_Periph.PIO_PIO_GROUP (G).MSKR'Address;
+   begin
+      MSKR := 2**P;
+   end Select_Pin;
 
    ----------
    -- Mode --
@@ -8,9 +21,11 @@ package body SAM.PIO is
 
    overriding
    function Mode (This : GPIO_Point) return HAL.GPIO.GPIO_Mode is
-      P : SAM_SVD.PIO.PIO_Peripheral renames This.Periph.all;
+      P : SAM_SVD.PIO.PIO_PIO_GROUP_Cluster
+        renames PIO_Periph.PIO_PIO_GROUP (This.Group);
    begin
-      if P.PIO_OSR.Arr (This.Pin) then
+      Select_Pin (This.Group, This.Pin);
+      if P.CFGR.DIR = OUTPUT then
          return Output;
       else
          return Input;
@@ -25,12 +40,14 @@ package body SAM.PIO is
    procedure Set_Mode
      (This : in out GPIO_Point; Mode : HAL.GPIO.GPIO_Config_Mode)
    is
-      P : SAM_SVD.PIO.PIO_Peripheral renames This.Periph.all;
+      P : SAM_SVD.PIO.PIO_PIO_GROUP_Cluster
+        renames PIO_Periph.PIO_PIO_GROUP (This.Group);
    begin
+      Select_Pin (This.Group, This.Pin);
       if Mode = Output then
-         P.PIO_OER.Arr (This.Pin) := True;
+         P.CFGR.DIR := OUTPUT;
       elsif Mode = Input then
-         null; --  Input always enabled
+         P.CFGR.DIR := INPUT;
       else
          raise Program_Error;
       end if;
@@ -44,12 +61,14 @@ package body SAM.PIO is
    function Pull_Resistor
      (This : GPIO_Point) return HAL.GPIO.GPIO_Pull_Resistor
    is
-      P : SAM_SVD.PIO.PIO_Peripheral renames This.Periph.all;
+      P : SAM_SVD.PIO.PIO_PIO_GROUP_Cluster
+        renames PIO_Periph.PIO_PIO_GROUP (This.Group);
    begin
-      if P.PIO_PUSR.Arr (This.Pin) then
+      Select_Pin (This.Group, This.Pin);
+      if P.CFGR.PUEN = ENABLED then
          return Pull_Up;
-      elsif P.PIO_PPDSR.Arr (This.Pin) then
-         return Pull_Up;
+      elsif P.CFGR.PDEN = ENABLED then
+         return Pull_Down;
       else
          return Floating;
       end if;
@@ -63,16 +82,20 @@ package body SAM.PIO is
    procedure Set_Pull_Resistor
      (This : in out GPIO_Point; Pull : HAL.GPIO.GPIO_Pull_Resistor)
    is
-      P : SAM_SVD.PIO.PIO_Peripheral renames This.Periph.all;
+      P : SAM_SVD.PIO.PIO_PIO_GROUP_Cluster
+        renames PIO_Periph.PIO_PIO_GROUP (This.Group);
    begin
+      Select_Pin (This.Group, This.Pin);
       case Pull is
          when Pull_Up =>
-            P.PIO_PUER.Arr (This.Pin) := True;
+            P.CFGR.PUEN := ENABLED;
+            P.CFGR.PDEN := DISABLED;
          when Pull_Down =>
-            P.PIO_PPDER.Arr (This.Pin) := True;
+            P.CFGR.PUEN := DISABLED;
+            P.CFGR.PDEN := ENABLED;
          when Floating =>
-            P.PIO_PPDDR.Arr (This.Pin) := True;
-            P.PIO_PUDR.Arr (This.Pin) := True;
+            P.CFGR.PUEN := DISABLED;
+            P.CFGR.PDEN := DISABLED;
       end case;
    end Set_Pull_Resistor;
 
@@ -82,9 +105,10 @@ package body SAM.PIO is
 
    overriding
    function Set (This : GPIO_Point) return Boolean is
-      P : SAM_SVD.PIO.PIO_Peripheral renames This.Periph.all;
+      P : SAM_SVD.PIO.PIO_PIO_GROUP_Cluster
+        renames PIO_Periph.PIO_PIO_GROUP (This.Group);
    begin
-      return P.PIO_PDSR.Arr (This.Pin);
+      return p.PDSR.Arr (This.Pin);
    end Set;
 
    ---------
@@ -93,9 +117,10 @@ package body SAM.PIO is
 
    overriding
    procedure Set (This : in out GPIO_Point) is
-      P : SAM_SVD.PIO.PIO_Peripheral renames This.Periph.all;
+      P : SAM_SVD.PIO.PIO_PIO_GROUP_Cluster
+        renames PIO_Periph.PIO_PIO_GROUP (This.Group);
    begin
-      P.PIO_SODR.Arr (This.Pin) := True;
+      P.SODR.Arr (This.Pin) := True;
    end Set;
 
    -----------
@@ -104,9 +129,10 @@ package body SAM.PIO is
 
    overriding
    procedure Clear (This : in out GPIO_Point) is
-      P : SAM_SVD.PIO.PIO_Peripheral renames This.Periph.all;
+      P : SAM_SVD.PIO.PIO_PIO_GROUP_Cluster
+        renames PIO_Periph.PIO_PIO_GROUP (This.Group);
    begin
-      P.PIO_CODR.Arr (This.Pin) := True;
+      P.CODR.Arr (This.Pin) := True;
    end Clear;
 
    ------------

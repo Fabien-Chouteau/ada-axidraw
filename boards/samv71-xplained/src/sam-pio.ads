@@ -1,12 +1,22 @@
-with SAM_SVD.PIO;
 with HAL.GPIO;
 
 package SAM.PIO is
 
+
+   subtype GPIO_Group_Index is Integer range 0 .. 6;
+
+   A : constant GPIO_Group_Index := 0;
+   B : constant GPIO_Group_Index := 1;
+   C : constant GPIO_Group_Index := 2;
+   D : constant GPIO_Group_Index := 3;
+   E : constant GPIO_Group_Index := 4;
+   F : constant GPIO_Group_Index := 5;
+   G : constant GPIO_Group_Index := 6;
+
    subtype GPIO_Pin_Index is Integer range 0 .. 31;
 
-   type GPIO_Point (Periph : not null access SAM_SVD.PIO.PIO_Peripheral;
-                    Pin        : GPIO_Pin_Index)
+   type GPIO_Point (Group : GPIO_Group_Index;
+                    Pin   : GPIO_Pin_Index)
    is new HAL.GPIO.GPIO_Point
      with
      private;
@@ -50,8 +60,8 @@ package SAM.PIO is
 
 private
 
-   type GPIO_Point (Periph : not null access SAM_SVD.PIO.PIO_Peripheral;
-                    Pin        : GPIO_Pin_Index)
+   type GPIO_Point (Group : GPIO_Group_Index;
+                    Pin   : GPIO_Pin_Index)
    is new HAL.GPIO.GPIO_Point
      with null record;
 

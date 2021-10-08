@@ -1,0 +1,78 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.val_uns%s	s-valuns.ads		d09be36e NE OL PR PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W system%s		system.ads		system.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+Z system.val_util%s	s-valuti.adb		s-valuti.ali
+W system.value_u%s
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D s-valuns.ads		20210927095552 dac7b45d system.val_uns%s
+D s-valuti.ads		20210927095552 aca0b6fe system.val_util%s
+D s-valueu.ads		20210927095552 7b8fccf5 system.value_u%s
+D s-valueu.adb		20210927095552 8ca52de6 system.value_u%b
+G a e
+G c Z s s [scan_raw_unsigned system__val_uns__impl 42 13 43_4]
+G c Z s s [scan_unsigned system__val_uns__impl 114 13 43_4]
+G c Z s s [value_unsigned system__val_uns__impl 124 13 43_4]
+X 4 system.ads
+50K9*System 164e11 9|35r6 36r6 38r9 61r5
+X 8 s-unstyp.ads
+40K16*Unsigned_Types 251e26 9|35w13 41r24
+46M9*Unsigned 9|41r39
+X 9 s-valuns.ads
+38K16*Val_Uns 4|50k9 9|61l12 61e19
+41M12*Unsigned{8|46M9} 43r33 48r29 54r29 58r28
+43K12*Impl[11|39] 49r14 55r14 59r14
+45V13*Scan_Raw_Unsigned=49:19{8|46M9}
+46a7 Str{string}
+47p7 Ptr(integer)
+48i7 Max{integer}
+51V13*Scan_Unsigned=55:19{8|46M9}
+52a7 Str{string}
+53p7 Ptr(integer)
+54i7 Max{integer}
+57V13*Value_Unsigned=59:19{8|46M9}
+58a7 Str{string}
+X 11 s-valueu.ads
+39k16*Value_U 9|36w13 43r24 11|131e19
+42V13*Scan_Raw_Unsigned{8|46M9} 9|49r19[43]
+114V13*Scan_Unsigned{8|46M9} 9|55r19[43]
+124V13*Value_Unsigned{8|46M9} 9|59r19[43]
+

@@ -1,0 +1,63 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.restrictions%b	s-restri.adb		100eaf58 NE OL PK
+W system%s		system.ads		system.ali
+
+U system.restrictions%s	s-restri.ads		3084f6a0 BN NE OL PR PK
+W system%s		system.ads		system.ali
+W system.rident%s
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-restri.ads		20210927095552 1b9d0672 system.restrictions%s
+D s-restri.adb		20210927095552 0b93a92a system.restrictions%b
+D s-rident.ads		20210927095552 71cd1f87 system.rident%s
+G a e
+G c Z s s [Trestriction_flagsBIP system__restrictions__rident 322 4 49_4]
+G c Z s s [Trestriction_valuesBIP system__restrictions__rident 323 4 49_4]
+G c Z s s [Tparameter_flagsBIP system__restrictions__rident 324 4 49_4]
+G c Z s s [restrictions_infoIP system__restrictions__rident 326 9 49_4]
+G c Z s s [profile_dataIP system__restrictions__rident 403 9 49_4]
+G c Z s b [abort_allowed system__restrictions 65 13 none]
+G c Z s b [tasking_allowed system__restrictions 71 13 none]
+X 1 system.ads
+50K9*System 164e11 2|43r6 45r9 49r26 77r5 3|34r14 59r5
+X 2 s-restri.ads
+45K16*Restrictions 1|50k9 2|77l12 77e24 3|34b21 59l12 59t24
+49K12*Rident[4|75] 52r28 3|35r8
+52r4*Run_Time_Restrictions{4|326R9[49]} 3|43r14 45r14 54r14 56r14
+65V13*Abort_Allowed{boolean} 66r19 3|41b13 46l8 46t21
+71V13*Tasking_Allowed{boolean} 72r19 3|52b13 57l8 57t23
+X 4 s-rident.ads
+75k16*Rident 2|43w13 49r33 4|682e18
+85E9*Restriction_Id
+93n7*No_Abort_Statements{85E9[2|49]} 3|43r46[2|49]
+153n7*No_Tasking{85E9[2|49]} 3|56r46[2|49]
+216n7*Max_Tasks{85E9[2|49]} 3|54r46[2|49]
+223n7*Max_Asynchronous_Select_Nesting{85E9[2|49]} 3|45r46[2|49]
+322A9*Restriction_Flags(boolean)<85E9[2|49]>
+326R9*Restrictions_Info 2|52r35[49]
+340a7*Violated{322A9[2|49]} 3|43r36[2|49] 45r36[2|49] 54r36[2|49] 56r36[2|49]
+

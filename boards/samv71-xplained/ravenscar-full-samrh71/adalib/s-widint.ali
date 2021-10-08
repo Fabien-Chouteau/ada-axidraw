@@ -1,0 +1,45 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.wid_int%s	s-widint.ads		fc55b40c NE OL PK
+W system%s		system.ads		system.ali
+W system.width_i%s
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-widint.ads		20210927095552 6bdab099 system.wid_int%s
+D s-widthi.ads		20210927095552 cd5bebc0 system.width_i%s
+D s-widthi.adb		20210927095552 a18a370f system.width_i%b
+G a e
+G c Z s s [width_integerR system__wid_int__width_integerGP2487 38 13 none]
+G c Z s s [width_integer system__wid_int 38 13 none]
+X 1 system.ads
+50K9*System 164e11 2|34r6 36r9 41r5
+X 2 s-widint.ads
+36K16*Wid_Int 1|50k9 2|41l12 41e19
+38V13*Width_Integer[3|39]{natural} 39r26 4|32b17
+X 3 s-widthi.ads
+39v17*Width_I 1|50k9 2|34w13 38r34
+

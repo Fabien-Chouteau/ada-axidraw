@@ -1,0 +1,84 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+
+U system.bb.cpu_primitives.context_switch_trigger%b  s-bcpcst.adb  2d444468 NE OL PK
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.cpu_primitives%s  s-bbcppr.adb	s-bbcppr.ali
+W system.bb.parameters%s  s-bbpara.ads		s-bbpara.ali
+W system.machine_code%s	s-maccod.ads		s-maccod.ali
+
+U system.bb.cpu_primitives.context_switch_trigger%s  s-bcpcst.ads  b41a6ce1 NE OL PR PK
+W system.bb.cpu_primitives%s  s-bbcppr.adb	s-bbcppr.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bcpcst.ads		20210927095552 1841a1ac system.bb.cpu_primitives.context_switch_trigger%s
+D s-bcpcst.adb		20210927095552 dfd328dd system.bb.cpu_primitives.context_switch_trigger%b
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-maccod.ads		20210927095552 6d68a701 system.machine_code%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+G a e
+G c Z s b [initialize_context_switch system__bb__cpu_primitives__context_switch_trigger 42 14 none]
+G c Z s b [trigger_context_switch system__bb__cpu_primitives__context_switch_trigger 47 14 none]
+G c Z b b [pend_sv_handler system__bb__cpu_primitives__context_switch_trigger 55 14 none]
+X 1 system.ads
+50K9*System 164e11 5|39r9 51r5 6|37r6 38r6 38r31 40r14 45r48 48r36 178r5
+X 2 s-bb.ads
+40K16*BB 1|50k9 2|95e14 5|39r16 51r12 6|37r13 40r21 45r55 48r43 178r12
+X 4 s-bbcppr.ads
+40K19*CPU_Primitives 2|40k16 4|150e29 5|39r19 51r15 6|40r24 178r15
+43M9*Word 6|51r11 53r32
+X 5 s-bcpcst.ads
+39K34*Context_Switch_Trigger 4|40k19 5|51l30 51e52 6|40b39 178l30 178t52
+42U14*Initialize_Context_Switch
+47U14*Trigger_Context_Switch 6|72b14 85l8 85t30
+X 6 s-bcpcst.adb
+42a4 NL{string} 101r50 102r33 103r33 112r41 113r41 114r41 115r41 116r41 122r41
+. 123r41 124r41 125r41 126r41 127r41 128r41 129r41 131r41 133r42 134r29 135r29
+. 140r37 141r37 142r37 143r37 144r37 146r39 147r39 148r39 149r39 150r39 151r39
+. 152r39 154r33 155r33 156r39 158r39 165r41 166r41 167r41 168r41 169r41 173r28
+45b4 No_Floating_Point{boolean} 110r14 163r14
+48b4 Is_ARMv6m{boolean} 120r14 138r14
+51m4 ICSR{4|43M9} 78m7 84r23
+53m4 ICSR_Pend_SV_Set{4|43M9} 78r15 84r32
+55U14 Pend_SV_Handler 56r30 57i24 91b14 176l8 176t23
+65U14 Initialize_Context_Switch
+X 8 s-bbpara.ads
+46K19*Parameters 6|37w16 45r58 48r46 8|130e25
+54b4*Has_FPU{boolean} 6|45r69
+65b4*Is_ARMv6m{boolean} 6|48r57
+X 9 s-maccod.ads
+36K16*Machine_Code 6|38w13 38r38 9|131e24
+83U14*Asm 6|79s7 99s7
+84a6 Template{string} 6|100r10
+88b6 Volatile{boolean} 6|79r19 175r10
+

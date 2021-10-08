@@ -1,0 +1,102 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_CONVERSION
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.arith_32%b	s-arit32.adb		3a3869b5 NE OL PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.unchecked_conversion%s
+W system%s		system.ads		system.ali
+
+U system.arith_32%s	s-arit32.ads		dab447ac NE OL PU PK
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-arit32.ads		20210927095552 6d8c80a6 system.arith_32%s
+D s-arit32.adb		20210927095552 592fce7c system.arith_32%b
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [scaled_divide32 system__arith_32 43 14 none]
+G c Z b b [to_int system__arith_32 44 13 none]
+G c Z b b [Oabs system__arith_32 50 13 none]
+G c Z b b [hi system__arith_32 57 13 none]
+G c Z b b [to_neg_int system__arith_32 60 13 none]
+G c Z b b [to_pos_int system__arith_32 66 13 none]
+G c Z b b [raise_error system__arith_32 71 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 7|32r6 44r27
+X 3 a-unccon.ads
+20v14*Unchecked_Conversion 7|32w10 44r31
+X 4 interfac.ads
+38K9*Interfaces 231e15 6|36w6 41r21 7|39r21 40r21 42r8
+52I9*Integer_32<integer> 6|41r32
+79M9*Unsigned_32 7|39r32
+82M9*Unsigned_64 7|40r32
+169V13*Shift_Right{82M9} 7|57s52
+X 5 system.ads
+50K9*System 164e11 6|38r9 55r5 7|34r14 182r5
+X 6 s-arit32.ads
+38K16*Arith_32 5|50k9 6|55l12 55e20 7|34b21 182l12 182t20
+41I12*Int32{4|52I9} 44r17 45r21 7|44r60 50r24 51r14 53r19 60r43 66r43 89r17
+. 90r21 155r43 156r20 157r28 172r43 173r20
+43U14*Scaled_Divide32 44>7 44>10 44>13 45<7 45<10 46>7 7|88b14 149l8 149t23
+44i7 X{41I12} 7|89b7 93r35 139r11 139r44
+44i10 Y{41I12} 7|89b10 94r35 139r27 139r59
+44i13 Z{41I12} 7|89b13 95r35 141r19 147r19
+45i7 Q{41I12} 7|90b7 141m10 147m10
+45i10 R{41I12} 7|90b10 140m10 146m10
+46b7 Round{boolean} 7|91b7 123r10
+X 7 s-arit32.adb
+39M12 Uns32{4|79M9} 44r53 50r38 53r12 57r35 57r45 60r29 66r29 93r22 94r22
+. 95r22 100r12 101r12 117r16 118r16 123r36 123r49 128r18 132r21 155r29 172r29
+40M12 Uns64{4|82M9} 57r21 97r13 107r12 107r25 117r27 118r29
+44V13 To_Int[3|20]{4|52I9} 157s46 173s29
+50V14 "abs"{39M12} 50>20 93s31 94s31 95s31
+50i20 X{6|41I12} 51r10 53r30
+57V13 Hi{39M12} 57>17 111s10
+57m17 A{40M12} 57r65
+60V13 To_Neg_Int{6|41I12} 60>25 141s51 146s15 147s30 155b13 166l8 166t18
+60m25 A{39M12} 155b25 157r13 157r54
+66V13 To_Pos_Int{6|41I12} 66>25 140s15 141s30 147s51 172b13 180l8 180t18
+66m25 A{39M12} 172b25 173r37
+71U14 Raise_Error 72r22 79b14 82l8 82t19 112s10 129s13 164s10 178s10
+93m7 Xu{39M12} 107r19
+94m7 Yu{39M12} 107r32
+95m7 Zu{39M12} 111r20 117r34 118r36 123r31
+97m7 D{40M12} 107m7 111r14 117r23 118r23
+100m7 Qu{39M12} 117m10 128r13 132m10 132r16 141r42 141r63 147r42 147r63
+101m7 Ru{39M12} 118m10 123r25 140r27 146r27
+156i7 R{6|41I12} 161r10 162r17
+173i7 R{6|41I12} 175r10 176r17
+

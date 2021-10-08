@@ -1,0 +1,153 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_PROTECTED_TYPES
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV MAX_PROTECTED_ENTRIES=1
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U ada.synchronous_task_control%b  a-sytaco.adb	b1a33938 NE OL PK
+W ada%s			ada.ads			ada.ali
+Z system%s		system.ads		system.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.single_entry%s  s-tposen.adb  s-tposen.ali
+
+U ada.synchronous_task_control%s  a-sytaco.ads	93ed06b6 NE OL PR PK
+W ada%s			ada.ads			ada.ali
+W ada.task_identification%s  a-taside.adb	a-taside.ali
+Z system%s		system.ads		system.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.single_entry%s  s-tposen.adb  s-tposen.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-sytaco.ads		20210927095552 e57638e1 ada.synchronous_task_control%s
+D a-sytaco.adb		20210927095552 9f6c2add ada.synchronous_task_control%b
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-taside.ads		20210927095552 00e3a3f6 ada.task_identification%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbbosu.ads		20210927095552 0f820a2a system.bb.board_support%s
+D s-bbbosu.adb		20210927095552 21f80941 system.bb.board_support%b
+D s-bbsumu.adb		20210927095552 cbb92b04 system.bb.board_support.multiprocessors
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbcppr.adb		20210927095552 0d3346b0 system.bb.cpu_primitives%b
+D s-bcpcst.ads		20210927095552 1841a1ac system.bb.cpu_primitives.context_switch_trigger%s
+D s-bbcpsp.ads		20210927095552 ccfc81c7 system.bb.cpu_specific%s
+D s-bbinte.ads		20210927095552 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-bbprot.ads		20210927095552 f48a7e85 system.bb.protection%s
+D s-bbprot.adb		20210927095552 a4657a6f system.bb.protection%b
+D s-bbthre.ads		20210927095552 c94b446f system.bb.threads%s
+D s-bbthre.adb		20210927095552 40388c8b system.bb.threads%b
+D s-bbthqu.ads		20210927095552 cd23d79e system.bb.threads.queues%s
+D s-bbthqu.adb		20210927095552 d73a8d13 system.bb.threads.queues%b
+D s-bbtime.ads		20210927095552 ad086247 system.bb.time%s
+D s-bbtime.adb		20210927095552 1eb33bd4 system.bb.time%b
+D s-bbtiev.ads		20210927095552 110cc417 system.bb.timing_events%s
+D s-maccod.ads		20210927095552 6d68a701 system.machine_code%s
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20210927095552 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20210927095552 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20210927095552 229b14dd system.os_interface%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-soflin.ads		20210927095552 09900c20 system.soft_links%s
+D s-soflin.adb		20210927095552 23e35865 system.soft_links%b
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-tasinf.ads		20210927095552 801abd01 system.task_info%s
+D s-taspri.ads		20210927095552 37f162b4 system.task_primitives%s
+D s-taprop.ads		20210927095552 5013f316 system.task_primitives.operations%s
+D s-taprop.adb		20210927095552 beae9bdd system.task_primitives.operations%b
+D s-taskin.ads		20210927095552 989d56fd system.tasking%s
+D s-tasdeb.ads		20210927095552 b275d76a system.tasking.debug%s
+D s-tasdeb.adb		20210927095552 16d62b3b system.tasking.debug%b
+D s-taprob.ads		20210927095552 c8fc0753 system.tasking.protected_objects%s
+D s-tposen.ads		20210927095552 828b4fcc system.tasking.protected_objects.single_entry%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [set_true ada__synchronous_task_control 49 14 none]
+G c Z s b [set_false ada__synchronous_task_control 54 14 none]
+G c Z s b [current_state ada__synchronous_task_control 59 13 none]
+G c Z s b [suspend_until_true ada__synchronous_task_control 63 14 none]
+G c Z s b [wait ada__synchronous_task_control__suspension_object 78 13 none]
+G c Z s b [set_false ada__synchronous_task_control__suspension_object 82 17 none]
+G c Z s b [set_true ada__synchronous_task_control__suspension_object 83 17 none]
+G c Z s b [get_open ada__synchronous_task_control__suspension_object 84 16 none]
+G c Z s b [suspension_object__set_falseN ada__synchronous_task_control 82 7 none]
+G c Z s b [suspension_object__set_falseP ada__synchronous_task_control 82 7 none]
+G c Z s b [suspension_object__set_trueN ada__synchronous_task_control 83 7 none]
+G c Z s b [suspension_object__set_trueP ada__synchronous_task_control 83 7 none]
+G c Z s b [suspension_object__get_openN ada__synchronous_task_control 84 7 none]
+G c Z s b [suspension_object__get_openP ada__synchronous_task_control 84 7 none]
+G c Z s s [suspension_objectVIP ada__synchronous_task_control 77 4 none]
+X 1 ada.ads
+16K9*Ada 20e8 6|38r6 40r9 61r16 92r5 7|34r14 114r5
+X 6 a-sytaco.ads
+40K13*Synchronous_Task_Control 1|16k9 6|77E19 92l9 92e33 7|34b18 114l9 114t33
+46W9*Suspension_Object 49r35 54r36 59r32 63r45 88E7 90l8 90e25 7|38b19 76l8
+. 76t25 82r32 91r36 100r35 109r45
+49U14*Set_True 49=24 7|100b14 103l8 103t16
+49w24 S{46W9} 51r18 52r26 7|100b24 102r7
+54U14*Set_False 54=25 7|91b14 94l8 94t17
+54w25 S{46W9} 56r18 57r26 7|91b25 93r7
+59V13*Current_State{boolean} 59>28 7|82b13 85l8 85t21
+59w28 S{46W9} 7|82b28 84r14
+63U14*Suspend_Until_True 63=34 7|109b14 112l8 112t26
+63w34 S{46W9} 65r18 66r26 7|109b34 111r7
+78Y13 Wait 7|71b13 74l11 74t15 111s9
+82U17 Set_False 7|53b17 56l11 56t20 93s9
+83U17 Set_True 7|62b17 65l11 65t19 102s9
+84V16 Get_Open{boolean} 7|44b16 47l11 47t19 84s16
+88b7 Open{boolean} 7|46r17 55r10 64r10 71r23 73r10
+X 9 a-taside.ads
+45K13*Task_Identification 6|38w10 61r20 9|104e28
+47@22*Tasking_State 6|61r40
+X 19 s-bbcppr.adb
+106U14 SV_Call_Handler 107i24
+109U14 Sys_Tick_Handler 110i24
+112U14 Interrupt_Request_Handler 113i24
+X 41 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 50 s-taprop.adb
+64U14 Initialize_Slave 65i24
+X 51 s-taskin.ads
+398V13*Get_Sec_Stack{41|46P9} 399i<c,__gnat_get_secondary_stack>22
+

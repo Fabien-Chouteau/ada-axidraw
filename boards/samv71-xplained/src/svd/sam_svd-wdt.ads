@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from ATSAMV71Q21.svd
+--  This spec has been automatically generated from ATSAMRH71F20C.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -15,51 +15,57 @@ package SAM_SVD.WDT is
    ---------------
 
    --  Password
-   type WDT_CR_KEYSelect is
+   type CR_KEYSelect is
      (--  Reset value for the field
-      WDT_CR_KEYSelect_Reset,
+      CR_KEYSelect_Reset,
       --  Writing any other value in this field aborts the write operation.
       PASSWD)
      with Size => 8;
-   for WDT_CR_KEYSelect use
-     (WDT_CR_KEYSelect_Reset => 0,
+   for CR_KEYSelect use
+     (CR_KEYSelect_Reset => 0,
       PASSWD => 165);
 
    --  Control Register
-   type WDT_WDT_CR_Register is record
+   type WDT_CR_Register is record
       --  Write-only. Watchdog Restart
       WDRSTT        : Boolean := False;
       --  unspecified
-      Reserved_1_23 : HAL.UInt23 := 16#0#;
+      Reserved_1_3  : HAL.UInt3 := 16#0#;
+      --  Write-only. Lock Mode Register Write Access
+      LOCKMR        : Boolean := False;
+      --  unspecified
+      Reserved_5_23 : HAL.UInt19 := 16#0#;
       --  Write-only. Password
-      KEY           : WDT_CR_KEYSelect := WDT_CR_KEYSelect_Reset;
+      KEY           : CR_KEYSelect := CR_KEYSelect_Reset;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for WDT_WDT_CR_Register use record
+   for WDT_CR_Register use record
       WDRSTT        at 0 range 0 .. 0;
-      Reserved_1_23 at 0 range 1 .. 23;
+      Reserved_1_3  at 0 range 1 .. 3;
+      LOCKMR        at 0 range 4 .. 4;
+      Reserved_5_23 at 0 range 5 .. 23;
       KEY           at 0 range 24 .. 31;
    end record;
 
-   subtype WDT_WDT_MR_WDV_Field is HAL.UInt12;
-   subtype WDT_WDT_MR_WDD_Field is HAL.UInt12;
+   subtype WDT_MR_WDV_Field is HAL.UInt12;
+   subtype WDT_MR_WDD_Field is HAL.UInt12;
 
    --  Mode Register
-   type WDT_WDT_MR_Register is record
+   type WDT_MR_Register is record
       --  Watchdog Counter Value
-      WDV            : WDT_WDT_MR_WDV_Field := 16#0#;
+      WDV            : WDT_MR_WDV_Field := 16#0#;
       --  Watchdog Fault Interrupt Enable
       WDFIEN         : Boolean := False;
       --  Watchdog Reset Enable
       WDRSTEN        : Boolean := False;
-      --  unspecified
-      Reserved_14_14 : HAL.Bit := 16#0#;
+      --  Watchdog Reset Processor
+      WDRPROC        : Boolean := False;
       --  Watchdog Disable
       WDDIS          : Boolean := False;
       --  Watchdog Delta Value
-      WDD            : WDT_WDT_MR_WDD_Field := 16#0#;
+      WDD            : WDT_MR_WDD_Field := 16#0#;
       --  Watchdog Debug Halt
       WDDBGHLT       : Boolean := False;
       --  Watchdog Idle Halt
@@ -70,11 +76,11 @@ package SAM_SVD.WDT is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for WDT_WDT_MR_Register use record
+   for WDT_MR_Register use record
       WDV            at 0 range 0 .. 11;
       WDFIEN         at 0 range 12 .. 12;
       WDRSTEN        at 0 range 13 .. 13;
-      Reserved_14_14 at 0 range 14 .. 14;
+      WDRPROC        at 0 range 14 .. 14;
       WDDIS          at 0 range 15 .. 15;
       WDD            at 0 range 16 .. 27;
       WDDBGHLT       at 0 range 28 .. 28;
@@ -83,7 +89,7 @@ package SAM_SVD.WDT is
    end record;
 
    --  Status Register
-   type WDT_WDT_SR_Register is record
+   type WDT_SR_Register is record
       --  Read-only. Watchdog Underflow (cleared on read)
       WDUNF         : Boolean;
       --  Read-only. Watchdog Error (cleared on read)
@@ -94,7 +100,7 @@ package SAM_SVD.WDT is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for WDT_WDT_SR_Register use record
+   for WDT_SR_Register use record
       WDUNF         at 0 range 0 .. 0;
       WDERR         at 0 range 1 .. 1;
       Reserved_2_31 at 0 range 2 .. 31;
@@ -107,18 +113,18 @@ package SAM_SVD.WDT is
    --  Watchdog Timer
    type WDT_Peripheral is record
       --  Control Register
-      WDT_CR : aliased WDT_WDT_CR_Register;
+      CR : aliased WDT_CR_Register;
       --  Mode Register
-      WDT_MR : aliased WDT_WDT_MR_Register;
+      MR : aliased WDT_MR_Register;
       --  Status Register
-      WDT_SR : aliased WDT_WDT_SR_Register;
+      SR : aliased WDT_SR_Register;
    end record
      with Volatile;
 
    for WDT_Peripheral use record
-      WDT_CR at 16#0# range 0 .. 31;
-      WDT_MR at 16#4# range 0 .. 31;
-      WDT_SR at 16#8# range 0 .. 31;
+      CR at 16#0# range 0 .. 31;
+      MR at 16#4# range 0 .. 31;
+      SR at 16#8# range 0 .. 31;
    end record;
 
    --  Watchdog Timer

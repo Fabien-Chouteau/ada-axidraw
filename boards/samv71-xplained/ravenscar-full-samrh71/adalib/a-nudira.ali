@@ -1,0 +1,109 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.numerics.discrete_random%b  a-nudira.adb	5279b137 NE OL PK GE
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+
+U ada.numerics.discrete_random%s  a-nudira.ads	1eadfd73 BN NE OL PK GE
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W system%s		system.ads		system.ali
+W system.random_numbers%s  s-rannum.adb		s-rannum.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-numeri.ads		20210927095552 84bea7a3 ada.numerics%s
+D a-nudira.ads		20210927095552 5984dff3 ada.numerics.discrete_random%s
+D a-nudira.adb		20210927095552 0bfd6ec4 ada.numerics.discrete_random%b
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-rannum.ads		20210927095552 c3978523 system.random_numbers%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [discrete_random ada__numerics 44 22 none]
+X 1 ada.ads
+16K9*Ada 20e8 3|44r9 81r5 4|32r14 107r5
+X 2 a-numeri.ads
+16K13*Numerics 1|16k9 2|35e17 3|44r13 81r9 4|32r18 107r9
+X 3 a-nudira.ads
+42E9 Result_Subtype 52r45 56r15 57r15 57r38 4|52r45 54r34 54r50 61r15 62r15
+. 62r38 64r32
+44k22*Discrete_Random 2|16k13 3|42z9 77E9 81l18 81e33 4|32b27 107l18 107t33
+50R9*Generator<12|65R9> 52r27 55r15 60r27 61r27 67r27 68r27 77c9 4|52r27
+. 60r15 74r27 79r27 84r27 93r26
+52V13*Random{42E9} 52>21 4|52b13 57l8 57t14
+52r21 Gen{50R9} 4|52b21 56r37
+54V13*Random{42E9} 55>7 56>7 57>7 4|59b13 68l8 68t14
+55r7 Gen{50R9} 4|60b7 67r37
+56*7 First{42E9} 58r36 4|61b7 64r53 65r66
+57*7 Last{42E9} 58r45 4|62b7 64r62
+60U14*Reset<12|109p14> 60>21 60>38 4|79b14 82l8 82t13
+60r21 Gen{50R9} 4|79b21 81r29
+60i38 Initiator{integer} 4|79b38 81r35
+61U14*Reset<12|103p14> 61>21 4|74b14 77l8 77t13
+61r21 Gen{50R9} 4|74b21 76r29
+65A9*State<12|70A9> 67r55 68r51 72r34 73r49 79c9 4|43r31 84r51 93r54 102r49
+. 104r14
+67U14*Save 67>21 67<38 4|93b14 96l8 96t12
+67r21 Gen{50R9} 4|93b20 95r28
+67a38 To_State{65A9} 4|93b37 95m45 95r45
+68U14*Reset 68>21 68>38 4|84b14 87l8 87t13
+68r21 Gen{50R9} 4|84b21 86r29
+68a38 From_State{65A9} 4|84b38 86r46
+70N4*Max_Image_Width
+72V13*Image{string}<12|132p13> 72>20 4|43b13 46l8 46t13
+72a20 Of_State{65A9} 4|43b20 45r32
+73V13*Value{65A9}<12|136p13> 73>20 4|102b13 105l8 105t13
+73a20 Coded_State{string} 4|102b20 104r39
+X 4 a-nudira.adb
+36K12 SRN=36:31 37r8 45r21 54r13 56r22 65r30 67r22 76r14 81r14 86r14 86r35
+. 95r13 95r34 104r21
+53V16 Random[12|86]{3|42E9} 56s14
+64E15 Local_Subtype{3|42E9} 65r51
+65V16 Random[12|86]{3|42E9} 67s14
+X 10 interfac.ads
+79M9*Unsigned_32
+X 11 system.ads
+50K9*System 3|39r6 70r34 77r26 79r22 4|36r24 11|164e11
+X 12 s-rannum.ads
+62K16*Random_Numbers 3|39w13 70r41 77r33 79r29 4|36r31 12|170e26
+65R9*Generator 3|77r48 4|56r26 67r26 76r18 81r18 86r18 95r17 12|168e14
+70A9*State(147M12) 3|79r44 4|45r25 86r39 95r38 104r25
+86v13*Random_Discrete 4|54r17 65r34
+103U14*Reset 4|76s7
+109U14*Reset 4|81s7
+117U14*Reset 4|86s7
+118U14*Save 4|95s7
+129N4*Max_Image_Width 3|70r56
+132V13*Image{string} 4|45s14
+136V13*Value{70A9} 4|104s32
+147M12 State_Val{10|79M9}
+

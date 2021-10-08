@@ -1,0 +1,66 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+
+U system.bb.parameters%s  s-bbpara.ads		47a1471c NE OL PR PK
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.board_parameters%s  s-bbbopa.ads	s-bbbopa.ali
+W system.bb.mcu_parameters%s  s-bbmcpa.ads	s-bbmcpa.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+G a e
+X 1 system.ads
+50K9*System 164e11 5|43r6 44r6 46r9 48r25 130r5
+X 2 s-bb.ads
+40K16*BB 1|50k9 2|95e14 5|43r13 44r13 46r16 48r32 130r12
+X 3 s-bbbopa.ads
+38K19*Board_Parameters 52e31 5|43w16 50r34
+46N4*Clock_Frequency 5|50r51
+X 4 s-bbmcpa.ads
+37K19*MCU_Parameters 45e29 5|44w16 54r34 76r18
+41N4*Number_Of_Interrupts 5|76r33
+43b4*Has_FPU{boolean} 5|54r49
+X 5 s-bbpara.ads
+46K19*Parameters 2|40k16 5|48r35 130l15 130e25
+50N4*Clock_Frequency 52r35
+52N4*Ticks_Per_Second
+54b4*Has_FPU{boolean}
+57b4*Has_VTOR{boolean}
+61b4*Has_OS_Extensions{boolean}
+65b4*Is_ARMv6m{boolean}
+75I12*Interrupt_Range{integer}
+81N4*Trap_Vectors
+104N4*Context_Buffer_Capacity
+112N4*Interrupt_Stack_Size
+117N4*Interrupt_Sec_Stack_Size
+124N4*Max_Number_Of_CPUs 127r41
+127b4*Multiprocessor{boolean}
+

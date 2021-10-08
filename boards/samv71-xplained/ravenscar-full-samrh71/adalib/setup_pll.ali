@@ -1,0 +1,121 @@
+V "GNAT Lib v2021"
+M P W=b
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+
+U setup_pll%b		setup_pll.adb		00f1f634 NE OO SU
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W interfaces.sam.pmc%s	i-sam-pmc.ads		i-sam-pmc.ali
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.board_parameters%s  s-bbbopa.ads	s-bbbopa.ali
+W system.samv71%s	s-samv71.ads		s-samv71.ali
+
+U setup_pll%s		setup_pll.ads		3d10c1df NE OO SU
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D i-sam.ads		20210927130812 3bba8a63 interfaces.sam%s
+D i-sam-pmc.ads		20210927130812 ed020b1b interfaces.sam.pmc%s
+D setup_pll.ads		20210927095552 3d10c1df setup_pll%s
+D setup_pll.adb		20210930152950 41c94aba setup_pll%b
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-samv71.ads		20210927095552 02932119 system.samv71%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+G a e
+G c Z s b [setup_pll standard 28 11 none]
+X 1 interfac.ads
+38K9*Interfaces 231e15 5|34r6 34r33 35r6 35r33
+68M9*Unsigned_8
+71M9*Unsigned_16
+X 2 i-sam.ads
+13K20*SAM 139e19 5|34w17 34r44 35r17 35r44
+22M9*UInt16<1|71M9>
+23M9*Byte<1|68M9>
+24M9*Bit
+34M9*UInt6
+42M9*UInt11
+X 3 i-sam-pmc.ads
+12K24*PMC 1795e23 5|35w21 35r48 182r28 188r27
+157M12*PMC_CKGR_MOR_MOSCXTEN_Field{2|24M9}
+159M12*PMC_CKGR_MOR_MOSCRCEN_Field{2|24M9}
+178M12*PMC_CKGR_MOR_MOSCXTST_Field{2|23M9}
+186n7*PASSWD{181E9} 5|66r35 79r35
+192M12*PMC_CKGR_MOR_MOSCSEL_Field{2|24M9}
+201m7*MOSCXTEN{157M12} 5|63m28 76m28
+207m7*MOSCRCEN{159M12} 5|64m28 77m28
+213m7*MOSCXTST{178M12} 5|65m28 78m28
+215e7*KEY{181E9} 5|66m28 79m28
+217m7*MOSCSEL{192M12} 5|80m28 103m27
+249M12*PMC_CKGR_MCFR_MAINF_Field{2|22M9}
+250M12*PMC_CKGR_MCFR_MAINFRDY_Field{2|24M9}
+257m7*MAINF{249M12} 5|102r28
+259m7*MAINFRDY{250M12} 5|98r31
+289n7*BYPASS{285E9} 5|132r15
+295M12*PMC_CKGR_PLLAR_PLLACOUNT_Field{2|34M9}
+300n7*VCO0{298E9} 5|130r19
+314M12*PMC_CKGR_PLLAR_MULA_Field{2|42M9}
+315M12*PMC_CKGR_PLLAR_ONE_Field{2|24M9}
+320e7*DIVA{285E9} 5|132m7
+322m7*PLLACOUNT{295M12} 5|133m7
+324e7*FREQ_VCO{298E9} 5|130m7
+326m7*MULA{314M12} 5|131m7
+330m7*ONE{315M12} 5|129m7
+427n7*PLLA_CLK{421E9} 5|188r31
+437n7*CLK_1{435E9} 5|177r28
+465n7*PCK_DIV2{461E9} 5|182r32
+476e7*CSS{421E9} 5|188m20
+480e7*PRES{435E9} 5|177m20
+484e7*MDIV{461E9} 5|182m20
+740M12*PMC_SR_MOSCXTS_Field{2|24M9}
+741M12*PMC_SR_LOCKA_Field{2|24M9}
+743M12*PMC_SR_MCKRDY_Field{2|24M9}
+772M12*PMC_SR_MOSCSELS_Field{2|24M9}
+783m7*MOSCXTS{740M12} 5|69r24
+785m7*LOCKA{741M12} 5|136r24
+789m7*MCKRDY{743M12} 5|178r24 184r24 189r24
+799m7*MOSCSELS{772M12} 5|85r24
+1699r7*CKGR_MOR{199R9} 5|63m15 76m15 103m18
+1701r7*CKGR_MCFR{255R9} 5|98r21 102r18
+1703r7*CKGR_PLLAR{318R9} 5|128m15
+1707r7*MCKR{474R9} 5|177m15 182m15 188m15
+1715r7*SR{781R9} 5|69r21 85r21 136r21 178r21 184r21 189r21
+1792r4*PMC_Periph{1691R9} 5|63m4 69r10 76m4 85r10 98r10 102r7 103m7 128m4
+. 136r10 177m4 178r10 182m4 184r10 188m4 189r10
+X 4 setup_pll.ads
+28U11*Setup_Pll 31r33 5|39b11 227l5 227t14
+X 6 system.ads
+50K9*System 5|31r6 31r25 37r6 131r15 6|164e11
+X 7 s-bb.ads
+40K16*BB 5|37r13 131r22 7|95e14
+X 8 s-bbbopa.ads
+38K19*Board_Parameters 5|37w16 131r25 8|52e31
+50N4*PLL_MULA 5|131r42
+X 9 s-samv71.ads
+36K16*SAMV71 5|31w13 31r32 9|49e18
+

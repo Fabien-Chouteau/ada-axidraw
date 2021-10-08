@@ -1,0 +1,102 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_ELABORATION_CODE
+
+U system.bb.threads.stack_checking%b  s-btstch.adb  1d099221 NE OL PK
+W system%s		system.ads		system.ali
+W system.bb%s		s-bb.ads		s-bb.ali
+W system.bb.interrupts%s  s-bbinte.adb		s-bbinte.ali
+W system.bb.threads%s	s-bbthre.adb		s-bbthre.ali
+
+U system.bb.threads.stack_checking%s  s-btstch.ads  1d4b06ca NE OL PK
+W system.bb.threads%s	s-bbthre.adb		s-bbthre.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbbosu.ads		20210927095552 0f820a2a system.bb.board_support%s
+D s-bbbosu.adb		20210927095552 21f80941 system.bb.board_support%b
+D s-bbsumu.adb		20210927095552 cbb92b04 system.bb.board_support.multiprocessors
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbcppr.adb		20210927095552 0d3346b0 system.bb.cpu_primitives%b
+D s-bcpcst.ads		20210927095552 1841a1ac system.bb.cpu_primitives.context_switch_trigger%s
+D s-bbcpsp.ads		20210927095552 ccfc81c7 system.bb.cpu_specific%s
+D s-bbinte.ads		20210927095552 c88d39da system.bb.interrupts%s
+D s-bbinte.adb		20210927095552 a342b37b system.bb.interrupts%b
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-bbprot.ads		20210927095552 f48a7e85 system.bb.protection%s
+D s-bbprot.adb		20210927095552 a4657a6f system.bb.protection%b
+D s-bbthre.ads		20210927095552 c94b446f system.bb.threads%s
+D s-bbthre.adb		20210927095552 40388c8b system.bb.threads%b
+D s-bbthqu.ads		20210927095552 cd23d79e system.bb.threads.queues%s
+D s-bbthqu.adb		20210927095552 d73a8d13 system.bb.threads.queues%b
+D s-btstch.ads		20210927095552 d40042a5 system.bb.threads.stack_checking%s
+D s-btstch.adb		20210927095552 ca3dc25a system.bb.threads.stack_checking%b
+D s-bbtime.ads		20210927095552 ad086247 system.bb.time%s
+D s-imagei.ads		20210927095552 0d3f86a7 system.image_i%s
+D s-imgint.ads		20210927095552 bdb6f5ec system.img_int%s
+D s-maccod.ads		20210927095552 6d68a701 system.machine_code%s
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [stack_check system__bb__threads__stack_checking 42 14 none]
+X 4 system.ads
+50K9*System 164e11 24|40r9 42r43 46r5 25|40r6 42r14 44r43 69r5
+80M9*Address 24|42r50 25|44r50
+90V14*"<"{boolean} 25|61r35
+92V14*">"{boolean} 25|62r35
+X 5 s-bb.ads
+40K16*BB 4|50k9 5|95e14 24|40r16 46r12 25|40r13 42r21 69r12
+X 11 s-bbcppr.adb
+106U14 SV_Call_Handler 107i24
+109U14 Sys_Tick_Handler 110i24
+112U14 Interrupt_Request_Handler 113i24
+X 14 s-bbinte.ads
+45K19*Interrupts 92e25 25|40w16 63r22
+83V13*Within_Interrupt_Stack{boolean} 25|63s33
+X 20 s-bbthre.ads
+48K19*Threads 5|40k16 20|298e22 24|40r19 46r15 25|42r24 69r15
+57b4*Initialized{boolean} 25|58r10
+64P9*Thread_Id(61R9) 25|45r23
+67p4*Null_Thread_Id{64P9} 25|60r19
+104m7*Top_Of_Stack{4|80M9} 25|62r42
+107m7*Bottom_Of_Stack{4|80M9} 25|61r42
+239V13*Thread_Self{64P9} 25|45s36
+X 24 s-btstch.ads
+40K27*Stack_Checking 20|48k19 24|46l23 46e37 25|42b32 69l23 69t37
+42U14*Stack_Check 42>27 43i<c,_gnat_stack_check>22 25|44b14 67l8 67t19
+42m27 Stack_Address{4|80M9} 25|44b27 61r21 62r21 63r57
+X 25 s-btstch.adb
+45p7 Self{20|64P9} 60r12 61r37 62r37
+

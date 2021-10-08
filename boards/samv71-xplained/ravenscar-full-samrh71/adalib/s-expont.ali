@@ -1,0 +1,51 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.expont%b	s-expont.adb		02b5c8da NE OL SU GE
+W system%s		system.ads		system.ali
+
+U system.expont%s	s-expont.ads		0f38530f BN NE OL GE
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-expont.ads		20210927095552 55ecbc5a system.expont%s
+D s-expont.adb		20210927095552 57597480 system.expont%b
+G a e
+G c Z s b [expont system 38 17 none]
+X 1 system.ads
+50K9*System 164e11 2|38r10 3|32r10 72r5
+X 2 s-expont.ads
+36I9 Int 38r32 38r61 3|32r32 32r61 37r13 38r13
+38v17*Expont 1|50k9 2|38>25 38>37 3|32b17 72l12 72t18
+38*25 Left{36I9} 3|32b25 38r24
+38i37 Right{natural} 3|32b37 39r24
+X 3 s-expont.adb
+37*4 Result{2|36I9} 56m16 56r26 71r11
+38*4 Factor{2|36I9} 56r35 66m13 66r23 66r32
+39i4 Exp{natural} 50r7 52r13 60m10 60r17 61r20
+51l7 loop 68e15
+53q13 declare 57e16
+63q10 declare 67e13
+

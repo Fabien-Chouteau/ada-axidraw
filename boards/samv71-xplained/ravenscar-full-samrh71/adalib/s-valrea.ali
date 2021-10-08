@@ -1,0 +1,162 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.val_real%b	s-valrea.adb		a58bc966 NE OL PK GE
+Z interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.double_real%s
+W system.float_control%s  s-flocon.adb		s-flocon.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W system.val_util%s	s-valuti.adb		s-valuti.ali
+W system.value_r%s
+
+U system.val_real%s	s-valrea.ads		d7088971 BN NE OL PR PK GE
+W system%s		system.ads		system.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-dourea.ads		20210927095552 8a0ecf55 system.double_real%s
+D s-dourea.adb		20210927095552 6aeeb936 system.double_real%b
+D s-dorepr.adb		20210927095552 e195a66d system.double_real.product
+D s-flocon.ads		20210927095552 e0fc433c system.float_control%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D s-valrea.ads		20210927095552 8ddc6624 system.val_real%s
+D s-valrea.adb		20210927095552 efec4045 system.val_real%b
+D s-valuti.ads		20210927095552 aca0b6fe system.val_util%s
+D s-valuer.ads		20210927095552 2aeea103 system.value_r%s
+D s-valuer.adb		20210927095552 5e5f062c system.value_r%b
+G a e
+G c Z s b [val_real system 45 16 none]
+X 2 system.ads
+50K9*System 164e11 8|41r21 45r9 87r5 9|32r6 33r6 34r6 34r33 35r6 35r33 36r6
+. 41r14 80r31 134r10 389r5
+80M9*Address 8|41r28
+91V14*"<="{boolean} 9|43r40
+92V14*">"{boolean} 9|46r58
+94V14*"="{boolean} 9|112r40 117r34 118r34 119r46 133r31
+X 3 s-dourea.ads
+42k16*Double_Real 123e23 9|32w13 80r38
+45R9 Double_T 9|81r25[80] 83r36[80]
+46*6 Hi{8|37F9} 9|167r32[80]
+46*10 Lo{8|37F9} 9|168r38[80]
+49V13 To_Double{45R9[9|80]} 9|190s31[80] 203s37[80]
+52V13 To_Single{8|37F9} 9|213s31[80] 222s50[80] 229s50[80] 236s50[80] 243s50[80]
+. 281s40[80] 297s40[80]
+55V13 Quick_Two_Sum{45R9[9|80]} 9|166s41[80] 182s34[80] 205s37[80]
+80V14 "*"{45R9[9|80]} 9|263s40[80] 265s40[80] 342s17[80] 346s14[80]
+81V14 "/"{45R9[9|80]} 9|270s40[80] 275s40[80] 277s40[80]
+X 6 s-flocon.ads
+34K16*Float_Control 59e25 9|33w13 134r17
+39U14*Reset 9|134s31
+X 7 s-unstyp.ads
+40K16*Unsigned_Types 251e26 9|34w13 34r40
+46M9*Unsigned 9|59r22 89r15 91r15 105r15 107r15 150r19 360r15 362r15 377r15
+. 379r15
+X 8 s-valrea.ads
+37F9 Num 51r29 81r46 9|43r19 46r37 53r29 80r51 92r31 108r31 112r22 117r25
+. 118r25 119r25 123r15 133r10 151r19 152r19 153r19 153r31 182r60 190r42 197r51
+. 203r48 205r52 205r62 222r25 229r25 236r25 243r25 294r32 294r39 358r29 376r46
+39i4 Maxpow{positive} 9|256r49 262r30 274r31 328r37 336r28 338r20 339r18
+. 341r17 342r27 343r19
+41m4 Powten_Address{2|80M9} 9|258r42 330r30
+43M9 Uns 9|43r43 46r60 52r31 53r62 57r33 88r15 104r15 197r29 197r40 198r29
+. 199r29 364r15 381r15
+45k16*Val_Real 2|50k9 8|37z9 39z4 41z4 43z9 87l12 87e20 9|41b21 389l12 389t20
+48V13*Scan_Real{37F9} 49>7 50^7 51>7 9|355b13 370l8 370t17
+49a7 Str{string} 9|356b7 367r34 369r31
+50p7 Ptr(integer) 9|357b7 367r39
+51i7 Max{integer} 9|358b7 367r44
+81V13*Value_Real{37F9} 81>25 9|376b13 387l8 387t18
+81a25 Str{string} 9|376b25 384r35 386r31
+X 9 s-valrea.adb
+46b4 Need_Extra{boolean} 53r10 57r64 148r10 189r13
+52*4 Precision_Limit{8|43M9} 57r38
+57K12 Impl[11|45] 367r14 384r14
+59M12 Base_T{7|46M9} 65r31 70r31 75r31
+65a4 Maxexp32(positive) 117r56
+70a4 Maxexp64(positive) 118r56
+75a4 Maxexp80(positive) 119r56
+80K12 Double_Real[3|42] 81r13 83r24 166r29 182r22 190r19 203r25 205r25 213r19
+. 222r38 229r38 236r38 243r38 281r28 297r28
+83R12 Double_T{3|45R9[80]} 95r49 124r15 154r19 256r60 327r49 328r48 332r11
+86V13 Integer_to_Real{8|37F9} 87>7 88>7 89>7 90>7 91>7 92>7 102b13 321l8
+. 321t23 369s14 386s14
+87a7 Str{string} 103b7 320r43
+88*7 Val{8|43M9} 104b7 153r36 190r47 198r36 199r36 212r10
+89m7 Base{7|46M9} 105b7 110r22 117r66 118r66 119r66 150r31 216r15 294r44
+90i7 Scale{integer} 106b7 125r26
+91m7 Extra{7|46M9} 107b7 148r30 182r65
+92b7 Minus{boolean} 108b7 317r18
+95V13 Large_Powten{83R12} 95>27 265s42 270s42 277s42 327b13 349l8 349t20
+95i27 Exp{natural} 327b27 336r22 339r12
+116i7 Maxexp{positive} 269r30 270r56 271r34 303r30 304r47 305r34
+123*7 R_Val{8|37F9} 213m10 222m16 229m16 236m16 243m16 281m19 297m19 300m22
+. 300r31 304m25 304r34 308m22 308r31 317r30 317r41
+124r7 D_Val{83R12} 182m13 190m10 203m16 205m16 213r42 222r61 229r61 236r61
+. 243r61 263m25 263r34 265m25 265r34 270m25 270r34 275m25 275r34 277m25 277r34
+. 281r51 297r51
+125i7 S{integer} 184m13 184r18 212r26 222r69 225r40 225r51 226m19 226r24
+. 229r69 232r40 232r51 233m19 233r24 236r69 239r40 239r51 240m19 240r24 243r69
+. 261r22 262r25 263r50 265r56 269r25 271m25 271r30 274r25 275r51 277r57 299r22
+. 300r44 303r25 305m25 305r30 308r46
+150m13 B{7|46M9} 162r19 170r29 176m16 176r21
+151*13 Acc{8|37F9} 163r22 164m22 166r61 167m22 182r49
+152*13 Err{8|37F9} 168m22 168r29 182r54
+153*13 Fac{8|37F9} 164r29 166r56 177m16 177r23
+154r13 DS{83R12} 166m22 167r29 168r35
+197*13 Mask{8|43M9} 198r48 199r44
+198*13 Hi{8|43M9} 202r16 205r57
+199*13 Lo{8|43M9} 203r53 205r67
+256a19 Powten(83R12) 257r39 258m23 258r23 263r42 275r42
+294*19 B{8|37F9} 300r39 304r42 308r39
+328a7 Powten(83R12) 329r27 330m11 330r11 338r12 342r19 346r16
+332r7 R{83R12} 338m7 342m10 342r15 346m7 346r12 348r14
+333i7 E{natural} 339m7 341r13 343m10 343r15 346r24
+360m7 Base{7|46M9} 367m49 367r49 369r41
+361i7 Scale{integer} 367m55 367r55 369r47
+362m7 Extra{7|46M9} 367m62 367r62 369r54
+363b7 Minus{boolean} 367m69 367r69 369r61
+364*7 Val{8|43M9} 367m7 369r36
+377m7 Base{7|46M9} 384m40 384r40 386r41
+378i7 Scale{integer} 384m46 384r46 386r47
+379m7 Extra{7|46M9} 384m53 384r53 386r54
+380b7 Minus{boolean} 384m60 384r60 386r61
+381*7 Val{8|43M9} 384m7 386r36
+X 10 s-valuti.ads
+34K16*Val_Util 9|35w13 35r40 10|124e20
+37U14*Bad_Value 9|320s32
+X 11 s-valuer.ads
+43b4 Round{boolean} 9|57r55
+45k16*Value_R 9|36w13 57r24 11|101e19
+48V13 Scan_Raw_Real{8|43M9} 9|367s19[57]
+91V13 Value_Raw_Real{8|43M9} 9|384s19[57]
+

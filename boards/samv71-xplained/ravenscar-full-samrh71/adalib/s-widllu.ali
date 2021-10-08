@@ -1,0 +1,51 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.wid_llu%s	s-widllu.ads		97130cc0 NE OL PK
+W system%s		system.ads		system.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W system.width_u%s
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D s-widllu.ads		20210927095552 f8079d2c system.wid_llu%s
+D s-widthu.ads		20210927095552 1ec70a2a system.width_u%s
+D s-widthu.adb		20210927095552 1e86a2c5 system.width_u%b
+G a e
+G c Z s s [width_long_long_unsignedR system__wid_llu__width_long_long_unsignedGP2591 41 13 none]
+G c Z s s [width_long_long_unsigned system__wid_llu 41 13 none]
+X 1 system.ads
+50K9*System 164e11 3|34r6 35r6 37r9 44r5
+X 2 s-unstyp.ads
+40K16*Unsigned_Types 251e26 3|35w13 39r34
+48M9*Long_Long_Unsigned 3|39r49
+X 3 s-widllu.ads
+37K16*Wid_LLU 1|50k9 3|44l12 44e19
+39M12*Long_Long_Unsigned{2|48M9} 41r54
+41V13*Width_Long_Long_Unsigned[4|39]{natural} 42r26 5|32b17
+X 4 s-widthu.ads
+39v17*Width_U 1|50k9 3|34w13 41r45
+

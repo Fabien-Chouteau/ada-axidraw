@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from ATSAMV71Q21.svd
+--  This spec has been automatically generated from ATSAMRH71F20C.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -14,313 +14,150 @@ package SAM_SVD.PMC is
    -- Registers --
    ---------------
 
-   --  PMC_PMC_SCER_PCK array
-   type PMC_PMC_SCER_PCK_Field_Array is array (0 .. 6) of Boolean
-     with Component_Size => 1, Size => 7;
+   --  PMC_SCER_PCK array
+   type PMC_SCER_PCK_Field_Array is array (0 .. 3) of Boolean
+     with Component_Size => 1, Size => 4;
 
-   --  Type definition for PMC_PMC_SCER_PCK
-   type PMC_PMC_SCER_PCK_Field
+   --  Type definition for PMC_SCER_PCK
+   type PMC_SCER_PCK_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
          when False =>
             --  PCK as a value
-            Val : HAL.UInt7;
+            Val : HAL.UInt4;
          when True =>
             --  PCK as an array
-            Arr : PMC_PMC_SCER_PCK_Field_Array;
+            Arr : PMC_SCER_PCK_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 7;
+     with Unchecked_Union, Size => 4;
 
-   for PMC_PMC_SCER_PCK_Field use record
-      Val at 0 range 0 .. 6;
-      Arr at 0 range 0 .. 6;
+   for PMC_SCER_PCK_Field use record
+      Val at 0 range 0 .. 3;
+      Arr at 0 range 0 .. 3;
    end record;
 
    --  System Clock Enable Register
-   type PMC_PMC_SCER_Register is record
+   type PMC_SCER_Register is record
       --  unspecified
-      Reserved_0_4   : HAL.UInt5 := 16#0#;
-      --  Write-only. Enable USB FS Clock
-      USBCLK         : Boolean := False;
-      --  unspecified
-      Reserved_6_7   : HAL.UInt2 := 16#0#;
+      Reserved_0_7   : HAL.UInt8 := 16#0#;
       --  Write-only. Programmable Clock 0 Output Enable
-      PCK            : PMC_PMC_SCER_PCK_Field :=
+      PCK            : PMC_SCER_PCK_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
-      Reserved_15_31 : HAL.UInt17 := 16#0#;
+      Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_SCER_Register use record
-      Reserved_0_4   at 0 range 0 .. 4;
-      USBCLK         at 0 range 5 .. 5;
-      Reserved_6_7   at 0 range 6 .. 7;
-      PCK            at 0 range 8 .. 14;
-      Reserved_15_31 at 0 range 15 .. 31;
+   for PMC_SCER_Register use record
+      Reserved_0_7   at 0 range 0 .. 7;
+      PCK            at 0 range 8 .. 11;
+      Reserved_12_31 at 0 range 12 .. 31;
    end record;
 
-   --  PMC_PMC_SCDR_PCK array
-   type PMC_PMC_SCDR_PCK_Field_Array is array (0 .. 6) of Boolean
-     with Component_Size => 1, Size => 7;
+   --  PMC_SCDR_PCK array
+   type PMC_SCDR_PCK_Field_Array is array (0 .. 3) of Boolean
+     with Component_Size => 1, Size => 4;
 
-   --  Type definition for PMC_PMC_SCDR_PCK
-   type PMC_PMC_SCDR_PCK_Field
+   --  Type definition for PMC_SCDR_PCK
+   type PMC_SCDR_PCK_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
          when False =>
             --  PCK as a value
-            Val : HAL.UInt7;
+            Val : HAL.UInt4;
          when True =>
             --  PCK as an array
-            Arr : PMC_PMC_SCDR_PCK_Field_Array;
+            Arr : PMC_SCDR_PCK_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 7;
+     with Unchecked_Union, Size => 4;
 
-   for PMC_PMC_SCDR_PCK_Field use record
-      Val at 0 range 0 .. 6;
-      Arr at 0 range 0 .. 6;
+   for PMC_SCDR_PCK_Field use record
+      Val at 0 range 0 .. 3;
+      Arr at 0 range 0 .. 3;
    end record;
 
    --  System Clock Disable Register
-   type PMC_PMC_SCDR_Register is record
+   type PMC_SCDR_Register is record
       --  unspecified
-      Reserved_0_4   : HAL.UInt5 := 16#0#;
-      --  Write-only. Disable USB FS Clock
-      USBCLK         : Boolean := False;
-      --  unspecified
-      Reserved_6_7   : HAL.UInt2 := 16#0#;
+      Reserved_0_7   : HAL.UInt8 := 16#0#;
       --  Write-only. Programmable Clock 0 Output Disable
-      PCK            : PMC_PMC_SCDR_PCK_Field :=
+      PCK            : PMC_SCDR_PCK_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
-      Reserved_15_31 : HAL.UInt17 := 16#0#;
+      Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_SCDR_Register use record
-      Reserved_0_4   at 0 range 0 .. 4;
-      USBCLK         at 0 range 5 .. 5;
-      Reserved_6_7   at 0 range 6 .. 7;
-      PCK            at 0 range 8 .. 14;
-      Reserved_15_31 at 0 range 15 .. 31;
+   for PMC_SCDR_Register use record
+      Reserved_0_7   at 0 range 0 .. 7;
+      PCK            at 0 range 8 .. 11;
+      Reserved_12_31 at 0 range 12 .. 31;
    end record;
 
-   --  PMC_PMC_SCSR_PCK array
-   type PMC_PMC_SCSR_PCK_Field_Array is array (0 .. 6) of Boolean
-     with Component_Size => 1, Size => 7;
+   --  PMC_SCSR_PCK array
+   type PMC_SCSR_PCK_Field_Array is array (0 .. 3) of Boolean
+     with Component_Size => 1, Size => 4;
 
-   --  Type definition for PMC_PMC_SCSR_PCK
-   type PMC_PMC_SCSR_PCK_Field
+   --  Type definition for PMC_SCSR_PCK
+   type PMC_SCSR_PCK_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
          when False =>
             --  PCK as a value
-            Val : HAL.UInt7;
+            Val : HAL.UInt4;
          when True =>
             --  PCK as an array
-            Arr : PMC_PMC_SCSR_PCK_Field_Array;
+            Arr : PMC_SCSR_PCK_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 7;
+     with Unchecked_Union, Size => 4;
 
-   for PMC_PMC_SCSR_PCK_Field use record
-      Val at 0 range 0 .. 6;
-      Arr at 0 range 0 .. 6;
+   for PMC_SCSR_PCK_Field use record
+      Val at 0 range 0 .. 3;
+      Arr at 0 range 0 .. 3;
    end record;
 
    --  System Clock Status Register
-   type PMC_PMC_SCSR_Register is record
-      --  Read-only. HCLK Status
-      HCLKS          : Boolean;
+   type PMC_SCSR_Register is record
       --  unspecified
-      Reserved_1_4   : HAL.UInt4;
-      --  Read-only. USB FS Clock Status
-      USBCLK         : Boolean;
-      --  unspecified
-      Reserved_6_7   : HAL.UInt2;
+      Reserved_0_7   : HAL.UInt8;
       --  Read-only. Programmable Clock 0 Output Status
-      PCK            : PMC_PMC_SCSR_PCK_Field;
+      PCK            : PMC_SCSR_PCK_Field;
       --  unspecified
-      Reserved_15_31 : HAL.UInt17;
+      Reserved_12_31 : HAL.UInt20;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_SCSR_Register use record
-      HCLKS          at 0 range 0 .. 0;
-      Reserved_1_4   at 0 range 1 .. 4;
-      USBCLK         at 0 range 5 .. 5;
-      Reserved_6_7   at 0 range 6 .. 7;
-      PCK            at 0 range 8 .. 14;
-      Reserved_15_31 at 0 range 15 .. 31;
-   end record;
-
-   --  PMC_PMC_PCER0_PID array
-   type PMC_PMC_PCER0_PID_Field_Array is array (7 .. 31) of Boolean
-     with Component_Size => 1, Size => 25;
-
-   --  Type definition for PMC_PMC_PCER0_PID
-   type PMC_PMC_PCER0_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt25;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCER0_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 25;
-
-   for PMC_PMC_PCER0_PID_Field use record
-      Val at 0 range 0 .. 24;
-      Arr at 0 range 0 .. 24;
-   end record;
-
-   --  Peripheral Clock Enable Register 0
-   type PMC_PMC_PCER0_Register is record
-      --  unspecified
-      Reserved_0_6 : HAL.UInt7 := 16#0#;
-      --  Write-only. Peripheral Clock 7 Enable
-      PID          : PMC_PMC_PCER0_PID_Field :=
-                      (As_Array => False, Val => 16#0#);
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_PCER0_Register use record
-      Reserved_0_6 at 0 range 0 .. 6;
-      PID          at 0 range 7 .. 31;
-   end record;
-
-   --  PMC_PMC_PCDR0_PID array
-   type PMC_PMC_PCDR0_PID_Field_Array is array (7 .. 31) of Boolean
-     with Component_Size => 1, Size => 25;
-
-   --  Type definition for PMC_PMC_PCDR0_PID
-   type PMC_PMC_PCDR0_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt25;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCDR0_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 25;
-
-   for PMC_PMC_PCDR0_PID_Field use record
-      Val at 0 range 0 .. 24;
-      Arr at 0 range 0 .. 24;
-   end record;
-
-   --  Peripheral Clock Disable Register 0
-   type PMC_PMC_PCDR0_Register is record
-      --  unspecified
-      Reserved_0_6 : HAL.UInt7 := 16#0#;
-      --  Write-only. Peripheral Clock 7 Disable
-      PID          : PMC_PMC_PCDR0_PID_Field :=
-                      (As_Array => False, Val => 16#0#);
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_PCDR0_Register use record
-      Reserved_0_6 at 0 range 0 .. 6;
-      PID          at 0 range 7 .. 31;
-   end record;
-
-   --  PMC_PMC_PCSR0_PID array
-   type PMC_PMC_PCSR0_PID_Field_Array is array (7 .. 31) of Boolean
-     with Component_Size => 1, Size => 25;
-
-   --  Type definition for PMC_PMC_PCSR0_PID
-   type PMC_PMC_PCSR0_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt25;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCSR0_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 25;
-
-   for PMC_PMC_PCSR0_PID_Field use record
-      Val at 0 range 0 .. 24;
-      Arr at 0 range 0 .. 24;
-   end record;
-
-   --  Peripheral Clock Status Register 0
-   type PMC_PMC_PCSR0_Register is record
-      --  unspecified
-      Reserved_0_6 : HAL.UInt7;
-      --  Read-only. Peripheral Clock 7 Status
-      PID          : PMC_PMC_PCSR0_PID_Field;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_PCSR0_Register use record
-      Reserved_0_6 at 0 range 0 .. 6;
-      PID          at 0 range 7 .. 31;
-   end record;
-
-   subtype PMC_CKGR_UCKR_UPLLCOUNT_Field is HAL.UInt4;
-
-   --  UTMI Clock Register
-   type PMC_CKGR_UCKR_Register is record
-      --  unspecified
-      Reserved_0_15  : HAL.UInt16 := 16#0#;
-      --  UTMI PLL Enable
-      UPLLEN         : Boolean := False;
-      --  unspecified
-      Reserved_17_19 : HAL.UInt3 := 16#0#;
-      --  UTMI PLL Startup Time
-      UPLLCOUNT      : PMC_CKGR_UCKR_UPLLCOUNT_Field := 16#0#;
-      --  unspecified
-      Reserved_24_31 : HAL.UInt8 := 16#0#;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_CKGR_UCKR_Register use record
-      Reserved_0_15  at 0 range 0 .. 15;
-      UPLLEN         at 0 range 16 .. 16;
-      Reserved_17_19 at 0 range 17 .. 19;
-      UPLLCOUNT      at 0 range 20 .. 23;
-      Reserved_24_31 at 0 range 24 .. 31;
+   for PMC_SCSR_Register use record
+      Reserved_0_7   at 0 range 0 .. 7;
+      PCK            at 0 range 8 .. 11;
+      Reserved_12_31 at 0 range 12 .. 31;
    end record;
 
    --  Main RC Oscillator Frequency Selection
    type CKGR_MOR_MOSCRCFSelect is
      (--  The RC oscillator frequency is at 4 MHz
-      Val_4_MHz,
+      Val_4_MHZ,
       --  The RC oscillator frequency is at 8 MHz
-      Val_8_MHz,
+      Val_8_MHZ,
+      --  The RC oscillator frequency is at 10 MHz
+      Val_10_MHZ,
       --  The RC oscillator frequency is at 12 MHz
-      Val_12_MHz)
+      Val_12_MHZ)
      with Size => 3;
    for CKGR_MOR_MOSCRCFSelect use
-     (Val_4_MHz => 0,
-      Val_8_MHz => 1,
-      Val_12_MHz => 2);
+     (Val_4_MHZ => 0,
+      Val_8_MHZ => 1,
+      Val_10_MHZ => 2,
+      Val_12_MHZ => 3);
 
    subtype PMC_CKGR_MOR_MOSCXTST_Field is HAL.UInt8;
 
@@ -328,7 +165,7 @@ package SAM_SVD.PMC is
    type CKGR_MOR_KEYSelect is
      (--  Reset value for the field
       CKGR_MOR_KEYSelect_Reset,
-      --  Writing any other value in this field aborts the write operation.Always
+      --  Writing any other value in this field aborts the write operation. Always
 --  reads as 0.
       PASSWD)
      with Size => 8;
@@ -342,12 +179,12 @@ package SAM_SVD.PMC is
       MOSCXTEN       : Boolean := False;
       --  Main Crystal Oscillator Bypass
       MOSCXTBY       : Boolean := False;
-      --  Wait Mode Command (Write-only)
-      WAITMODE       : Boolean := False;
+      --  unspecified
+      Reserved_2_2   : HAL.Bit := 16#0#;
       --  Main RC Oscillator Enable
       MOSCRCEN       : Boolean := False;
       --  Main RC Oscillator Frequency Selection
-      MOSCRCF        : CKGR_MOR_MOSCRCFSelect := SAM_SVD.PMC.Val_4_MHz;
+      MOSCRCF        : CKGR_MOR_MOSCRCFSelect := SAM_SVD.PMC.Val_4_MHZ;
       --  unspecified
       Reserved_7_7   : HAL.Bit := 16#0#;
       --  Main Crystal Oscillator Startup Time
@@ -359,9 +196,13 @@ package SAM_SVD.PMC is
       --  Clock Failure Detector Enable
       CFDEN          : Boolean := False;
       --  32.768 kHz Crystal Oscillator Frequency Monitoring Enable
-      XT32KFME       : Boolean := False;
+      EXT32KFME      : Boolean := False;
+      --  Bad CPU Clock Reset Enable
+      BCPURST        : Boolean := False;
+      --  Bad CPU Clock Interrupt to NMIC Enable
+      BCPUNMIC       : Boolean := False;
       --  unspecified
-      Reserved_27_31 : HAL.UInt5 := 16#0#;
+      Reserved_29_31 : HAL.UInt3 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
@@ -369,7 +210,7 @@ package SAM_SVD.PMC is
    for PMC_CKGR_MOR_Register use record
       MOSCXTEN       at 0 range 0 .. 0;
       MOSCXTBY       at 0 range 1 .. 1;
-      WAITMODE       at 0 range 2 .. 2;
+      Reserved_2_2   at 0 range 2 .. 2;
       MOSCRCEN       at 0 range 3 .. 3;
       MOSCRCF        at 0 range 4 .. 6;
       Reserved_7_7   at 0 range 7 .. 7;
@@ -377,8 +218,10 @@ package SAM_SVD.PMC is
       KEY            at 0 range 16 .. 23;
       MOSCSEL        at 0 range 24 .. 24;
       CFDEN          at 0 range 25 .. 25;
-      XT32KFME       at 0 range 26 .. 26;
-      Reserved_27_31 at 0 range 27 .. 31;
+      EXT32KFME      at 0 range 26 .. 26;
+      BCPURST        at 0 range 27 .. 27;
+      BCPUNMIC       at 0 range 28 .. 28;
+      Reserved_29_31 at 0 range 29 .. 31;
    end record;
 
    subtype PMC_CKGR_MCFR_MAINF_Field is HAL.UInt16;
@@ -415,7 +258,7 @@ package SAM_SVD.PMC is
 
    --  PLLA Front End Divider
    type CKGR_PLLAR_DIVASelect is
-     (--  Divider output is 0 and PLLA is disabled.
+     (--  PLLA is disabled.
       Val_0,
       --  Divider is bypassed (divide by 1) and PLLA is enabled.
       BYPASS)
@@ -425,6 +268,24 @@ package SAM_SVD.PMC is
       BYPASS => 1);
 
    subtype PMC_CKGR_PLLAR_PLLACOUNT_Field is HAL.UInt6;
+
+   --  VCO Frequency Configuratio
+   type CKGR_PLLAR_FREQ_VCOSelect is
+     (--  Frequency range: 40-80 MHz
+      VCO0,
+      --  Frequency range: 70-150 MHz
+      VCO1,
+      --  Frequency range: 125-275 MHz
+      VCO2,
+      --  Frequency range: 250-450 MHz
+      VCO3)
+     with Size => 2;
+   for CKGR_PLLAR_FREQ_VCOSelect use
+     (VCO0 => 0,
+      VCO1 => 1,
+      VCO2 => 2,
+      VCO3 => 3);
+
    subtype PMC_CKGR_PLLAR_MULA_Field is HAL.UInt11;
 
    --  PLLA Register
@@ -433,8 +294,8 @@ package SAM_SVD.PMC is
       DIVA           : CKGR_PLLAR_DIVASelect := SAM_SVD.PMC.Val_0;
       --  PLLA Counter
       PLLACOUNT      : PMC_CKGR_PLLAR_PLLACOUNT_Field := 16#0#;
-      --  unspecified
-      Reserved_14_15 : HAL.UInt2 := 16#0#;
+      --  VCO Frequency Configuratio
+      FREQ_VCO       : CKGR_PLLAR_FREQ_VCOSelect := SAM_SVD.PMC.VCO0;
       --  PLLA Multiplier
       MULA           : PMC_CKGR_PLLAR_MULA_Field := 16#0#;
       --  unspecified
@@ -450,32 +311,102 @@ package SAM_SVD.PMC is
    for PMC_CKGR_PLLAR_Register use record
       DIVA           at 0 range 0 .. 7;
       PLLACOUNT      at 0 range 8 .. 13;
-      Reserved_14_15 at 0 range 14 .. 15;
+      FREQ_VCO       at 0 range 14 .. 15;
       MULA           at 0 range 16 .. 26;
       Reserved_27_28 at 0 range 27 .. 28;
       ONE            at 0 range 29 .. 29;
       Reserved_30_31 at 0 range 30 .. 31;
    end record;
 
+   --  PLLB Front End Divider
+   type CKGR_PLLBR_DIVBSelect is
+     (--  PLLBis disabled.
+      Val_0,
+      --  Divider is bypassed (divide by 1) and PLLB is enabled.
+      BYPASS)
+     with Size => 8;
+   for CKGR_PLLBR_DIVBSelect use
+     (Val_0 => 0,
+      BYPASS => 1);
+
+   subtype PMC_CKGR_PLLBR_PLLBCOUNT_Field is HAL.UInt6;
+
+   --  VCO Frequency Configuration
+   type CKGR_PLLBR_FREQ_VCOSelect is
+     (--  Frequency range: 40-80 MHz
+      VCO0,
+      --  Frequency range: 70-150 MHz
+      VCO1,
+      --  Frequency range: 125-275 MHz
+      VCO2,
+      --  Frequency range: 250-450 MHz
+      VCO3)
+     with Size => 2;
+   for CKGR_PLLBR_FREQ_VCOSelect use
+     (VCO0 => 0,
+      VCO1 => 1,
+      VCO2 => 2,
+      VCO3 => 3);
+
+   subtype PMC_CKGR_PLLBR_MULB_Field is HAL.UInt11;
+
+   --  PLLB Source Clock Selection
+   type CKGR_PLLBR_SRCBSelect is
+     (--  MAINCK is the source clock of PLLB.
+      MAINCK,
+      --  RC2CK is the source clock of PLLB.
+      RC2CK)
+     with Size => 2;
+   for CKGR_PLLBR_SRCBSelect use
+     (MAINCK => 0,
+      RC2CK => 2);
+
+   --  PLLB Register
+   type PMC_CKGR_PLLBR_Register is record
+      --  PLLB Front End Divider
+      DIVB           : CKGR_PLLBR_DIVBSelect := SAM_SVD.PMC.Val_0;
+      --  PLLB Counter
+      PLLBCOUNT      : PMC_CKGR_PLLBR_PLLBCOUNT_Field := 16#0#;
+      --  VCO Frequency Configuration
+      FREQ_VCO       : CKGR_PLLBR_FREQ_VCOSelect := SAM_SVD.PMC.VCO0;
+      --  PLLB Multiplier
+      MULB           : PMC_CKGR_PLLBR_MULB_Field := 16#0#;
+      --  unspecified
+      Reserved_27_28 : HAL.UInt2 := 16#0#;
+      --  PLLB Source Clock Selection
+      SRCB           : CKGR_PLLBR_SRCBSelect := SAM_SVD.PMC.MAINCK;
+      --  unspecified
+      Reserved_31_31 : HAL.Bit := 16#0#;
+   end record
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_CKGR_PLLBR_Register use record
+      DIVB           at 0 range 0 .. 7;
+      PLLBCOUNT      at 0 range 8 .. 13;
+      FREQ_VCO       at 0 range 14 .. 15;
+      MULB           at 0 range 16 .. 26;
+      Reserved_27_28 at 0 range 27 .. 28;
+      SRCB           at 0 range 29 .. 30;
+      Reserved_31_31 at 0 range 31 .. 31;
+   end record;
+
    --  Master Clock Source Selection
-   type PMC_MCKR_CSSSelect is
-     (--  SLCK is selected
+   type MCKR_CSSSelect is
+     (--  MD_SLCK is selected
       SLOW_CLK,
       --  MAINCK is selected
       MAIN_CLK,
       --  PLLACK is selected
-      PLLA_CLK,
-      --  UPPLLCKDIV is selected
-      UPLL_CLK)
+      PLLA_CLK)
      with Size => 2;
-   for PMC_MCKR_CSSSelect use
+   for MCKR_CSSSelect use
      (SLOW_CLK => 0,
       MAIN_CLK => 1,
-      PLLA_CLK => 2,
-      UPLL_CLK => 3);
+      PLLA_CLK => 2);
 
    --  Processor Clock Prescaler
-   type PMC_MCKR_PRESSelect is
+   type MCKR_PRESSelect is
      (--  Selected clock
       CLK_1,
       --  Selected clock divided by 2
@@ -489,184 +420,148 @@ package SAM_SVD.PMC is
       --  Selected clock divided by 32
       CLK_32,
       --  Selected clock divided by 64
-      CLK_64,
-      --  Selected clock divided by 3
-      CLK_3)
+      CLK_64)
      with Size => 3;
-   for PMC_MCKR_PRESSelect use
+   for MCKR_PRESSelect use
      (CLK_1 => 0,
       CLK_2 => 1,
       CLK_4 => 2,
       CLK_8 => 3,
       CLK_16 => 4,
       CLK_32 => 5,
-      CLK_64 => 6,
-      CLK_3 => 7);
+      CLK_64 => 6);
 
    --  Master Clock Division
-   type PMC_MCKR_MDIVSelect is
+   type MCKR_MDIVSelect is
      (--  MCK is FCLK divided by 1.
       EQ_PCK,
       --  MCK is FCLK divided by 2.
-      PCK_DIV2,
-      --  MCK is FCLK divided by 4.
-      PCK_DIV4,
-      --  MCK is FCLK divided by 3.
-      PCK_DIV3)
-     with Size => 2;
-   for PMC_MCKR_MDIVSelect use
+      PCK_DIV2)
+     with Size => 1;
+   for MCKR_MDIVSelect use
      (EQ_PCK => 0,
-      PCK_DIV2 => 1,
-      PCK_DIV4 => 2,
-      PCK_DIV3 => 3);
+      PCK_DIV2 => 1);
 
    --  Master Clock Register
-   type PMC_PMC_MCKR_Register is record
+   type PMC_MCKR_Register is record
       --  Master Clock Source Selection
-      CSS            : PMC_MCKR_CSSSelect := SAM_SVD.PMC.SLOW_CLK;
+      CSS            : MCKR_CSSSelect := SAM_SVD.PMC.SLOW_CLK;
       --  unspecified
       Reserved_2_3   : HAL.UInt2 := 16#0#;
       --  Processor Clock Prescaler
-      PRES           : PMC_MCKR_PRESSelect := SAM_SVD.PMC.CLK_1;
+      PRES           : MCKR_PRESSelect := SAM_SVD.PMC.CLK_1;
       --  unspecified
       Reserved_7_7   : HAL.Bit := 16#0#;
       --  Master Clock Division
-      MDIV           : PMC_MCKR_MDIVSelect := SAM_SVD.PMC.EQ_PCK;
+      MDIV           : MCKR_MDIVSelect := SAM_SVD.PMC.EQ_PCK;
       --  unspecified
-      Reserved_10_12 : HAL.UInt3 := 16#0#;
-      --  UPLL Divider by 2
-      UPLLDIV2       : Boolean := False;
+      Reserved_9_12  : HAL.UInt4 := 16#0#;
+      --  Shall be always write at '0'
+      ZERO           : Boolean := False;
       --  unspecified
       Reserved_14_31 : HAL.UInt18 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_MCKR_Register use record
+   for PMC_MCKR_Register use record
       CSS            at 0 range 0 .. 1;
       Reserved_2_3   at 0 range 2 .. 3;
       PRES           at 0 range 4 .. 6;
       Reserved_7_7   at 0 range 7 .. 7;
-      MDIV           at 0 range 8 .. 9;
-      Reserved_10_12 at 0 range 10 .. 12;
-      UPLLDIV2       at 0 range 13 .. 13;
+      MDIV           at 0 range 8 .. 8;
+      Reserved_9_12  at 0 range 9 .. 12;
+      ZERO           at 0 range 13 .. 13;
       Reserved_14_31 at 0 range 14 .. 31;
    end record;
 
-   subtype PMC_PMC_USB_USBDIV_Field is HAL.UInt4;
-
-   --  USB Clock Register
-   type PMC_PMC_USB_Register is record
-      --  USB Input Clock Selection
-      USBS           : Boolean := False;
-      --  unspecified
-      Reserved_1_7   : HAL.UInt7 := 16#0#;
-      --  Divider for USB_48M
-      USBDIV         : PMC_PMC_USB_USBDIV_Field := 16#0#;
-      --  unspecified
-      Reserved_12_31 : HAL.UInt20 := 16#0#;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_USB_Register use record
-      USBS           at 0 range 0 .. 0;
-      Reserved_1_7   at 0 range 1 .. 7;
-      USBDIV         at 0 range 8 .. 11;
-      Reserved_12_31 at 0 range 12 .. 31;
-   end record;
-
    --  Programmable Clock Source Selection
-   type PMC_PCK_CSSSelect is
-     (--  SLCK is selected
+   type PCK_CSSSelect is
+     (--  MD_SLCK is selected
       SLOW_CLK,
       --  MAINCK is selected
       MAIN_CLK,
       --  PLLACK is selected
       PLLA_CLK,
-      --  UPLLCKDIV is selected
-      UPLL_CLK,
+      --  PLLBCKDIV is selected
+      PLLB_CLK,
       --  MCK is selected
       MCK)
      with Size => 3;
-   for PMC_PCK_CSSSelect use
+   for PCK_CSSSelect use
      (SLOW_CLK => 0,
       MAIN_CLK => 1,
       PLLA_CLK => 2,
-      UPLL_CLK => 3,
+      PLLB_CLK => 3,
       MCK => 4);
 
-   subtype PMC_PMC_PCK_PRES_Field is HAL.UInt8;
+   subtype PMC_PCK_PRES_Field is HAL.UInt8;
 
-   --  Programmable Clock Register (chid = 0) 0
-   type PMC_PMC_PCK_Register is record
+   --  Programmable Clock Register
+   type PMC_PCK_Register is record
       --  Programmable Clock Source Selection
-      CSS            : PMC_PCK_CSSSelect := SAM_SVD.PMC.SLOW_CLK;
+      CSS            : PCK_CSSSelect := SAM_SVD.PMC.SLOW_CLK;
       --  unspecified
       Reserved_3_3   : HAL.Bit := 16#0#;
       --  Programmable Clock Prescaler
-      PRES           : PMC_PMC_PCK_PRES_Field := 16#0#;
+      PRES           : PMC_PCK_PRES_Field := 16#0#;
       --  unspecified
       Reserved_12_31 : HAL.UInt20 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_PCK_Register use record
+   for PMC_PCK_Register use record
       CSS            at 0 range 0 .. 2;
       Reserved_3_3   at 0 range 3 .. 3;
       PRES           at 0 range 4 .. 11;
       Reserved_12_31 at 0 range 12 .. 31;
    end record;
 
-   --  Programmable Clock Register (chid = 0) 0
-   type PMC_PMC_PCK_Registers is array (0 .. 7) of PMC_PMC_PCK_Register;
+   --  Programmable Clock Register
+   type PMC_PCK_Registers is array (0 .. 3) of PMC_PCK_Register;
 
-   --  PMC_PMC_IER_PCKRDY array
-   type PMC_PMC_IER_PCKRDY_Field_Array is array (0 .. 6) of Boolean
-     with Component_Size => 1, Size => 7;
+   --  PMC_IER_PCKRDY array
+   type PMC_IER_PCKRDY_Field_Array is array (0 .. 3) of Boolean
+     with Component_Size => 1, Size => 4;
 
-   --  Type definition for PMC_PMC_IER_PCKRDY
-   type PMC_PMC_IER_PCKRDY_Field
+   --  Type definition for PMC_IER_PCKRDY
+   type PMC_IER_PCKRDY_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
          when False =>
             --  PCKRDY as a value
-            Val : HAL.UInt7;
+            Val : HAL.UInt4;
          when True =>
             --  PCKRDY as an array
-            Arr : PMC_PMC_IER_PCKRDY_Field_Array;
+            Arr : PMC_IER_PCKRDY_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 7;
+     with Unchecked_Union, Size => 4;
 
-   for PMC_PMC_IER_PCKRDY_Field use record
-      Val at 0 range 0 .. 6;
-      Arr at 0 range 0 .. 6;
+   for PMC_IER_PCKRDY_Field use record
+      Val at 0 range 0 .. 3;
+      Arr at 0 range 0 .. 3;
    end record;
 
    --  Interrupt Enable Register
-   type PMC_PMC_IER_Register is record
+   type PMC_IER_Register is record
       --  Write-only. Main Crystal Oscillator Status Interrupt Enable
       MOSCXTS        : Boolean := False;
       --  Write-only. PLLA Lock Interrupt Enable
       LOCKA          : Boolean := False;
-      --  unspecified
-      Reserved_2_2   : HAL.Bit := 16#0#;
+      --  Write-only. PLLB Lock Interrupt Enable
+      LOCKB          : Boolean := False;
       --  Write-only. Master Clock Ready Interrupt Enable
       MCKRDY         : Boolean := False;
       --  unspecified
-      Reserved_4_5   : HAL.UInt2 := 16#0#;
-      --  Write-only. UTMI PLL Lock Interrupt Enable
-      LOCKU          : Boolean := False;
-      --  unspecified
-      Reserved_7_7   : HAL.Bit := 16#0#;
+      Reserved_4_7   : HAL.UInt4 := 16#0#;
       --  Write-only. Programmable Clock Ready 0 Interrupt Enable
-      PCKRDY         : PMC_PMC_IER_PCKRDY_Field :=
+      PCKRDY         : PMC_IER_PCKRDY_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
-      Reserved_15_15 : HAL.Bit := 16#0#;
+      Reserved_12_15 : HAL.UInt4 := 16#0#;
       --  Write-only. Main Clock Source Oscillator Selection Status Interrupt
       --  Enable
       MOSCSELS       : Boolean := False;
@@ -677,76 +572,76 @@ package SAM_SVD.PMC is
       --  unspecified
       Reserved_19_20 : HAL.UInt2 := 16#0#;
       --  Write-only. 32.768 kHz Crystal Oscillator Error Interrupt Enable
-      XT32KERR       : Boolean := False;
+      EXT32KERR      : Boolean := False;
       --  unspecified
-      Reserved_22_31 : HAL.UInt10 := 16#0#;
+      Reserved_22_22 : HAL.Bit := 16#0#;
+      --  Write-only. CPU Clock Monitor Interrupt Enable
+      CPUMON         : Boolean := False;
+      --  unspecified
+      Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_IER_Register use record
+   for PMC_IER_Register use record
       MOSCXTS        at 0 range 0 .. 0;
       LOCKA          at 0 range 1 .. 1;
-      Reserved_2_2   at 0 range 2 .. 2;
+      LOCKB          at 0 range 2 .. 2;
       MCKRDY         at 0 range 3 .. 3;
-      Reserved_4_5   at 0 range 4 .. 5;
-      LOCKU          at 0 range 6 .. 6;
-      Reserved_7_7   at 0 range 7 .. 7;
-      PCKRDY         at 0 range 8 .. 14;
-      Reserved_15_15 at 0 range 15 .. 15;
+      Reserved_4_7   at 0 range 4 .. 7;
+      PCKRDY         at 0 range 8 .. 11;
+      Reserved_12_15 at 0 range 12 .. 15;
       MOSCSELS       at 0 range 16 .. 16;
       MOSCRCS        at 0 range 17 .. 17;
       CFDEV          at 0 range 18 .. 18;
       Reserved_19_20 at 0 range 19 .. 20;
-      XT32KERR       at 0 range 21 .. 21;
-      Reserved_22_31 at 0 range 22 .. 31;
+      EXT32KERR      at 0 range 21 .. 21;
+      Reserved_22_22 at 0 range 22 .. 22;
+      CPUMON         at 0 range 23 .. 23;
+      Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   --  PMC_PMC_IDR_PCKRDY array
-   type PMC_PMC_IDR_PCKRDY_Field_Array is array (0 .. 6) of Boolean
-     with Component_Size => 1, Size => 7;
+   --  PMC_IDR_PCKRDY array
+   type PMC_IDR_PCKRDY_Field_Array is array (0 .. 3) of Boolean
+     with Component_Size => 1, Size => 4;
 
-   --  Type definition for PMC_PMC_IDR_PCKRDY
-   type PMC_PMC_IDR_PCKRDY_Field
+   --  Type definition for PMC_IDR_PCKRDY
+   type PMC_IDR_PCKRDY_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
          when False =>
             --  PCKRDY as a value
-            Val : HAL.UInt7;
+            Val : HAL.UInt4;
          when True =>
             --  PCKRDY as an array
-            Arr : PMC_PMC_IDR_PCKRDY_Field_Array;
+            Arr : PMC_IDR_PCKRDY_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 7;
+     with Unchecked_Union, Size => 4;
 
-   for PMC_PMC_IDR_PCKRDY_Field use record
-      Val at 0 range 0 .. 6;
-      Arr at 0 range 0 .. 6;
+   for PMC_IDR_PCKRDY_Field use record
+      Val at 0 range 0 .. 3;
+      Arr at 0 range 0 .. 3;
    end record;
 
    --  Interrupt Disable Register
-   type PMC_PMC_IDR_Register is record
+   type PMC_IDR_Register is record
       --  Write-only. Main Crystal Oscillator Status Interrupt Disable
       MOSCXTS        : Boolean := False;
       --  Write-only. PLLA Lock Interrupt Disable
       LOCKA          : Boolean := False;
-      --  unspecified
-      Reserved_2_2   : HAL.Bit := 16#0#;
+      --  Write-only. PLLB Lock Interrupt Disable
+      LOCKB          : Boolean := False;
       --  Write-only. Master Clock Ready Interrupt Disable
       MCKRDY         : Boolean := False;
       --  unspecified
-      Reserved_4_5   : HAL.UInt2 := 16#0#;
-      --  Write-only. UTMI PLL Lock Interrupt Disable
-      LOCKU          : Boolean := False;
-      --  unspecified
-      Reserved_7_7   : HAL.Bit := 16#0#;
+      Reserved_4_7   : HAL.UInt4 := 16#0#;
       --  Write-only. Programmable Clock Ready 0 Interrupt Disable
-      PCKRDY         : PMC_PMC_IDR_PCKRDY_Field :=
+      PCKRDY         : PMC_IDR_PCKRDY_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
-      Reserved_15_15 : HAL.Bit := 16#0#;
+      Reserved_12_15 : HAL.UInt4 := 16#0#;
       --  Write-only. Main Clock Source Oscillator Selection Status Interrupt
       --  Disable
       MOSCSELS       : Boolean := False;
@@ -757,75 +652,77 @@ package SAM_SVD.PMC is
       --  unspecified
       Reserved_19_20 : HAL.UInt2 := 16#0#;
       --  Write-only. 32.768 kHz Crystal Oscillator Error Interrupt Disable
-      XT32KERR       : Boolean := False;
+      EXT32KERR      : Boolean := False;
       --  unspecified
-      Reserved_22_31 : HAL.UInt10 := 16#0#;
+      Reserved_22_22 : HAL.Bit := 16#0#;
+      --  Write-only. CPU Clock Monitor Interrupt Disable
+      CPUMON         : Boolean := False;
+      --  unspecified
+      Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_IDR_Register use record
+   for PMC_IDR_Register use record
       MOSCXTS        at 0 range 0 .. 0;
       LOCKA          at 0 range 1 .. 1;
-      Reserved_2_2   at 0 range 2 .. 2;
+      LOCKB          at 0 range 2 .. 2;
       MCKRDY         at 0 range 3 .. 3;
-      Reserved_4_5   at 0 range 4 .. 5;
-      LOCKU          at 0 range 6 .. 6;
-      Reserved_7_7   at 0 range 7 .. 7;
-      PCKRDY         at 0 range 8 .. 14;
-      Reserved_15_15 at 0 range 15 .. 15;
+      Reserved_4_7   at 0 range 4 .. 7;
+      PCKRDY         at 0 range 8 .. 11;
+      Reserved_12_15 at 0 range 12 .. 15;
       MOSCSELS       at 0 range 16 .. 16;
       MOSCRCS        at 0 range 17 .. 17;
       CFDEV          at 0 range 18 .. 18;
       Reserved_19_20 at 0 range 19 .. 20;
-      XT32KERR       at 0 range 21 .. 21;
-      Reserved_22_31 at 0 range 22 .. 31;
+      EXT32KERR      at 0 range 21 .. 21;
+      Reserved_22_22 at 0 range 22 .. 22;
+      CPUMON         at 0 range 23 .. 23;
+      Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   --  PMC_PMC_SR_PCKRDY array
-   type PMC_PMC_SR_PCKRDY_Field_Array is array (0 .. 6) of Boolean
-     with Component_Size => 1, Size => 7;
+   --  PMC_SR_PCKRDY array
+   type PMC_SR_PCKRDY_Field_Array is array (0 .. 3) of Boolean
+     with Component_Size => 1, Size => 4;
 
-   --  Type definition for PMC_PMC_SR_PCKRDY
-   type PMC_PMC_SR_PCKRDY_Field
+   --  Type definition for PMC_SR_PCKRDY
+   type PMC_SR_PCKRDY_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
          when False =>
             --  PCKRDY as a value
-            Val : HAL.UInt7;
+            Val : HAL.UInt4;
          when True =>
             --  PCKRDY as an array
-            Arr : PMC_PMC_SR_PCKRDY_Field_Array;
+            Arr : PMC_SR_PCKRDY_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 7;
+     with Unchecked_Union, Size => 4;
 
-   for PMC_PMC_SR_PCKRDY_Field use record
-      Val at 0 range 0 .. 6;
-      Arr at 0 range 0 .. 6;
+   for PMC_SR_PCKRDY_Field use record
+      Val at 0 range 0 .. 3;
+      Arr at 0 range 0 .. 3;
    end record;
 
    --  Status Register
-   type PMC_PMC_SR_Register is record
+   type PMC_SR_Register is record
       --  Read-only. Main Crystal Oscillator Status
       MOSCXTS        : Boolean;
       --  Read-only. PLLA Lock Status
       LOCKA          : Boolean;
-      --  unspecified
-      Reserved_2_2   : HAL.Bit;
+      --  Read-only. PLLB Lock Status
+      LOCKB          : Boolean;
       --  Read-only. Master Clock Status
       MCKRDY         : Boolean;
       --  unspecified
-      Reserved_4_5   : HAL.UInt2;
-      --  Read-only. UTMI PLL Lock Status
-      LOCKU          : Boolean;
-      --  Read-only. Slow Clock Source Oscillator Selection
+      Reserved_4_6   : HAL.UInt3;
+      --  Read-only. Monitoring Domain Slow Clock Source Oscillator Selection
       OSCSELS        : Boolean;
       --  Read-only. Programmable Clock Ready Status
-      PCKRDY         : PMC_PMC_SR_PCKRDY_Field;
+      PCKRDY         : PMC_SR_PCKRDY_Field;
       --  unspecified
-      Reserved_15_15 : HAL.Bit;
+      Reserved_12_15 : HAL.UInt4;
       --  Read-only. Main Clock Source Oscillator Selection Status
       MOSCSELS       : Boolean;
       --  Read-only. Main RC Oscillator Status
@@ -837,76 +734,77 @@ package SAM_SVD.PMC is
       --  Read-only. Clock Failure Detector Fault Output Status
       FOS            : Boolean;
       --  Read-only. Slow Crystal Oscillator Error
-      XT32KERR       : Boolean;
+      EXT32KERR      : Boolean;
       --  unspecified
-      Reserved_22_31 : HAL.UInt10;
+      Reserved_22_22 : HAL.Bit;
+      --  Read-only. CPU Clock Monitor Error
+      CPUMON         : Boolean;
+      --  unspecified
+      Reserved_24_31 : HAL.UInt8;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_SR_Register use record
+   for PMC_SR_Register use record
       MOSCXTS        at 0 range 0 .. 0;
       LOCKA          at 0 range 1 .. 1;
-      Reserved_2_2   at 0 range 2 .. 2;
+      LOCKB          at 0 range 2 .. 2;
       MCKRDY         at 0 range 3 .. 3;
-      Reserved_4_5   at 0 range 4 .. 5;
-      LOCKU          at 0 range 6 .. 6;
+      Reserved_4_6   at 0 range 4 .. 6;
       OSCSELS        at 0 range 7 .. 7;
-      PCKRDY         at 0 range 8 .. 14;
-      Reserved_15_15 at 0 range 15 .. 15;
+      PCKRDY         at 0 range 8 .. 11;
+      Reserved_12_15 at 0 range 12 .. 15;
       MOSCSELS       at 0 range 16 .. 16;
       MOSCRCS        at 0 range 17 .. 17;
       CFDEV          at 0 range 18 .. 18;
       CFDS           at 0 range 19 .. 19;
       FOS            at 0 range 20 .. 20;
-      XT32KERR       at 0 range 21 .. 21;
-      Reserved_22_31 at 0 range 22 .. 31;
+      EXT32KERR      at 0 range 21 .. 21;
+      Reserved_22_22 at 0 range 22 .. 22;
+      CPUMON         at 0 range 23 .. 23;
+      Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   --  PMC_PMC_IMR_PCKRDY array
-   type PMC_PMC_IMR_PCKRDY_Field_Array is array (0 .. 6) of Boolean
-     with Component_Size => 1, Size => 7;
+   --  PMC_IMR_PCKRDY array
+   type PMC_IMR_PCKRDY_Field_Array is array (0 .. 3) of Boolean
+     with Component_Size => 1, Size => 4;
 
-   --  Type definition for PMC_PMC_IMR_PCKRDY
-   type PMC_PMC_IMR_PCKRDY_Field
+   --  Type definition for PMC_IMR_PCKRDY
+   type PMC_IMR_PCKRDY_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
          when False =>
             --  PCKRDY as a value
-            Val : HAL.UInt7;
+            Val : HAL.UInt4;
          when True =>
             --  PCKRDY as an array
-            Arr : PMC_PMC_IMR_PCKRDY_Field_Array;
+            Arr : PMC_IMR_PCKRDY_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 7;
+     with Unchecked_Union, Size => 4;
 
-   for PMC_PMC_IMR_PCKRDY_Field use record
-      Val at 0 range 0 .. 6;
-      Arr at 0 range 0 .. 6;
+   for PMC_IMR_PCKRDY_Field use record
+      Val at 0 range 0 .. 3;
+      Arr at 0 range 0 .. 3;
    end record;
 
    --  Interrupt Mask Register
-   type PMC_PMC_IMR_Register is record
+   type PMC_IMR_Register is record
       --  Read-only. Main Crystal Oscillator Status Interrupt Mask
       MOSCXTS        : Boolean;
       --  Read-only. PLLA Lock Interrupt Mask
       LOCKA          : Boolean;
-      --  unspecified
-      Reserved_2_2   : HAL.Bit;
+      --  Read-only. PLLB Lock Interrupt Mask
+      LOCKB          : Boolean;
       --  Read-only. Master Clock Ready Interrupt Mask
       MCKRDY         : Boolean;
       --  unspecified
-      Reserved_4_5   : HAL.UInt2;
-      --  Read-only. UTMI PLL Lock Interrupt Mask
-      LOCKU          : Boolean;
-      --  unspecified
-      Reserved_7_7   : HAL.Bit;
+      Reserved_4_7   : HAL.UInt4;
       --  Read-only. Programmable Clock Ready 0 Interrupt Mask
-      PCKRDY         : PMC_PMC_IMR_PCKRDY_Field;
+      PCKRDY         : PMC_IMR_PCKRDY_Field;
       --  unspecified
-      Reserved_15_15 : HAL.Bit;
+      Reserved_12_15 : HAL.UInt4;
       --  Read-only. Main Clock Source Oscillator Selection Status Interrupt
       --  Mask
       MOSCSELS       : Boolean;
@@ -917,148 +815,37 @@ package SAM_SVD.PMC is
       --  unspecified
       Reserved_19_20 : HAL.UInt2;
       --  Read-only. 32.768 kHz Crystal Oscillator Error Interrupt Mask
-      XT32KERR       : Boolean;
+      EXT32KERR      : Boolean;
       --  unspecified
-      Reserved_22_31 : HAL.UInt10;
+      Reserved_22_22 : HAL.Bit;
+      --  Read-only. CPU Clock Monitor Error Interrupt Mask
+      CPUMON         : Boolean;
+      --  unspecified
+      Reserved_24_31 : HAL.UInt8;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_IMR_Register use record
+   for PMC_IMR_Register use record
       MOSCXTS        at 0 range 0 .. 0;
       LOCKA          at 0 range 1 .. 1;
-      Reserved_2_2   at 0 range 2 .. 2;
+      LOCKB          at 0 range 2 .. 2;
       MCKRDY         at 0 range 3 .. 3;
-      Reserved_4_5   at 0 range 4 .. 5;
-      LOCKU          at 0 range 6 .. 6;
-      Reserved_7_7   at 0 range 7 .. 7;
-      PCKRDY         at 0 range 8 .. 14;
-      Reserved_15_15 at 0 range 15 .. 15;
+      Reserved_4_7   at 0 range 4 .. 7;
+      PCKRDY         at 0 range 8 .. 11;
+      Reserved_12_15 at 0 range 12 .. 15;
       MOSCSELS       at 0 range 16 .. 16;
       MOSCRCS        at 0 range 17 .. 17;
       CFDEV          at 0 range 18 .. 18;
       Reserved_19_20 at 0 range 19 .. 20;
-      XT32KERR       at 0 range 21 .. 21;
-      Reserved_22_31 at 0 range 22 .. 31;
-   end record;
-
-   --  PMC_PMC_FSMR_FSTT array
-   type PMC_PMC_FSMR_FSTT_Field_Array is array (0 .. 15) of Boolean
-     with Component_Size => 1, Size => 16;
-
-   --  Type definition for PMC_PMC_FSMR_FSTT
-   type PMC_PMC_FSMR_FSTT_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  FSTT as a value
-            Val : HAL.UInt16;
-         when True =>
-            --  FSTT as an array
-            Arr : PMC_PMC_FSMR_FSTT_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 16;
-
-   for PMC_PMC_FSMR_FSTT_Field use record
-      Val at 0 range 0 .. 15;
-      Arr at 0 range 0 .. 15;
-   end record;
-
-   --  Flash Low-power Mode
-   type PMC_FSMR_FLPMSelect is
-     (--  Flash is in Standby Mode when system enters Wait Mode
-      FLASH_STANDBY,
-      --  Flash is in Deep-power-down mode when system enters Wait Mode
-      FLASH_DEEP_POWERDOWN,
-      --  Idle mode
-      FLASH_IDLE)
-     with Size => 2;
-   for PMC_FSMR_FLPMSelect use
-     (FLASH_STANDBY => 0,
-      FLASH_DEEP_POWERDOWN => 1,
-      FLASH_IDLE => 2);
-
-   --  Fast Startup Mode Register
-   type PMC_PMC_FSMR_Register is record
-      --  Fast Startup Input Enable 0
-      FSTT           : PMC_PMC_FSMR_FSTT_Field :=
-                        (As_Array => False, Val => 16#0#);
-      --  RTT Alarm Enable
-      RTTAL          : Boolean := False;
-      --  RTC Alarm Enable
-      RTCAL          : Boolean := False;
-      --  USB Alarm Enable
-      USBAL          : Boolean := False;
-      --  unspecified
-      Reserved_19_19 : HAL.Bit := 16#0#;
-      --  Low-power Mode
-      LPM            : Boolean := False;
-      --  Flash Low-power Mode
-      FLPM           : PMC_FSMR_FLPMSelect := SAM_SVD.PMC.FLASH_STANDBY;
-      --  Force Flash Low-power Mode
-      FFLPM          : Boolean := False;
-      --  unspecified
-      Reserved_24_31 : HAL.UInt8 := 16#0#;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_FSMR_Register use record
-      FSTT           at 0 range 0 .. 15;
-      RTTAL          at 0 range 16 .. 16;
-      RTCAL          at 0 range 17 .. 17;
-      USBAL          at 0 range 18 .. 18;
-      Reserved_19_19 at 0 range 19 .. 19;
-      LPM            at 0 range 20 .. 20;
-      FLPM           at 0 range 21 .. 22;
-      FFLPM          at 0 range 23 .. 23;
+      EXT32KERR      at 0 range 21 .. 21;
+      Reserved_22_22 at 0 range 22 .. 22;
+      CPUMON         at 0 range 23 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   --  PMC_PMC_FSPR_FSTP array
-   type PMC_PMC_FSPR_FSTP_Field_Array is array (0 .. 15) of Boolean
-     with Component_Size => 1, Size => 16;
-
-   --  Type definition for PMC_PMC_FSPR_FSTP
-   type PMC_PMC_FSPR_FSTP_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  FSTP as a value
-            Val : HAL.UInt16;
-         when True =>
-            --  FSTP as an array
-            Arr : PMC_PMC_FSPR_FSTP_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 16;
-
-   for PMC_PMC_FSPR_FSTP_Field use record
-      Val at 0 range 0 .. 15;
-      Arr at 0 range 0 .. 15;
-   end record;
-
-   --  Fast Startup Polarity Register
-   type PMC_PMC_FSPR_Register is record
-      --  Fast Startup Input Polarity 0
-      FSTP           : PMC_PMC_FSPR_FSTP_Field :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_16_31 : HAL.UInt16 := 16#0#;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_FSPR_Register use record
-      FSTP           at 0 range 0 .. 15;
-      Reserved_16_31 at 0 range 16 .. 31;
-   end record;
-
    --  Fault Output Clear Register
-   type PMC_PMC_FOCR_Register is record
+   type PMC_FOCR_Register is record
       --  Write-only. Fault Output Clear
       FOCLR         : Boolean := False;
       --  unspecified
@@ -1067,441 +854,237 @@ package SAM_SVD.PMC is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_FOCR_Register use record
+   for PMC_FOCR_Register use record
       FOCLR         at 0 range 0 .. 0;
       Reserved_1_31 at 0 range 1 .. 31;
    end record;
 
-   --  Write Protection Key
-   type PMC_WPMR_WPKEYSelect is
-     (--  Reset value for the field
-      PMC_WPMR_WPKEYSelect_Reset,
-      --  Writing any other value in this field aborts the write operation of the
---  WPEN bit. Always reads as 0.
-      PASSWD)
-     with Size => 24;
-   for PMC_WPMR_WPKEYSelect use
-     (PMC_WPMR_WPKEYSelect_Reset => 0,
-      PASSWD => 5262659);
+   --  PLLA Output Current
+   type PLL_CFG_OUTCUR_PLLASelect is
+     (--  0.5 mA
+      ICP0,
+      --  0.75 mA
+      ICP1,
+      --  1 mA
+      ICP2,
+      --  1.25 mA
+      ICP3)
+     with Size => 4;
+   for PLL_CFG_OUTCUR_PLLASelect use
+     (ICP0 => 0,
+      ICP1 => 1,
+      ICP2 => 2,
+      ICP3 => 3);
 
-   --  Write Protection Mode Register
-   type PMC_PMC_WPMR_Register is record
-      --  Write Protection Enable
-      WPEN         : Boolean := False;
+   --  Internal Filter PLL - Select Internal Capaticance Value
+   type PLL_CFG_SCASelect is
+     (--  20 pF
+      SC_VAL_20p,
+      --  40 pF
+      SC_VAL_40p,
+      --  30 pF
+      SC_VAL_30p,
+      --  60 pF
+      SC_VAL_60p)
+     with Size => 2;
+   for PLL_CFG_SCASelect use
+     (SC_VAL_20p => 0,
+      SC_VAL_40p => 1,
+      SC_VAL_30p => 2,
+      SC_VAL_60p => 3);
+
+   --  Internal Filter PLL - Select Internal Resistor Value
+   type PLL_CFG_SRASelect is
+     (--  24 Ohms
+      SR_VAL_24K,
+      --  6 Ohms
+      SR_VAL_6K,
+      --  3 Ohms
+      SR_VAL_3K,
+      --  12 Ohms
+      SR_VAL_12K)
+     with Size => 2;
+   for PLL_CFG_SRASelect use
+     (SR_VAL_24K => 0,
+      SR_VAL_6K => 1,
+      SR_VAL_3K => 2,
+      SR_VAL_12K => 3);
+
+   --  PLLB Output Current
+   type PLL_CFG_OUTCUR_PLLBSelect is
+     (--  0.5 mA
+      ICP0,
+      --  0.75 mA
+      ICP1,
+      --  1 mA
+      ICP2,
+      --  1.25 mA
+      ICP3)
+     with Size => 4;
+   for PLL_CFG_OUTCUR_PLLBSelect use
+     (ICP0 => 0,
+      ICP1 => 1,
+      ICP2 => 2,
+      ICP3 => 3);
+
+   --  Internal Filter PLL - Select Internal Capaticance Value
+   type PLL_CFG_SCBSelect is
+     (--  20 pF
+      SC_VAL_20p,
+      --  40 pF
+      SC_VAL_40p,
+      --  30 pF
+      SC_VAL_30p,
+      --  60 pF
+      SC_VAL_60p)
+     with Size => 2;
+   for PLL_CFG_SCBSelect use
+     (SC_VAL_20p => 0,
+      SC_VAL_40p => 1,
+      SC_VAL_30p => 2,
+      SC_VAL_60p => 3);
+
+   --  Internal Filter PLL - Select Internal Resistor Value
+   type PLL_CFG_SRBSelect is
+     (--  24 Ohms
+      SR_VAL_24K,
+      --  6 Ohms
+      SR_VAL_6K,
+      --  3 Ohms
+      SR_VAL_3K,
+      --  12 Ohms
+      SR_VAL_12K)
+     with Size => 2;
+   for PLL_CFG_SRBSelect use
+     (SR_VAL_24K => 0,
+      SR_VAL_6K => 1,
+      SR_VAL_3K => 2,
+      SR_VAL_12K => 3);
+
+   --  PLL Configuration Register
+   type PMC_PLL_CFG_Register is record
+      --  PLLA Output Current
+      OUTCUR_PLLA    : PLL_CFG_OUTCUR_PLLASelect := SAM_SVD.PMC.ICP0;
       --  unspecified
-      Reserved_1_7 : HAL.UInt7 := 16#0#;
-      --  Write Protection Key
-      WPKEY        : PMC_WPMR_WPKEYSelect := PMC_WPMR_WPKEYSelect_Reset;
+      Reserved_4_11  : HAL.UInt8 := 16#0#;
+      --  Internal Filter PLL - Select Internal Capaticance Value
+      SCA            : PLL_CFG_SCASelect := SAM_SVD.PMC.SC_VAL_20p;
+      --  Internal Filter PLL - Select Internal Resistor Value
+      SRA            : PLL_CFG_SRASelect := SAM_SVD.PMC.SR_VAL_24K;
+      --  PLLB Output Current
+      OUTCUR_PLLB    : PLL_CFG_OUTCUR_PLLBSelect := SAM_SVD.PMC.ICP0;
+      --  unspecified
+      Reserved_20_27 : HAL.UInt8 := 16#0#;
+      --  Internal Filter PLL - Select Internal Capaticance Value
+      SCB            : PLL_CFG_SCBSelect := SAM_SVD.PMC.SC_VAL_20p;
+      --  Internal Filter PLL - Select Internal Resistor Value
+      SRB            : PLL_CFG_SRBSelect := SAM_SVD.PMC.SR_VAL_24K;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_WPMR_Register use record
+   for PMC_PLL_CFG_Register use record
+      OUTCUR_PLLA    at 0 range 0 .. 3;
+      Reserved_4_11  at 0 range 4 .. 11;
+      SCA            at 0 range 12 .. 13;
+      SRA            at 0 range 14 .. 15;
+      OUTCUR_PLLB    at 0 range 16 .. 19;
+      Reserved_20_27 at 0 range 20 .. 27;
+      SCB            at 0 range 28 .. 29;
+      SRB            at 0 range 30 .. 31;
+   end record;
+
+   --  Write Protection Key
+   type WPMR_WPKEYSelect is
+     (--  Reset value for the field
+      WPMR_WPKEYSelect_Reset,
+      --  Writing any other value in this field aborts the write operation of the
+--  WPEN bit. Always reads as 0.
+      PASSWD)
+     with Size => 24;
+   for WPMR_WPKEYSelect use
+     (WPMR_WPKEYSelect_Reset => 0,
+      PASSWD => 5262659);
+
+   --  Write Protection Mode Register
+   type PMC_WPMR_Register is record
+      --  Write Protection Enable
+      WPEN         : Boolean := False;
+      --  Write Protection Interrupt Enable
+      WPITEN       : Boolean := False;
+      --  unspecified
+      Reserved_2_7 : HAL.UInt6 := 16#0#;
+      --  Write Protection Key
+      WPKEY        : WPMR_WPKEYSelect := WPMR_WPKEYSelect_Reset;
+   end record
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_WPMR_Register use record
       WPEN         at 0 range 0 .. 0;
-      Reserved_1_7 at 0 range 1 .. 7;
+      WPITEN       at 0 range 1 .. 1;
+      Reserved_2_7 at 0 range 2 .. 7;
       WPKEY        at 0 range 8 .. 31;
    end record;
 
-   subtype PMC_PMC_WPSR_WPVSRC_Field is HAL.UInt16;
+   subtype PMC_WPSR_WPVSRC_Field is HAL.UInt16;
 
    --  Write Protection Status Register
-   type PMC_PMC_WPSR_Register is record
+   type PMC_WPSR_Register is record
       --  Read-only. Write Protection Violation Status
       WPVS           : Boolean;
       --  unspecified
       Reserved_1_7   : HAL.UInt7;
       --  Read-only. Write Protection Violation Source
-      WPVSRC         : PMC_PMC_WPSR_WPVSRC_Field;
+      WPVSRC         : PMC_WPSR_WPVSRC_Field;
       --  unspecified
       Reserved_24_31 : HAL.UInt8;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_WPSR_Register use record
+   for PMC_WPSR_Register use record
       WPVS           at 0 range 0 .. 0;
       Reserved_1_7   at 0 range 1 .. 7;
       WPVSRC         at 0 range 8 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   subtype PMC_PMC_VERSION_VERSION_Field is HAL.UInt12;
-   subtype PMC_PMC_VERSION_MFN_Field is HAL.UInt3;
-
-   --  Version Register
-   type PMC_PMC_VERSION_Register is record
-      --  Read-only. Version of the Hardware Module
-      VERSION        : PMC_PMC_VERSION_VERSION_Field;
-      --  unspecified
-      Reserved_12_15 : HAL.UInt4;
-      --  Read-only. Metal Fix Number
-      MFN            : PMC_PMC_VERSION_MFN_Field;
-      --  unspecified
-      Reserved_19_31 : HAL.UInt13;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_VERSION_Register use record
-      VERSION        at 0 range 0 .. 11;
-      Reserved_12_15 at 0 range 12 .. 15;
-      MFN            at 0 range 16 .. 18;
-      Reserved_19_31 at 0 range 19 .. 31;
-   end record;
-
-   --  PMC_PMC_PCER1_PID array
-   type PMC_PMC_PCER1_PID_Field_Array is array (32 .. 35) of Boolean
-     with Component_Size => 1, Size => 4;
-
-   --  Type definition for PMC_PMC_PCER1_PID
-   type PMC_PMC_PCER1_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt4;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCER1_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 4;
-
-   for PMC_PMC_PCER1_PID_Field use record
-      Val at 0 range 0 .. 3;
-      Arr at 0 range 0 .. 3;
-   end record;
-
-   --  PMC_PMC_PCER1_PID array
-   type PMC_PMC_PCER1_PID_Field_Array_1 is array (39 .. 53) of Boolean
-     with Component_Size => 1, Size => 15;
-
-   --  Type definition for PMC_PMC_PCER1_PID
-   type PMC_PMC_PCER1_PID_Field_1
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt15;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCER1_PID_Field_Array_1;
-      end case;
-   end record
-     with Unchecked_Union, Size => 15;
-
-   for PMC_PMC_PCER1_PID_Field_1 use record
-      Val at 0 range 0 .. 14;
-      Arr at 0 range 0 .. 14;
-   end record;
-
-   --  PMC_PMC_PCER1_PID array
-   type PMC_PMC_PCER1_PID_Field_Array_2 is array (56 .. 60) of Boolean
-     with Component_Size => 1, Size => 5;
-
-   --  Type definition for PMC_PMC_PCER1_PID
-   type PMC_PMC_PCER1_PID_Field_2
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt5;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCER1_PID_Field_Array_2;
-      end case;
-   end record
-     with Unchecked_Union, Size => 5;
-
-   for PMC_PMC_PCER1_PID_Field_2 use record
-      Val at 0 range 0 .. 4;
-      Arr at 0 range 0 .. 4;
-   end record;
-
-   --  Peripheral Clock Enable Register 1
-   type PMC_PMC_PCER1_Register is record
-      --  Write-only. Peripheral Clock 32 Enable
-      PID            : PMC_PMC_PCER1_PID_Field :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_4_4   : HAL.Bit := 16#0#;
-      --  Write-only. Peripheral Clock 37 Enable
-      PID37          : Boolean := False;
-      --  unspecified
-      Reserved_6_6   : HAL.Bit := 16#0#;
-      --  Write-only. Peripheral Clock 39 Enable
-      PID_1          : PMC_PMC_PCER1_PID_Field_1 :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_22_23 : HAL.UInt2 := 16#0#;
-      --  Write-only. Peripheral Clock 56 Enable
-      PID_2          : PMC_PMC_PCER1_PID_Field_2 :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_29_31 : HAL.UInt3 := 16#0#;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_PCER1_Register use record
-      PID            at 0 range 0 .. 3;
-      Reserved_4_4   at 0 range 4 .. 4;
-      PID37          at 0 range 5 .. 5;
-      Reserved_6_6   at 0 range 6 .. 6;
-      PID_1          at 0 range 7 .. 21;
-      Reserved_22_23 at 0 range 22 .. 23;
-      PID_2          at 0 range 24 .. 28;
-      Reserved_29_31 at 0 range 29 .. 31;
-   end record;
-
-   --  PMC_PMC_PCDR1_PID array
-   type PMC_PMC_PCDR1_PID_Field_Array is array (32 .. 35) of Boolean
-     with Component_Size => 1, Size => 4;
-
-   --  Type definition for PMC_PMC_PCDR1_PID
-   type PMC_PMC_PCDR1_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt4;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCDR1_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 4;
-
-   for PMC_PMC_PCDR1_PID_Field use record
-      Val at 0 range 0 .. 3;
-      Arr at 0 range 0 .. 3;
-   end record;
-
-   --  PMC_PMC_PCDR1_PID array
-   type PMC_PMC_PCDR1_PID_Field_Array_1 is array (39 .. 53) of Boolean
-     with Component_Size => 1, Size => 15;
-
-   --  Type definition for PMC_PMC_PCDR1_PID
-   type PMC_PMC_PCDR1_PID_Field_1
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt15;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCDR1_PID_Field_Array_1;
-      end case;
-   end record
-     with Unchecked_Union, Size => 15;
-
-   for PMC_PMC_PCDR1_PID_Field_1 use record
-      Val at 0 range 0 .. 14;
-      Arr at 0 range 0 .. 14;
-   end record;
-
-   --  PMC_PMC_PCDR1_PID array
-   type PMC_PMC_PCDR1_PID_Field_Array_2 is array (56 .. 60) of Boolean
-     with Component_Size => 1, Size => 5;
-
-   --  Type definition for PMC_PMC_PCDR1_PID
-   type PMC_PMC_PCDR1_PID_Field_2
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt5;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCDR1_PID_Field_Array_2;
-      end case;
-   end record
-     with Unchecked_Union, Size => 5;
-
-   for PMC_PMC_PCDR1_PID_Field_2 use record
-      Val at 0 range 0 .. 4;
-      Arr at 0 range 0 .. 4;
-   end record;
-
-   --  Peripheral Clock Disable Register 1
-   type PMC_PMC_PCDR1_Register is record
-      --  Write-only. Peripheral Clock 32 Disable
-      PID            : PMC_PMC_PCDR1_PID_Field :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_4_4   : HAL.Bit := 16#0#;
-      --  Write-only. Peripheral Clock 37 Disable
-      PID37          : Boolean := False;
-      --  unspecified
-      Reserved_6_6   : HAL.Bit := 16#0#;
-      --  Write-only. Peripheral Clock 39 Disable
-      PID_1          : PMC_PMC_PCDR1_PID_Field_1 :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_22_23 : HAL.UInt2 := 16#0#;
-      --  Write-only. Peripheral Clock 56 Disable
-      PID_2          : PMC_PMC_PCDR1_PID_Field_2 :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_29_31 : HAL.UInt3 := 16#0#;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_PCDR1_Register use record
-      PID            at 0 range 0 .. 3;
-      Reserved_4_4   at 0 range 4 .. 4;
-      PID37          at 0 range 5 .. 5;
-      Reserved_6_6   at 0 range 6 .. 6;
-      PID_1          at 0 range 7 .. 21;
-      Reserved_22_23 at 0 range 22 .. 23;
-      PID_2          at 0 range 24 .. 28;
-      Reserved_29_31 at 0 range 29 .. 31;
-   end record;
-
-   --  PMC_PMC_PCSR1_PID array
-   type PMC_PMC_PCSR1_PID_Field_Array is array (32 .. 35) of Boolean
-     with Component_Size => 1, Size => 4;
-
-   --  Type definition for PMC_PMC_PCSR1_PID
-   type PMC_PMC_PCSR1_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt4;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCSR1_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 4;
-
-   for PMC_PMC_PCSR1_PID_Field use record
-      Val at 0 range 0 .. 3;
-      Arr at 0 range 0 .. 3;
-   end record;
-
-   --  PMC_PMC_PCSR1_PID array
-   type PMC_PMC_PCSR1_PID_Field_Array_1 is array (39 .. 53) of Boolean
-     with Component_Size => 1, Size => 15;
-
-   --  Type definition for PMC_PMC_PCSR1_PID
-   type PMC_PMC_PCSR1_PID_Field_1
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt15;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCSR1_PID_Field_Array_1;
-      end case;
-   end record
-     with Unchecked_Union, Size => 15;
-
-   for PMC_PMC_PCSR1_PID_Field_1 use record
-      Val at 0 range 0 .. 14;
-      Arr at 0 range 0 .. 14;
-   end record;
-
-   --  PMC_PMC_PCSR1_PID array
-   type PMC_PMC_PCSR1_PID_Field_Array_2 is array (56 .. 60) of Boolean
-     with Component_Size => 1, Size => 5;
-
-   --  Type definition for PMC_PMC_PCSR1_PID
-   type PMC_PMC_PCSR1_PID_Field_2
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt5;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_PCSR1_PID_Field_Array_2;
-      end case;
-   end record
-     with Unchecked_Union, Size => 5;
-
-   for PMC_PMC_PCSR1_PID_Field_2 use record
-      Val at 0 range 0 .. 4;
-      Arr at 0 range 0 .. 4;
-   end record;
-
-   --  Peripheral Clock Status Register 1
-   type PMC_PMC_PCSR1_Register is record
-      --  Read-only. Peripheral Clock 32 Status
-      PID            : PMC_PMC_PCSR1_PID_Field;
-      --  unspecified
-      Reserved_4_4   : HAL.Bit;
-      --  Read-only. Peripheral Clock 37 Status
-      PID37          : Boolean;
-      --  unspecified
-      Reserved_6_6   : HAL.Bit;
-      --  Read-only. Peripheral Clock 39 Status
-      PID_1          : PMC_PMC_PCSR1_PID_Field_1;
-      --  unspecified
-      Reserved_22_23 : HAL.UInt2;
-      --  Read-only. Peripheral Clock 56 Status
-      PID_2          : PMC_PMC_PCSR1_PID_Field_2;
-      --  unspecified
-      Reserved_29_31 : HAL.UInt3;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_PCSR1_Register use record
-      PID            at 0 range 0 .. 3;
-      Reserved_4_4   at 0 range 4 .. 4;
-      PID37          at 0 range 5 .. 5;
-      Reserved_6_6   at 0 range 6 .. 6;
-      PID_1          at 0 range 7 .. 21;
-      Reserved_22_23 at 0 range 22 .. 23;
-      PID_2          at 0 range 24 .. 28;
-      Reserved_29_31 at 0 range 29 .. 31;
-   end record;
-
-   subtype PMC_PMC_PCR_PID_Field is HAL.UInt7;
+   subtype PMC_PCR_PID_Field is HAL.UInt7;
 
    --  Generic Clock Source Selection
-   type PMC_PCR_GCLKCSSSelect is
-     (--  SLCK is selected
+   type PCR_GCLKCSSSelect is
+     (--  MD_SLCK is selected
       SLOW_CLK,
       --  MAINCK is selected
       MAIN_CLK,
       --  PLLACK is selected
       PLLA_CLK,
-      --  UPLLCK is selected
-      UPLL_CLK,
+      --  PLLBCK is selected
+      PLLB_CLK,
       --  MCK is selected
-      MCK_CLK)
+      MCK_CLK,
+      --  RC2 is selected
+      MCK_RC2)
      with Size => 3;
-   for PMC_PCR_GCLKCSSSelect use
+   for PCR_GCLKCSSSelect use
      (SLOW_CLK => 0,
       MAIN_CLK => 1,
       PLLA_CLK => 2,
-      UPLL_CLK => 3,
-      MCK_CLK => 4);
+      PLLB_CLK => 3,
+      MCK_CLK => 4,
+      MCK_RC2 => 5);
 
-   subtype PMC_PMC_PCR_GCLKDIV_Field is HAL.UInt8;
+   subtype PMC_PCR_GCLKDIV_Field is HAL.UInt8;
 
    --  Peripheral Control Register
-   type PMC_PMC_PCR_Register is record
+   type PMC_PCR_Register is record
       --  Peripheral ID
-      PID            : PMC_PMC_PCR_PID_Field := 16#0#;
+      PID            : PMC_PCR_PID_Field := 16#0#;
       --  unspecified
       Reserved_7_7   : HAL.Bit := 16#0#;
       --  Generic Clock Source Selection
-      GCLKCSS        : PMC_PCR_GCLKCSSSelect := SAM_SVD.PMC.SLOW_CLK;
+      GCLKCSS        : PCR_GCLKCSSSelect := SAM_SVD.PMC.SLOW_CLK;
       --  unspecified
       Reserved_11_11 : HAL.Bit := 16#0#;
       --  Command
@@ -1509,7 +1092,7 @@ package SAM_SVD.PMC is
       --  unspecified
       Reserved_13_19 : HAL.UInt7 := 16#0#;
       --  Generic Clock Division Ratio
-      GCLKDIV        : PMC_PMC_PCR_GCLKDIV_Field := 16#0#;
+      GCLKDIV        : PMC_PCR_GCLKDIV_Field := 16#0#;
       --  Enable
       EN             : Boolean := False;
       --  Generic Clock Enable
@@ -1520,7 +1103,7 @@ package SAM_SVD.PMC is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_PCR_Register use record
+   for PMC_PCR_Register use record
       PID            at 0 range 0 .. 6;
       Reserved_7_7   at 0 range 7 .. 7;
       GCLKCSS        at 0 range 8 .. 10;
@@ -1533,711 +1116,435 @@ package SAM_SVD.PMC is
       Reserved_30_31 at 0 range 30 .. 31;
    end record;
 
-   subtype PMC_PMC_OCR_CAL4_Field is HAL.UInt7;
-   subtype PMC_PMC_OCR_CAL8_Field is HAL.UInt7;
-   subtype PMC_PMC_OCR_CAL12_Field is HAL.UInt7;
+   subtype PMC_OCR1_CAL4_Field is HAL.UInt7;
+   subtype PMC_OCR1_CAL8_Field is HAL.UInt7;
+   subtype PMC_OCR1_CAL12_Field is HAL.UInt7;
+   subtype PMC_OCR1_CAL10_Field is HAL.UInt7;
 
    --  Oscillator Calibration Register
-   type PMC_PMC_OCR_Register is record
+   type PMC_OCR1_Register is record
       --  Main RC Oscillator Calibration Bits for 4 MHz
-      CAL4           : PMC_PMC_OCR_CAL4_Field := 16#0#;
+      CAL4  : PMC_OCR1_CAL4_Field := 16#0#;
       --  Selection of Main RC Oscillator Calibration Bits for 4 MHz
-      SEL4           : Boolean := False;
+      SEL4  : Boolean := False;
       --  Main RC Oscillator Calibration Bits for 8 MHz
-      CAL8           : PMC_PMC_OCR_CAL8_Field := 16#0#;
+      CAL8  : PMC_OCR1_CAL8_Field := 16#0#;
       --  Selection of Main RC Oscillator Calibration Bits for 8 MHz
-      SEL8           : Boolean := False;
+      SEL8  : Boolean := False;
       --  Main RC Oscillator Calibration Bits for 12 MHz
-      CAL12          : PMC_PMC_OCR_CAL12_Field := 16#0#;
+      CAL12 : PMC_OCR1_CAL12_Field := 16#0#;
+      --  Selection of Main RC Oscillator Calibration Bits for 10 MHz
+      SEL10 : Boolean := False;
+      --  Main RC Oscillator Calibration Bits for 10 MHz
+      CAL10 : PMC_OCR1_CAL10_Field := 16#0#;
       --  Selection of Main RC Oscillator Calibration Bits for 12 MHz
-      SEL12          : Boolean := False;
+      SEL12 : Boolean := False;
+   end record
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_OCR1_Register use record
+      CAL4  at 0 range 0 .. 6;
+      SEL4  at 0 range 7 .. 7;
+      CAL8  at 0 range 8 .. 14;
+      SEL8  at 0 range 15 .. 15;
+      CAL12 at 0 range 16 .. 22;
+      SEL10 at 0 range 23 .. 23;
+      CAL10 at 0 range 24 .. 30;
+      SEL12 at 0 range 31 .. 31;
+   end record;
+
+   subtype PMC_PMMR_PLLA_MMAX_Field is HAL.UInt11;
+   subtype PMC_PMMR_PLLB_MMAX_Field is HAL.UInt11;
+
+   --  PLL Maximum Multiplier Value Register
+   type PMC_PMMR_Register is record
+      --  PLLA Maximum Allowed Multiplier Value
+      PLLA_MMAX      : PMC_PMMR_PLLA_MMAX_Field := 16#0#;
+      --  unspecified
+      Reserved_11_15 : HAL.UInt5 := 16#0#;
+      --  PLLB Maximum Allowed Multiplier Value
+      PLLB_MMAX      : PMC_PMMR_PLLB_MMAX_Field := 16#0#;
+      --  unspecified
+      Reserved_27_31 : HAL.UInt5 := 16#0#;
+   end record
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_PMMR_Register use record
+      PLLA_MMAX      at 0 range 0 .. 10;
+      Reserved_11_15 at 0 range 11 .. 15;
+      PLLB_MMAX      at 0 range 16 .. 26;
+      Reserved_27_31 at 0 range 27 .. 31;
+   end record;
+
+   subtype PMC_CPULIM_CPU_LOW_IT_Field is HAL.UInt8;
+   subtype PMC_CPULIM_CPU_HIGH_IT_Field is HAL.UInt8;
+   subtype PMC_CPULIM_CPU_LOW_RES_Field is HAL.UInt8;
+   subtype PMC_CPULIM_CPU_HIGH_RES_Field is HAL.UInt8;
+
+   --  CPU Monitor Limits Register
+   type PMC_CPULIM_Register is record
+      --  CPU Monitoring Low IT Limit
+      CPU_LOW_IT   : PMC_CPULIM_CPU_LOW_IT_Field := 16#0#;
+      --  CPU Monitoring High IT Limit
+      CPU_HIGH_IT  : PMC_CPULIM_CPU_HIGH_IT_Field := 16#0#;
+      --  CPU Monitoring Low RESET Limit
+      CPU_LOW_RES  : PMC_CPULIM_CPU_LOW_RES_Field := 16#0#;
+      --  CPU Monitoring High Reset Limit
+      CPU_HIGH_RES : PMC_CPULIM_CPU_HIGH_RES_Field := 16#0#;
+   end record
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_CPULIM_Register use record
+      CPU_LOW_IT   at 0 range 0 .. 7;
+      CPU_HIGH_IT  at 0 range 8 .. 15;
+      CPU_LOW_RES  at 0 range 16 .. 23;
+      CPU_HIGH_RES at 0 range 24 .. 31;
+   end record;
+
+   --  PMC_CSR0_PID array
+   type PMC_CSR0_PID_Field_Array is array (0 .. 31) of Boolean
+     with Component_Size => 1, Size => 32;
+
+   --  Peripheral Clock Status Register 0
+   type PMC_CSR0_Register
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  PID as a value
+            Val : HAL.UInt32;
+         when True =>
+            --  PID as an array
+            Arr : PMC_CSR0_PID_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_CSR0_Register use record
+      Val at 0 range 0 .. 31;
+      Arr at 0 range 0 .. 31;
+   end record;
+
+   --  PMC_CSR1_PID array
+   type PMC_CSR1_PID_Field_Array is array (32 .. 63) of Boolean
+     with Component_Size => 1, Size => 32;
+
+   --  Peripheral Clock Status Register 1
+   type PMC_CSR1_Register
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  PID as a value
+            Val : HAL.UInt32;
+         when True =>
+            --  PID as an array
+            Arr : PMC_CSR1_PID_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_CSR1_Register use record
+      Val at 0 range 0 .. 31;
+      Arr at 0 range 0 .. 31;
+   end record;
+
+   --  PMC_CSR2_PID array
+   type PMC_CSR2_PID_Field_Array is array (64 .. 95) of Boolean
+     with Component_Size => 1, Size => 32;
+
+   --  Peripheral Clock Status Register 2
+   type PMC_CSR2_Register
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  PID as a value
+            Val : HAL.UInt32;
+         when True =>
+            --  PID as an array
+            Arr : PMC_CSR2_PID_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_CSR2_Register use record
+      Val at 0 range 0 .. 31;
+      Arr at 0 range 0 .. 31;
+   end record;
+
+   --  PMC_CSR3_PID array
+   type PMC_CSR3_PID_Field_Array is array (96 .. 127) of Boolean
+     with Component_Size => 1, Size => 32;
+
+   --  Peripheral Clock Status Register 3
+   type PMC_CSR3_Register
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  PID as a value
+            Val : HAL.UInt32;
+         when True =>
+            --  PID as an array
+            Arr : PMC_CSR3_PID_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_CSR3_Register use record
+      Val at 0 range 0 .. 31;
+      Arr at 0 range 0 .. 31;
+   end record;
+
+   --  PMC_GCSR0_GPID array
+   type PMC_GCSR0_GPID_Field_Array is array (0 .. 31) of Boolean
+     with Component_Size => 1, Size => 32;
+
+   --  Generic Clock Status Register 0
+   type PMC_GCSR0_Register
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  GPID as a value
+            Val : HAL.UInt32;
+         when True =>
+            --  GPID as an array
+            Arr : PMC_GCSR0_GPID_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_GCSR0_Register use record
+      Val at 0 range 0 .. 31;
+      Arr at 0 range 0 .. 31;
+   end record;
+
+   --  PMC_GCSR1_GPID array
+   type PMC_GCSR1_GPID_Field_Array is array (32 .. 63) of Boolean
+     with Component_Size => 1, Size => 32;
+
+   --  Generic Clock Status Register 1
+   type PMC_GCSR1_Register
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  GPID as a value
+            Val : HAL.UInt32;
+         when True =>
+            --  GPID as an array
+            Arr : PMC_GCSR1_GPID_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_GCSR1_Register use record
+      Val at 0 range 0 .. 31;
+      Arr at 0 range 0 .. 31;
+   end record;
+
+   --  PMC_GCSR2_GPID array
+   type PMC_GCSR2_GPID_Field_Array is array (64 .. 95) of Boolean
+     with Component_Size => 1, Size => 32;
+
+   --  Generic Clock Status Register 2
+   type PMC_GCSR2_Register
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  GPID as a value
+            Val : HAL.UInt32;
+         when True =>
+            --  GPID as an array
+            Arr : PMC_GCSR2_GPID_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_GCSR2_Register use record
+      Val at 0 range 0 .. 31;
+      Arr at 0 range 0 .. 31;
+   end record;
+
+   --  PMC_GCSR3_GPID array
+   type PMC_GCSR3_GPID_Field_Array is array (96 .. 120) of Boolean
+     with Component_Size => 1, Size => 25;
+
+   --  Type definition for PMC_GCSR3_GPID
+   type PMC_GCSR3_GPID_Field
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  GPID as a value
+            Val : HAL.UInt25;
+         when True =>
+            --  GPID as an array
+            Arr : PMC_GCSR3_GPID_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 25;
+
+   for PMC_GCSR3_GPID_Field use record
+      Val at 0 range 0 .. 24;
+      Arr at 0 range 0 .. 24;
+   end record;
+
+   subtype PMC_GCSR3_GPID122_Field is HAL.UInt2;
+
+   --  PMC_GCSR3_GPID array
+   type PMC_GCSR3_GPID_Field_Array_1 is array (123 .. 127) of Boolean
+     with Component_Size => 1, Size => 5;
+
+   --  Type definition for PMC_GCSR3_GPID
+   type PMC_GCSR3_GPID_Field_1
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  GPID as a value
+            Val : HAL.UInt5;
+         when True =>
+            --  GPID as an array
+            Arr : PMC_GCSR3_GPID_Field_Array_1;
+      end case;
+   end record
+     with Unchecked_Union, Size => 5;
+
+   for PMC_GCSR3_GPID_Field_1 use record
+      Val at 0 range 0 .. 4;
+      Arr at 0 range 0 .. 4;
+   end record;
+
+   --  Generic Clock Status Register 3
+   type PMC_GCSR3_Register is record
+      --  Read-only. Generic Clock 96 Status
+      GPID    : PMC_GCSR3_GPID_Field;
+      --  Read-only. Generic Clock 122 Status
+      GPID122 : PMC_GCSR3_GPID122_Field;
+      --  Read-only. Generic Clock 123 Status
+      GPID_1  : PMC_GCSR3_GPID_Field_1;
+   end record
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for PMC_GCSR3_Register use record
+      GPID    at 0 range 0 .. 24;
+      GPID122 at 0 range 25 .. 26;
+      GPID_1  at 0 range 27 .. 31;
+   end record;
+
+   --  2nd Oscillator Frequency Selection
+   type OSC2_OSCRCFSelect is
+     (--  The 2nd RC oscillator frequency is at 4 MHZ
+      Val_4_MHZ,
+      --  The 2nd RC oscillator frequency is at 8 MHZ
+      Val_8_MHZ,
+      --  The 2nd RC oscillator frequency is at 10 MHZ
+      Val_10_MHZ,
+      --  The 2nd RC oscillator frequency is at 12 MHZ
+      Val_12_MHZ)
+     with Size => 2;
+   for OSC2_OSCRCFSelect use
+     (Val_4_MHZ => 0,
+      Val_8_MHZ => 1,
+      Val_10_MHZ => 2,
+      Val_12_MHZ => 3);
+
+   --  Register Write Access Password
+   type OSC2_KEYSelect is
+     (--  Reset value for the field
+      OSC2_KEYSelect_Reset,
+      --  Writing any other value in this field aborts the write operation.Always
+--  reads as 0.
+      PASSWD)
+     with Size => 8;
+   for OSC2_KEYSelect use
+     (OSC2_KEYSelect_Reset => 0,
+      PASSWD => 55);
+
+   --  Oscillator Control Register 2
+   type PMC_OSC2_Register is record
+      --  Enable
+      EN             : Boolean := False;
+      --  unspecified
+      Reserved_1_3   : HAL.UInt3 := 16#0#;
+      --  2nd Oscillator Frequency Selection
+      OSCRCF         : OSC2_OSCRCFSelect := SAM_SVD.PMC.Val_4_MHZ;
+      --  unspecified
+      Reserved_6_7   : HAL.UInt2 := 16#0#;
+      --  Enable Calibration Register Write
+      EN_WR_CALIB    : Boolean := False;
+      --  unspecified
+      Reserved_9_15  : HAL.UInt7 := 16#0#;
+      --  Register Write Access Password
+      KEY            : OSC2_KEYSelect := OSC2_KEYSelect_Reset;
       --  unspecified
       Reserved_24_31 : HAL.UInt8 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_OCR_Register use record
-      CAL4           at 0 range 0 .. 6;
-      SEL4           at 0 range 7 .. 7;
-      CAL8           at 0 range 8 .. 14;
-      SEL8           at 0 range 15 .. 15;
-      CAL12          at 0 range 16 .. 22;
-      SEL12          at 0 range 23 .. 23;
+   for PMC_OSC2_Register use record
+      EN             at 0 range 0 .. 0;
+      Reserved_1_3   at 0 range 1 .. 3;
+      OSCRCF         at 0 range 4 .. 5;
+      Reserved_6_7   at 0 range 6 .. 7;
+      EN_WR_CALIB    at 0 range 8 .. 8;
+      Reserved_9_15  at 0 range 9 .. 15;
+      KEY            at 0 range 16 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   --  PMC_PMC_SLPWK_ER0_PID array
-   type PMC_PMC_SLPWK_ER0_PID_Field_Array is array (7 .. 31) of Boolean
-     with Component_Size => 1, Size => 25;
+   subtype PMC_OCR2_CAL4_Field is HAL.UInt7;
+   subtype PMC_OCR2_CAL8_Field is HAL.UInt7;
+   subtype PMC_OCR2_CAL12_Field is HAL.UInt7;
+   subtype PMC_OCR2_CAL10_Field is HAL.UInt7;
 
-   --  Type definition for PMC_PMC_SLPWK_ER0_PID
-   type PMC_PMC_SLPWK_ER0_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt25;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_ER0_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 25;
-
-   for PMC_PMC_SLPWK_ER0_PID_Field use record
-      Val at 0 range 0 .. 24;
-      Arr at 0 range 0 .. 24;
-   end record;
-
-   --  SleepWalking Enable Register 0
-   type PMC_PMC_SLPWK_ER0_Register is record
-      --  unspecified
-      Reserved_0_6 : HAL.UInt7 := 16#0#;
-      --  Write-only. Peripheral 7 SleepWalking Enable
-      PID          : PMC_PMC_SLPWK_ER0_PID_Field :=
-                      (As_Array => False, Val => 16#0#);
+   --  Oscillator Calibration Register 2
+   type PMC_OCR2_Register is record
+      --  Main RC Oscillator Calibration Bits for 4 MHz
+      CAL4  : PMC_OCR2_CAL4_Field := 16#0#;
+      --  Selection of Main RC Oscillator Calibration Bits for 4 MHz
+      SEL4  : Boolean := False;
+      --  Main RC Oscillator Calibration Bits for 8 MHz
+      CAL8  : PMC_OCR2_CAL8_Field := 16#0#;
+      --  Selection of Main RC Oscillator Calibration Bits for 8 MHz
+      SEL8  : Boolean := False;
+      --  Main RC Oscillator Calibration Bits for 12 MHz
+      CAL12 : PMC_OCR2_CAL12_Field := 16#0#;
+      --  Selection of Main RC Oscillator Calibration Bits for 12 MHz
+      SEL12 : Boolean := False;
+      --  Main RC Oscillator Calibration Bits for 10 MHz
+      CAL10 : PMC_OCR2_CAL10_Field := 16#0#;
+      --  Selection of Main RC Oscillator Calibration Bits for 10 MHz
+      SEL10 : Boolean := False;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for PMC_PMC_SLPWK_ER0_Register use record
-      Reserved_0_6 at 0 range 0 .. 6;
-      PID          at 0 range 7 .. 31;
-   end record;
-
-   --  PMC_PMC_SLPWK_DR0_PID array
-   type PMC_PMC_SLPWK_DR0_PID_Field_Array is array (7 .. 31) of Boolean
-     with Component_Size => 1, Size => 25;
-
-   --  Type definition for PMC_PMC_SLPWK_DR0_PID
-   type PMC_PMC_SLPWK_DR0_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt25;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_DR0_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 25;
-
-   for PMC_PMC_SLPWK_DR0_PID_Field use record
-      Val at 0 range 0 .. 24;
-      Arr at 0 range 0 .. 24;
-   end record;
-
-   --  SleepWalking Disable Register 0
-   type PMC_PMC_SLPWK_DR0_Register is record
-      --  unspecified
-      Reserved_0_6 : HAL.UInt7 := 16#0#;
-      --  Write-only. Peripheral 7 SleepWalking Disable
-      PID          : PMC_PMC_SLPWK_DR0_PID_Field :=
-                      (As_Array => False, Val => 16#0#);
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_SLPWK_DR0_Register use record
-      Reserved_0_6 at 0 range 0 .. 6;
-      PID          at 0 range 7 .. 31;
-   end record;
-
-   --  PMC_PMC_SLPWK_SR0_PID array
-   type PMC_PMC_SLPWK_SR0_PID_Field_Array is array (7 .. 31) of Boolean
-     with Component_Size => 1, Size => 25;
-
-   --  Type definition for PMC_PMC_SLPWK_SR0_PID
-   type PMC_PMC_SLPWK_SR0_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt25;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_SR0_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 25;
-
-   for PMC_PMC_SLPWK_SR0_PID_Field use record
-      Val at 0 range 0 .. 24;
-      Arr at 0 range 0 .. 24;
-   end record;
-
-   --  SleepWalking Status Register 0
-   type PMC_PMC_SLPWK_SR0_Register is record
-      --  unspecified
-      Reserved_0_6 : HAL.UInt7;
-      --  Read-only. Peripheral 7 SleepWalking Status
-      PID          : PMC_PMC_SLPWK_SR0_PID_Field;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_SLPWK_SR0_Register use record
-      Reserved_0_6 at 0 range 0 .. 6;
-      PID          at 0 range 7 .. 31;
-   end record;
-
-   --  PMC_PMC_SLPWK_ASR0_PID array
-   type PMC_PMC_SLPWK_ASR0_PID_Field_Array is array (7 .. 31) of Boolean
-     with Component_Size => 1, Size => 25;
-
-   --  Type definition for PMC_PMC_SLPWK_ASR0_PID
-   type PMC_PMC_SLPWK_ASR0_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt25;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_ASR0_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 25;
-
-   for PMC_PMC_SLPWK_ASR0_PID_Field use record
-      Val at 0 range 0 .. 24;
-      Arr at 0 range 0 .. 24;
-   end record;
-
-   --  SleepWalking Activity Status Register 0
-   type PMC_PMC_SLPWK_ASR0_Register is record
-      --  unspecified
-      Reserved_0_6 : HAL.UInt7;
-      --  Read-only. Peripheral 7 Activity Status
-      PID          : PMC_PMC_SLPWK_ASR0_PID_Field;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_SLPWK_ASR0_Register use record
-      Reserved_0_6 at 0 range 0 .. 6;
-      PID          at 0 range 7 .. 31;
-   end record;
-
-   subtype PMC_PMC_PMMR_PLLA_MMAX_Field is HAL.UInt11;
-
-   --  PLL Maximum Multiplier Value Register
-   type PMC_PMC_PMMR_Register is record
-      --  PLLA Maximum Allowed Multiplier Value
-      PLLA_MMAX      : PMC_PMC_PMMR_PLLA_MMAX_Field := 16#0#;
-      --  unspecified
-      Reserved_11_31 : HAL.UInt21 := 16#0#;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_PMMR_Register use record
-      PLLA_MMAX      at 0 range 0 .. 10;
-      Reserved_11_31 at 0 range 11 .. 31;
-   end record;
-
-   --  PMC_PMC_SLPWK_ER1_PID array
-   type PMC_PMC_SLPWK_ER1_PID_Field_Array is array (32 .. 35) of Boolean
-     with Component_Size => 1, Size => 4;
-
-   --  Type definition for PMC_PMC_SLPWK_ER1_PID
-   type PMC_PMC_SLPWK_ER1_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt4;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_ER1_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 4;
-
-   for PMC_PMC_SLPWK_ER1_PID_Field use record
-      Val at 0 range 0 .. 3;
-      Arr at 0 range 0 .. 3;
-   end record;
-
-   --  PMC_PMC_SLPWK_ER1_PID array
-   type PMC_PMC_SLPWK_ER1_PID_Field_Array_1 is array (39 .. 53) of Boolean
-     with Component_Size => 1, Size => 15;
-
-   --  Type definition for PMC_PMC_SLPWK_ER1_PID
-   type PMC_PMC_SLPWK_ER1_PID_Field_1
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt15;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_ER1_PID_Field_Array_1;
-      end case;
-   end record
-     with Unchecked_Union, Size => 15;
-
-   for PMC_PMC_SLPWK_ER1_PID_Field_1 use record
-      Val at 0 range 0 .. 14;
-      Arr at 0 range 0 .. 14;
-   end record;
-
-   --  PMC_PMC_SLPWK_ER1_PID array
-   type PMC_PMC_SLPWK_ER1_PID_Field_Array_2 is array (56 .. 60) of Boolean
-     with Component_Size => 1, Size => 5;
-
-   --  Type definition for PMC_PMC_SLPWK_ER1_PID
-   type PMC_PMC_SLPWK_ER1_PID_Field_2
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt5;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_ER1_PID_Field_Array_2;
-      end case;
-   end record
-     with Unchecked_Union, Size => 5;
-
-   for PMC_PMC_SLPWK_ER1_PID_Field_2 use record
-      Val at 0 range 0 .. 4;
-      Arr at 0 range 0 .. 4;
-   end record;
-
-   --  SleepWalking Enable Register 1
-   type PMC_PMC_SLPWK_ER1_Register is record
-      --  Write-only. Peripheral 32 SleepWalking Enable
-      PID            : PMC_PMC_SLPWK_ER1_PID_Field :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_4_4   : HAL.Bit := 16#0#;
-      --  Write-only. Peripheral 37 SleepWalking Enable
-      PID37          : Boolean := False;
-      --  unspecified
-      Reserved_6_6   : HAL.Bit := 16#0#;
-      --  Write-only. Peripheral 39 SleepWalking Enable
-      PID_1          : PMC_PMC_SLPWK_ER1_PID_Field_1 :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_22_23 : HAL.UInt2 := 16#0#;
-      --  Write-only. Peripheral 56 SleepWalking Enable
-      PID_2          : PMC_PMC_SLPWK_ER1_PID_Field_2 :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_29_31 : HAL.UInt3 := 16#0#;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_SLPWK_ER1_Register use record
-      PID            at 0 range 0 .. 3;
-      Reserved_4_4   at 0 range 4 .. 4;
-      PID37          at 0 range 5 .. 5;
-      Reserved_6_6   at 0 range 6 .. 6;
-      PID_1          at 0 range 7 .. 21;
-      Reserved_22_23 at 0 range 22 .. 23;
-      PID_2          at 0 range 24 .. 28;
-      Reserved_29_31 at 0 range 29 .. 31;
-   end record;
-
-   --  PMC_PMC_SLPWK_DR1_PID array
-   type PMC_PMC_SLPWK_DR1_PID_Field_Array is array (32 .. 35) of Boolean
-     with Component_Size => 1, Size => 4;
-
-   --  Type definition for PMC_PMC_SLPWK_DR1_PID
-   type PMC_PMC_SLPWK_DR1_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt4;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_DR1_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 4;
-
-   for PMC_PMC_SLPWK_DR1_PID_Field use record
-      Val at 0 range 0 .. 3;
-      Arr at 0 range 0 .. 3;
-   end record;
-
-   --  PMC_PMC_SLPWK_DR1_PID array
-   type PMC_PMC_SLPWK_DR1_PID_Field_Array_1 is array (39 .. 53) of Boolean
-     with Component_Size => 1, Size => 15;
-
-   --  Type definition for PMC_PMC_SLPWK_DR1_PID
-   type PMC_PMC_SLPWK_DR1_PID_Field_1
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt15;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_DR1_PID_Field_Array_1;
-      end case;
-   end record
-     with Unchecked_Union, Size => 15;
-
-   for PMC_PMC_SLPWK_DR1_PID_Field_1 use record
-      Val at 0 range 0 .. 14;
-      Arr at 0 range 0 .. 14;
-   end record;
-
-   --  PMC_PMC_SLPWK_DR1_PID array
-   type PMC_PMC_SLPWK_DR1_PID_Field_Array_2 is array (56 .. 60) of Boolean
-     with Component_Size => 1, Size => 5;
-
-   --  Type definition for PMC_PMC_SLPWK_DR1_PID
-   type PMC_PMC_SLPWK_DR1_PID_Field_2
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt5;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_DR1_PID_Field_Array_2;
-      end case;
-   end record
-     with Unchecked_Union, Size => 5;
-
-   for PMC_PMC_SLPWK_DR1_PID_Field_2 use record
-      Val at 0 range 0 .. 4;
-      Arr at 0 range 0 .. 4;
-   end record;
-
-   --  SleepWalking Disable Register 1
-   type PMC_PMC_SLPWK_DR1_Register is record
-      --  Write-only. Peripheral 32 SleepWalking Disable
-      PID            : PMC_PMC_SLPWK_DR1_PID_Field :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_4_4   : HAL.Bit := 16#0#;
-      --  Write-only. Peripheral 37 SleepWalking Disable
-      PID37          : Boolean := False;
-      --  unspecified
-      Reserved_6_6   : HAL.Bit := 16#0#;
-      --  Write-only. Peripheral 39 SleepWalking Disable
-      PID_1          : PMC_PMC_SLPWK_DR1_PID_Field_1 :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_22_23 : HAL.UInt2 := 16#0#;
-      --  Write-only. Peripheral 56 SleepWalking Disable
-      PID_2          : PMC_PMC_SLPWK_DR1_PID_Field_2 :=
-                        (As_Array => False, Val => 16#0#);
-      --  unspecified
-      Reserved_29_31 : HAL.UInt3 := 16#0#;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_SLPWK_DR1_Register use record
-      PID            at 0 range 0 .. 3;
-      Reserved_4_4   at 0 range 4 .. 4;
-      PID37          at 0 range 5 .. 5;
-      Reserved_6_6   at 0 range 6 .. 6;
-      PID_1          at 0 range 7 .. 21;
-      Reserved_22_23 at 0 range 22 .. 23;
-      PID_2          at 0 range 24 .. 28;
-      Reserved_29_31 at 0 range 29 .. 31;
-   end record;
-
-   --  PMC_PMC_SLPWK_SR1_PID array
-   type PMC_PMC_SLPWK_SR1_PID_Field_Array is array (32 .. 35) of Boolean
-     with Component_Size => 1, Size => 4;
-
-   --  Type definition for PMC_PMC_SLPWK_SR1_PID
-   type PMC_PMC_SLPWK_SR1_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt4;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_SR1_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 4;
-
-   for PMC_PMC_SLPWK_SR1_PID_Field use record
-      Val at 0 range 0 .. 3;
-      Arr at 0 range 0 .. 3;
-   end record;
-
-   --  PMC_PMC_SLPWK_SR1_PID array
-   type PMC_PMC_SLPWK_SR1_PID_Field_Array_1 is array (39 .. 53) of Boolean
-     with Component_Size => 1, Size => 15;
-
-   --  Type definition for PMC_PMC_SLPWK_SR1_PID
-   type PMC_PMC_SLPWK_SR1_PID_Field_1
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt15;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_SR1_PID_Field_Array_1;
-      end case;
-   end record
-     with Unchecked_Union, Size => 15;
-
-   for PMC_PMC_SLPWK_SR1_PID_Field_1 use record
-      Val at 0 range 0 .. 14;
-      Arr at 0 range 0 .. 14;
-   end record;
-
-   --  PMC_PMC_SLPWK_SR1_PID array
-   type PMC_PMC_SLPWK_SR1_PID_Field_Array_2 is array (56 .. 60) of Boolean
-     with Component_Size => 1, Size => 5;
-
-   --  Type definition for PMC_PMC_SLPWK_SR1_PID
-   type PMC_PMC_SLPWK_SR1_PID_Field_2
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt5;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_SR1_PID_Field_Array_2;
-      end case;
-   end record
-     with Unchecked_Union, Size => 5;
-
-   for PMC_PMC_SLPWK_SR1_PID_Field_2 use record
-      Val at 0 range 0 .. 4;
-      Arr at 0 range 0 .. 4;
-   end record;
-
-   --  SleepWalking Status Register 1
-   type PMC_PMC_SLPWK_SR1_Register is record
-      --  Read-only. Peripheral 32 SleepWalking Status
-      PID            : PMC_PMC_SLPWK_SR1_PID_Field;
-      --  unspecified
-      Reserved_4_4   : HAL.Bit;
-      --  Read-only. Peripheral 37 SleepWalking Status
-      PID37          : Boolean;
-      --  unspecified
-      Reserved_6_6   : HAL.Bit;
-      --  Read-only. Peripheral 39 SleepWalking Status
-      PID_1          : PMC_PMC_SLPWK_SR1_PID_Field_1;
-      --  unspecified
-      Reserved_22_23 : HAL.UInt2;
-      --  Read-only. Peripheral 56 SleepWalking Status
-      PID_2          : PMC_PMC_SLPWK_SR1_PID_Field_2;
-      --  unspecified
-      Reserved_29_31 : HAL.UInt3;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_SLPWK_SR1_Register use record
-      PID            at 0 range 0 .. 3;
-      Reserved_4_4   at 0 range 4 .. 4;
-      PID37          at 0 range 5 .. 5;
-      Reserved_6_6   at 0 range 6 .. 6;
-      PID_1          at 0 range 7 .. 21;
-      Reserved_22_23 at 0 range 22 .. 23;
-      PID_2          at 0 range 24 .. 28;
-      Reserved_29_31 at 0 range 29 .. 31;
-   end record;
-
-   --  PMC_PMC_SLPWK_ASR1_PID array
-   type PMC_PMC_SLPWK_ASR1_PID_Field_Array is array (32 .. 35) of Boolean
-     with Component_Size => 1, Size => 4;
-
-   --  Type definition for PMC_PMC_SLPWK_ASR1_PID
-   type PMC_PMC_SLPWK_ASR1_PID_Field
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt4;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_ASR1_PID_Field_Array;
-      end case;
-   end record
-     with Unchecked_Union, Size => 4;
-
-   for PMC_PMC_SLPWK_ASR1_PID_Field use record
-      Val at 0 range 0 .. 3;
-      Arr at 0 range 0 .. 3;
-   end record;
-
-   --  PMC_PMC_SLPWK_ASR1_PID array
-   type PMC_PMC_SLPWK_ASR1_PID_Field_Array_1 is array (39 .. 53) of Boolean
-     with Component_Size => 1, Size => 15;
-
-   --  Type definition for PMC_PMC_SLPWK_ASR1_PID
-   type PMC_PMC_SLPWK_ASR1_PID_Field_1
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt15;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_ASR1_PID_Field_Array_1;
-      end case;
-   end record
-     with Unchecked_Union, Size => 15;
-
-   for PMC_PMC_SLPWK_ASR1_PID_Field_1 use record
-      Val at 0 range 0 .. 14;
-      Arr at 0 range 0 .. 14;
-   end record;
-
-   --  PMC_PMC_SLPWK_ASR1_PID array
-   type PMC_PMC_SLPWK_ASR1_PID_Field_Array_2 is array (56 .. 60) of Boolean
-     with Component_Size => 1, Size => 5;
-
-   --  Type definition for PMC_PMC_SLPWK_ASR1_PID
-   type PMC_PMC_SLPWK_ASR1_PID_Field_2
-     (As_Array : Boolean := False)
-   is record
-      case As_Array is
-         when False =>
-            --  PID as a value
-            Val : HAL.UInt5;
-         when True =>
-            --  PID as an array
-            Arr : PMC_PMC_SLPWK_ASR1_PID_Field_Array_2;
-      end case;
-   end record
-     with Unchecked_Union, Size => 5;
-
-   for PMC_PMC_SLPWK_ASR1_PID_Field_2 use record
-      Val at 0 range 0 .. 4;
-      Arr at 0 range 0 .. 4;
-   end record;
-
-   --  SleepWalking Activity Status Register 1
-   type PMC_PMC_SLPWK_ASR1_Register is record
-      --  Read-only. Peripheral 32 Activity Status
-      PID            : PMC_PMC_SLPWK_ASR1_PID_Field;
-      --  unspecified
-      Reserved_4_4   : HAL.Bit;
-      --  Read-only. Peripheral 37 Activity Status
-      PID37          : Boolean;
-      --  unspecified
-      Reserved_6_6   : HAL.Bit;
-      --  Read-only. Peripheral 39 Activity Status
-      PID_1          : PMC_PMC_SLPWK_ASR1_PID_Field_1;
-      --  unspecified
-      Reserved_22_23 : HAL.UInt2;
-      --  Read-only. Peripheral 56 Activity Status
-      PID_2          : PMC_PMC_SLPWK_ASR1_PID_Field_2;
-      --  unspecified
-      Reserved_29_31 : HAL.UInt3;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_SLPWK_ASR1_Register use record
-      PID            at 0 range 0 .. 3;
-      Reserved_4_4   at 0 range 4 .. 4;
-      PID37          at 0 range 5 .. 5;
-      Reserved_6_6   at 0 range 6 .. 6;
-      PID_1          at 0 range 7 .. 21;
-      Reserved_22_23 at 0 range 22 .. 23;
-      PID_2          at 0 range 24 .. 28;
-      Reserved_29_31 at 0 range 29 .. 31;
-   end record;
-
-   --  SleepWalking Activity In Progress Register
-   type PMC_PMC_SLPWK_AIPR_Register is record
-      --  Read-only. Activity In Progress
-      AIP           : Boolean;
-      --  unspecified
-      Reserved_1_31 : HAL.UInt31;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_SLPWK_AIPR_Register use record
-      AIP           at 0 range 0 .. 0;
-      Reserved_1_31 at 0 range 1 .. 31;
-   end record;
-
-   subtype PMC_PMC_APLLACR_DCOFLTSEL_Field is HAL.UInt4;
-   subtype PMC_PMC_APLLACR_FLTSEL_Field is HAL.UInt4;
-   subtype PMC_PMC_APLLACR_BIAS_Field is HAL.UInt2;
-
-   --  Audio PLL Analog Configuration Register
-   type PMC_PMC_APLLACR_Register is record
-      --  DCO Filter Selection
-      DCOFLTSEL      : PMC_PMC_APLLACR_DCOFLTSEL_Field := 16#0#;
-      --  PLL Filter Selection
-      FLTSEL         : PMC_PMC_APLLACR_FLTSEL_Field := 16#0#;
-      --  Bias Voltage Selection
-      BIAS           : PMC_PMC_APLLACR_BIAS_Field := 16#0#;
-      --  unspecified
-      Reserved_10_31 : HAL.UInt22 := 16#0#;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_APLLACR_Register use record
-      DCOFLTSEL      at 0 range 0 .. 3;
-      FLTSEL         at 0 range 4 .. 7;
-      BIAS           at 0 range 8 .. 9;
-      Reserved_10_31 at 0 range 10 .. 31;
-   end record;
-
-   subtype PMC_PMC_WMST_WMST_Field is HAL.UInt8;
-
-   --  Write Access Password
-   type PMC_WMST_KEYSelect is
-     (--  Reset value for the field
-      PMC_WMST_KEYSelect_Reset,
-      --  Writing any other value in this field aborts the write operation.Always
---  reads as 0.
-      PASSWD)
-     with Size => 8;
-   for PMC_WMST_KEYSelect use
-     (PMC_WMST_KEYSelect_Reset => 0,
-      PASSWD => 90);
-
-   --  Wait Mode Startup Time Register
-   type PMC_PMC_WMST_Register is record
-      --  Wait Mode Startup Time
-      WMST          : PMC_PMC_WMST_WMST_Field := 16#0#;
-      --  unspecified
-      Reserved_8_23 : HAL.UInt16 := 16#0#;
-      --  Write Access Password
-      KEY           : PMC_WMST_KEYSelect := PMC_WMST_KEYSelect_Reset;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for PMC_PMC_WMST_Register use record
-      WMST          at 0 range 0 .. 7;
-      Reserved_8_23 at 0 range 8 .. 23;
-      KEY           at 0 range 24 .. 31;
+   for PMC_OCR2_Register use record
+      CAL4  at 0 range 0 .. 6;
+      SEL4  at 0 range 7 .. 7;
+      CAL8  at 0 range 8 .. 14;
+      SEL8  at 0 range 15 .. 15;
+      CAL12 at 0 range 16 .. 22;
+      SEL12 at 0 range 23 .. 23;
+      CAL10 at 0 range 24 .. 30;
+      SEL10 at 0 range 31 .. 31;
    end record;
 
    -----------------
@@ -2247,129 +1554,102 @@ package SAM_SVD.PMC is
    --  Power Management Controller
    type PMC_Peripheral is record
       --  System Clock Enable Register
-      PMC_SCER       : aliased PMC_PMC_SCER_Register;
+      SCER       : aliased PMC_SCER_Register;
       --  System Clock Disable Register
-      PMC_SCDR       : aliased PMC_PMC_SCDR_Register;
+      SCDR       : aliased PMC_SCDR_Register;
       --  System Clock Status Register
-      PMC_SCSR       : aliased PMC_PMC_SCSR_Register;
-      --  Peripheral Clock Enable Register 0
-      PMC_PCER0      : aliased PMC_PMC_PCER0_Register;
-      --  Peripheral Clock Disable Register 0
-      PMC_PCDR0      : aliased PMC_PMC_PCDR0_Register;
-      --  Peripheral Clock Status Register 0
-      PMC_PCSR0      : aliased PMC_PMC_PCSR0_Register;
-      --  UTMI Clock Register
-      CKGR_UCKR      : aliased PMC_CKGR_UCKR_Register;
+      SCSR       : aliased PMC_SCSR_Register;
       --  Main Oscillator Register
-      CKGR_MOR       : aliased PMC_CKGR_MOR_Register;
+      CKGR_MOR   : aliased PMC_CKGR_MOR_Register;
       --  Main Clock Frequency Register
-      CKGR_MCFR      : aliased PMC_CKGR_MCFR_Register;
+      CKGR_MCFR  : aliased PMC_CKGR_MCFR_Register;
       --  PLLA Register
-      CKGR_PLLAR     : aliased PMC_CKGR_PLLAR_Register;
+      CKGR_PLLAR : aliased PMC_CKGR_PLLAR_Register;
+      --  PLLB Register
+      CKGR_PLLBR : aliased PMC_CKGR_PLLBR_Register;
       --  Master Clock Register
-      PMC_MCKR       : aliased PMC_PMC_MCKR_Register;
-      --  USB Clock Register
-      PMC_USB        : aliased PMC_PMC_USB_Register;
-      --  Programmable Clock Register (chid = 0) 0
-      PMC_PCK        : aliased PMC_PMC_PCK_Registers;
+      MCKR       : aliased PMC_MCKR_Register;
+      --  Programmable Clock Register
+      PCK        : aliased PMC_PCK_Registers;
       --  Interrupt Enable Register
-      PMC_IER        : aliased PMC_PMC_IER_Register;
+      IER        : aliased PMC_IER_Register;
       --  Interrupt Disable Register
-      PMC_IDR        : aliased PMC_PMC_IDR_Register;
+      IDR        : aliased PMC_IDR_Register;
       --  Status Register
-      PMC_SR         : aliased PMC_PMC_SR_Register;
+      SR         : aliased PMC_SR_Register;
       --  Interrupt Mask Register
-      PMC_IMR        : aliased PMC_PMC_IMR_Register;
-      --  Fast Startup Mode Register
-      PMC_FSMR       : aliased PMC_PMC_FSMR_Register;
-      --  Fast Startup Polarity Register
-      PMC_FSPR       : aliased PMC_PMC_FSPR_Register;
+      IMR        : aliased PMC_IMR_Register;
       --  Fault Output Clear Register
-      PMC_FOCR       : aliased PMC_PMC_FOCR_Register;
+      FOCR       : aliased PMC_FOCR_Register;
+      --  PLL Configuration Register
+      PLL_CFG    : aliased PMC_PLL_CFG_Register;
       --  Write Protection Mode Register
-      PMC_WPMR       : aliased PMC_PMC_WPMR_Register;
+      WPMR       : aliased PMC_WPMR_Register;
       --  Write Protection Status Register
-      PMC_WPSR       : aliased PMC_PMC_WPSR_Register;
-      --  Version Register
-      PMC_VERSION    : aliased PMC_PMC_VERSION_Register;
-      --  Peripheral Clock Enable Register 1
-      PMC_PCER1      : aliased PMC_PMC_PCER1_Register;
-      --  Peripheral Clock Disable Register 1
-      PMC_PCDR1      : aliased PMC_PMC_PCDR1_Register;
-      --  Peripheral Clock Status Register 1
-      PMC_PCSR1      : aliased PMC_PMC_PCSR1_Register;
+      WPSR       : aliased PMC_WPSR_Register;
       --  Peripheral Control Register
-      PMC_PCR        : aliased PMC_PMC_PCR_Register;
+      PCR        : aliased PMC_PCR_Register;
       --  Oscillator Calibration Register
-      PMC_OCR        : aliased PMC_PMC_OCR_Register;
-      --  SleepWalking Enable Register 0
-      PMC_SLPWK_ER0  : aliased PMC_PMC_SLPWK_ER0_Register;
-      --  SleepWalking Disable Register 0
-      PMC_SLPWK_DR0  : aliased PMC_PMC_SLPWK_DR0_Register;
-      --  SleepWalking Status Register 0
-      PMC_SLPWK_SR0  : aliased PMC_PMC_SLPWK_SR0_Register;
-      --  SleepWalking Activity Status Register 0
-      PMC_SLPWK_ASR0 : aliased PMC_PMC_SLPWK_ASR0_Register;
+      OCR1       : aliased PMC_OCR1_Register;
       --  PLL Maximum Multiplier Value Register
-      PMC_PMMR       : aliased PMC_PMC_PMMR_Register;
-      --  SleepWalking Enable Register 1
-      PMC_SLPWK_ER1  : aliased PMC_PMC_SLPWK_ER1_Register;
-      --  SleepWalking Disable Register 1
-      PMC_SLPWK_DR1  : aliased PMC_PMC_SLPWK_DR1_Register;
-      --  SleepWalking Status Register 1
-      PMC_SLPWK_SR1  : aliased PMC_PMC_SLPWK_SR1_Register;
-      --  SleepWalking Activity Status Register 1
-      PMC_SLPWK_ASR1 : aliased PMC_PMC_SLPWK_ASR1_Register;
-      --  SleepWalking Activity In Progress Register
-      PMC_SLPWK_AIPR : aliased PMC_PMC_SLPWK_AIPR_Register;
-      --  Audio PLL Analog Configuration Register
-      PMC_APLLACR    : aliased PMC_PMC_APLLACR_Register;
-      --  Wait Mode Startup Time Register
-      PMC_WMST       : aliased PMC_PMC_WMST_Register;
+      PMMR       : aliased PMC_PMMR_Register;
+      --  CPU Monitor Limits Register
+      CPULIM     : aliased PMC_CPULIM_Register;
+      --  Peripheral Clock Status Register 0
+      CSR0       : aliased PMC_CSR0_Register;
+      --  Peripheral Clock Status Register 1
+      CSR1       : aliased PMC_CSR1_Register;
+      --  Peripheral Clock Status Register 2
+      CSR2       : aliased PMC_CSR2_Register;
+      --  Peripheral Clock Status Register 3
+      CSR3       : aliased PMC_CSR3_Register;
+      --  Generic Clock Status Register 0
+      GCSR0      : aliased PMC_GCSR0_Register;
+      --  Generic Clock Status Register 1
+      GCSR1      : aliased PMC_GCSR1_Register;
+      --  Generic Clock Status Register 2
+      GCSR2      : aliased PMC_GCSR2_Register;
+      --  Generic Clock Status Register 3
+      GCSR3      : aliased PMC_GCSR3_Register;
+      --  Oscillator Control Register 2
+      OSC2       : aliased PMC_OSC2_Register;
+      --  Oscillator Calibration Register 2
+      OCR2       : aliased PMC_OCR2_Register;
    end record
      with Volatile;
 
    for PMC_Peripheral use record
-      PMC_SCER       at 16#0# range 0 .. 31;
-      PMC_SCDR       at 16#4# range 0 .. 31;
-      PMC_SCSR       at 16#8# range 0 .. 31;
-      PMC_PCER0      at 16#10# range 0 .. 31;
-      PMC_PCDR0      at 16#14# range 0 .. 31;
-      PMC_PCSR0      at 16#18# range 0 .. 31;
-      CKGR_UCKR      at 16#1C# range 0 .. 31;
-      CKGR_MOR       at 16#20# range 0 .. 31;
-      CKGR_MCFR      at 16#24# range 0 .. 31;
-      CKGR_PLLAR     at 16#28# range 0 .. 31;
-      PMC_MCKR       at 16#30# range 0 .. 31;
-      PMC_USB        at 16#38# range 0 .. 31;
-      PMC_PCK        at 16#40# range 0 .. 255;
-      PMC_IER        at 16#60# range 0 .. 31;
-      PMC_IDR        at 16#64# range 0 .. 31;
-      PMC_SR         at 16#68# range 0 .. 31;
-      PMC_IMR        at 16#6C# range 0 .. 31;
-      PMC_FSMR       at 16#70# range 0 .. 31;
-      PMC_FSPR       at 16#74# range 0 .. 31;
-      PMC_FOCR       at 16#78# range 0 .. 31;
-      PMC_WPMR       at 16#E4# range 0 .. 31;
-      PMC_WPSR       at 16#E8# range 0 .. 31;
-      PMC_VERSION    at 16#FC# range 0 .. 31;
-      PMC_PCER1      at 16#100# range 0 .. 31;
-      PMC_PCDR1      at 16#104# range 0 .. 31;
-      PMC_PCSR1      at 16#108# range 0 .. 31;
-      PMC_PCR        at 16#10C# range 0 .. 31;
-      PMC_OCR        at 16#110# range 0 .. 31;
-      PMC_SLPWK_ER0  at 16#114# range 0 .. 31;
-      PMC_SLPWK_DR0  at 16#118# range 0 .. 31;
-      PMC_SLPWK_SR0  at 16#11C# range 0 .. 31;
-      PMC_SLPWK_ASR0 at 16#120# range 0 .. 31;
-      PMC_PMMR       at 16#130# range 0 .. 31;
-      PMC_SLPWK_ER1  at 16#134# range 0 .. 31;
-      PMC_SLPWK_DR1  at 16#138# range 0 .. 31;
-      PMC_SLPWK_SR1  at 16#13C# range 0 .. 31;
-      PMC_SLPWK_ASR1 at 16#140# range 0 .. 31;
-      PMC_SLPWK_AIPR at 16#144# range 0 .. 31;
-      PMC_APLLACR    at 16#158# range 0 .. 31;
-      PMC_WMST       at 16#15C# range 0 .. 31;
+      SCER       at 16#0# range 0 .. 31;
+      SCDR       at 16#4# range 0 .. 31;
+      SCSR       at 16#8# range 0 .. 31;
+      CKGR_MOR   at 16#20# range 0 .. 31;
+      CKGR_MCFR  at 16#24# range 0 .. 31;
+      CKGR_PLLAR at 16#28# range 0 .. 31;
+      CKGR_PLLBR at 16#2C# range 0 .. 31;
+      MCKR       at 16#30# range 0 .. 31;
+      PCK        at 16#40# range 0 .. 127;
+      IER        at 16#60# range 0 .. 31;
+      IDR        at 16#64# range 0 .. 31;
+      SR         at 16#68# range 0 .. 31;
+      IMR        at 16#6C# range 0 .. 31;
+      FOCR       at 16#78# range 0 .. 31;
+      PLL_CFG    at 16#80# range 0 .. 31;
+      WPMR       at 16#E4# range 0 .. 31;
+      WPSR       at 16#E8# range 0 .. 31;
+      PCR        at 16#10C# range 0 .. 31;
+      OCR1       at 16#110# range 0 .. 31;
+      PMMR       at 16#130# range 0 .. 31;
+      CPULIM     at 16#160# range 0 .. 31;
+      CSR0       at 16#170# range 0 .. 31;
+      CSR1       at 16#174# range 0 .. 31;
+      CSR2       at 16#178# range 0 .. 31;
+      CSR3       at 16#17C# range 0 .. 31;
+      GCSR0      at 16#190# range 0 .. 31;
+      GCSR1      at 16#194# range 0 .. 31;
+      GCSR2      at 16#198# range 0 .. 31;
+      GCSR3      at 16#19C# range 0 .. 31;
+      OSC2       at 16#1B0# range 0 .. 31;
+      OCR2       at 16#1B4# range 0 .. 31;
    end record;
 
    --  Power Management Controller

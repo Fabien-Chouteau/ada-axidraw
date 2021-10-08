@@ -1,0 +1,54 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.val_bool%b	s-valboo.adb		522bc5b6 NE OL PK
+W system%s		system.ads		system.ali
+W system.val_util%s	s-valuti.adb		s-valuti.ali
+
+U system.val_bool%s	s-valboo.ads		0af23ede NE OL PR PK
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-valboo.ads		20210927095552 5026d18b system.val_bool%s
+D s-valboo.adb		20210927095552 aeada2c3 system.val_bool%b
+D s-valuti.ads		20210927095552 aca0b6fe system.val_util%s
+G a e
+G c Z s b [value_boolean system__val_bool 35 13 none]
+X 1 system.ads
+50K9*System 164e11 2|32r9 38r5 3|32r6 32r27 34r14 59r5
+X 2 s-valboo.ads
+32K16*Val_Bool 1|50k9 2|38l12 38e20 3|34b21 59l12 59t20
+35V13*Value_Boolean{boolean} 35>28 3|40b13 57l8 57t21
+35a28 Str{string} 3|40b28 43r19 43r33 55r21
+X 3 s-valboo.adb
+41i7 F{natural} 46m28 48r13 51r16
+42i7 L{natural} 46m31 48r18 51r21
+43a7 S{string} 46m25 46r25 48r10 51r13
+X 4 s-valuti.ads
+34K16*Val_Util 3|32w13 32r34 4|124e20
+37U14*Bad_Value 3|55s10
+41U14*Normalize_String 3|46s7
+

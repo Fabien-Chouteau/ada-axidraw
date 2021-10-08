@@ -1,0 +1,72 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U interfaces.sam.sfr%s	i-sam-sfr.ads		53bf127c NE OL PR PK
+W interfaces.sam%s	i-sam.ads		i-sam.ali
+W system%s		system.ads		system.ali
+
+D interfac.ads		20210927095552 edec285f interfaces%s
+D i-sam.ads		20210927130812 3bba8a63 interfaces.sam%s
+D i-sam-sfr.ads		20210927130812 32d1774a interfaces.sam.sfr%s
+D system.ads		20210927095552 5ad4ef55 system%s
+G a e
+G c Z s s [can_registerIP interfaces__sam__sfr 23 9 none]
+G c Z s s [sfr_wpmr_registerIP interfaces__sam__sfr 52 9 none]
+G c Z s s [sfr_peripheralIP interfaces__sam__sfr 74 9 none]
+X 1 interfac.ads
+38K9*Interfaces 231e15 3|12r9 20r38 25r23 37r35 56r22 94r5
+71M9*Unsigned_16
+X 2 i-sam.ads
+13K20*SAM 1|38k9 2|139e19 3|12r20 20r49 25r34 37r46 56r33 94r16
+22M9*UInt16<1|71M9> 3|20r53 25r38
+24M9*Bit 3|37r50
+36M9*UInt7 3|56r37
+119m4*SFR_Base{4|80M9} 3|92r30
+X 3 i-sam-sfr.ads
+12K24*SFR 2|13k20 3|94l20 94e23
+20M12*CAN_EXT_MEM_ADDR_Field{2|22M9} 27r23
+23R9*CAN_Register 29e6 32r8 76r22 78r22
+25m7*Reserved_0_15{2|22M9} 33r7
+27m7*EXT_MEM_ADDR{20M12} 34r7
+37M12*SFR_WPMR_WPEN_Field{2|24M9} 54r22
+40E9*WPMR_WPKEYSelect 46e6 47r8 58r22
+42n7*WPMR_WPKEYSelect_Reset{40E9} 48r7 58r42
+45n7*PASSWD{40E9} 49r7
+52R9*SFR_WPMR_Register 60e6 63r8 80r22
+54m7*WPEN{37M12} 64r7
+56m7*Reserved_1_7{2|36M9} 65r7
+58e7*WPKEY{40E9} 66r7
+74R9*SFR_Peripheral 82e6 84r8 91r25
+76r7*CAN0{23R9} 85r7
+78r7*CAN1{23R9} 86r7
+80r7*WPMR{52R9} 87r7
+91r4*SFR_Periph{74R9}
+X 4 system.ads
+50K9*System 3|10w6 30r24 61r24 4|164e11
+80M9*Address
+104n41*Low_Order_First{104E9} 3|30r31 61r31
+

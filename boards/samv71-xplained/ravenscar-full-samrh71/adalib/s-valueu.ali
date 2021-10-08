@@ -1,0 +1,92 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_RECURSION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.value_u%b	s-valueu.adb		5b8a57ed NE OL PK GE
+W system%s		system.ads		system.ali
+W system.val_util%s	s-valuti.adb		s-valuti.ali
+
+U system.value_u%s	s-valueu.ads		215b23a0 BN NE OL PR PK GE
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-valuti.ads		20210927095552 aca0b6fe system.val_util%s
+D s-valueu.ads		20210927095552 7b8fccf5 system.value_u%s
+D s-valueu.adb		20210927095552 8ca52de6 system.value_u%b
+G a e
+G c Z s b [value_u system 39 16 none]
+X 1 system.ads
+50K9*System 164e11 3|39r9 131r5 4|32r6 32r27 34r14 324r5
+X 2 s-valuti.ads
+34K16*Val_Util 124e20 4|32w13 32r34
+37U14*Bad_Value 4|215s19 264s10 287s10
+76U14*Scan_Plus_Sign 4|283s7
+84V13*Scan_Exponent{integer} 4|237s16
+103U14*Scan_Trailing_Blanks 4|318s13
+107U14*Scan_Underscore 4|99s19 227s19
+X 3 s-valueu.ads
+37M9 Uns 45r29 117r29 125r28 4|43r29 48r14 60r14 63r15 82r26 82r34 85r28
+. 85r35 150r29 150r37 153r30 153r37 246r30 246r37 277r29 297r50 314r17
+39k16*Value_U 1|50k9 3|37z9 131l12 131e19 4|34b21 324l12 324t19
+42V13*Scan_Raw_Unsigned{37M9} 43>7 44^7 45>7 4|40b13 268l8 268t25 290s14
+43a7 Str{string} 4|41b7 69r10 75r30 93r37 98r19 99r36 131r28 131r50 132r23
+. 162r19 163r43 165r22 167r36 169r22 171r36 215r30 220r19 226r22 227r36 237r31
+. 264r21
+44p7 Ptr(integer) 4|42b7 74r12 99r44 126r7 214r19 221r19 227r44 237r36
+45i7 Max{integer} 4|43b7 91r27 99r49 131r14 213r23 227r49 237r41
+114V13*Scan_Unsigned{37M9} 115>7 116^7 117>7 4|274b13 291l8 291t21 317s18
+115a7 Str{string} 4|275b7 283r23 285r10 287r21 290r33
+116p7 Ptr(integer) 4|276b7 283r28 285r15 286r10 290r38
+117i7 Max{integer} 4|277b7 283r33 290r43
+124V13*Value_Unsigned{37M9} 125>7 4|297b13 307s20 322l8 322t22
+125a7 Str{string} 4|297b29 303r10 305r40 307r40 315r36 317r33 317r48 318r35
+X 4 s-valueu.adb
+45i7 P{integer} 74m7 75r35 76m7 76r12 91r23 93r42 98r24 99m41 99r41 121m16
+. 121r21 126r18 131r10 131r33 131r55 132r28 133m10 133r15 162r24 163r48 165r27
+. 167r41 169r27 171r41 211m16 211r21 213r19 214r30 220r24 221r30 226r27 227m41
+. 227r41
+48*7 Uval{3|37M9} 75m7 107r19 108m19 108r32 110r22 114m19 114r32 116r22 134r18
+. 135m10 179m19 192r22 193m19 193r34 195r22 199m19 199r34 201r22 239r30 251r19
+. 256m16 256r24 266r17
+51i7 Expon{integer} 237m7 239r10 250r27
+54b7 Overflow{boolean} 111m19 117m22 143m13 188m19 196m19 202m22 252m19 263r10
+57e7 Base_Char{character} 132m10 220r29
+60*7 Base{3|37M9} 134m10 142r13 144m13 150r48 150r60 153r48 179r27 187r28
+. 193r27 199r27 246r48 256r31
+63*7 Digit{3|37M9} 93m13 97r16 108r39 114r39 163m19 166m19 170m19 187r19
+. 193r41 199r41
+82*10 Umax{3|37M9} 107r27
+85*10 Umax10{3|37M9} 110r29 116r29
+150*13 Umax{3|37M9} 192r30
+153*13 UmaxB{3|37M9} 195r29 201r29
+246*13 UmaxB{3|37M9} 251r26
+250i17 J{integer}
+279i7 Start{positive} 283m38 286r21
+305A21 NT{string}<integer> 307r36
+314*13 V{3|37M9} 317m13 319r20
+315i13 P{integer} 317m38 317r38 318r40
+

@@ -1,0 +1,139 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada.numerics.long_elementary_functions%b  a-nlelfu.ads  4a933b1e NE OL PU PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W system%s		system.ads		system.ali
+Z system.fat_lflt%s	s-fatlfl.ads		s-fatlfl.ali
+W system.generic_c_math_interface%s
+W system.libm_double%s	s-libdou.adb		s-libdou.ali
+
+U ada.numerics.long_elementary_functions%s  a-nlelfu.ads  5c256589 EB NE OL PU PK
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W system%s		system.ads		system.ali
+W system.generic_c_math_interface%s
+W system.libm_double%s	s-libdou.adb		s-libdou.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-numeri.ads		20210927095552 84bea7a3 ada.numerics%s
+D a-nlelfu.ads		20210927095552 4a933b1e ada.numerics.long_elementary_functions%s
+D a-nlelfu.ads		20210927095552 4a933b1e ada.numerics.long_elementary_functions%b
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-fatgen.ads		20210927095552 d28c6cfe system.fat_gen%s
+D s-fatgen.adb		20210927095552 f61e99f3 system.fat_gen%b
+D s-fatlfl.ads		20210927095552 378cba9f system.fat_lflt%s
+D s-gcmain.ads		20210927095552 f623c353 system.generic_c_math_interface%s
+D s-gcmain.adb		20210927095552 b4b426ea system.generic_c_math_interface%b
+D s-libdou.ads		20210927095552 642b3a67 system.libm_double%s
+D s-libpre.ads		20210927095552 f93cda94 system.libm_prefix%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+G a e
+G c Z s s [sqrt ada__numerics__long_elementary_functions 93 13 41_1]
+G c Z s s [log ada__numerics__long_elementary_functions 97 13 41_1]
+G c Z s s [log ada__numerics__long_elementary_functions 101 13 41_1]
+G c Z s s [exp ada__numerics__long_elementary_functions 105 13 41_1]
+G c Z s s [Oexpon ada__numerics__long_elementary_functions 109 13 41_1]
+G c Z s s [sin ada__numerics__long_elementary_functions 113 13 41_1]
+G c Z s s [sin ada__numerics__long_elementary_functions 117 13 41_1]
+G c Z s s [cos ada__numerics__long_elementary_functions 121 13 41_1]
+G c Z s s [cos ada__numerics__long_elementary_functions 125 13 41_1]
+G c Z s s [tan ada__numerics__long_elementary_functions 129 13 41_1]
+G c Z s s [tan ada__numerics__long_elementary_functions 133 13 41_1]
+G c Z s s [cot ada__numerics__long_elementary_functions 137 13 41_1]
+G c Z s s [cot ada__numerics__long_elementary_functions 141 13 41_1]
+G c Z s s [arcsin ada__numerics__long_elementary_functions 145 13 41_1]
+G c Z s s [arcsin ada__numerics__long_elementary_functions 149 13 41_1]
+G c Z s s [arccos ada__numerics__long_elementary_functions 154 13 41_1]
+G c Z s s [arccos ada__numerics__long_elementary_functions 158 13 41_1]
+G c Z s s [arctan ada__numerics__long_elementary_functions 163 13 41_1]
+G c Z s s [arctan ada__numerics__long_elementary_functions 170 13 41_1]
+G c Z s s [arccot ada__numerics__long_elementary_functions 178 13 41_1]
+G c Z s s [arccot ada__numerics__long_elementary_functions 185 13 41_1]
+G c Z s s [sinh ada__numerics__long_elementary_functions 193 13 41_1]
+G c Z s s [cosh ada__numerics__long_elementary_functions 197 13 41_1]
+G c Z s s [tanh ada__numerics__long_elementary_functions 201 13 41_1]
+G c Z s s [coth ada__numerics__long_elementary_functions 205 13 41_1]
+G c Z s s [arcsinh ada__numerics__long_elementary_functions 209 13 41_1]
+G c Z s s [arccosh ada__numerics__long_elementary_functions 213 13 41_1]
+G c Z s s [arctanh ada__numerics__long_elementary_functions 217 13 41_1]
+G c Z s s [arccoth ada__numerics__long_elementary_functions 221 13 41_1]
+X 1 ada.ads
+16K9*Ada 20e8 5|41r9
+X 3 a-numeri.ads
+16K13*Numerics 1|16k9 3|35e17 5|41r13
+X 5 a-nlelfu.ads
+41K22*Long_Elementary_Functions[11|86] 3|16k13 5|64r14
+X 7 system.ads
+50K9*System 5|38r6 39r6 42r8 44r18 45r18 46r18 47r18 49r18 50r18 51r18 53r18
+. 54r18 55r18 57r18 58r18 59r18 61r18 62r18 63r18 7|164e11
+X 11 s-gcmain.ads
+63F9 Float_Type 5|43r7
+65V18 C_Sqrt{63F9} 5|44r7
+66V18 C_Log{63F9} 5|45r7
+67V18 C_Exp{63F9} 5|46r7
+68V18 C_Pow{63F9} 5|47r7
+70V18 C_Sin{63F9} 5|49r7
+71V18 C_Cos{63F9} 5|50r7
+72V18 C_Tan{63F9} 5|51r7
+74V18 C_Asin{63F9} 5|53r7
+75V18 C_Acos{63F9} 5|54r7
+76V18 C_Atan2{63F9} 5|55r7
+78V18 C_Sinh{63F9} 5|57r7
+79V18 C_Cosh{63F9} 5|58r7
+80V18 C_Tanh{63F9} 5|59r7
+82V18 C_Asinh{63F9} 5|61r7
+83V18 C_Acosh{63F9} 5|62r7
+84V18 C_Atanh{63F9} 5|63r7
+86k16*Generic_C_Math_Interface 5|38w13 42r15 11|225e36
+X 13 s-libdou.ads
+40K16*Libm_Double 5|39w13 44r25 45r25 46r25 47r25 49r25 50r25 51r25 53r25
+. 54r25 55r25 57r25 58r25 59r25 61r25 62r25 63r25 13|533e23
+78V13*Acos{long_float} 5|54r37
+103V13*Acosh{long_float} 5|62r37
+124V13*Asin{long_float} 5|53r37
+149V13*Asinh{long_float} 5|61r37
+185V13*Atan2{long_float} 5|55r37
+219V13*Atanh{long_float} 5|63r37
+240V13*Cos{long_float} 5|50r37
+263V13*Cosh{long_float} 5|58r37
+286V13*Exp{long_float} 5|46r37
+328V13*Log{long_float} 5|45r37
+393V13*Pow{long_float} 5|47r37
+429V13*Sin{long_float} 5|49r37
+449V13*Sinh{long_float} 5|57r37
+469V13*Sqrt{long_float} 5|44r37
+482V13*Tan{long_float} 5|51r37
+502V13*Tanh{long_float} 5|59r37
+

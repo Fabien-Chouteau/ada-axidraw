@@ -1,0 +1,49 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.fore_real%b	s-forrea.adb		22f7ecb9 NE OL PK
+W system%s		system.ads		system.ali
+
+U system.fore_real%s	s-forrea.ads		ad3a533d NE OL PU PK
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-forrea.ads		20210927095552 f7eebc68 system.fore_real%s
+D s-forrea.adb		20210927095552 d51950d1 system.fore_real%b
+G a e
+G c Z s b [fore_fixed system__fore_real 38 13 none]
+X 1 system.ads
+50K9*System 164e11 2|35r9 42r5 3|32r14 57r5
+X 2 s-forrea.ads
+35K16*Fore_Real 1|50k9 2|42l12 42e21 3|32b21 57l12 57t21
+38V13*Fore_Fixed{natural} 38>25 38>29 3|38b13 55l8 55t18
+38f25 Lo{long_float} 3|38b25 39r45
+38f29 Hi{long_float} 3|38b29 39r53
+X 3 s-forrea.adb
+39f7 T{long_float} 49r13 50m10 50r15
+40i7 F{natural} 45m7 51m10 51r15 54r14
+

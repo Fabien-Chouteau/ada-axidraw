@@ -1,0 +1,42 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.float_control%b  s-flocon.adb		ebbca372 NE OL PK
+W system%s		system.ads		system.ali
+
+U system.float_control%s  s-flocon.ads		ba28ac69 BN NE OL PU PK
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-flocon.ads		20210927095552 e0fc433c system.float_control%s
+D s-flocon.adb		20210927095552 0b40e04e system.float_control%b
+G a e
+G c Z s b [reset system__float_control 39 14 none]
+X 1 system.ads
+50K9*System 164e11 2|34r9 59r5 3|35r14 46r5
+X 2 s-flocon.ads
+34K16*Float_Control 1|50k9 2|59l12 59e25 3|35b21 46l12 46t25
+39U14*Reset 40r19 3|41b14 44l8 44t13
+

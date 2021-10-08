@@ -1,0 +1,133 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTIONS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+
+U gnat.sha512%b		g-sha512.ads		ddcf5bc4 NE OL PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.secure_hashes%s	g-sechas.adb		g-sechas.ali
+W gnat.secure_hashes.sha2_64%s  g-shsh64.adb	g-shsh64.ali
+W gnat.secure_hashes.sha2_common%s  g-shshco.adb  g-shshco.ali
+W system%s		system.ads		system.ali
+Z system.put_images%s	s-putima.adb		s-putima.ali
+
+U gnat.sha512%s		g-sha512.ads		a2a28399 EB EE OL PK
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.secure_hashes%s	g-sechas.adb		g-sechas.ali
+W gnat.secure_hashes.sha2_64%s  g-shsh64.adb	g-shsh64.ali
+W gnat.secure_hashes.sha2_common%s  g-shshco.adb  g-shshco.ali
+W system%s		system.ads		system.ali
+Z system.put_images%s	s-putima.adb		s-putima.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-stream.ads		20210927095552 119b8fb3 ada.streams%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20210927095552 b5988c27 gnat%s
+D g-bytswa.ads		20210927095552 a4d21639 gnat.byte_swapping%s
+D g-sechas.ads		20210927095552 302163b5 gnat.secure_hashes%s
+D g-sechas.adb		20210927095552 d130861d gnat.secure_hashes%b
+D g-shsh64.ads		20210927095552 8165eb03 gnat.secure_hashes.sha2_64%s
+D g-shshco.ads		20210927095552 1144502c gnat.secure_hashes.sha2_common%s
+D g-sha512.ads		20210927095552 ddcf5bc4 gnat.sha512%s
+D g-sha512.ads		20210927095552 ddcf5bc4 gnat.sha512%b
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-putima.ads		20210927095552 4e095881 system.put_images%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s s [hmac_initial_context gnat__sha512 147 16 43_1]
+G c Z s s [update gnat__sha512 150 17 43_1]
+G c Z s s [wide_update gnat__sha512 151 17 43_1]
+G c Z s s [update gnat__sha512 152 17 43_1]
+G c Z s s [digest gnat__sha512 167 16 43_1]
+G c Z s s [digest gnat__sha512 170 16 43_1]
+G c Z s s [wide_digest gnat__sha512 171 16 43_1]
+G c Z s s [digest gnat__sha512 172 16 43_1]
+G c Z s s [digest gnat__sha512 182 16 43_1]
+G c Z s s [digest gnat__sha512 186 16 43_1]
+G c Z s s [wide_digest gnat__sha512 187 16 43_1]
+G c Z s s [digest gnat__sha512 188 16 43_1]
+G c Z s s [contextIP gnat__sha512 210 12 43_1]
+G c Z s s [read gnat__sha512 229 17 43_1]
+G c Z s s [write gnat__sha512 235 17 43_1]
+G c Z s s [hash_streamDF gnat__sha512 226 12 43_1]
+G c Z s s [hash_streamIP gnat__sha512 226 12 43_1]
+G c Z s s [update gnat__sha512 149 17 43_1]
+G c Z s s [final gnat__sha512 155 17 43_1]
+X 3 a-stream.ads
+44I9*Stream_Element_Offset<long_long_integer>
+51I12*Stream_Element_Count{44I9}
+X 9 gnat.ads
+34K9*GNAT 57e9 16|39r6 40r6 43r9 43r28 44r22 48r22 49r22 50r22
+X 11 g-sechas.ads
+45K14*Secure_Hashes 242e23 16|39r11 40r11 43r33 44r27 48r27 49r27 50r27
+73M12 Word
+84A12*State(17|82M9)<3|44I9>
+100i7 Block_Words{3|51I12} 16|44r4
+103i7 State_Words{3|51I12} 16|45r4
+106i7 Hash_Words{3|51I12} 16|46r4
+110e7 Hash_Bit_Order{18|104E9} 16|47r4
+114K20 Hash_State 16|48r4
+117a7 Initial_State{84A12[114]} 16|49r4
+120U22 Transform 16|50r4
+126k12*H 240e9 16|43r47
+X 13 g-shsh64.ads
+43K28*SHA2_64 132e31 16|40w25 48r41 49r41 50r41
+46K12*Hash_State[11|82] 16|48r49
+103U14*Transform[14|62] 16|50r49
+121a4*SHA512_Init_State{11|84A12[46]} 16|49r49
+X 14 g-shshco.ads
+42K28*SHA2_Common 66e35 16|39w25 44r41
+44N4*Block_Words 16|44r53
+X 16 g-sha512.ads
+43K14*SHA512[11|126] 9|34k9
+X 17 interfac.ads
+82M9*Unsigned_64
+X 18 system.ads
+50K9*System 16|41w6 47r22 18|164e11
+104n23*High_Order_First{104E9} 16|47r29
+

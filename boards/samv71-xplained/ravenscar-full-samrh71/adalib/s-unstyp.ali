@@ -1,0 +1,185 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_LONG_LONG_INTEGERS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RR NO_ELABORATION_CODE
+
+U system.unsigned_types%s  s-unstyp.ads		71d39bc6 NE OL PU PK
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+G a e
+G c Z s s [shift_left system__unsigned_types 116 13 none]
+G c Z s s [shift_right system__unsigned_types 120 13 none]
+G c Z s s [shift_right_arithmetic system__unsigned_types 124 13 none]
+G c Z s s [rotate_left system__unsigned_types 128 13 none]
+G c Z s s [rotate_right system__unsigned_types 132 13 none]
+G c Z s s [shift_left system__unsigned_types 136 13 none]
+G c Z s s [shift_right system__unsigned_types 140 13 none]
+G c Z s s [shift_right_arithmetic system__unsigned_types 144 13 none]
+G c Z s s [rotate_left system__unsigned_types 148 13 none]
+G c Z s s [rotate_right system__unsigned_types 152 13 none]
+G c Z s s [shift_left system__unsigned_types 156 13 none]
+G c Z s s [shift_right system__unsigned_types 160 13 none]
+G c Z s s [shift_right_arithmetic system__unsigned_types 164 13 none]
+G c Z s s [rotate_left system__unsigned_types 168 13 none]
+G c Z s s [rotate_right system__unsigned_types 172 13 none]
+G c Z s s [shift_left system__unsigned_types 176 13 none]
+G c Z s s [shift_right system__unsigned_types 180 13 none]
+G c Z s s [shift_right_arithmetic system__unsigned_types 184 13 none]
+G c Z s s [rotate_left system__unsigned_types 188 13 none]
+G c Z s s [rotate_right system__unsigned_types 192 13 none]
+G c Z s s [shift_left system__unsigned_types 196 13 none]
+G c Z s s [shift_right system__unsigned_types 200 13 none]
+G c Z s s [shift_right_arithmetic system__unsigned_types 204 13 none]
+G c Z s s [rotate_left system__unsigned_types 208 13 none]
+G c Z s s [rotate_right system__unsigned_types 212 13 none]
+G c Z s s [shift_left system__unsigned_types 216 13 none]
+G c Z s s [shift_right system__unsigned_types 220 13 none]
+G c Z s s [shift_right_arithmetic system__unsigned_types 224 13 none]
+G c Z s s [rotate_left system__unsigned_types 228 13 none]
+G c Z s s [rotate_right system__unsigned_types 232 13 none]
+X 1 system.ads
+50K9*System 164e11 2|40r9 251r5
+67N4*Max_Binary_Modulus 2|49r40
+X 2 s-unstyp.ads
+40K16*Unsigned_Types 1|50k9 2|251l12 251e26
+44M9*Short_Short_Unsigned 117r16 118r32 121r16 122r32 125r16 126r32 129r16
+. 130r32 133r16 134r32
+45M9*Short_Unsigned 137r16 138r32 141r16 142r32 145r16 146r32 149r16 150r32
+. 153r16 154r32
+46M9*Unsigned 157r16 158r32 161r16 162r32 165r16 166r32 169r16 170r32 173r16
+. 174r32
+47M9*Long_Unsigned 177r16 178r32 181r16 182r32 185r16 186r32 189r16 190r32
+. 193r16 194r32
+48M9*Long_Long_Unsigned 197r16 198r32 201r16 202r32 205r16 206r32 209r16
+. 210r32 213r16 214r32
+49M9*Long_Long_Long_Unsigned 217r16 218r32 221r16 222r32 225r16 226r32 229r16
+. 230r32 233r16 234r32
+51M9*Packed_Byte 52r8 53r31 58r62 60r41
+58A9*Packed_Bytes1(51M9)<integer> 59r8 60r8 61r36 68r30 79r30 90r34 249r38
+68A9*Packed_Bytes2<58A9>(51M9)<integer> 69r8 70r36 96r34
+79A9*Packed_Bytes4<58A9>(51M9)<integer> 80r8 81r36 102r34 113r23 248r38
+90A9*Rev_Packed_Bytes1<58A9>(51M9)<integer> 91r36
+96A9*Rev_Packed_Bytes2<68A9>(51M9)<integer> 97r36
+102A9*Rev_Packed_Bytes4<79A9>(51M9)<integer> 103r36
+108M9*Bits_1
+109M9*Bits_2
+110M9*Bits_4
+113A12*Bytes_F{79A9}(51M9)<integer>
+116V13*Shift_Left{44M9} 117>7 118>7 236b30
+117m7 Value{44M9}
+118i7 Amount{natural}
+120V13*Shift_Right{44M9} 121>7 122>7 237b30
+121m7 Value{44M9}
+122i7 Amount{natural}
+124V13*Shift_Right_Arithmetic{44M9} 125>7 126>7 238b30
+125m7 Value{44M9}
+126i7 Amount{natural}
+128V13*Rotate_Left{44M9} 129>7 130>7 239b30
+129m7 Value{44M9}
+130i7 Amount{natural}
+132V13*Rotate_Right{44M9} 133>7 134>7 240b30
+133m7 Value{44M9}
+134i7 Amount{natural}
+136V13*Shift_Left{45M9} 137>7 138>7 236b30
+137m7 Value{45M9}
+138i7 Amount{natural}
+140V13*Shift_Right{45M9} 141>7 142>7 237b30
+141m7 Value{45M9}
+142i7 Amount{natural}
+144V13*Shift_Right_Arithmetic{45M9} 145>7 146>7 238b30
+145m7 Value{45M9}
+146i7 Amount{natural}
+148V13*Rotate_Left{45M9} 149>7 150>7 239b30
+149m7 Value{45M9}
+150i7 Amount{natural}
+152V13*Rotate_Right{45M9} 153>7 154>7 240b30
+153m7 Value{45M9}
+154i7 Amount{natural}
+156V13*Shift_Left{46M9} 157>7 158>7 236b30
+157m7 Value{46M9}
+158i7 Amount{natural}
+160V13*Shift_Right{46M9} 161>7 162>7 237b30
+161m7 Value{46M9}
+162i7 Amount{natural}
+164V13*Shift_Right_Arithmetic{46M9} 165>7 166>7 238b30
+165m7 Value{46M9}
+166i7 Amount{natural}
+168V13*Rotate_Left{46M9} 169>7 170>7 239b30
+169m7 Value{46M9}
+170i7 Amount{natural}
+172V13*Rotate_Right{46M9} 173>7 174>7 240b30
+173m7 Value{46M9}
+174i7 Amount{natural}
+176V13*Shift_Left{47M9} 177>7 178>7 236b30
+177m7 Value{47M9}
+178i7 Amount{natural}
+180V13*Shift_Right{47M9} 181>7 182>7 237b30
+181m7 Value{47M9}
+182i7 Amount{natural}
+184V13*Shift_Right_Arithmetic{47M9} 185>7 186>7 238b30
+185m7 Value{47M9}
+186i7 Amount{natural}
+188V13*Rotate_Left{47M9} 189>7 190>7 239b30
+189m7 Value{47M9}
+190i7 Amount{natural}
+192V13*Rotate_Right{47M9} 193>7 194>7 240b30
+193m7 Value{47M9}
+194i7 Amount{natural}
+196V13*Shift_Left{48M9} 197>7 198>7 236b30
+197m7 Value{48M9}
+198i7 Amount{natural}
+200V13*Shift_Right{48M9} 201>7 202>7 237b30
+201m7 Value{48M9}
+202i7 Amount{natural}
+204V13*Shift_Right_Arithmetic{48M9} 205>7 206>7 238b30
+205m7 Value{48M9}
+206i7 Amount{natural}
+208V13*Rotate_Left{48M9} 209>7 210>7 239b30
+209m7 Value{48M9}
+210i7 Amount{natural}
+212V13*Rotate_Right{48M9} 213>7 214>7 240b30
+213m7 Value{48M9}
+214i7 Amount{natural}
+216V13*Shift_Left{49M9} 217>7 218>7 236b30
+217m7 Value{49M9}
+218i7 Amount{natural}
+220V13*Shift_Right{49M9} 221>7 222>7 237b30
+221m7 Value{49M9}
+222i7 Amount{natural}
+224V13*Shift_Right_Arithmetic{49M9} 225>7 226>7 238b30
+225m7 Value{49M9}
+226i7 Amount{natural}
+228V13*Rotate_Left{49M9} 229>7 230>7 239b30
+229m7 Value{49M9}
+230i7 Amount{natural}
+232V13*Rotate_Right{49M9} 233>7 234>7 240b30
+233m7 Value{49M9}
+234i7 Amount{natural}
+248A12*Packed_Bytes{79A9}(51M9)<integer>
+249A12*Packed_Bytes_Unaligned{58A9}<integer>
+

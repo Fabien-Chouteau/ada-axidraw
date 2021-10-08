@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from ATSAMV71Q21.svd
+--  This spec has been automatically generated from ATSAMRH71F20C.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -15,73 +15,74 @@ package SAM_SVD.MATRIX is
    ---------------
 
    --  Undefined Length Burst Type
-   type MATRIX_MCFG_ULBTSelect is
+   type MCFG_ULBTSelect is
      (--  Unlimited Length Burst-No predicted end of burst is generated, therefore
 --  INCR bursts coming from this master can only be broken if the Slave Slot
 --  Cycle Limit is reached. If the Slot Cycle Limit is not reached, the burst
---  is normally completed by the master, at the latest, on the next AHB 1-Kbyte
+--  is normally completed by the master, at the latest, on the next AHB 1 Kbyte
 --  address boundary, allowing up to 256-beat word bursts or 128-beat
 --  double-word bursts.This value should not be used in the very particular
 --  case of a master capable of performing back-to-back undefined length bursts
 --  on a single slave, since this could indefinitely freeze the slave
 --  arbitration and thus prevent another master from accessing this slave.
-      UNLTD_LENGTH,
+      UNLIMITED,
       --  Single Access-The undefined length burst is treated as a succession of
 --  single accesses, allowing re-arbitration at each beat of the INCR burst or
 --  bursts sequence.
-      SINGLE_ACCESS,
+      SINGLE,
       --  4-beat Burst-The undefined length burst or bursts sequence is split into
 --  4-beat bursts or less, allowing re-arbitration every 4 beats.
-      Val_4BEAT_BURST,
+      Val_4_BEAT,
       --  8-beat Burst-The undefined length burst or bursts sequence is split into
 --  8-beat bursts or less, allowing re-arbitration every 8 beats.
-      Val_8BEAT_BURST,
+      Val_8_BEAT,
       --  16-beat Burst-The undefined length burst or bursts sequence is split into
 --  16-beat bursts or less, allowing re-arbitration every 16 beats.
-      Val_16BEAT_BURST,
-      --  32-beat Burst -The undefined length burst or bursts sequence is split into
+      Val_16_BEAT,
+      --  32-beat Burst-The undefined length burst or bursts sequence is split into
 --  32-beat bursts or less, allowing re-arbitration every 32 beats.
-      Val_32BEAT_BURST,
+      Val_32_BEAT,
       --  64-beat Burst-The undefined length burst or bursts sequence is split into
 --  64-beat bursts or less, allowing re-arbitration every 64 beats.
-      Val_64BEAT_BURST,
+      Val_64_BEAT,
       --  128-beat Burst-The undefined length burst or bursts sequence is split into
---  128-beat bursts or less, allowing re-arbitration every 128 beats.
-      Val_128BEAT_BURST)
+--  128-beat bursts or less, allowing re-arbitration every 128 beats.Unless
+--  duly needed, the ULBT should be left at its default 0 value for power
+--  saving.
+      Val_128_BEAT)
      with Size => 3;
-   for MATRIX_MCFG_ULBTSelect use
-     (UNLTD_LENGTH => 0,
-      SINGLE_ACCESS => 1,
-      Val_4BEAT_BURST => 2,
-      Val_8BEAT_BURST => 3,
-      Val_16BEAT_BURST => 4,
-      Val_32BEAT_BURST => 5,
-      Val_64BEAT_BURST => 6,
-      Val_128BEAT_BURST => 7);
+   for MCFG_ULBTSelect use
+     (UNLIMITED => 0,
+      SINGLE => 1,
+      Val_4_BEAT => 2,
+      Val_8_BEAT => 3,
+      Val_16_BEAT => 4,
+      Val_32_BEAT => 5,
+      Val_64_BEAT => 6,
+      Val_128_BEAT => 7);
 
-   --  Master Configuration Register 0
-   type MATRIX_MATRIX_MCFG_Register is record
+   --  Master Configuration Register
+   type MATRIX_MCFG_Register is record
       --  Undefined Length Burst Type
-      ULBT          : MATRIX_MCFG_ULBTSelect := SAM_SVD.MATRIX.UNLTD_LENGTH;
+      ULBT          : MCFG_ULBTSelect := SAM_SVD.MATRIX.UNLIMITED;
       --  unspecified
       Reserved_3_31 : HAL.UInt29 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for MATRIX_MATRIX_MCFG_Register use record
+   for MATRIX_MCFG_Register use record
       ULBT          at 0 range 0 .. 2;
       Reserved_3_31 at 0 range 3 .. 31;
    end record;
 
-   --  Master Configuration Register 0
-   type MATRIX_MATRIX_MCFG_Registers is array (0 .. 11)
-     of MATRIX_MATRIX_MCFG_Register;
+   --  Master Configuration Register
+   type MATRIX_MCFG_Registers is array (0 .. 15) of MATRIX_MCFG_Register;
 
-   subtype MATRIX_MATRIX_SCFG_SLOT_CYCLE_Field is HAL.UInt9;
+   subtype MATRIX_SCFG_SLOT_CYCLE_Field is HAL.UInt9;
 
    --  Default Master Type
-   type MATRIX_SCFG_DEFMSTR_TYPESelect is
+   type SCFG_DEFMSTR_TYPESelect is
      (--  No Default Master-At the end of the current slave access, if no other
 --  master request is pending, the slave is disconnected from all masters.This
 --  results in a one clock cycle latency for the first access of a burst
@@ -99,30 +100,30 @@ package SAM_SVD.MATRIX is
 --  slave again.
       FIXED)
      with Size => 2;
-   for MATRIX_SCFG_DEFMSTR_TYPESelect use
+   for SCFG_DEFMSTR_TYPESelect use
      (NONE => 0,
       LAST => 1,
       FIXED => 2);
 
-   subtype MATRIX_MATRIX_SCFG_FIXED_DEFMSTR_Field is HAL.UInt4;
+   subtype MATRIX_SCFG_FIXED_DEFMSTR_Field is HAL.UInt4;
 
-   --  Slave Configuration Register 0
-   type MATRIX_MATRIX_SCFG_Register is record
+   --  Slave Configuration Register
+   type MATRIX_SCFG_Register is record
       --  Maximum Bus Grant Duration for Masters
-      SLOT_CYCLE     : MATRIX_MATRIX_SCFG_SLOT_CYCLE_Field := 16#0#;
+      SLOT_CYCLE     : MATRIX_SCFG_SLOT_CYCLE_Field := 16#0#;
       --  unspecified
       Reserved_9_15  : HAL.UInt7 := 16#0#;
       --  Default Master Type
-      DEFMSTR_TYPE   : MATRIX_SCFG_DEFMSTR_TYPESelect := SAM_SVD.MATRIX.NONE;
+      DEFMSTR_TYPE   : SCFG_DEFMSTR_TYPESelect := SAM_SVD.MATRIX.NONE;
       --  Fixed Default Master
-      FIXED_DEFMSTR  : MATRIX_MATRIX_SCFG_FIXED_DEFMSTR_Field := 16#0#;
+      FIXED_DEFMSTR  : MATRIX_SCFG_FIXED_DEFMSTR_Field := 16#0#;
       --  unspecified
       Reserved_22_31 : HAL.UInt10 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for MATRIX_MATRIX_SCFG_Register use record
+   for MATRIX_SCFG_Register use record
       SLOT_CYCLE     at 0 range 0 .. 8;
       Reserved_9_15  at 0 range 9 .. 15;
       DEFMSTR_TYPE   at 0 range 16 .. 17;
@@ -130,423 +131,737 @@ package SAM_SVD.MATRIX is
       Reserved_22_31 at 0 range 22 .. 31;
    end record;
 
-   --  Slave Configuration Register 0
-   type MATRIX_MATRIX_SCFG_Registers is array (0 .. 8)
-     of MATRIX_MATRIX_SCFG_Register;
+   --  Slave Configuration Register
+   type MATRIX_SCFG_Registers is array (0 .. 15) of MATRIX_SCFG_Register;
 
    ------------------------------------------
    -- MATRIX_MATRIX_PR cluster's Registers --
    ------------------------------------------
 
-   subtype MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M0PR_Field is HAL.UInt2;
-   subtype MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M1PR_Field is HAL.UInt2;
-   subtype MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M2PR_Field is HAL.UInt2;
-   subtype MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M3PR_Field is HAL.UInt2;
-   subtype MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M4PR_Field is HAL.UInt2;
-   subtype MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M5PR_Field is HAL.UInt2;
-   subtype MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M6PR_Field is HAL.UInt2;
-   subtype MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M7PR_Field is HAL.UInt2;
+   subtype MATRIX_PRAS_MATRIX_MATRIX_PR_M0PR_Field is HAL.UInt2;
+   subtype MATRIX_PRAS_MATRIX_MATRIX_PR_M1PR_Field is HAL.UInt2;
+   subtype MATRIX_PRAS_MATRIX_MATRIX_PR_M2PR_Field is HAL.UInt2;
+   subtype MATRIX_PRAS_MATRIX_MATRIX_PR_M3PR_Field is HAL.UInt2;
+   subtype MATRIX_PRAS_MATRIX_MATRIX_PR_M4PR_Field is HAL.UInt2;
+   subtype MATRIX_PRAS_MATRIX_MATRIX_PR_M5PR_Field is HAL.UInt2;
+   subtype MATRIX_PRAS_MATRIX_MATRIX_PR_M6PR_Field is HAL.UInt2;
+   subtype MATRIX_PRAS_MATRIX_MATRIX_PR_M7PR_Field is HAL.UInt2;
 
-   --  Priority Register A for Slave 0
-   type MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_Register is record
+   --  Priority Register A for Slave
+   type MATRIX_PRAS_MATRIX_MATRIX_PR_Register is record
       --  Master 0 Priority
-      M0PR           : MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M0PR_Field :=
-                        16#0#;
+      M0PR           : MATRIX_PRAS_MATRIX_MATRIX_PR_M0PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 0
+      LQOSEN0        : Boolean := False;
       --  unspecified
-      Reserved_2_3   : HAL.UInt2 := 16#0#;
+      Reserved_3_3   : HAL.Bit := 16#0#;
       --  Master 1 Priority
-      M1PR           : MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M1PR_Field :=
-                        16#0#;
+      M1PR           : MATRIX_PRAS_MATRIX_MATRIX_PR_M1PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 1
+      LQOSEN1        : Boolean := False;
       --  unspecified
-      Reserved_6_7   : HAL.UInt2 := 16#0#;
+      Reserved_7_7   : HAL.Bit := 16#0#;
       --  Master 2 Priority
-      M2PR           : MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M2PR_Field :=
-                        16#0#;
+      M2PR           : MATRIX_PRAS_MATRIX_MATRIX_PR_M2PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 2
+      LQOSEN2        : Boolean := False;
       --  unspecified
-      Reserved_10_11 : HAL.UInt2 := 16#0#;
+      Reserved_11_11 : HAL.Bit := 16#0#;
       --  Master 3 Priority
-      M3PR           : MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M3PR_Field :=
-                        16#0#;
+      M3PR           : MATRIX_PRAS_MATRIX_MATRIX_PR_M3PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 3
+      LQOSEN3        : Boolean := False;
       --  unspecified
-      Reserved_14_15 : HAL.UInt2 := 16#0#;
+      Reserved_15_15 : HAL.Bit := 16#0#;
       --  Master 4 Priority
-      M4PR           : MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M4PR_Field :=
-                        16#0#;
+      M4PR           : MATRIX_PRAS_MATRIX_MATRIX_PR_M4PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 4
+      LQOSEN4        : Boolean := False;
       --  unspecified
-      Reserved_18_19 : HAL.UInt2 := 16#0#;
+      Reserved_19_19 : HAL.Bit := 16#0#;
       --  Master 5 Priority
-      M5PR           : MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M5PR_Field :=
-                        16#0#;
+      M5PR           : MATRIX_PRAS_MATRIX_MATRIX_PR_M5PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 5
+      LQOSEN5        : Boolean := False;
       --  unspecified
-      Reserved_22_23 : HAL.UInt2 := 16#0#;
+      Reserved_23_23 : HAL.Bit := 16#0#;
       --  Master 6 Priority
-      M6PR           : MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M6PR_Field :=
-                        16#0#;
+      M6PR           : MATRIX_PRAS_MATRIX_MATRIX_PR_M6PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 6
+      LQOSEN6        : Boolean := False;
       --  unspecified
-      Reserved_26_27 : HAL.UInt2 := 16#0#;
+      Reserved_27_27 : HAL.Bit := 16#0#;
       --  Master 7 Priority
-      M7PR           : MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_M7PR_Field :=
-                        16#0#;
+      M7PR           : MATRIX_PRAS_MATRIX_MATRIX_PR_M7PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 7
+      LQOSEN7        : Boolean := False;
       --  unspecified
-      Reserved_30_31 : HAL.UInt2 := 16#0#;
+      Reserved_31_31 : HAL.Bit := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_Register use record
+   for MATRIX_PRAS_MATRIX_MATRIX_PR_Register use record
       M0PR           at 0 range 0 .. 1;
-      Reserved_2_3   at 0 range 2 .. 3;
+      LQOSEN0        at 0 range 2 .. 2;
+      Reserved_3_3   at 0 range 3 .. 3;
       M1PR           at 0 range 4 .. 5;
-      Reserved_6_7   at 0 range 6 .. 7;
+      LQOSEN1        at 0 range 6 .. 6;
+      Reserved_7_7   at 0 range 7 .. 7;
       M2PR           at 0 range 8 .. 9;
-      Reserved_10_11 at 0 range 10 .. 11;
+      LQOSEN2        at 0 range 10 .. 10;
+      Reserved_11_11 at 0 range 11 .. 11;
       M3PR           at 0 range 12 .. 13;
-      Reserved_14_15 at 0 range 14 .. 15;
+      LQOSEN3        at 0 range 14 .. 14;
+      Reserved_15_15 at 0 range 15 .. 15;
       M4PR           at 0 range 16 .. 17;
-      Reserved_18_19 at 0 range 18 .. 19;
+      LQOSEN4        at 0 range 18 .. 18;
+      Reserved_19_19 at 0 range 19 .. 19;
       M5PR           at 0 range 20 .. 21;
-      Reserved_22_23 at 0 range 22 .. 23;
+      LQOSEN5        at 0 range 22 .. 22;
+      Reserved_23_23 at 0 range 23 .. 23;
       M6PR           at 0 range 24 .. 25;
-      Reserved_26_27 at 0 range 26 .. 27;
+      LQOSEN6        at 0 range 26 .. 26;
+      Reserved_27_27 at 0 range 27 .. 27;
       M7PR           at 0 range 28 .. 29;
-      Reserved_30_31 at 0 range 30 .. 31;
+      LQOSEN7        at 0 range 30 .. 30;
+      Reserved_31_31 at 0 range 31 .. 31;
    end record;
 
-   subtype MATRIX_MATRIX_PRBS_MATRIX_MATRIX_PR_M8PR_Field is HAL.UInt2;
-   subtype MATRIX_MATRIX_PRBS_MATRIX_MATRIX_PR_M9PR_Field is HAL.UInt2;
-   subtype MATRIX_MATRIX_PRBS_MATRIX_MATRIX_PR_M10PR_Field is HAL.UInt2;
-   subtype MATRIX_MATRIX_PRBS_MATRIX_MATRIX_PR_M11PR_Field is HAL.UInt2;
+   subtype MATRIX_PRBS_MATRIX_MATRIX_PR_M8PR_Field is HAL.UInt2;
+   subtype MATRIX_PRBS_MATRIX_MATRIX_PR_M9PR_Field is HAL.UInt2;
+   subtype MATRIX_PRBS_MATRIX_MATRIX_PR_M10PR_Field is HAL.UInt2;
+   subtype MATRIX_PRBS_MATRIX_MATRIX_PR_M11PR_Field is HAL.UInt2;
+   subtype MATRIX_PRBS_MATRIX_MATRIX_PR_M12PR_Field is HAL.UInt2;
+   subtype MATRIX_PRBS_MATRIX_MATRIX_PR_M13PR_Field is HAL.UInt2;
+   subtype MATRIX_PRBS_MATRIX_MATRIX_PR_M14PR_Field is HAL.UInt2;
+   subtype MATRIX_PRBS_MATRIX_MATRIX_PR_M15PR_Field is HAL.UInt2;
 
-   --  Priority Register B for Slave 0
-   type MATRIX_MATRIX_PRBS_MATRIX_MATRIX_PR_Register is record
+   --  Priority Register B for Slave
+   type MATRIX_PRBS_MATRIX_MATRIX_PR_Register is record
       --  Master 8 Priority
-      M8PR           : MATRIX_MATRIX_PRBS_MATRIX_MATRIX_PR_M8PR_Field :=
-                        16#0#;
+      M8PR           : MATRIX_PRBS_MATRIX_MATRIX_PR_M8PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 8
+      LQOSEN8        : Boolean := False;
       --  unspecified
-      Reserved_2_3   : HAL.UInt2 := 16#0#;
+      Reserved_3_3   : HAL.Bit := 16#0#;
       --  Master 9 Priority
-      M9PR           : MATRIX_MATRIX_PRBS_MATRIX_MATRIX_PR_M9PR_Field :=
-                        16#0#;
+      M9PR           : MATRIX_PRBS_MATRIX_MATRIX_PR_M9PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 9
+      LQOSEN9        : Boolean := False;
       --  unspecified
-      Reserved_6_7   : HAL.UInt2 := 16#0#;
+      Reserved_7_7   : HAL.Bit := 16#0#;
       --  Master 10 Priority
-      M10PR          : MATRIX_MATRIX_PRBS_MATRIX_MATRIX_PR_M10PR_Field :=
-                        16#0#;
+      M10PR          : MATRIX_PRBS_MATRIX_MATRIX_PR_M10PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 10
+      LQOSEN10       : Boolean := False;
       --  unspecified
-      Reserved_10_11 : HAL.UInt2 := 16#0#;
+      Reserved_11_11 : HAL.Bit := 16#0#;
       --  Master 11 Priority
-      M11PR          : MATRIX_MATRIX_PRBS_MATRIX_MATRIX_PR_M11PR_Field :=
-                        16#0#;
+      M11PR          : MATRIX_PRBS_MATRIX_MATRIX_PR_M11PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 11
+      LQOSEN11       : Boolean := False;
       --  unspecified
-      Reserved_14_31 : HAL.UInt18 := 16#0#;
+      Reserved_15_15 : HAL.Bit := 16#0#;
+      --  Master 12 Priority
+      M12PR          : MATRIX_PRBS_MATRIX_MATRIX_PR_M12PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 12
+      LQOSEN12       : Boolean := False;
+      --  unspecified
+      Reserved_19_19 : HAL.Bit := 16#0#;
+      --  Master 13 Priority
+      M13PR          : MATRIX_PRBS_MATRIX_MATRIX_PR_M13PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 13
+      LQOSEN13       : Boolean := False;
+      --  unspecified
+      Reserved_23_23 : HAL.Bit := 16#0#;
+      --  Master 14 Priority
+      M14PR          : MATRIX_PRBS_MATRIX_MATRIX_PR_M14PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 14
+      LQOSEN14       : Boolean := False;
+      --  unspecified
+      Reserved_27_27 : HAL.Bit := 16#0#;
+      --  Master 15 Priority
+      M15PR          : MATRIX_PRBS_MATRIX_MATRIX_PR_M15PR_Field := 16#0#;
+      --  Latency Quality of Service Enable for Master 15
+      LQOSEN15       : Boolean := False;
+      --  unspecified
+      Reserved_31_31 : HAL.Bit := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for MATRIX_MATRIX_PRBS_MATRIX_MATRIX_PR_Register use record
+   for MATRIX_PRBS_MATRIX_MATRIX_PR_Register use record
       M8PR           at 0 range 0 .. 1;
-      Reserved_2_3   at 0 range 2 .. 3;
+      LQOSEN8        at 0 range 2 .. 2;
+      Reserved_3_3   at 0 range 3 .. 3;
       M9PR           at 0 range 4 .. 5;
-      Reserved_6_7   at 0 range 6 .. 7;
+      LQOSEN9        at 0 range 6 .. 6;
+      Reserved_7_7   at 0 range 7 .. 7;
       M10PR          at 0 range 8 .. 9;
-      Reserved_10_11 at 0 range 10 .. 11;
+      LQOSEN10       at 0 range 10 .. 10;
+      Reserved_11_11 at 0 range 11 .. 11;
       M11PR          at 0 range 12 .. 13;
-      Reserved_14_31 at 0 range 14 .. 31;
+      LQOSEN11       at 0 range 14 .. 14;
+      Reserved_15_15 at 0 range 15 .. 15;
+      M12PR          at 0 range 16 .. 17;
+      LQOSEN12       at 0 range 18 .. 18;
+      Reserved_19_19 at 0 range 19 .. 19;
+      M13PR          at 0 range 20 .. 21;
+      LQOSEN13       at 0 range 22 .. 22;
+      Reserved_23_23 at 0 range 23 .. 23;
+      M14PR          at 0 range 24 .. 25;
+      LQOSEN14       at 0 range 26 .. 26;
+      Reserved_27_27 at 0 range 27 .. 27;
+      M15PR          at 0 range 28 .. 29;
+      LQOSEN15       at 0 range 30 .. 30;
+      Reserved_31_31 at 0 range 31 .. 31;
    end record;
 
-   --  Priority Register A for Slave 0
    type MATRIX_MATRIX_PR_Cluster is record
-      --  Priority Register A for Slave 0
-      MATRIX_PRAS : aliased MATRIX_MATRIX_PRAS_MATRIX_MATRIX_PR_Register;
-      --  Priority Register B for Slave 0
-      MATRIX_PRBS : aliased MATRIX_MATRIX_PRBS_MATRIX_MATRIX_PR_Register;
+      --  Priority Register A for Slave
+      PRAS : aliased MATRIX_PRAS_MATRIX_MATRIX_PR_Register;
+      --  Priority Register B for Slave
+      PRBS : aliased MATRIX_PRBS_MATRIX_MATRIX_PR_Register;
    end record
      with Size => 64;
 
    for MATRIX_MATRIX_PR_Cluster use record
-      MATRIX_PRAS at 16#0# range 0 .. 31;
-      MATRIX_PRBS at 16#4# range 0 .. 31;
+      PRAS at 16#0# range 0 .. 31;
+      PRBS at 16#4# range 0 .. 31;
    end record;
 
-   --  Priority Register A for Slave 0
-   type MATRIX_MATRIX_PR_Clusters is array (0 .. 8)
+   type MATRIX_MATRIX_PR_Clusters is array (0 .. 15)
      of MATRIX_MATRIX_PR_Cluster;
 
-   --  MATRIX_MATRIX_MRCR_RCB array
-   type MATRIX_MATRIX_MRCR_RCB_Field_Array is array (0 .. 11) of Boolean
-     with Component_Size => 1, Size => 12;
+   --  MATRIX_MRCR_RCB array
+   type MATRIX_MRCR_RCB_Field_Array is array (0 .. 15) of Boolean
+     with Component_Size => 1, Size => 16;
 
-   --  Type definition for MATRIX_MATRIX_MRCR_RCB
-   type MATRIX_MATRIX_MRCR_RCB_Field
+   --  Type definition for MATRIX_MRCR_RCB
+   type MATRIX_MRCR_RCB_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
          when False =>
             --  RCB as a value
-            Val : HAL.UInt12;
+            Val : HAL.UInt16;
          when True =>
             --  RCB as an array
-            Arr : MATRIX_MATRIX_MRCR_RCB_Field_Array;
+            Arr : MATRIX_MRCR_RCB_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 12;
+     with Unchecked_Union, Size => 16;
 
-   for MATRIX_MATRIX_MRCR_RCB_Field use record
-      Val at 0 range 0 .. 11;
-      Arr at 0 range 0 .. 11;
+   for MATRIX_MRCR_RCB_Field use record
+      Val at 0 range 0 .. 15;
+      Arr at 0 range 0 .. 15;
    end record;
 
    --  Master Remap Control Register
-   type MATRIX_MATRIX_MRCR_Register is record
+   type MATRIX_MRCR_Register is record
       --  Remap Command Bit for Master 0
-      RCB            : MATRIX_MATRIX_MRCR_RCB_Field :=
+      RCB            : MATRIX_MRCR_RCB_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
-      Reserved_12_31 : HAL.UInt20 := 16#0#;
+      Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for MATRIX_MATRIX_MRCR_Register use record
-      RCB            at 0 range 0 .. 11;
-      Reserved_12_31 at 0 range 12 .. 31;
+   for MATRIX_MRCR_Register use record
+      RCB            at 0 range 0 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
    end record;
 
-   subtype MATRIX_CCFG_CAN0_CAN0DMABA_Field is HAL.UInt16;
+   --  MATRIX_MEIER_MERR array
+   type MATRIX_MEIER_MERR_Field_Array is array (0 .. 15) of Boolean
+     with Component_Size => 1, Size => 16;
 
-   --  CAN0 Configuration Register
-   type MATRIX_CCFG_CAN0_Register is record
-      --  unspecified
-      Reserved_0_15 : HAL.UInt16 := 16#0#;
-      --  CAN0 DMA Base Address
-      CAN0DMABA     : MATRIX_CCFG_CAN0_CAN0DMABA_Field := 16#0#;
-   end record
-     with Volatile_Full_Access, Object_Size => 32,
-          Bit_Order => System.Low_Order_First;
-
-   for MATRIX_CCFG_CAN0_Register use record
-      Reserved_0_15 at 0 range 0 .. 15;
-      CAN0DMABA     at 0 range 16 .. 31;
-   end record;
-
-   --  MATRIX_CCFG_SYSIO_SYSIO array
-   type MATRIX_CCFG_SYSIO_SYSIO_Field_Array is array (4 .. 7) of Boolean
-     with Component_Size => 1, Size => 4;
-
-   --  Type definition for MATRIX_CCFG_SYSIO_SYSIO
-   type MATRIX_CCFG_SYSIO_SYSIO_Field
+   --  Type definition for MATRIX_MEIER_MERR
+   type MATRIX_MEIER_MERR_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
          when False =>
-            --  SYSIO as a value
-            Val : HAL.UInt4;
+            --  MERR as a value
+            Val : HAL.UInt16;
          when True =>
-            --  SYSIO as an array
-            Arr : MATRIX_CCFG_SYSIO_SYSIO_Field_Array;
+            --  MERR as an array
+            Arr : MATRIX_MEIER_MERR_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 4;
+     with Unchecked_Union, Size => 16;
 
-   for MATRIX_CCFG_SYSIO_SYSIO_Field use record
-      Val at 0 range 0 .. 3;
-      Arr at 0 range 0 .. 3;
+   for MATRIX_MEIER_MERR_Field use record
+      Val at 0 range 0 .. 15;
+      Arr at 0 range 0 .. 15;
    end record;
 
-   subtype MATRIX_CCFG_SYSIO_CAN1DMABA_Field is HAL.UInt16;
-
-   --  System I/O and CAN1 Configuration Register
-   type MATRIX_CCFG_SYSIO_Register is record
-      --  unspecified
-      Reserved_0_3   : HAL.UInt4 := 16#0#;
-      --  PB4 or TDI Assignment
-      SYSIO          : MATRIX_CCFG_SYSIO_SYSIO_Field :=
+   --  Master Error Interrupt Enable Register
+   type MATRIX_MEIER_Register is record
+      --  Write-only. Master 0 Access Error
+      MERR           : MATRIX_MEIER_MERR_Field :=
                         (As_Array => False, Val => 16#0#);
       --  unspecified
-      Reserved_8_11  : HAL.UInt4 := 16#0#;
-      --  PB12 or ERASE Assignment
-      SYSIO12        : Boolean := False;
-      --  unspecified
-      Reserved_13_15 : HAL.UInt3 := 16#0#;
-      --  CAN1 DMA Base Address
-      CAN1DMABA      : MATRIX_CCFG_SYSIO_CAN1DMABA_Field := 16#0#;
+      Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for MATRIX_CCFG_SYSIO_Register use record
-      Reserved_0_3   at 0 range 0 .. 3;
-      SYSIO          at 0 range 4 .. 7;
-      Reserved_8_11  at 0 range 8 .. 11;
-      SYSIO12        at 0 range 12 .. 12;
-      Reserved_13_15 at 0 range 13 .. 15;
-      CAN1DMABA      at 0 range 16 .. 31;
+   for MATRIX_MEIER_Register use record
+      MERR           at 0 range 0 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
    end record;
 
-   --  MATRIX_CCFG_SMCNFCS_SMC_NFCS array
-   type MATRIX_CCFG_SMCNFCS_SMC_NFCS_Field_Array is array (0 .. 3) of Boolean
-     with Component_Size => 1, Size => 4;
+   --  MATRIX_MEIDR_MERR array
+   type MATRIX_MEIDR_MERR_Field_Array is array (0 .. 15) of Boolean
+     with Component_Size => 1, Size => 16;
 
-   --  Type definition for MATRIX_CCFG_SMCNFCS_SMC_NFCS
-   type MATRIX_CCFG_SMCNFCS_SMC_NFCS_Field
+   --  Type definition for MATRIX_MEIDR_MERR
+   type MATRIX_MEIDR_MERR_Field
      (As_Array : Boolean := False)
    is record
       case As_Array is
          when False =>
-            --  SMC_NFCS as a value
-            Val : HAL.UInt4;
+            --  MERR as a value
+            Val : HAL.UInt16;
          when True =>
-            --  SMC_NFCS as an array
-            Arr : MATRIX_CCFG_SMCNFCS_SMC_NFCS_Field_Array;
+            --  MERR as an array
+            Arr : MATRIX_MEIDR_MERR_Field_Array;
       end case;
    end record
-     with Unchecked_Union, Size => 4;
+     with Unchecked_Union, Size => 16;
 
-   for MATRIX_CCFG_SMCNFCS_SMC_NFCS_Field use record
-      Val at 0 range 0 .. 3;
-      Arr at 0 range 0 .. 3;
+   for MATRIX_MEIDR_MERR_Field use record
+      Val at 0 range 0 .. 15;
+      Arr at 0 range 0 .. 15;
    end record;
 
-   --  SMC NAND Flash Chip Select Configuration Register
-   type MATRIX_CCFG_SMCNFCS_Register is record
-      --  SMC NAND Flash Chip Select 0 Assignment
-      SMC_NFCS      : MATRIX_CCFG_SMCNFCS_SMC_NFCS_Field :=
-                       (As_Array => False, Val => 16#0#);
-      --  SDRAM Enable
-      SDRAMEN       : Boolean := False;
+   --  Master Error Interrupt Disable Register
+   type MATRIX_MEIDR_Register is record
+      --  Write-only. Master 0 Access Error
+      MERR           : MATRIX_MEIDR_MERR_Field :=
+                        (As_Array => False, Val => 16#0#);
       --  unspecified
-      Reserved_5_31 : HAL.UInt27 := 16#0#;
+      Reserved_16_31 : HAL.UInt16 := 16#0#;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for MATRIX_CCFG_SMCNFCS_Register use record
-      SMC_NFCS      at 0 range 0 .. 3;
-      SDRAMEN       at 0 range 4 .. 4;
-      Reserved_5_31 at 0 range 5 .. 31;
+   for MATRIX_MEIDR_Register use record
+      MERR           at 0 range 0 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
    end record;
+
+   --  MATRIX_MEIMR_MERR array
+   type MATRIX_MEIMR_MERR_Field_Array is array (0 .. 15) of Boolean
+     with Component_Size => 1, Size => 16;
+
+   --  Type definition for MATRIX_MEIMR_MERR
+   type MATRIX_MEIMR_MERR_Field
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  MERR as a value
+            Val : HAL.UInt16;
+         when True =>
+            --  MERR as an array
+            Arr : MATRIX_MEIMR_MERR_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 16;
+
+   for MATRIX_MEIMR_MERR_Field use record
+      Val at 0 range 0 .. 15;
+      Arr at 0 range 0 .. 15;
+   end record;
+
+   --  Master Error Interrupt Mask Register
+   type MATRIX_MEIMR_Register is record
+      --  Read-only. Master 0 Access Error
+      MERR           : MATRIX_MEIMR_MERR_Field;
+      --  unspecified
+      Reserved_16_31 : HAL.UInt16;
+   end record
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for MATRIX_MEIMR_Register use record
+      MERR           at 0 range 0 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
+
+   --  MATRIX_MESR_MERR array
+   type MATRIX_MESR_MERR_Field_Array is array (0 .. 15) of Boolean
+     with Component_Size => 1, Size => 16;
+
+   --  Type definition for MATRIX_MESR_MERR
+   type MATRIX_MESR_MERR_Field
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  MERR as a value
+            Val : HAL.UInt16;
+         when True =>
+            --  MERR as an array
+            Arr : MATRIX_MESR_MERR_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 16;
+
+   for MATRIX_MESR_MERR_Field use record
+      Val at 0 range 0 .. 15;
+      Arr at 0 range 0 .. 15;
+   end record;
+
+   --  Master Error Status Register
+   type MATRIX_MESR_Register is record
+      --  Read-only. Master 0 Access Error
+      MERR           : MATRIX_MESR_MERR_Field;
+      --  unspecified
+      Reserved_16_31 : HAL.UInt16;
+   end record
+     with Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for MATRIX_MESR_Register use record
+      MERR           at 0 range 0 .. 15;
+      Reserved_16_31 at 0 range 16 .. 31;
+   end record;
+
+   --  Master 0 Error Address Register
+
+   --  Master 0 Error Address Register
+   type MATRIX_MEAR_Registers is array (0 .. 15) of HAL.UInt32;
 
    --  Write Protection Key
-   type MATRIX_WPMR_WPKEYSelect is
+   type WPMR_WPKEYSelect is
      (--  Reset value for the field
-      MATRIX_WPMR_WPKEYSelect_Reset,
+      WPMR_WPKEYSelect_Reset,
       --  Writing any other value in this field aborts the write operation of the
---  WPEN bit.Always reads as 0.
+--  WPEN and CFGFRZ bits. Always reads as 0.
       PASSWD)
      with Size => 24;
-   for MATRIX_WPMR_WPKEYSelect use
-     (MATRIX_WPMR_WPKEYSelect_Reset => 0,
+   for WPMR_WPKEYSelect use
+     (WPMR_WPKEYSelect_Reset => 0,
       PASSWD => 5062996);
 
-   --  Write Protection Mode Register
-   type MATRIX_MATRIX_WPMR_Register is record
+   --  Write Protect Mode Register
+   type MATRIX_WPMR_Register is record
       --  Write Protection Enable
       WPEN         : Boolean := False;
       --  unspecified
-      Reserved_1_7 : HAL.UInt7 := 16#0#;
+      Reserved_1_6 : HAL.UInt6 := 16#0#;
+      CFGFRZ       : Boolean := False;
       --  Write Protection Key
-      WPKEY        : MATRIX_WPMR_WPKEYSelect := MATRIX_WPMR_WPKEYSelect_Reset;
+      WPKEY        : WPMR_WPKEYSelect := WPMR_WPKEYSelect_Reset;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for MATRIX_MATRIX_WPMR_Register use record
+   for MATRIX_WPMR_Register use record
       WPEN         at 0 range 0 .. 0;
-      Reserved_1_7 at 0 range 1 .. 7;
+      Reserved_1_6 at 0 range 1 .. 6;
+      CFGFRZ       at 0 range 7 .. 7;
       WPKEY        at 0 range 8 .. 31;
    end record;
 
-   subtype MATRIX_MATRIX_WPSR_WPVSRC_Field is HAL.UInt16;
+   subtype MATRIX_WPSR_WPVSRC_Field is HAL.UInt16;
 
-   --  Write Protection Status Register
-   type MATRIX_MATRIX_WPSR_Register is record
+   --  Write Protect Status Register
+   type MATRIX_WPSR_Register is record
       --  Read-only. Write Protection Violation Status
       WPVS           : Boolean;
       --  unspecified
       Reserved_1_7   : HAL.UInt7;
       --  Read-only. Write Protection Violation Source
-      WPVSRC         : MATRIX_MATRIX_WPSR_WPVSRC_Field;
+      WPVSRC         : MATRIX_WPSR_WPVSRC_Field;
       --  unspecified
       Reserved_24_31 : HAL.UInt8;
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for MATRIX_MATRIX_WPSR_Register use record
+   for MATRIX_WPSR_Register use record
       WPVS           at 0 range 0 .. 0;
       Reserved_1_7   at 0 range 1 .. 7;
       WPVSRC         at 0 range 8 .. 23;
       Reserved_24_31 at 0 range 24 .. 31;
    end record;
 
-   subtype MATRIX_MATRIX_VERSION_VERSION_Field is HAL.UInt12;
-   subtype MATRIX_MATRIX_VERSION_MFN_Field is HAL.UInt3;
+   --  MATRIX_PSR_LAUSERH array
+   type MATRIX_PSR_LAUSERH_Field_Array is array (0 .. 7) of Boolean
+     with Component_Size => 1, Size => 8;
 
-   --  Version Register
-   type MATRIX_MATRIX_VERSION_Register is record
-      --  Read-only. Version of the Hardware Module
-      VERSION        : MATRIX_MATRIX_VERSION_VERSION_Field;
-      --  unspecified
-      Reserved_12_15 : HAL.UInt4;
-      --  Read-only. Metal Fix Number
-      MFN            : MATRIX_MATRIX_VERSION_MFN_Field;
-      --  unspecified
-      Reserved_19_31 : HAL.UInt13;
+   --  Type definition for MATRIX_PSR_LAUSERH
+   type MATRIX_PSR_LAUSERH_Field
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  LAUSERH as a value
+            Val : HAL.UInt8;
+         when True =>
+            --  LAUSERH as an array
+            Arr : MATRIX_PSR_LAUSERH_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 8;
+
+   for MATRIX_PSR_LAUSERH_Field use record
+      Val at 0 range 0 .. 7;
+      Arr at 0 range 0 .. 7;
+   end record;
+
+   --  MATRIX_PSR_RDUSERH array
+   type MATRIX_PSR_RDUSERH_Field_Array is array (0 .. 7) of Boolean
+     with Component_Size => 1, Size => 8;
+
+   --  Type definition for MATRIX_PSR_RDUSERH
+   type MATRIX_PSR_RDUSERH_Field
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  RDUSERH as a value
+            Val : HAL.UInt8;
+         when True =>
+            --  RDUSERH as an array
+            Arr : MATRIX_PSR_RDUSERH_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 8;
+
+   for MATRIX_PSR_RDUSERH_Field use record
+      Val at 0 range 0 .. 7;
+      Arr at 0 range 0 .. 7;
+   end record;
+
+   --  MATRIX_PSR_WRUSERH array
+   type MATRIX_PSR_WRUSERH_Field_Array is array (0 .. 7) of Boolean
+     with Component_Size => 1, Size => 8;
+
+   --  Type definition for MATRIX_PSR_WRUSERH
+   type MATRIX_PSR_WRUSERH_Field
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  WRUSERH as a value
+            Val : HAL.UInt8;
+         when True =>
+            --  WRUSERH as an array
+            Arr : MATRIX_PSR_WRUSERH_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 8;
+
+   for MATRIX_PSR_WRUSERH_Field use record
+      Val at 0 range 0 .. 7;
+      Arr at 0 range 0 .. 7;
+   end record;
+
+   --  MATRIX_PSR_DPSOA array
+   type MATRIX_PSR_DPSOA_Field_Array is array (0 .. 7) of Boolean
+     with Component_Size => 1, Size => 8;
+
+   --  Type definition for MATRIX_PSR_DPSOA
+   type MATRIX_PSR_DPSOA_Field
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  DPSOA as a value
+            Val : HAL.UInt8;
+         when True =>
+            --  DPSOA as an array
+            Arr : MATRIX_PSR_DPSOA_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 8;
+
+   for MATRIX_PSR_DPSOA_Field use record
+      Val at 0 range 0 .. 7;
+      Arr at 0 range 0 .. 7;
+   end record;
+
+   --  Protection Slave Register
+   type MATRIX_PSR_Register is record
+      --  Low Area USER in HSELx Protected Region
+      LAUSERH : MATRIX_PSR_LAUSERH_Field := (As_Array => False, Val => 16#0#);
+      --  Read USER for HSELx Protected Region
+      RDUSERH : MATRIX_PSR_RDUSERH_Field := (As_Array => False, Val => 16#0#);
+      --  Write USER for HSELx Protected Region
+      WRUSERH : MATRIX_PSR_WRUSERH_Field := (As_Array => False, Val => 16#0#);
+      --  Downward Protection Split Address for HSELx Protected Region
+      DPSOA   : MATRIX_PSR_DPSOA_Field := (As_Array => False, Val => 16#0#);
    end record
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for MATRIX_MATRIX_VERSION_Register use record
-      VERSION        at 0 range 0 .. 11;
-      Reserved_12_15 at 0 range 12 .. 15;
-      MFN            at 0 range 16 .. 18;
-      Reserved_19_31 at 0 range 19 .. 31;
+   for MATRIX_PSR_Register use record
+      LAUSERH at 0 range 0 .. 7;
+      RDUSERH at 0 range 8 .. 15;
+      WRUSERH at 0 range 16 .. 23;
+      DPSOA   at 0 range 24 .. 31;
    end record;
+
+   --  Protection Slave Register
+   type MATRIX_PSR_Registers is array (0 .. 15) of MATRIX_PSR_Register;
+
+   --  MATRIX_PASSR_PASPLIT array element
+   subtype MATRIX_PASSR_PASPLIT_Element is HAL.UInt4;
+
+   --  MATRIX_PASSR_PASPLIT array
+   type MATRIX_PASSR_PASPLIT_Field_Array is array (0 .. 7)
+     of MATRIX_PASSR_PASPLIT_Element
+     with Component_Size => 4, Size => 32;
+
+   --  Protected Areas Split Slave Register
+   type MATRIX_PASSR_Register
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  PASPLIT as a value
+            Val : HAL.UInt32;
+         when True =>
+            --  PASPLIT as an array
+            Arr : MATRIX_PASSR_PASPLIT_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for MATRIX_PASSR_Register use record
+      Val at 0 range 0 .. 31;
+      Arr at 0 range 0 .. 31;
+   end record;
+
+   --  Protected Areas Split Slave Register
+   type MATRIX_PASSR_Registers is array (0 .. 15) of MATRIX_PASSR_Register;
+
+   --  MATRIX_PRTSR_PRTOP array element
+   subtype MATRIX_PRTSR_PRTOP_Element is HAL.UInt4;
+
+   --  MATRIX_PRTSR_PRTOP array
+   type MATRIX_PRTSR_PRTOP_Field_Array is array (0 .. 7)
+     of MATRIX_PRTSR_PRTOP_Element
+     with Component_Size => 4, Size => 32;
+
+   --  Protected Region Top Slave Register
+   type MATRIX_PRTSR_Register
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  PRTOP as a value
+            Val : HAL.UInt32;
+         when True =>
+            --  PRTOP as an array
+            Arr : MATRIX_PRTSR_PRTOP_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for MATRIX_PRTSR_Register use record
+      Val at 0 range 0 .. 31;
+      Arr at 0 range 0 .. 31;
+   end record;
+
+   --  Protected Region Top Slave Register
+   type MATRIX_PRTSR_Registers is array (0 .. 15) of MATRIX_PRTSR_Register;
+
+   --  MATRIX_PPSELR_USERP array
+   type MATRIX_PPSELR_USERP_Field_Array is array (0 .. 31) of Boolean
+     with Component_Size => 1, Size => 32;
+
+   --  Protected Peripheral Select Register
+   type MATRIX_PPSELR_Register
+     (As_Array : Boolean := False)
+   is record
+      case As_Array is
+         when False =>
+            --  USERP as a value
+            Val : HAL.UInt32;
+         when True =>
+            --  USERP as an array
+            Arr : MATRIX_PPSELR_USERP_Field_Array;
+      end case;
+   end record
+     with Unchecked_Union, Size => 32, Volatile_Full_Access, Object_Size => 32,
+          Bit_Order => System.Low_Order_First;
+
+   for MATRIX_PPSELR_Register use record
+      Val at 0 range 0 .. 31;
+      Arr at 0 range 0 .. 31;
+   end record;
+
+   --  Protected Peripheral Select Register
+   type MATRIX_PPSELR_Registers is array (0 .. 2) of MATRIX_PPSELR_Register;
 
    -----------------
    -- Peripherals --
    -----------------
 
    --  AHB Bus Matrix
-   type MATRIX_Peripheral is record
-      --  Master Configuration Register 0
-      MATRIX_MCFG      : aliased MATRIX_MATRIX_MCFG_Registers;
-      --  Slave Configuration Register 0
-      MATRIX_SCFG      : aliased MATRIX_MATRIX_SCFG_Registers;
-      --  Priority Register A for Slave 0
+   type MATRIX0_Peripheral is record
+      --  Master Configuration Register
+      MCFG             : aliased MATRIX_MCFG_Registers;
+      --  Slave Configuration Register
+      SCFG             : aliased MATRIX_SCFG_Registers;
       MATRIX_MATRIX_PR : aliased MATRIX_MATRIX_PR_Clusters;
       --  Master Remap Control Register
-      MATRIX_MRCR      : aliased MATRIX_MATRIX_MRCR_Register;
-      --  CAN0 Configuration Register
-      CCFG_CAN0        : aliased MATRIX_CCFG_CAN0_Register;
-      --  System I/O and CAN1 Configuration Register
-      CCFG_SYSIO       : aliased MATRIX_CCFG_SYSIO_Register;
-      --  SMC NAND Flash Chip Select Configuration Register
-      CCFG_SMCNFCS     : aliased MATRIX_CCFG_SMCNFCS_Register;
-      --  Write Protection Mode Register
-      MATRIX_WPMR      : aliased MATRIX_MATRIX_WPMR_Register;
-      --  Write Protection Status Register
-      MATRIX_WPSR      : aliased MATRIX_MATRIX_WPSR_Register;
-      --  Version Register
-      MATRIX_VERSION   : aliased MATRIX_MATRIX_VERSION_Register;
+      MRCR             : aliased MATRIX_MRCR_Register;
+      --  Master Error Interrupt Enable Register
+      MEIER            : aliased MATRIX_MEIER_Register;
+      --  Master Error Interrupt Disable Register
+      MEIDR            : aliased MATRIX_MEIDR_Register;
+      --  Master Error Interrupt Mask Register
+      MEIMR            : aliased MATRIX_MEIMR_Register;
+      --  Master Error Status Register
+      MESR             : aliased MATRIX_MESR_Register;
+      --  Master 0 Error Address Register
+      MEAR             : aliased MATRIX_MEAR_Registers;
+      --  Write Protect Mode Register
+      WPMR             : aliased MATRIX_WPMR_Register;
+      --  Write Protect Status Register
+      WPSR             : aliased MATRIX_WPSR_Register;
+      --  Protection Slave Register
+      PSR              : aliased MATRIX_PSR_Registers;
+      --  Protected Areas Split Slave Register
+      PASSR            : aliased MATRIX_PASSR_Registers;
+      --  Protected Region Top Slave Register
+      PRTSR            : aliased MATRIX_PRTSR_Registers;
+      --  Protected Peripheral Select Register
+      PPSELR           : aliased MATRIX_PPSELR_Registers;
    end record
      with Volatile;
 
-   for MATRIX_Peripheral use record
-      MATRIX_MCFG      at 16#0# range 0 .. 383;
-      MATRIX_SCFG      at 16#40# range 0 .. 287;
-      MATRIX_MATRIX_PR at 16#80# range 0 .. 575;
-      MATRIX_MRCR      at 16#100# range 0 .. 31;
-      CCFG_CAN0        at 16#110# range 0 .. 31;
-      CCFG_SYSIO       at 16#114# range 0 .. 31;
-      CCFG_SMCNFCS     at 16#124# range 0 .. 31;
-      MATRIX_WPMR      at 16#1E4# range 0 .. 31;
-      MATRIX_WPSR      at 16#1E8# range 0 .. 31;
-      MATRIX_VERSION   at 16#1FC# range 0 .. 31;
+   for MATRIX0_Peripheral use record
+      MCFG             at 16#0# range 0 .. 511;
+      SCFG             at 16#40# range 0 .. 511;
+      MATRIX_MATRIX_PR at 16#80# range 0 .. 1023;
+      MRCR             at 16#100# range 0 .. 31;
+      MEIER            at 16#150# range 0 .. 31;
+      MEIDR            at 16#154# range 0 .. 31;
+      MEIMR            at 16#158# range 0 .. 31;
+      MESR             at 16#15C# range 0 .. 31;
+      MEAR             at 16#160# range 0 .. 511;
+      WPMR             at 16#1E4# range 0 .. 31;
+      WPSR             at 16#1E8# range 0 .. 31;
+      PSR              at 16#200# range 0 .. 511;
+      PASSR            at 16#240# range 0 .. 511;
+      PRTSR            at 16#280# range 0 .. 511;
+      PPSELR           at 16#2C0# range 0 .. 95;
    end record;
 
    --  AHB Bus Matrix
-   MATRIX_Periph : aliased MATRIX_Peripheral
-     with Import, Address => MATRIX_Base;
+   MATRIX0_Periph : aliased MATRIX0_Peripheral
+     with Import, Address => MATRIX0_Base;
 
 end SAM_SVD.MATRIX;

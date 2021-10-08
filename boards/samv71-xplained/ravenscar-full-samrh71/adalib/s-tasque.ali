@@ -1,0 +1,149 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.tasking.queuing%b  s-tasque.adb	3463ef7a NE OL PK
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+
+U system.tasking.queuing%s  s-tasque.ads	8d9d1f53 NE OL PK
+W system%s		system.ads		system.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbbosu.ads		20210927095552 0f820a2a system.bb.board_support%s
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbinte.ads		20210927095552 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-bbthre.ads		20210927095552 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20210927095552 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20210927095552 ad086247 system.bb.time%s
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20210927095552 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20210927095552 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20210927095552 229b14dd system.os_interface%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-secsta.ads		20210927095552 56a2861c system.secondary_stack%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20210927095552 801abd01 system.task_info%s
+D s-taspri.ads		20210927095552 37f162b4 system.task_primitives%s
+D s-taskin.ads		20210927095552 989d56fd system.tasking%s
+D s-taprob.ads		20210927095552 c8fc0753 system.tasking.protected_objects%s
+D s-tpoben.ads		20210927095552 8351b91e system.tasking.protected_objects.entries%s
+D s-tasque.ads		20210927095552 9651f0b0 system.tasking.queuing%s
+D s-tasque.adb		20210927095552 a2321fca system.tasking.queuing%b
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [enqueue system__tasking__queuing 40 14 none]
+G c Z s b [count_waiting system__tasking__queuing 43 13 none]
+G c Z s b [select_protected_entry_call system__tasking__queuing 46 14 none]
+G c Z b b [dequeue_head system__tasking__queuing 41 14 none]
+G c Z b b [head system__tasking__queuing 46 13 none]
+G c Z b b [check_queue system__tasking__queuing 51 13 none]
+X 4 system.ads
+50K9*System 164e11 28|34r6 36r9 38r24 52r5 29|36r14 276r5
+80M9*Address
+X 20 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 25 s-taskin.ads
+58K16*Tasking 4|50k9 25|453e19 28|34r13 36r16 38r31 52r12 29|36r21 276r12
+67P9*Task_Id(65R9) 28|47r17 29|234r17
+177N4*Null_Entry 29|242r46
+185I9*Entry_Index<integer>
+196P9*Entry_Call_Link(194R9) 28|40r54 49r21 29|43r18 46r43 62r17 117r17 145r18
+. 147r14 194r54 220r43 236r21 240r21 241r21
+200R9*Entry_Queue 203e14 28|40r34 43r32 29|42r21 46r23 51r30 60r30 115r32
+. 144r21 194r34 220r23
+201p7*Head{196P9} 29|65r12 72r37 78r20 96r32 124r12 125r20 153r12 158r17
+. 162r12 163m12 173m12 201r12 202m12 208r9 210r24 223r16
+202p7*Tail{196P9} 29|66r15 71r15 72r22 99r26 129r25 162r21 164m12 204r12
+. 205r27 209m9
+220p7*Next{196P9} 29|72r27 82r23 130r26 170r30 173r25 174m20 174r33 175r15
+. 181m12 204m17 210m12
+221p7*Prev{196P9} 29|90r29 171r30 174r15 175m20 175r33 180m12 205m15 208m14
+398V13*Get_Sec_Stack{20|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 26 s-taprob.ads
+52K24*Protected_Objects 225e37 28|34r21 38r39 29|38r8 39r8
+130I9*Protected_Entry_Index<25|185I9> 29|242r21
+134P9*Barrier_Function_Pointer(boolean)
+156p7*Barrier{134P9} 29|257r18
+X 27 s-tpoben.ads
+47K42*Entries 153e45 28|34w39 38r57 29|39r26
+54P9*Find_Body_Index_Access(26|130I9)
+62A9*Protected_Entry_Body_Array(26|155R9)<26|130I9>
+66P9*Protected_Entry_Body_Access(62A9)
+69A9*Protected_Entry_Queue_Array(25|200R9)<26|130I9>
+94m7*Compiler_Info{4|80M9} 29|256m27 257m34
+100p7*Entry_Bodies{66P9} 29|254r21
+104p7*Find_Body_Index{54P9} 29|255r24
+112a7*Entry_Queues{69A9} 29|249r23 250r36 269m31
+119P9*Protection_Entries_Access(89R9) 28|48r21 29|235r17
+X 28 s-tasque.ads
+36K24*Queuing 25|58k16 28|52l20 52e27 29|36b29 276l20 276t27
+38K12*POE=38:57 48r17
+40U14*Enqueue 40=23 40>47 29|194b14 212l8 212t15
+40r23 E{25|200R9} 29|194b23 196r35 201r10 202m10 204r10 205r25 208r7 209m7
+. 210r22 211r35
+40p47 Call{25|196P9} 29|194b47 197r22 202r20 204r25 205r10 208r22 209r22
+. 210r7
+43V13*Count_Waiting{natural} 43>28 29|115b13 135l8 135t21
+43r28 E{25|200R9} 29|115b28 120r35 124r10 125r18 129r23
+46U14*Select_Protected_Entry_Call 47>7 48>7 49<7 29|233b14 274l8 274t35
+47p7 Self_ID{25|67P9} 29|234b7 238r28
+48p7 Object{27|119P9} 29|235b7 249r16 250r29 254r14 255r17 256r20 257r27
+. 269r24
+49p7 Call{25|196P9} 29|236b7 273m7
+X 29 s-tasque.adb
+41U14 Dequeue_Head 42=7 43<7 143b14 184l8 184t20 269s10
+42r7 E{25|200R9} 144b7 150r35 153r10 158r15 162r10 162r19 163m10 164m10 173m10
+. 183r35
+43p7 Call{25|196P9} 145b7 154m10 182m7
+46V13 Head{25|196P9} 46>19 220b13 224l8 224t12 250s23
+46r19 E{25|200R9} 220b19 222r35 223r14
+51V13 Check_Queue{boolean} 51>26 60b13 107l8 107t19 120s22 150s22 183s22
+. 196s22 211s22 222s22
+51r26 E{25|200R9} 60b26 65r10 66r13 71r13 72r20 72r35 78r18 96r30 99r24
+61b7 Valid{boolean} 67m13 68r28 74m13 75r28 85m19 86r34 91m19 92r34 100m16
+. 101r31 106r14
+62p7 C{25|196P9} 78m13 81r24 82m16 82r21 84r19 90r27 96r26
+62p10 Prev{25|196P9} 81m16 90r19 99r16
+116i7 Count{natural} 122m7 128m13 128r22 134r14
+117p7 Temp{25|196P9} 125m10 129r32 130m13 130r21
+147p7 Temp{25|196P9} 158m7 169r25 170r25 171r25 173r20 174r10 174r28 175r10
+. 175r28 180r7 181r7 182r15
+240p7 Entry_Call{25|196P9} 245m7 259m13 267r10 268r23 269m59 269r59 270r37
+. 273r15
+241p7 Temp_Call{25|196P9} 250m10 252r13 259r27 268m10 270r25
+242i7 Entry_Index{26|130I9} 260m13 269r45
+249i11 J<25|185I9> 250r50 256r42 257r49 260r28
+

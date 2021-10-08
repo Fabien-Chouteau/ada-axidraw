@@ -1,0 +1,55 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.img_real%s	s-imgrea.ads		1aada73c NE OL PU PK
+W system%s		system.ads		system.ali
+W system.img_llf%s	s-imgllf.ads		s-imgllf.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-imager.ads		20210927095552 500b11a9 system.image_r%s
+D s-imageu.ads		20210927095552 525c30c6 system.image_u%s
+D s-imageu.adb		20210927095552 2d0619dc system.image_u%b
+D s-imgllf.ads		20210927095552 39f1d16c system.img_llf%s
+D s-imgllu.ads		20210927095552 e025ba90 system.img_llu%s
+D s-imgrea.ads		20210927095552 79889905 system.img_real%s
+D s-powllf.ads		20210927095552 9900c89e system.powten_llf%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+G a e
+X 1 system.ads
+50K9*System 164e11 7|34r6 36r9 46r14 48r5
+X 5 s-imgllf.ads
+40K16*Img_LLF 73e19 7|34w13 46r21
+64U14*Set_Image_Long_Long_Float=71:19 7|46r29
+X 7 s-imgrea.ads
+36K16*Img_Real 1|50k9 7|48l12 48e20
+39U14*Set_Image_Real=46:29
+40f7 V{long_long_float}
+41a7 S{string}
+42i7 P{natural}
+43i7 Fore{natural}
+44i7 Aft{natural}
+45i7 Exp{natural}
+

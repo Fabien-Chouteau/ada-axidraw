@@ -1,0 +1,71 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.assertions%b	s-assert.adb		48433bbe NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W system%s		system.ads		system.ali
+W system.exceptions_debug%s  s-excdeb.adb	s-excdeb.ali
+
+U system.assertions%s	s-assert.ads		9785fded NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.assertions%s	a-assert.adb		a-assert.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-assert.ads		20210927095552 a718b65c ada.assertions%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-assert.ads		20210927095552 6a49a4e4 system.assertions%s
+D s-assert.adb		20210927095552 c1526fca system.assertions%b
+D s-excdeb.ads		20210927095552 7737c084 system.exceptions_debug%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+G c Z s b [raise_assert_failure system__assertions 48 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 6|41r6 45r39 7|34r6 46r7
+X 2 a-assert.ads
+44K13*Assertions 55e19 6|41w10 45r43
+47X4*Assertion_Error 6|45r54
+X 3 a-except.ads
+44K13*Exceptions 289e19 7|34w10 46r11
+80U14*Raise_Exception 7|46s22
+X 5 system.ads
+50K9*System 164e11 6|43r9 52r5 7|35r6 37r14 45r7 49r5
+X 6 s-assert.ads
+43K16*Assertions 5|50k9 6|52l12 52e22 7|37b21 49l12 49t22
+45X4*Assert_Failure 7|46r39
+48U14*Raise_Assert_Failure 48>36 49r22 7|43b14 47l8 47t28
+48a36 Msg{string} 7|43b36 46r64
+X 8 s-excdeb.ads
+40K16*Exceptions_Debug 7|35w13 45r14 8|78e28
+62U14*Debug_Raise_Assert_Failure 7|45s31
+

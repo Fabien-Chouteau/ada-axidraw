@@ -1,0 +1,118 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_CONVERSION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_OBSOLESCENT_FEATURES
+
+U system.standard_library%b  s-stalib.adb	80b04603 NE OL PK
+W system%s		system.ads		system.ali
+W system.memory%s	s-memory.adb		s-memory.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+
+U system.standard_library%s  s-stalib.ads	13607492 BN NE OL PR PK
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+W system%s		system.ads		system.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-memory.ads		20210927095552 597d6634 system.memory%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-soflin.ads		20210927095552 09900c20 system.soft_links%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-stalib.adb		20210927095552 977290bf system.standard_library%b
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+G a e
+G c Z s s [to_ptr system__standard_library 72 13 none]
+G c Z s s [exception_dataIP system__standard_library 99 9 none]
+G c Z s b [abort_undefer_direct system__standard_library 253 14 none]
+G c Z s b [adafinal system__standard_library 258 14 none]
+G c Z b b [break_start system__standard_library 89 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 8|49r6 73r10
+X 3 a-unccon.ads
+20v14*Unchecked_Conversion 8|49w10 73r14
+X 4 system.ads
+50K9*System 164e11 8|51r9 73r36 115r27 124r30 262r5 9|43r6 51r6 58r14 70r7
+. 81r10 101r5
+80M9*Address 8|73r43 115r34 124r37
+82m4*Null_Address{80M9} 8|157r32 166r32 175r32 184r32 193r32 202r32
+X 5 s-memory.ads
+45K16*Memory 107e18 9|51w13
+53V13*Alloc{4|80M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{4|80M9} 105i<c,__gnat_realloc>22
+X 7 s-soflin.ads
+45K16*Soft_Links 179e22 9|43w13 70r14 81r17
+55P9*No_Param_Proc
+121p4*Adafinal{55P9} 9|81r28
+128p4*Abort_Undefer{55P9} 9|70r25
+X 8 s-stalib.ads
+51K16*Standard_Library 4|50k9 8|262l12 262e28 9|58b21 101l12 101t28
+58A12*Big_String{string}<integer> 59r36 65r38
+65P9*Big_String_Ptr(58A12) 66r8 73r52
+72V13*To_Ptr[3|20]{65P9}
+79P9*Raise_Action 80r28 128r28
+83R9*Exception_Data 84r42 99c9 134e14 151r35 160r32 169r32 178r32 187r32
+. 196r31
+84P9*Exception_Data_Ptr(83R9) 119r28
+99R9*Exception_Data
+100b7*Not_Handled_By_Others{boolean} 152m7 161m7 170m7 179m7 188m7 197m7
+107e7*Lang{character} 153m7 162m7 171m7 180m7 189m7 198m7
+112i7*Name_Length{natural} 154m7 163m7 172m7 181m7 190m7 199m7
+115m7*Full_Name{4|80M9} 155m7 164m7 173m7 182m7 191m7 200m7
+119p7*HTable_Ptr{84P9} 156m7 165m7 174m7 183m7 192m7 201m7
+124m7*Foreign_Data{4|80M9} 157m7 166m7 175m7 184m7 193m7 202m7
+128p7*Raise_Hook{79P9} 158m7 167m7 176m7 185m7 194m7 203m7
+141a4*Constraint_Error_Name{string} 154r32 155r32
+142a4*Program_Error_Name{string} 172r32 173r32
+143a4*Storage_Error_Name{string} 181r32 182r32
+144a4*Tasking_Error_Name{string} 190r32 191r32
+145a4*Abort_Signal_Name{string} 199r32 200r32
+147a4*Numeric_Error_Name{string} 163r32 164r32
+151r4*Constraint_Error_Def{99R9} 205m22 205r22
+160r4*Numeric_Error_Def{99R9} 206m22 206r22
+169r4*Program_Error_Def{99R9} 207m22 207r22
+178r4*Storage_Error_Def{99R9} 208m22 208r22
+187r4*Tasking_Error_Def{99R9} 209m22 209r22
+196r4*Abort_Signal_Def{99R9} 210m22 210r22
+212i4*Local_Partition_ID{natural}
+217E9*Exception_Trace_Kind 241e7 245r22
+218n7*RM_Convention{217E9} 245r46
+223n7*Every_Raise{217E9}
+228n7*Unhandled_Raise{217E9}
+233n7*Unhandled_Raise_In_Main{217E9}
+245e4*Exception_Trace{217E9} 246r19
+253U14*Abort_Undefer_Direct 254r19 9|68b14 71l8 71t28
+258U14*Adafinal 9|77b14 83l8 83t16
+X 9 s-stalib.adb
+60b4 Runtime_Finalized{boolean} 79r14 80m10
+89U14 Break_Start 90i<c,__gnat_break_start>22 96b14 99l8 99t19
+

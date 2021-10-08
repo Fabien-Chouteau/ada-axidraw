@@ -1,6 +1,6 @@
 pragma Style_Checks (Off);
 
---  This spec has been automatically generated from ATSAMV71Q21.svd
+--  This spec has been automatically generated from ATSAMRH71F20C.svd
 
 pragma Restrictions (No_Elaboration_Code);
 
@@ -14,12 +14,12 @@ package SAM_SVD.RTT is
    -- Registers --
    ---------------
 
-   subtype RTT_RTT_MR_RTPRES_Field is HAL.UInt16;
+   subtype RTT_MR_RTPRES_Field is HAL.UInt16;
 
    --  Mode Register
-   type RTT_RTT_MR_Register is record
+   type RTT_MR_Register is record
       --  Real-time Timer Prescaler Value
-      RTPRES         : RTT_RTT_MR_RTPRES_Field := 16#0#;
+      RTPRES         : RTT_MR_RTPRES_Field := 16#0#;
       --  Alarm Interrupt Enable
       ALMIEN         : Boolean := False;
       --  Real-time Timer Increment Interrupt Enable
@@ -40,7 +40,7 @@ package SAM_SVD.RTT is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTT_RTT_MR_Register use record
+   for RTT_MR_Register use record
       RTPRES         at 0 range 0 .. 15;
       ALMIEN         at 0 range 16 .. 16;
       RTTINCIEN      at 0 range 17 .. 17;
@@ -53,7 +53,7 @@ package SAM_SVD.RTT is
    end record;
 
    --  Status Register
-   type RTT_RTT_SR_Register is record
+   type RTT_SR_Register is record
       --  Read-only. Real-time Alarm Status (cleared on read)
       ALMS          : Boolean;
       --  Read-only. Prescaler Roll-over Status (cleared on read)
@@ -64,7 +64,7 @@ package SAM_SVD.RTT is
      with Volatile_Full_Access, Object_Size => 32,
           Bit_Order => System.Low_Order_First;
 
-   for RTT_RTT_SR_Register use record
+   for RTT_SR_Register use record
       ALMS          at 0 range 0 .. 0;
       RTTINC        at 0 range 1 .. 1;
       Reserved_2_31 at 0 range 2 .. 31;
@@ -77,21 +77,21 @@ package SAM_SVD.RTT is
    --  Real-time Timer
    type RTT_Peripheral is record
       --  Mode Register
-      RTT_MR : aliased RTT_RTT_MR_Register;
+      MR : aliased RTT_MR_Register;
       --  Alarm Register
-      RTT_AR : aliased HAL.UInt32;
+      AR : aliased HAL.UInt32;
       --  Value Register
-      RTT_VR : aliased HAL.UInt32;
+      VR : aliased HAL.UInt32;
       --  Status Register
-      RTT_SR : aliased RTT_RTT_SR_Register;
+      SR : aliased RTT_SR_Register;
    end record
      with Volatile;
 
    for RTT_Peripheral use record
-      RTT_MR at 16#0# range 0 .. 31;
-      RTT_AR at 16#4# range 0 .. 31;
-      RTT_VR at 16#8# range 0 .. 31;
-      RTT_SR at 16#C# range 0 .. 31;
+      MR at 16#0# range 0 .. 31;
+      AR at 16#4# range 0 .. 31;
+      VR at 16#8# range 0 .. 31;
+      SR at 16#C# range 0 .. 31;
    end record;
 
    --  Real-time Timer

@@ -1,0 +1,80 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_UNCHECKED_CONVERSION
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.random_seed%b	s-ransee.adb		aef8df52 NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.unchecked_conversion%s
+W system%s		system.ads		system.ali
+
+U system.random_seed%s	s-ransee.ads		b69dbc39 NE OL PK
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-reatim.ads		20210927095552 cfe92427 ada.real_time%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-bb.ads		20210927095552 09e072ae system.bb%s
+D s-bbbopa.ads		20210930145842 a803dd30 system.bb.board_parameters%s
+D s-bbbosu.ads		20210927095552 0f820a2a system.bb.board_support%s
+D s-bbcppr.ads		20210927095552 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbinte.ads		20210927095552 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20210927132727 61fc829a system.bb.mcu_parameters%s
+D s-bbpara.ads		20210927095552 87be6a18 system.bb.parameters%s
+D s-bbthre.ads		20210927095552 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20210927095552 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20210927095552 ad086247 system.bb.time%s
+D s-multip.ads		20210927095552 f33e0e35 system.multiprocessors%s
+D s-osinte.ads		20210927095552 229b14dd system.os_interface%s
+D s-ransee.ads		20210927095552 01a57b33 system.random_seed%s
+D s-ransee.adb		20210927095552 6e2fa729 system.random_seed%b
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+G a e
+G c Z s b [get_seed system__random_seed 46 13 none]
+G c Z b b [to_u64 system__random_seed 39 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 19|34r6 34r25 35r6 40r10
+X 2 a-reatim.ads
+40K13*Real_Time 181e18 19|34w10 34r29
+50M9*Time<15|46M9> 19|40r36
+67V13*Clock{50M9}<15|134p13> 19|48s22
+X 3 a-unccon.ads
+20v14*Unchecked_Conversion 19|35w10 40r14
+X 4 interfac.ads
+38K9*Interfaces 231e15 18|42w6 46r29 19|40r42 46r29
+82M9*Unsigned_64 18|46r40 19|40r53 46r40
+X 5 system.ads
+50K9*System 164e11 18|44r9 49r5 19|37r14 51r5
+X 15 s-bbtime.ads
+46M9*Time
+X 18 s-ransee.ads
+44K16*Random_Seed 5|50k9 18|49l12 49e23 19|37b21 51l12 51t23
+46V13*Get_Seed{4|82M9} 19|46b13 49l8 49t16
+X 19 s-ransee.adb
+39V13 To_U64[3|20]{4|82M9} 48s14
+

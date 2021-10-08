@@ -1,0 +1,53 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_ENUMERATION_MAPS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.wid_char%b	s-widcha.adb		8f4aaed6 NE OL PK
+W system%s		system.ads		system.ali
+Z system.img_char%s	s-imgcha.adb		s-imgcha.ali
+
+U system.wid_char%s	s-widcha.ads		b232d4c0 NE OL PU PK
+W system%s		system.ads		system.ali
+
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-imgcha.ads		20210927095552 9c3458e7 system.img_char%s
+D s-widcha.ads		20210927095552 e8e63b95 system.wid_char%s
+D s-widcha.adb		20210927095552 67ac9543 system.wid_char%b
+G a e
+G c Z s b [width_character system__wid_char 37 13 none]
+X 1 system.ads
+50K9*System 164e11 3|34r9 41r5 4|32r14 56r5
+X 3 s-widcha.ads
+34K16*Wid_Char 1|50k9 3|41l12 41e20 4|32b21 56l12 56t20
+37V13*Width_Character{natural} 37>30 37>34 4|38b13 54l8 54t23
+37e30 Lo{character} 4|38b30 44r16
+37e34 Hi{character} 4|38b34 44r22
+X 4 s-widcha.adb
+39i7 W{natural} 42m7 49m13 49r31 53r14
+44e11 C{character} 46r53
+46a13 S{string} 49r34
+

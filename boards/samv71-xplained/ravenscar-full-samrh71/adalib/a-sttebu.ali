@@ -1,0 +1,157 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+
+U ada.strings.text_buffers%b  a-sttebu.adb	8c178268 NE OL PK
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.utf_encoding%s  a-stuten.adb	a-stuten.ali
+W ada.strings.utf_encoding.wide_strings%s  a-suewst.adb  a-suewst.ali
+W ada.strings.utf_encoding.wide_wide_strings%s  a-suezst.adb  a-suezst.ali
+
+U ada.strings.text_buffers%s  a-sttebu.ads	0800bb5e BN EE OL PU PK
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.utf_encoding%s  a-stuten.adb	a-stuten.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-string.ads		20210927095552 90ac6797 ada.strings%s
+D a-sttebu.ads		20210927095552 18209c64 ada.strings.text_buffers%s
+D a-sttebu.adb		20210927095552 15e06adb ada.strings.text_buffers%b
+D a-stuten.ads		20210927095552 808c40ad ada.strings.utf_encoding%s
+D a-suewst.ads		20210927095552 90b69721 ada.strings.utf_encoding.wide_strings%s
+D a-suezst.ads		20210927095552 1161e3f6 ada.strings.utf_encoding.wide_wide_strings%s
+D a-tags.ads		20210927095552 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-stoele.ads		20210927095552 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210927095552 ed88f8fb system.storage_elements%b
+D unchconv.ads		20210927095552 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s s [root_buffer_typePartial_DIC ada__strings__text_buffers 26 9 none]
+G c Z s s [root_buffer_typeDIC ada__strings__text_buffers 26 9 none]
+G c Z s b [current_indent ada__strings__text_buffers 49 13 none]
+G c Z s b [increase_indent ada__strings__text_buffers 52 14 none]
+G c Z s b [decrease_indent ada__strings__text_buffers 58 14 none]
+G c Z s s [root_buffer_typeDF ada__strings__text_buffers 69 9 none]
+G c Z s s [root_buffer_typeIP ada__strings__text_buffers 69 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 3|16r6 17r9 136r5 4|32r6 33r6 35r14 121r5
+X 2 a-string.ads
+16K13*Strings 1|16k9 2|35e16 3|16r10 17r13 136r9 4|32r10 33r10 35r18 121r9
+X 3 a-sttebu.ads
+17K21*Text_Buffers 2|16k13 3|69E9 136l17 136e29 4|35b26 121l17 121t29
+21I9*Text_Buffer_Count<integer> 23r30 47r31 50r41 54r23 60r23 4|37r41 38r7
+. 42r23 50r23
+23i4*New_Line_Count{21I9}
+26H9*Root_Buffer_Type 29p14 29r35 31p14 32r23 34p14 35r23 37p14 38r23 41p14
+. 42r23 45p14 45r40 49p13 50r16 52p14 53r23 58p14 59r23 69c9 88e14 113r26
+. 116r40 4|37r16 41r23 49r23
+29x14*Put 29=19 29>53
+29r19 Buffer{26R9}
+29a53 Item{string}
+31x14*Wide_Put 32=7 32>41
+32r7 Buffer{26R9}
+32a41 Item{wide_string}
+34x14*Wide_Wide_Put 35=7 35>41
+35r7 Buffer{26R9}
+35a41 Item{wide_wide_string}
+37x14*Put_UTF_8 38=7 39>7
+38r7 Buffer{26R9}
+39a7 Item{5|59A12}
+41x14*Wide_Put_UTF_16 42=7 43>7
+42r7 Buffer{26R9}
+43a7 Item{5|62A12}
+45x14*New_Line 45=24
+45r24 Buffer{26R9}
+47i4*Standard_Indent{21I9} 54r44 60r44 4|42r44 50r44
+49V13*Current_Indent{21I9} 27s36 50>7 55s21 56s7 61s20 63s28 64s21 65s7 4|36b13
+50r7 Buffer{26R9} 4|38r26
+52U14*Increase_Indent 53=7 54>7 4|40t4
+53r7 Buffer{26R9} 55r37 56r23
+54i7 Amount{21I9} 56r37
+58U14*Decrease_Indent 59=7 60>7 4|48t4
+59r7 Buffer{26R9} 61r36 63r44 64r37 65r23
+60i7 Amount{21I9} 61r47 63r54 65r37
+70i7*Indentation{natural} 4|38r33 45m14 45r14 53m14 53r14 95r23 97r40
+73b7*Indent_Pending{boolean} 4|93r20 94m20 113m17 115m17
+76i7*UTF_8_Length{natural}
+79i7*UTF_8_Column{positive} 4|116m17
+83b7*All_7_Bits{boolean}
+85b7*All_8_Bits{boolean} 4|67m17 78m17
+112U22 Put_UTF_8_Implementation 113=10 114>10 4|96s16 101s10
+113c10 Buffer<26R9>
+114a10 Item{5|59A12}
+115k12 Output_Mapping 112z22 134l8 134e22 4|56b17 119l8 119t22
+116H12*Buffer_Type<26R9> 49p13 52p14 58p14 116e73 118P28 118r49 120P28 121r26
+. 123P28 124r26 126P28 127r26 130P28 131r26 133P28 133r54 4|60r38 65r43 75r26
+. 86r26 105r26 111r43
+118U28*Put<29p14> 118=33 118>62 4|60b17 63l11 63t14 114s10
+118r33 Buffer{116R12} 4|60b22 62m21
+118a62 Item{string} 4|60b51 62r29
+120U28*Wide_Put<31p14> 121=10 121>39 4|65b17 72l11 72t19
+121r10 Buffer{116R12} 4|65b27 67m10 71m21
+121a39 Item{wide_string} 4|65b56 69r30 71r63
+123U28*Wide_Wide_Put<34p14> 124=10 124>39 4|74b17 83l11 83t24 108s10
+124r10 Buffer{116R12} 4|75b10 78m10 82m21
+124a39 Item{wide_wide_string} 4|75b39 80r31 82r68
+126U28*Put_UTF_8<37p14> 127=10 128>10 4|62s10 71s10 82s10 85b17 102l11 102t20
+127r10 Buffer{116R12} 4|86b10 93r13 94m13 95r16 97m19 97r33 101m36
+128a10 Item{5|59A12} 4|87b10 89r13 101r44
+130U28*Wide_Put_UTF_16<41p14> 131=10 131>39 4|104b17 109l11 109t26
+131r10 Buffer{116R12} 4|105b10 108m25
+131a39 Item{5|62A12} 4|105b39 108r72
+133U28*New_Line<45p14> 133=38 4|111b17 117l11 117t19
+133r38 Buffer{116R12} 4|111b27 113m10 114m15 115m10 116m10
+X 4 a-sttebu.adb
+40U14 Increase_Indent
+41r7 Buffer{3|26R9}
+42i7 Amount{3|21I9}
+48U14 Decrease_Indent
+49r7 Buffer{3|26R9}
+50i7 Amount{3|21I9}
+69e21 WChar{wide_character} 69r58
+80e21 WWChar{wide_wide_character} 80r64
+X 5 a-stuten.ads
+42K21*UTF_Encoding 3|16w18 39r23 43r23 114r26 128r26 131r46 4|32r18 33r18
+. 71r29 82r29 87r26 105r46 108r33 5|144e29
+59A12*UTF_8_String{string}<integer> 3|39r36 114r39 128r39 4|87r39
+62A12*UTF_16_Wide_String{wide_string}<integer> 3|43r36 131r59 4|105r59
+X 6 a-suewst.ads
+20K34*Wide_Strings 4|32w31 71r42 6|67e42
+38V13*Encode{5|59A12} 4|71s55
+X 7 a-suezst.ads
+21K34*Wide_Wide_Strings 4|33w31 82r42 108r46 7|64e47
+35V13*Encode{5|59A12} 4|82s60
+60V13*Decode{wide_wide_string} 4|108s64
+

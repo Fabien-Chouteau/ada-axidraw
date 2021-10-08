@@ -1,0 +1,139 @@
+V "GNAT Lib v2021"
+A -nostdinc
+A -O2
+A -gnatA
+A --RTS=/home/chouteau/src/github/perso/ada-axidraw/boards/samv71-xplained/ravenscar-full-samrh71/
+A -mlittle-endian
+A -mthumb
+A -mcpu=cortex-m7
+A -mfloat-abi=hard
+A -mfpu=fpv5-d16
+A -gnatg
+A -fno-delete-null-pointer-checks
+A -gnatp
+A -gnatn2
+A -g
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -march=armv7e-m+fp.dp
+P DB ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U system.val_flt%s	s-valflt.ads		6dc0e626 NE OL PR PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+Z system.double_real%s
+Z system.exn_flt%s	s-exnflt.ads		s-exnflt.ali
+Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+Z system.float_control%s  s-flocon.adb		s-flocon.ali
+W system.powten_flt%s	s-powflt.ads		s-powflt.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W system.val_real%s
+Z system.val_util%s	s-valuti.adb		s-valuti.ali
+Z system.value_r%s
+
+D ada.ads		20210927095552 76789da1 ada%s
+D a-except.ads		20210927095552 946f3014 ada.exceptions%s
+D a-unccon.ads		20210927095552 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210927095552 edec285f interfaces%s
+D system.ads		20210927095552 5ad4ef55 system%s
+D s-dourea.ads		20210927095552 8a0ecf55 system.double_real%s
+D s-dourea.adb		20210927095552 6aeeb936 system.double_real%b
+D s-dorepr.adb		20210927095552 e195a66d system.double_real.product
+D s-exnflt.ads		20210927095552 84371ff2 system.exn_flt%s
+D s-exponr.ads		20210927095552 2127300b system.exponr%s
+D s-fatflt.ads		20210927095552 11beb392 system.fat_flt%s
+D s-fatgen.ads		20210927095552 d28c6cfe system.fat_gen%s
+D s-fatgen.adb		20210927095552 f61e99f3 system.fat_gen%b
+D s-flocon.ads		20210927095552 e0fc433c system.float_control%s
+D s-parame.ads		20210927095552 8e90778f system.parameters%s
+D s-powflt.ads		20210927095552 46f7a1b9 system.powten_flt%s
+D s-stalib.ads		20210927095552 472fbca8 system.standard_library%s
+D s-traent.ads		20210927095552 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210927095552 2b077493 system.unsigned_types%s
+D s-valflt.ads		20210927095552 d738ba7d system.val_flt%s
+D s-valrea.ads		20210927095552 8ddc6624 system.val_real%s
+D s-valrea.adb		20210927095552 efec4045 system.val_real%b
+D s-valuti.ads		20210927095552 aca0b6fe system.val_util%s
+D s-valuer.ads		20210927095552 2aeea103 system.value_r%s
+D s-valuer.adb		20210927095552 5e5f062c system.value_r%b
+G a e
+G c Z s s [scan_real system__val_flt__impl 48 13 42_4]
+G c Z s s [value_real system__val_flt__impl 81 13 42_4]
+G c Z s s [scan_raw_real system__val_flt__impl__impl 48 13 57_4_42_4]
+G c Z s s [value_raw_real system__val_flt__impl__impl 91 13 57_4_42_4]
+G c Z s s [as_digit system__val_flt__impl__impl 42 13 57_4_42_4]
+G c Z s s [round_extra system__val_flt__impl__impl 45 14 57_4_42_4]
+G c Z s s [scan_decimal_digits system__val_flt__impl__impl 53 14 57_4_42_4]
+G c Z s s [scan_integral_digits system__val_flt__impl__impl 76 14 57_4_42_4]
+G c Z s s [to_double system__val_flt__impl__double_real 49 13 80_4_42_4]
+G c Z s s [to_single system__val_flt__impl__double_real 52 13 80_4_42_4]
+G c Z s s [quick_two_sum system__val_flt__impl__double_real 55 13 80_4_42_4]
+G c Z s s [two_sum system__val_flt__impl__double_real 59 13 80_4_42_4]
+G c Z s s [two_diff system__val_flt__impl__double_real 62 13 80_4_42_4]
+G c Z s s [two_prod system__val_flt__impl__double_real 65 13 80_4_42_4]
+G c Z s s [two_sqr system__val_flt__impl__double_real 68 13 80_4_42_4]
+G c Z s s [Oadd system__val_flt__impl__double_real 71 13 80_4_42_4]
+G c Z s s [Osubtract system__val_flt__impl__double_real 72 13 80_4_42_4]
+G c Z s s [Omultiply system__val_flt__impl__double_real 73 13 80_4_42_4]
+G c Z s s [Odivide system__val_flt__impl__double_real 74 13 80_4_42_4]
+G c Z s s [Oadd system__val_flt__impl__double_real 78 13 80_4_42_4]
+G c Z s s [Osubtract system__val_flt__impl__double_real 79 13 80_4_42_4]
+G c Z s s [Omultiply system__val_flt__impl__double_real 80 13 80_4_42_4]
+G c Z s s [Odivide system__val_flt__impl__double_real 81 13 80_4_42_4]
+G c Z s s [sqr system__val_flt__impl__double_real 85 13 80_4_42_4]
+G c Z s s [Oeq system__val_flt__impl__double_real 88 13 80_4_42_4]
+G c Z s s [Olt system__val_flt__impl__double_real 90 13 80_4_42_4]
+G c Z s s [Ole system__val_flt__impl__double_real 92 13 80_4_42_4]
+G c Z s s [Ogt system__val_flt__impl__double_real 94 13 80_4_42_4]
+G c Z s s [Oge system__val_flt__impl__double_real 96 13 80_4_42_4]
+G c Z s s [Oeq system__val_flt__impl__double_real 100 13 80_4_42_4]
+G c Z s s [Olt system__val_flt__impl__double_real 102 13 80_4_42_4]
+G c Z s s [Ole system__val_flt__impl__double_real 104 13 80_4_42_4]
+G c Z s s [Ogt system__val_flt__impl__double_real 106 13 80_4_42_4]
+G c Z s s [Oge system__val_flt__impl__double_real 108 13 80_4_42_4]
+G c Z s s [double_tIP system__val_flt__impl__double_real 45 9 80_4_42_4]
+G c Z s s [is_nan system__val_flt__impl__double_real 34 13 80_4_42_4]
+G c Z s s [is_infinity system__val_flt__impl__double_real 37 13 80_4_42_4]
+G c Z s s [is_zero system__val_flt__impl__double_real 41 13 80_4_42_4]
+G c Z s s [two_prod system__val_flt__impl__double_real__product 46 16 80_4_42_4]
+G c Z s s [two_sqr system__val_flt__impl__double_real__product 47 16 80_4_42_4]
+G c Z s s [split system__val_flt__impl__double_real__product 40 14 80_4_42_4]
+G c Z s s [integer_to_real system__val_flt__impl 86 13 42_4]
+G c Z s s [large_powten system__val_flt__impl 95 13 42_4]
+X 5 system.ads
+50K9*System 164e11 20|35r6 36r6 37r6 39r9 44r7 45r7 57r5
+X 16 s-powflt.ads
+34K16*Powten_Flt 67e22 20|35w13 44r14 45r14
+41N4*Maxpow 20|44r25
+44a4*Powten(float) 20|45r25
+X 19 s-unstyp.ads
+40K16*Unsigned_Types 251e26 20|36w13 46r7
+46M9*Unsigned 20|46r22
+X 20 s-valflt.ads
+39K16*Val_Flt 5|50k9 20|57l12 57e19
+42K12*Impl[21|45] 52r14 55r14
+48V13*Scan_Float=52:19{float}
+49a7 Str{string}
+50p7 Ptr(integer)
+51i7 Max{integer}
+54V13*Value_Float=55:19{float}
+54a26 Str{string}
+X 21 s-valrea.ads
+45k16*Val_Real 20|37w13 42r24 21|87e20
+48V13*Scan_Real{float} 20|52r19[42]
+81V13*Value_Real{float} 20|55r19[42]
+
